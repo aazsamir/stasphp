@@ -16,7 +16,7 @@ readonly class SessionCookie
         public ?int $maxAge,
         public ?bool $secure,
         public ?bool $httpOnly,
-        public ?int $sameSite,
+        public ?string $sameSite,
         public ?string $raw,
         public mixed $unparsed,
     ) {}

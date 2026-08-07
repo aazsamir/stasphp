@@ -6,7 +6,7 @@ namespace Aazsamir\Stasphp\Scraper;
 
 use Aazsamir\Stasphp\Scraper\Input\ScrapInput;
 
-class Scraper
+interface Scraper
 {
-    public function scrape(ScrapInput $input)
+    public function scrape(ScrapInput $input): ?ScraperOutput;
 }

@@ -1,10 +1,22 @@
 {
     "name": "aazsamir/stasphp",
+    "description": "PHP SDK for writing StashApp plugins and scrapers",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "stashapp",
+        "sdk",
+        "plugin",
+        "scraper"
+    ],
     "autoload": {
         "psr-4": {
             "Aazsamir\\Stasphp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aazsamir\\Stasphp\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -13,5 +25,14 @@
             "email": "sutikkukun@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "scripts": {
+        "test": "phpunit --colors=always",
+        "lint": "find src tests -type f -name '*.php' -print0 | xargs -0 -n1 php -l"
+    }
 }

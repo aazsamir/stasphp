@@ -2,16 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Plugin;
+namespace Aazsamir\Stasphp\Scraper;
 
-readonly class PluginOutput
+readonly class ScraperOutput
 {
+    /**
+     * @param array<int, array<string, mixed>>|null $output
+     */
     public function __construct(
         public ?string $error,
-        public ?string $output,
+        public ?array $output,
     ) {}
 
-    public static function success(string $output): self
+    /**
+     * @param array<int, array<string, mixed>> $output
+     */
+    public static function success(array $output): self
     {
         return new self(error: null, output: $output);
     }
@@ -29,7 +35,7 @@ readonly class PluginOutput
             $json['error'] = $this->error;
         }
 
-        if ($this->output !== null && $this->output !== '') {
+        if ($this->output !== null) {
             $json['output'] = $this->output;
         }
 

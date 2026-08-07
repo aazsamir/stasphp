@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Plugin;
+namespace Aazsamir\Stasphp\Scraper;
 
-use Aazsamir\Stasphp\Plugin\Input\PluginInput;
+use Aazsamir\Stasphp\Scraper\Input\ScrapInput;
 
-class PluginRunner
+class ScraperRunner
 {
     public function __construct(
-        private Plugin $plugin,
+        private Scraper $scraper,
     ) {}
 
     public function run(array $stdin): void
     {
         try {
-            $input = PluginInput::fromArray($stdin);
-            $output = $this->plugin->run($input);
+            $input = ScrapInput::fromArray($stdin);
+            $output = $this->scraper->scrape($input);
             $this->writeOutput($output);
         } catch (\Throwable $exception) {
-            $this->writeOutput(PluginOutput::error($exception->getMessage()));
+            $this->writeOutput(ScraperOutput::error($exception->getMessage()));
         }
     }
 
@@ -27,20 +27,20 @@ class PluginRunner
     {
         try {
             $decoded = \json_decode($json, true, 512, \JSON_THROW_ON_ERROR);
-        } catch (\JsonException $exception) {
-            $this->writeOutput(PluginOutput::error('Invalid input JSON.'));
+        } catch (\JsonException) {
+            $this->writeOutput(ScraperOutput::error('Invalid input JSON.'));
             return;
         }
 
         if (!\is_array($decoded)) {
-            $this->writeOutput(PluginOutput::error('Input JSON must decode to an object.'));
+            $this->writeOutput(ScraperOutput::error('Input JSON must decode to an object.'));
             return;
         }
 
         $this->run($decoded);
     }
 
-    private function writeOutput(?PluginOutput $output): void
+    private function writeOutput(?ScraperOutput $output): void
     {
         $json = $output?->toArray() ?? [];
 
