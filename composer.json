@@ -1,0 +1,17 @@
+{
+    "name": "aazsamir/stasphp",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aazsamir\\Stasphp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "aazsamir",
+            "email": "sutikkukun@gmail.com"
+        }
+    ],
+    "require": {}
+}
