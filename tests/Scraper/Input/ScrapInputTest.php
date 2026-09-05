@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Aazsamir\Stasphp\Tests\Scraper\Input;
 
-use Aazsamir\Stasphp\Scraper\Input\ScrapInput;
+use Aazsamir\Stasphp\Scraper\Input\SceneByFragment;
 use PHPUnit\Framework\TestCase;
 
 final class ScrapInputTest extends TestCase
 {
     public function testFromArrayParsesUrlAndArgs(): void
     {
-        $input = ScrapInput::fromArray([
+        $input = SceneByFragment::fromArray([
             'url' => 'https://example.com',
             'args' => [
                 'limit' => 10,
