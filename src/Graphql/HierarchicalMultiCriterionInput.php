@@ -1,0 +1,68 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Aazsamir\Stasphp\Graphpql;
+
+class HierarchicalMultiCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
+{
+    use \Aazsamir\Graphpql\Model\ToArray;
+
+    /** @var array<string> */
+    public ?array $value;
+    public CriterionModifier $modifier;
+    public ?int $depth;
+
+    /** @var array<string> */
+    public ?array $excludes;
+
+    /**
+     * @param array<string> $value
+     * @param array<string> $excludes
+     */
+    public static function new(
+        CriterionModifier $modifier,
+        ?array $value = null,
+        ?int $depth = null,
+        ?array $excludes = null,
+    ): self {
+        $self = new self();
+        $self->modifier = $modifier;
+        $self->value = $value;
+        $self->depth = $depth;
+        $self->excludes = $excludes;
+
+        return $self;
+    }
+
+    public static function fromArray(array $data): self
+    {
+        $self = new self();
+        if (isset($data['modifier'])) {
+            $self->modifier = \Aazsamir\Stasphp\Graphpql\CriterionModifier::from($data['modifier']);
+        }
+        if (isset($data['value'])) {
+            $self->value = array_map(function ($data) {
+                if ($data === []) {
+                    return [];
+                }
+
+                return $data;
+            }, $data['value'] ?? []);
+        }
+        if (isset($data['depth'])) {
+            $self->depth = $data['depth'];
+        }
+        if (isset($data['excludes'])) {
+            $self->excludes = array_map(function ($data) {
+                if ($data === []) {
+                    return [];
+                }
+
+                return $data;
+            }, $data['excludes'] ?? []);
+        }
+
+        return $self;
+    }
+}

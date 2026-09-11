@@ -1,0 +1,49 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Aazsamir\Stasphp\Graphpql;
+
+class SetDefaultFilterInput implements \Aazsamir\Graphpql\Model\GraphObject
+{
+    use \Aazsamir\Graphpql\Model\ToArray;
+
+    public FilterMode $mode;
+    public ?FindFilterType $find_filter;
+    public mixed $object_filter;
+    public mixed $ui_options;
+
+    public static function new(
+        FilterMode $mode,
+        ?FindFilterType $find_filter = null,
+        mixed $object_filter = null,
+        mixed $ui_options = null,
+    ): self {
+        $self = new self();
+        $self->mode = $mode;
+        $self->find_filter = $find_filter;
+        $self->object_filter = $object_filter;
+        $self->ui_options = $ui_options;
+
+        return $self;
+    }
+
+    public static function fromArray(array $data): self
+    {
+        $self = new self();
+        if (isset($data['mode'])) {
+            $self->mode = \Aazsamir\Stasphp\Graphpql\FilterMode::from($data['mode']);
+        }
+        if (isset($data['find_filter'])) {
+            $self->find_filter = \Aazsamir\Stasphp\Graphpql\FindFilterType::fromArray($data['find_filter']);
+        }
+        if (isset($data['object_filter'])) {
+            $self->object_filter = $data['object_filter'];
+        }
+        if (isset($data['ui_options'])) {
+            $self->ui_options = $data['ui_options'];
+        }
+
+        return $self;
+    }
+}

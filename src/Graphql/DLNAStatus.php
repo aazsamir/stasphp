@@ -1,0 +1,101 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Aazsamir\Stasphp\Graphpql;
+
+class DLNAStatus implements \Aazsamir\Graphpql\Model\GraphObject
+{
+    use \Aazsamir\Graphpql\Model\ToArray;
+
+    public bool $running;
+    public ?\DateTimeInterface $until;
+
+    /** @var array<string> */
+    public array $recentIPAddresses;
+
+    /** @var array<\Aazsamir\Stasphp\Graphpql\DLNAIP> */
+    public array $allowedIPAddresses;
+
+    /**
+     * @return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField<mixed>
+     */
+    public static function running(): Fields\DLNAStatusField
+    {
+        return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField::running();
+    }
+
+    /**
+     * @return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField<mixed>
+     */
+    public static function until(): Fields\DLNAStatusField
+    {
+        return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField::until();
+    }
+
+    /**
+     * @return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField<mixed>
+     */
+    public static function recentIPAddresses(): Fields\DLNAStatusField
+    {
+        return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField::recentIPAddresses();
+    }
+
+    /**
+     * @return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField<\Aazsamir\Stasphp\Graphpql\SelectionSet\DLNAIPSelectionSet>
+     */
+    public static function allowedIPAddresses(): Fields\DLNAStatusField
+    {
+        return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField::allowedIPAddresses();
+    }
+
+    /**
+     * @param array<string> $recentIPAddresses
+     * @param array<\Aazsamir\Stasphp\Graphpql\DLNAIP> $allowedIPAddresses
+     */
+    public static function new(
+        bool $running,
+        array $recentIPAddresses,
+        array $allowedIPAddresses,
+        ?\DateTimeInterface $until = null,
+    ): self {
+        $self = new self();
+        $self->running = $running;
+        $self->recentIPAddresses = $recentIPAddresses;
+        $self->allowedIPAddresses = $allowedIPAddresses;
+        $self->until = $until;
+
+        return $self;
+    }
+
+    public static function fromArray(array $data): self
+    {
+        $self = new self();
+        if (isset($data['running'])) {
+            $self->running = $data['running'];
+        }
+        if (isset($data['recentIPAddresses'])) {
+            $self->recentIPAddresses = array_map(function ($data) {
+                if ($data === []) {
+                    return [];
+                }
+
+                return $data;
+            }, $data['recentIPAddresses'] ?? []);
+        }
+        if (isset($data['allowedIPAddresses'])) {
+            $self->allowedIPAddresses = array_map(function ($data) {
+                if ($data === []) {
+                    return [];
+                }
+
+                return \Aazsamir\Stasphp\Graphpql\DLNAIP::fromArray($data);
+            }, $data['allowedIPAddresses'] ?? []);
+        }
+        if (isset($data['until'])) {
+            $self->until = new \DateTimeImmutable($data['until']);
+        }
+
+        return $self;
+    }
+}

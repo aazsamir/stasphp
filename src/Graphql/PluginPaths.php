@@ -1,0 +1,70 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Aazsamir\Stasphp\Graphpql;
+
+class PluginPaths implements \Aazsamir\Graphpql\Model\GraphObject
+{
+    use \Aazsamir\Graphpql\Model\ToArray;
+
+    /** @var array<string> */
+    public ?array $javascript;
+
+    /** @var array<string> */
+    public ?array $css;
+
+    /**
+     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginPathsField<mixed>
+     */
+    public static function javascript(): Fields\PluginPathsField
+    {
+        return \Aazsamir\Stasphp\Graphpql\Fields\PluginPathsField::javascript();
+    }
+
+    /**
+     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginPathsField<mixed>
+     */
+    public static function css(): Fields\PluginPathsField
+    {
+        return \Aazsamir\Stasphp\Graphpql\Fields\PluginPathsField::css();
+    }
+
+    /**
+     * @param array<string> $javascript
+     * @param array<string> $css
+     */
+    public static function new(?array $javascript = null, ?array $css = null): self
+    {
+        $self = new self();
+        $self->javascript = $javascript;
+        $self->css = $css;
+
+        return $self;
+    }
+
+    public static function fromArray(array $data): self
+    {
+        $self = new self();
+        if (isset($data['javascript'])) {
+            $self->javascript = array_map(function ($data) {
+                if ($data === []) {
+                    return [];
+                }
+
+                return $data;
+            }, $data['javascript'] ?? []);
+        }
+        if (isset($data['css'])) {
+            $self->css = array_map(function ($data) {
+                if ($data === []) {
+                    return [];
+                }
+
+                return $data;
+            }, $data['css'] ?? []);
+        }
+
+        return $self;
+    }
+}

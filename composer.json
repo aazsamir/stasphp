@@ -28,14 +28,11 @@
     ],
     "require": {
         "php": "^8.1",
+        "aazsamir/graphpql": "0.1",
         "psr/log": "^3.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.5",
         "symfony/var-dumper": "^8.1"
-    },
-    "scripts": {
-        "test": "phpunit --colors=always",
-        "lint": "find src tests -type f -name '*.php' -print0 | xargs -0 -n1 php -l"
     }
 }
