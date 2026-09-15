@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Query;
 class FindGallery implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'findGallery';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Gallery';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\GallerySelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class FindGallery implements \Aazsamir\Graphpql\Model\Query
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -76,9 +70,7 @@ class FindGallery implements \Aazsamir\Graphpql\Model\Query
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\Gallery::fromArray($response->data);
     }
 
     public function dd(): never

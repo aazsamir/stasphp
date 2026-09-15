@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Query;
 class FindDuplicateScenes implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'findDuplicateScenes';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Scene';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\SceneSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class FindDuplicateScenes implements \Aazsamir\Graphpql\Model\Query
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -71,7 +65,7 @@ class FindDuplicateScenes implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @return array<\Aazsamir\Stasphp\Graphql\Scene>
+     * @return array<array<\Aazsamir\Stasphp\Graphql\Scene>>
      */
     public function do(): ?array
     {
@@ -81,9 +75,19 @@ class FindDuplicateScenes implements \Aazsamir\Graphpql\Model\Query
             return null;
         }
 
-        $returnType = self::getReturnType();
+        return array_map(function ($data) {
+            if ($data === []) {
+                return [];
+            }
 
-        return array_map(fn ($x) => $returnType::fromArray($x), $response->data);
+            return array_map(function ($data) {
+                if ($data === []) {
+                    return [];
+                }
+
+                return \Aazsamir\Stasphp\Graphql\Scene::fromArray($data);
+            }, $data ?? []);
+        }, $response->data ?? []);
     }
 
     public function dd(): never

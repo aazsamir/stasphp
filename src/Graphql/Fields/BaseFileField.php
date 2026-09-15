@@ -160,6 +160,54 @@ class BaseFileField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\BasicFileSelectionSet>
+     */
+    public static function onBasicFile(): self
+    {
+        $instance = new self();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\BasicFileSelectionSet();
+        $instance->union = 'BasicFile';
+
+        return $instance;
+    }
+
+    /**
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\VideoFileSelectionSet>
+     */
+    public static function onVideoFile(): self
+    {
+        $instance = new self();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\VideoFileSelectionSet();
+        $instance->union = 'VideoFile';
+
+        return $instance;
+    }
+
+    /**
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ImageFileSelectionSet>
+     */
+    public static function onImageFile(): self
+    {
+        $instance = new self();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ImageFileSelectionSet();
+        $instance->union = 'ImageFile';
+
+        return $instance;
+    }
+
+    /**
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\GalleryFileSelectionSet>
+     */
+    public static function onGalleryFile(): self
+    {
+        $instance = new self();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\GalleryFileSelectionSet();
+        $instance->union = 'GalleryFile';
+
+        return $instance;
+    }
+
+    /**
      * @param callable(T): void $selection
      */
     public function selector(callable $selection): self

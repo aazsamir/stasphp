@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Mutation;
 class ExecSQL implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'execSQL';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\SQLExecResult';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\SQLExecResultSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class ExecSQL implements \Aazsamir\Graphpql\Model\Mutation
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     /**
@@ -81,9 +75,7 @@ class ExecSQL implements \Aazsamir\Graphpql\Model\Mutation
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\SQLExecResult::fromArray($response->data);
     }
 
     public function dd(): never

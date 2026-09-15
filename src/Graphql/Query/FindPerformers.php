@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Query;
 class FindPerformers implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'findPerformers';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\FindPerformersResultType';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\FindPerformersResultTypeSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class FindPerformers implements \Aazsamir\Graphpql\Model\Query
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     /**
@@ -87,9 +81,7 @@ class FindPerformers implements \Aazsamir\Graphpql\Model\Query
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\FindPerformersResultType::fromArray($response->data);
     }
 
     public function dd(): never

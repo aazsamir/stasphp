@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Mutation;
 class GalleriesUpdate implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'galleriesUpdate';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Gallery';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\GallerySelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class GalleriesUpdate implements \Aazsamir\Graphpql\Model\Mutation
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     /**
@@ -82,9 +76,13 @@ class GalleriesUpdate implements \Aazsamir\Graphpql\Model\Mutation
             return null;
         }
 
-        $returnType = self::getReturnType();
+        return array_map(function ($data) {
+            if ($data === []) {
+                return [];
+            }
 
-        return array_map(fn ($x) => $returnType::fromArray($x), $response->data);
+            return $data;
+        }, $response->data ?? []);
     }
 
     public function dd(): never

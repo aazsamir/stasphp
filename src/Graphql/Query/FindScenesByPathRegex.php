@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Query;
 class FindScenesByPathRegex implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'findScenesByPathRegex';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\FindScenesResultType';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\FindScenesResultTypeSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class FindScenesByPathRegex implements \Aazsamir\Graphpql\Model\Query
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -77,9 +71,7 @@ class FindScenesByPathRegex implements \Aazsamir\Graphpql\Model\Query
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\FindScenesResultType::fromArray($response->data);
     }
 
     public function dd(): never

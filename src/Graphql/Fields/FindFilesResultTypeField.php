@@ -58,12 +58,13 @@ class FindFilesResultTypeField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<mixed>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\BaseFileSelectionSet>
      */
     public static function files(): self
     {
         $instance = new self();
         $instance->name = 'files';
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\BaseFileSelectionSet();
 
         return $instance;
     }

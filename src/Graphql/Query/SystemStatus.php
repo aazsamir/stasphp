@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Query;
 class SystemStatus implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'systemStatus';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\SystemStatus';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\SystemStatusSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class SystemStatus implements \Aazsamir\Graphpql\Model\Query
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct()
@@ -74,9 +68,7 @@ class SystemStatus implements \Aazsamir\Graphpql\Model\Query
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\SystemStatus::fromArray($response->data);
     }
 
     public function dd(): never

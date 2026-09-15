@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Query;
 class FindStudios implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'findStudios';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\FindStudiosResultType';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\FindStudiosResultTypeSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class FindStudios implements \Aazsamir\Graphpql\Model\Query
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     /**
@@ -84,9 +78,7 @@ class FindStudios implements \Aazsamir\Graphpql\Model\Query
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\FindStudiosResultType::fromArray($response->data);
     }
 
     public function dd(): never

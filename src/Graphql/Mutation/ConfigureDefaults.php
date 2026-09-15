@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Mutation;
 class ConfigureDefaults implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'configureDefaults';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ConfigDefaultSettingsResult';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\ConfigDefaultSettingsResultSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class ConfigureDefaults implements \Aazsamir\Graphpql\Model\Mutation
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -77,9 +71,7 @@ class ConfigureDefaults implements \Aazsamir\Graphpql\Model\Mutation
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\ConfigDefaultSettingsResult::fromArray($response->data);
     }
 
     public function dd(): never

@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Query;
 class FindImage implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'findImage';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Image';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\ImageSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class FindImage implements \Aazsamir\Graphpql\Model\Query
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -78,9 +72,7 @@ class FindImage implements \Aazsamir\Graphpql\Model\Query
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\Image::fromArray($response->data);
     }
 
     public function dd(): never

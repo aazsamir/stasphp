@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Query;
 class Latestversion implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'latestversion';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\LatestVersion';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\LatestVersionSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class Latestversion implements \Aazsamir\Graphpql\Model\Query
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct()
@@ -74,9 +68,7 @@ class Latestversion implements \Aazsamir\Graphpql\Model\Query
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\LatestVersion::fromArray($response->data);
     }
 
     public function dd(): never

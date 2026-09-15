@@ -13,7 +13,7 @@ class FindFilesResultType implements \Aazsamir\Graphpql\Model\GraphObject
     public float $duration;
     public int $size;
 
-    /** @var array<\Aazsamir\Stasphp\Graphql\BaseFile> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\BasicFile|\Aazsamir\Stasphp\Graphql\VideoFile|\Aazsamir\Stasphp\Graphql\ImageFile|\Aazsamir\Stasphp\Graphql\GalleryFile> */
     public array $files;
 
     /**
@@ -49,7 +49,7 @@ class FindFilesResultType implements \Aazsamir\Graphpql\Model\GraphObject
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphql\Fields\FindFilesResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindFilesResultTypeField<\Aazsamir\Stasphp\Graphql\SelectionSet\BaseFileSelectionSet>
      */
     public static function files(): Fields\FindFilesResultTypeField
     {
@@ -57,7 +57,7 @@ class FindFilesResultType implements \Aazsamir\Graphpql\Model\GraphObject
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphql\BaseFile> $files
+     * @param array<\Aazsamir\Stasphp\Graphql\BasicFile|\Aazsamir\Stasphp\Graphql\VideoFile|\Aazsamir\Stasphp\Graphql\ImageFile|\Aazsamir\Stasphp\Graphql\GalleryFile> $files
      */
     public static function new(int $count, float $megapixels, float $duration, int $size, array $files): self
     {
@@ -92,7 +92,15 @@ class FindFilesResultType implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphql\BaseFile::fromArray($data);
+                return ($data['__typename'] ?? '') === 'BasicFile'
+                ? (\Aazsamir\Stasphp\Graphql\BasicFile::fromArray($data))
+                : (($data['__typename'] ?? '') === 'VideoFile'
+                    ? (\Aazsamir\Stasphp\Graphql\VideoFile::fromArray($data))
+                    : (($data['__typename'] ?? '') === 'ImageFile'
+                        ? (\Aazsamir\Stasphp\Graphql\ImageFile::fromArray($data))
+                        : (($data['__typename'] ?? '') === 'GalleryFile'
+                            ? (\Aazsamir\Stasphp\Graphql\GalleryFile::fromArray($data))
+                            : (null))));
             }, $data['files'] ?? []);
         }
 

@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Query;
 class ScrapeSingleGroup implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'scrapeSingleGroup';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ScrapedGroup';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedGroupSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class ScrapeSingleGroup implements \Aazsamir\Graphpql\Model\Query
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -81,9 +75,13 @@ class ScrapeSingleGroup implements \Aazsamir\Graphpql\Model\Query
             return null;
         }
 
-        $returnType = self::getReturnType();
+        return array_map(function ($data) {
+            if ($data === []) {
+                return [];
+            }
 
-        return array_map(fn ($x) => $returnType::fromArray($x), $response->data);
+            return \Aazsamir\Stasphp\Graphql\ScrapedGroup::fromArray($data);
+        }, $response->data ?? []);
     }
 
     public function dd(): never

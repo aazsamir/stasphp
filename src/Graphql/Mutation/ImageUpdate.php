@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Mutation;
 class ImageUpdate implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'imageUpdate';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Image';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\ImageSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class ImageUpdate implements \Aazsamir\Graphpql\Model\Mutation
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -76,9 +70,7 @@ class ImageUpdate implements \Aazsamir\Graphpql\Model\Mutation
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\Image::fromArray($response->data);
     }
 
     public function dd(): never

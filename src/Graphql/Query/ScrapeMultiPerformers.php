@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Query;
 class ScrapeMultiPerformers implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'scrapeMultiPerformers';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ScrapedPerformer';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedPerformerSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class ScrapeMultiPerformers implements \Aazsamir\Graphpql\Model\Query
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -71,7 +65,7 @@ class ScrapeMultiPerformers implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @return array<\Aazsamir\Stasphp\Graphql\ScrapedPerformer>
+     * @return array<array<\Aazsamir\Stasphp\Graphql\ScrapedPerformer>>
      */
     public function do(): ?array
     {
@@ -81,9 +75,19 @@ class ScrapeMultiPerformers implements \Aazsamir\Graphpql\Model\Query
             return null;
         }
 
-        $returnType = self::getReturnType();
+        return array_map(function ($data) {
+            if ($data === []) {
+                return [];
+            }
 
-        return array_map(fn ($x) => $returnType::fromArray($x), $response->data);
+            return array_map(function ($data) {
+                if ($data === []) {
+                    return [];
+                }
+
+                return \Aazsamir\Stasphp\Graphql\ScrapedPerformer::fromArray($data);
+            }, $data ?? []);
+        }, $response->data ?? []);
     }
 
     public function dd(): never

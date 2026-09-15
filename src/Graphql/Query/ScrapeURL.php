@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Query;
 class ScrapeURL implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'scrapeURL';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ScrapedStudio|\Aazsamir\Stasphp\Graphql\ScrapedTag|\Aazsamir\Stasphp\Graphql\ScrapedScene|\Aazsamir\Stasphp\Graphql\ScrapedGallery|\Aazsamir\Stasphp\Graphql\ScrapedImage|\Aazsamir\Stasphp\Graphql\ScrapedMovie|\Aazsamir\Stasphp\Graphql\ScrapedGroup|\Aazsamir\Stasphp\Graphql\ScrapedPerformer';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedContentSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class ScrapeURL implements \Aazsamir\Graphpql\Model\Query
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -78,9 +72,23 @@ class ScrapeURL implements \Aazsamir\Graphpql\Model\Query
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return ($response->data['__typename'] ?? '') === 'ScrapedStudio'
+                ? (\Aazsamir\Stasphp\Graphql\ScrapedStudio::fromArray($response->data))
+                : (($response->data['__typename'] ?? '') === 'ScrapedTag'
+                    ? (\Aazsamir\Stasphp\Graphql\ScrapedTag::fromArray($response->data))
+                    : (($response->data['__typename'] ?? '') === 'ScrapedScene'
+                        ? (\Aazsamir\Stasphp\Graphql\ScrapedScene::fromArray($response->data))
+                        : (($response->data['__typename'] ?? '') === 'ScrapedGallery'
+                            ? (\Aazsamir\Stasphp\Graphql\ScrapedGallery::fromArray($response->data))
+                            : (($response->data['__typename'] ?? '') === 'ScrapedImage'
+                                ? (\Aazsamir\Stasphp\Graphql\ScrapedImage::fromArray($response->data))
+                                : (($response->data['__typename'] ?? '') === 'ScrapedMovie'
+                                    ? (\Aazsamir\Stasphp\Graphql\ScrapedMovie::fromArray($response->data))
+                                    : (($response->data['__typename'] ?? '') === 'ScrapedGroup'
+                                        ? (\Aazsamir\Stasphp\Graphql\ScrapedGroup::fromArray($response->data))
+                                        : (($response->data['__typename'] ?? '') === 'ScrapedPerformer'
+                                            ? (\Aazsamir\Stasphp\Graphql\ScrapedPerformer::fromArray($response->data))
+                                            : (null))))))));
     }
 
     public function dd(): never

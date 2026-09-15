@@ -10,7 +10,6 @@ namespace Aazsamir\Stasphp\Graphql\Mutation;
 class MovieUpdate implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'movieUpdate';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Movie';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\MovieSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -18,11 +17,6 @@ class MovieUpdate implements \Aazsamir\Graphpql\Model\Mutation
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -79,9 +73,7 @@ class MovieUpdate implements \Aazsamir\Graphpql\Model\Mutation
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\Movie::fromArray($response->data);
     }
 
     public function dd(): never

@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Query;
 class ScrapeSceneURL implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'scrapeSceneURL';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ScrapedScene';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedSceneSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class ScrapeSceneURL implements \Aazsamir\Graphpql\Model\Query
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -76,9 +70,7 @@ class ScrapeSceneURL implements \Aazsamir\Graphpql\Model\Query
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\ScrapedScene::fromArray($response->data);
     }
 
     public function dd(): never

@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Mutation;
 class ConfigureInterface implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'configureInterface';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ConfigInterfaceResult';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\ConfigInterfaceResultSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class ConfigureInterface implements \Aazsamir\Graphpql\Model\Mutation
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -77,9 +71,7 @@ class ConfigureInterface implements \Aazsamir\Graphpql\Model\Mutation
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\ConfigInterfaceResult::fromArray($response->data);
     }
 
     public function dd(): never

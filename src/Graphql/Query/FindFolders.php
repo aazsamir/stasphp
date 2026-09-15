@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Query;
 class FindFolders implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'findFolders';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\FindFoldersResultType';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\FindFoldersResultTypeSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class FindFolders implements \Aazsamir\Graphpql\Model\Query
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     /**
@@ -84,9 +78,7 @@ class FindFolders implements \Aazsamir\Graphpql\Model\Query
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\FindFoldersResultType::fromArray($response->data);
     }
 
     public function dd(): never

@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Query;
 class FindFile implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'findFile';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\BaseFile';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\BaseFileSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class FindFile implements \Aazsamir\Graphpql\Model\Query
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -70,17 +64,23 @@ class FindFile implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphql\BaseFile
-    {
+    public function do(
+    ): \Aazsamir\Stasphp\Graphql\BasicFile|\Aazsamir\Stasphp\Graphql\VideoFile|\Aazsamir\Stasphp\Graphql\ImageFile|\Aazsamir\Stasphp\Graphql\GalleryFile|null {
         $response = $this->graphqlClient->request($this);
 
         if ($response->data === null) {
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return ($response->data['__typename'] ?? '') === 'BasicFile'
+                ? (\Aazsamir\Stasphp\Graphql\BasicFile::fromArray($response->data))
+                : (($response->data['__typename'] ?? '') === 'VideoFile'
+                    ? (\Aazsamir\Stasphp\Graphql\VideoFile::fromArray($response->data))
+                    : (($response->data['__typename'] ?? '') === 'ImageFile'
+                        ? (\Aazsamir\Stasphp\Graphql\ImageFile::fromArray($response->data))
+                        : (($response->data['__typename'] ?? '') === 'GalleryFile'
+                            ? (\Aazsamir\Stasphp\Graphql\GalleryFile::fromArray($response->data))
+                            : (null))));
     }
 
     public function dd(): never

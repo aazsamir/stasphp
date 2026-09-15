@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Mutation;
 class BulkStudioUpdate implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'bulkStudioUpdate';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Studio';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\StudioSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class BulkStudioUpdate implements \Aazsamir\Graphpql\Model\Mutation
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -79,9 +73,13 @@ class BulkStudioUpdate implements \Aazsamir\Graphpql\Model\Mutation
             return null;
         }
 
-        $returnType = self::getReturnType();
+        return array_map(function ($data) {
+            if ($data === []) {
+                return [];
+            }
 
-        return array_map(fn ($x) => $returnType::fromArray($x), $response->data);
+            return \Aazsamir\Stasphp\Graphql\Studio::fromArray($data);
+        }, $response->data ?? []);
     }
 
     public function dd(): never

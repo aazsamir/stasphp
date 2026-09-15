@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Mutation;
 class SceneDeleteO implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'sceneDeleteO';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\HistoryMutationResult';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\HistoryMutationResultSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class SceneDeleteO implements \Aazsamir\Graphpql\Model\Mutation
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     /**
@@ -82,9 +76,7 @@ class SceneDeleteO implements \Aazsamir\Graphpql\Model\Mutation
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\HistoryMutationResult::fromArray($response->data);
     }
 
     public function dd(): never

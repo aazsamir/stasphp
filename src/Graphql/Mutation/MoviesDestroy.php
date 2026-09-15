@@ -10,7 +10,6 @@ namespace Aazsamir\Stasphp\Graphql\Mutation;
 class MoviesDestroy implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'moviesDestroy';
-    public const RETURN_TYPE = 'bool';
 
     private \Aazsamir\Graphpql\Model\NullSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -18,11 +17,6 @@ class MoviesDestroy implements \Aazsamir\Graphpql\Model\Mutation
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     /**
@@ -81,8 +75,6 @@ class MoviesDestroy implements \Aazsamir\Graphpql\Model\Mutation
         if ($response->data === null) {
             return null;
         }
-
-        $returnType = self::getReturnType();
 
         return $response->data;
     }

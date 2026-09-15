@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Query;
 class ScrapePerformerURL implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'scrapePerformerURL';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ScrapedPerformer';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedPerformerSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class ScrapePerformerURL implements \Aazsamir\Graphpql\Model\Query
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -76,9 +70,7 @@ class ScrapePerformerURL implements \Aazsamir\Graphpql\Model\Query
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\ScrapedPerformer::fromArray($response->data);
     }
 
     public function dd(): never

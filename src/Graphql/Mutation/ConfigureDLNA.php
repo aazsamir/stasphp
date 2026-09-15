@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Mutation;
 class ConfigureDLNA implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'configureDLNA';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ConfigDLNAResult';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\ConfigDLNAResultSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class ConfigureDLNA implements \Aazsamir\Graphpql\Model\Mutation
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -76,9 +70,7 @@ class ConfigureDLNA implements \Aazsamir\Graphpql\Model\Mutation
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\ConfigDLNAResult::fromArray($response->data);
     }
 
     public function dd(): never

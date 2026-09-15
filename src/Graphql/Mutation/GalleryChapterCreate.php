@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Mutation;
 class GalleryChapterCreate implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'galleryChapterCreate';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\GalleryChapter';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\GalleryChapterSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class GalleryChapterCreate implements \Aazsamir\Graphpql\Model\Mutation
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -76,9 +70,7 @@ class GalleryChapterCreate implements \Aazsamir\Graphpql\Model\Mutation
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\GalleryChapter::fromArray($response->data);
     }
 
     public function dd(): never

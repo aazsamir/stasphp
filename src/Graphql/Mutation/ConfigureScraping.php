@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Mutation;
 class ConfigureScraping implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'configureScraping';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ConfigScrapingResult';
 
     private \Aazsamir\Stasphp\Graphql\SelectionSet\ConfigScrapingResultSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class ConfigureScraping implements \Aazsamir\Graphpql\Model\Mutation
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -77,9 +71,7 @@ class ConfigureScraping implements \Aazsamir\Graphpql\Model\Mutation
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return \Aazsamir\Stasphp\Graphql\ConfigScrapingResult::fromArray($response->data);
     }
 
     public function dd(): never

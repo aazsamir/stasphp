@@ -7,7 +7,6 @@ namespace Aazsamir\Stasphp\Graphql\Mutation;
 class ConfigurePlugin implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'configurePlugin';
-    public const RETURN_TYPE = 'mixed';
 
     private \Aazsamir\Graphpql\Model\NullSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
@@ -15,11 +14,6 @@ class ConfigurePlugin implements \Aazsamir\Graphpql\Model\Mutation
     public static function getName(): string
     {
         return self::NAME;
-    }
-
-    public static function getReturnType(): string
-    {
-        return self::RETURN_TYPE;
     }
 
     public function __construct(
@@ -78,9 +72,7 @@ class ConfigurePlugin implements \Aazsamir\Graphpql\Model\Mutation
             return null;
         }
 
-        $returnType = self::getReturnType();
-
-        return $returnType::fromArray($response->data);
+        return $response->data;
     }
 
     public function dd(): never
