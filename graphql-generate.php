@@ -19,9 +19,11 @@ $schema = $client->fetchSchema(
     ),
 );
 
+// dd($schema->findType('VideoFile'));
+
 $generator = GraphqlGenerator::default();
 $generator->generate(
     $schema,
-    '\\Aazsamir\\Stasphp\\Graphpql',
+    '\\Aazsamir\\Stasphp\\Graphql',
     __DIR__ . '/src/Graphql',
 );

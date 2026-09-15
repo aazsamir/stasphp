@@ -20,4 +20,22 @@ readonly class SessionCookie
         public ?string $raw,
         public mixed $unparsed,
     ) {}
+
+    public function toArray(): array
+    {
+        return [
+            'name' => $this->name,
+            'value' => $this->value,
+            'path' => $this->path,
+            'domain' => $this->domain,
+            'expires' => $this->expires?->format(\DateTimeImmutable::ATOM),
+            'rawExpires' => $this->rawExpires,
+            'maxAge' => $this->maxAge,
+            'secure' => $this->secure,
+            'httpOnly' => $this->httpOnly,
+            'sameSite' => $this->sameSite,
+            'raw' => $this->raw,
+            'unparsed' => $this->unparsed,
+        ];
+    }
 }

@@ -11,6 +11,15 @@ readonly class PluginInput
         public array $args,
     ) {}
 
+    public static function fromString(string $data): self
+    {
+        if ($data === '') {
+            $data = '{}';
+        }
+
+        return self::fromArray(\json_decode($data, true, flags: \JSON_THROW_ON_ERROR));
+    }
+
     public static function fromArray(array $data): self
     {
         $serverConnection = self::asArray($data['server_connection'] ?? []);
@@ -18,8 +27,9 @@ readonly class PluginInput
 
         return new self(
             serverConnection: new ServerConnection(
-                scheme: self::asString($serverConnection['scheme'] ?? ''),
-                port: self::asInt($serverConnection['port'] ?? 0),
+                scheme: self::asString($serverConnection['scheme'] ?? 'http'),
+                port: self::asInt($serverConnection['port'] ?? 9999),
+                host: self::asString($serverConnection['host'] ?? '0.0.0.0'),
                 sessionCookie: new SessionCookie(
                     name: self::asNullableString($sessionCookie['name'] ?? null),
                     value: self::asNullableString($sessionCookie['value'] ?? null),
@@ -39,6 +49,14 @@ readonly class PluginInput
             ),
             args: self::asArray($data['args'] ?? [])
         );
+    }
+
+    public function toArray(): array
+    {
+        return [
+            'serverConnection' => $this->serverConnection->toArray(),
+            'args' => $this->args,
+        ];
     }
 
     private static function asArray(mixed $value): array

@@ -8,6 +8,7 @@ enum ScrapType: string
 {
     case SceneByFragment = 'scene_by_fragment';
     case SceneByName = 'scene_by_name';
+    case SceneByQueryFragment = 'scene_by_query_fragment';
 
     public static function fromString(string $type): self
     {
@@ -20,6 +21,7 @@ enum ScrapType: string
         return match ($type) {
             'scenebyfragment' => self::SceneByFragment,
             'scenebyname' => self::SceneByName,
+            'scenebyqueryfragment' => self::SceneByQueryFragment,
             default => throw new \InvalidArgumentException("Invalid scrap type: {$type}")
         };
     }

@@ -5,39 +5,29 @@ declare(strict_types=1);
 namespace Aazsamir\Stasphp\Plugin;
 
 use Aazsamir\Stasphp\Plugin\Input\PluginInput;
+use Psr\Log\LoggerInterface;
 
 class PluginRunner
 {
     public function __construct(
         private Plugin $plugin,
+        private ?LoggerInterface $logger,
     ) {}
 
-    public function run(array $stdin): void
+    public function run(PluginInput $input): void
     {
+        $this->logger?->info('[plugin] started');
+        $this->logger?->debug('[plugin] input', ['input' => $input->toArray()]);
+
         try {
-            $input = PluginInput::fromArray($stdin);
             $output = $this->plugin->run($input);
             $this->writeOutput($output);
         } catch (\Throwable $exception) {
+            $this->logger?->warning('[plugin] error', [
+                'error' => $exception->getMessage(),
+            ]);
             $this->writeOutput(PluginOutput::error($exception->getMessage()));
         }
-    }
-
-    public function runFromJsonString(string $json): void
-    {
-        try {
-            $decoded = \json_decode($json, true, 512, \JSON_THROW_ON_ERROR);
-        } catch (\JsonException $exception) {
-            $this->writeOutput(PluginOutput::error('Invalid input JSON.'));
-            return;
-        }
-
-        if (!\is_array($decoded)) {
-            $this->writeOutput(PluginOutput::error('Input JSON must decode to an object.'));
-            return;
-        }
-
-        $this->run($decoded);
     }
 
     private function writeOutput(?PluginOutput $output): void

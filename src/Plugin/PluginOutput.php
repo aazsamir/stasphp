@@ -7,8 +7,8 @@ namespace Aazsamir\Stasphp\Plugin;
 readonly class PluginOutput
 {
     public function __construct(
-        public ?string $error,
-        public ?string $output,
+        public ?string $error = null,
+        public ?string $output = null,
     ) {}
 
     public static function success(string $output): self

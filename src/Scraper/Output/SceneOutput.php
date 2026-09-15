@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Scraper;
+namespace Aazsamir\Stasphp\Scraper\Output;
 
-readonly class ScraperOutput
+readonly class SceneOutput
 {
     public function __construct(
         public ?string $title,
