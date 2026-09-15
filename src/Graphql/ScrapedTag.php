@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScrapedTag implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -18,51 +18,51 @@ class ScrapedTag implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $remote_site_id;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedTagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedTagField<mixed>
      */
     public static function stored_id(): Fields\ScrapedTagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedTagField::stored_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedTagField::stored_id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedTagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedTagField<mixed>
      */
     public static function name(): Fields\ScrapedTagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedTagField::name();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedTagField::name();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedTagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedTagField<mixed>
      */
     public static function description(): Fields\ScrapedTagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedTagField::description();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedTagField::description();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedTagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedTagField<mixed>
      */
     public static function alias_list(): Fields\ScrapedTagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedTagField::alias_list();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedTagField::alias_list();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedTagField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedTagSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedTagField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedTagSelectionSet>
      */
     public static function parent(): Fields\ScrapedTagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedTagField::parent();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedTagField::parent();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedTagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedTagField<mixed>
      */
     public static function remote_site_id(): Fields\ScrapedTagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedTagField::remote_site_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedTagField::remote_site_id();
     }
 
     /**
@@ -109,7 +109,7 @@ class ScrapedTag implements \Aazsamir\Graphpql\Model\GraphObject
             }, $data['alias_list'] ?? []);
         }
         if (isset($data['parent'])) {
-            $self->parent = \Aazsamir\Stasphp\Graphpql\ScrapedTag::fromArray($data['parent']);
+            $self->parent = \Aazsamir\Stasphp\Graphql\ScrapedTag::fromArray($data['parent']);
         }
         if (isset($data['remote_site_id'])) {
             $self->remote_site_id = $data['remote_site_id'];

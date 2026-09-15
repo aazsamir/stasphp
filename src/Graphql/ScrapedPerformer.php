@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScrapedPerformer implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -34,7 +34,7 @@ class ScrapedPerformer implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $piercings;
     public ?string $aliases;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\ScrapedTag> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\ScrapedTag> */
     public ?array $tags;
     public ?string $image;
 
@@ -47,256 +47,256 @@ class ScrapedPerformer implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $remote_site_id;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function stored_id(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::stored_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::stored_id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function name(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::name();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::name();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function disambiguation(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::disambiguation();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::disambiguation();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function gender(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::gender();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::gender();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function url(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::url();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::url();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function urls(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::urls();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::urls();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function twitter(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::twitter();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::twitter();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function instagram(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::instagram();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::instagram();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function birthdate(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::birthdate();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::birthdate();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function ethnicity(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::ethnicity();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::ethnicity();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function country(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::country();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::country();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function eye_color(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::eye_color();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::eye_color();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function height(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::height();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::height();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function measurements(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::measurements();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::measurements();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function fake_tits(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::fake_tits();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::fake_tits();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function penis_length(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::penis_length();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::penis_length();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function circumcised(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::circumcised();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::circumcised();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function career_length(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::career_length();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::career_length();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function career_start(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::career_start();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::career_start();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function career_end(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::career_end();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::career_end();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function tattoos(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::tattoos();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::tattoos();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function piercings(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::piercings();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::piercings();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function aliases(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::aliases();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::aliases();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedTagSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedTagSelectionSet>
      */
     public static function tags(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::tags();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::tags();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function image(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::image();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::image();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function images(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::images();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::images();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function details(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::details();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::details();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function death_date(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::death_date();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::death_date();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function hair_color(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::hair_color();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::hair_color();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function weight(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::weight();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::weight();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField<mixed>
      */
     public static function remote_site_id(): Fields\ScrapedPerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedPerformerField::remote_site_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedPerformerField::remote_site_id();
     }
 
     /**
      * @param array<string> $urls
-     * @param array<\Aazsamir\Stasphp\Graphpql\ScrapedTag> $tags
+     * @param array<\Aazsamir\Stasphp\Graphql\ScrapedTag> $tags
      * @param array<string> $images
      */
     public static function new(
@@ -452,7 +452,7 @@ class ScrapedPerformer implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\ScrapedTag::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\ScrapedTag::fromArray($data);
             }, $data['tags'] ?? []);
         }
         if (isset($data['image'])) {

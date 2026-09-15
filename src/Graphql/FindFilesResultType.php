@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class FindFilesResultType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -13,51 +13,51 @@ class FindFilesResultType implements \Aazsamir\Graphpql\Model\GraphObject
     public float $duration;
     public int $size;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\BaseFile> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\BaseFile> */
     public array $files;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindFilesResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindFilesResultTypeField<mixed>
      */
     public static function count(): Fields\FindFilesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindFilesResultTypeField::count();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindFilesResultTypeField::count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindFilesResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindFilesResultTypeField<mixed>
      */
     public static function megapixels(): Fields\FindFilesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindFilesResultTypeField::megapixels();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindFilesResultTypeField::megapixels();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindFilesResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindFilesResultTypeField<mixed>
      */
     public static function duration(): Fields\FindFilesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindFilesResultTypeField::duration();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindFilesResultTypeField::duration();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindFilesResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindFilesResultTypeField<mixed>
      */
     public static function size(): Fields\FindFilesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindFilesResultTypeField::size();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindFilesResultTypeField::size();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindFilesResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindFilesResultTypeField<mixed>
      */
     public static function files(): Fields\FindFilesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindFilesResultTypeField::files();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindFilesResultTypeField::files();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\BaseFile> $files
+     * @param array<\Aazsamir\Stasphp\Graphql\BaseFile> $files
      */
     public static function new(int $count, float $megapixels, float $duration, int $size, array $files): self
     {
@@ -92,7 +92,7 @@ class FindFilesResultType implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\BaseFile::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\BaseFile::fromArray($data);
             }, $data['files'] ?? []);
         }
 

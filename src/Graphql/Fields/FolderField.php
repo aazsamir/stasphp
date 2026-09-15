@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -69,49 +69,49 @@ class FolderField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\FolderSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\FolderSelectionSet>
      */
     public static function parent_folder(): self
     {
         $instance = new self();
         $instance->name = 'parent_folder';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\FolderSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\FolderSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\FolderSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\FolderSelectionSet>
      */
     public static function parent_folders(): self
     {
         $instance = new self();
         $instance->name = 'parent_folders';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\FolderSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\FolderSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\BasicFileSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\BasicFileSelectionSet>
      */
     public static function zip_file(): self
     {
         $instance = new self();
         $instance->name = 'zip_file';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\BasicFileSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\BasicFileSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\FolderSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\FolderSelectionSet>
      */
     public static function sub_folders(): self
     {
         $instance = new self();
         $instance->name = 'sub_folders';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\FolderSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\FolderSelectionSet();
 
         return $instance;
     }

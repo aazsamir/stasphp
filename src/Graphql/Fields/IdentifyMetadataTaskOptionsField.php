@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -14,25 +14,25 @@ class IdentifyMetadataTaskOptionsField implements \Aazsamir\Graphpql\Model\Objec
     private ?string $union = null;
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\IdentifySourceSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\IdentifySourceSelectionSet>
      */
     public static function sources(): self
     {
         $instance = new self();
         $instance->name = 'sources';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\IdentifySourceSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\IdentifySourceSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\IdentifyMetadataOptionsSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\IdentifyMetadataOptionsSelectionSet>
      */
     public static function options(): self
     {
         $instance = new self();
         $instance->name = 'options';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\IdentifyMetadataOptionsSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\IdentifyMetadataOptionsSelectionSet();
 
         return $instance;
     }

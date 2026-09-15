@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class IdentifyMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
     use \Aazsamir\Graphpql\Model\ToArray;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\IdentifySourceInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\IdentifySourceInput> */
     public array $sources;
     public ?IdentifyMetadataOptionsInput $options;
 
@@ -19,7 +19,7 @@ class IdentifyMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
     public ?array $paths;
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\IdentifySourceInput> $sources
+     * @param array<\Aazsamir\Stasphp\Graphql\IdentifySourceInput> $sources
      * @param array<string> $sceneIDs
      * @param array<string> $paths
      */
@@ -47,11 +47,11 @@ class IdentifyMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\IdentifySourceInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\IdentifySourceInput::fromArray($data);
             }, $data['sources'] ?? []);
         }
         if (isset($data['options'])) {
-            $self->options = \Aazsamir\Stasphp\Graphpql\IdentifyMetadataOptionsInput::fromArray($data['options']);
+            $self->options = \Aazsamir\Stasphp\Graphql\IdentifyMetadataOptionsInput::fromArray($data['options']);
         }
         if (isset($data['sceneIDs'])) {
             $self->sceneIDs = array_map(function ($data) {

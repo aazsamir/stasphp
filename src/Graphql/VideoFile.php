@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class VideoFile implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -19,7 +19,7 @@ class VideoFile implements \Aazsamir\Graphpql\Model\GraphObject
     public int $size;
     public ?string $fingerprint;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Fingerprint> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Fingerprint> */
     public array $fingerprints;
     public string $format;
     public int $width;
@@ -33,175 +33,175 @@ class VideoFile implements \Aazsamir\Graphpql\Model\GraphObject
     public \DateTimeInterface $updated_at;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function id(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::id();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function path(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::path();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::path();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function basename(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::basename();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::basename();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function parent_folder_id(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::parent_folder_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::parent_folder_id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function zip_file_id(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::zip_file_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::zip_file_id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<\Aazsamir\Stasphp\Graphpql\SelectionSet\FolderSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<\Aazsamir\Stasphp\Graphql\SelectionSet\FolderSelectionSet>
      */
     public static function parent_folder(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::parent_folder();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::parent_folder();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<\Aazsamir\Stasphp\Graphpql\SelectionSet\BasicFileSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<\Aazsamir\Stasphp\Graphql\SelectionSet\BasicFileSelectionSet>
      */
     public static function zip_file(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::zip_file();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::zip_file();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function mod_time(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::mod_time();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::mod_time();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function size(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::size();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::size();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function fingerprint(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::fingerprint();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::fingerprint();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<\Aazsamir\Stasphp\Graphpql\SelectionSet\FingerprintSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<\Aazsamir\Stasphp\Graphql\SelectionSet\FingerprintSelectionSet>
      */
     public static function fingerprints(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::fingerprints();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::fingerprints();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function format(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::format();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::format();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function width(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::width();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::width();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function height(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::height();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::height();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function duration(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::duration();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::duration();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function video_codec(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::video_codec();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::video_codec();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function audio_codec(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::audio_codec();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::audio_codec();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function frame_rate(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::frame_rate();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::frame_rate();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function bit_rate(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::bit_rate();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::bit_rate();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function created_at(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::created_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::created_at();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField<mixed>
      */
     public static function updated_at(): Fields\VideoFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoFileField::updated_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoFileField::updated_at();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\Fingerprint> $fingerprints
+     * @param array<\Aazsamir\Stasphp\Graphql\Fingerprint> $fingerprints
      */
     public static function new(
         string $id,
@@ -268,7 +268,7 @@ class VideoFile implements \Aazsamir\Graphpql\Model\GraphObject
             $self->parent_folder_id = $data['parent_folder_id'];
         }
         if (isset($data['parent_folder'])) {
-            $self->parent_folder = \Aazsamir\Stasphp\Graphpql\Folder::fromArray($data['parent_folder']);
+            $self->parent_folder = \Aazsamir\Stasphp\Graphql\Folder::fromArray($data['parent_folder']);
         }
         if (isset($data['mod_time'])) {
             $self->mod_time = new \DateTimeImmutable($data['mod_time']);
@@ -282,7 +282,7 @@ class VideoFile implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Fingerprint::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Fingerprint::fromArray($data);
             }, $data['fingerprints'] ?? []);
         }
         if (isset($data['format'])) {
@@ -319,7 +319,7 @@ class VideoFile implements \Aazsamir\Graphpql\Model\GraphObject
             $self->zip_file_id = $data['zip_file_id'];
         }
         if (isset($data['zip_file'])) {
-            $self->zip_file = \Aazsamir\Stasphp\Graphpql\BasicFile::fromArray($data['zip_file']);
+            $self->zip_file = \Aazsamir\Stasphp\Graphql\BasicFile::fromArray($data['zip_file']);
         }
         if (isset($data['fingerprint'])) {
             $self->fingerprint = $data['fingerprint'];

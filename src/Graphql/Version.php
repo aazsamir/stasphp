@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class Version implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -13,27 +13,27 @@ class Version implements \Aazsamir\Graphpql\Model\GraphObject
     public string $build_time;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VersionField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VersionField<mixed>
      */
     public static function version(): Fields\VersionField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VersionField::version();
+        return \Aazsamir\Stasphp\Graphql\Fields\VersionField::version();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VersionField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VersionField<mixed>
      */
     public static function hash(): Fields\VersionField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VersionField::hash();
+        return \Aazsamir\Stasphp\Graphql\Fields\VersionField::hash();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VersionField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VersionField<mixed>
      */
     public static function build_time(): Fields\VersionField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VersionField::build_time();
+        return \Aazsamir\Stasphp\Graphql\Fields\VersionField::build_time();
     }
 
     public static function new(string $hash, string $build_time, ?string $version = null): self

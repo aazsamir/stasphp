@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class DlnaStatus implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'dlnaStatus';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\DLNAStatus';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\DLNAStatus';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\DLNAStatusSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\DLNAStatusSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -33,12 +33,12 @@ class DlnaStatus implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\DLNAStatusSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\DLNAStatusSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\DLNAStatusSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\DLNAStatusSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -46,14 +46,14 @@ class DlnaStatus implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\DLNAStatusSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\DLNAStatusSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\DLNAStatusSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\DLNAStatusSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -66,7 +66,7 @@ class DlnaStatus implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\DLNAStatus
+    public function do(): ?\Aazsamir\Stasphp\Graphql\DLNAStatus
     {
         $response = $this->graphqlClient->request($this);
 

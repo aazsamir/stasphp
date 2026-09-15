@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -14,24 +14,24 @@ class VisualFileField implements \Aazsamir\Graphpql\Model\ObjectField
     private ?string $union = null;
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\VideoFileSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\VideoFileSelectionSet>
      */
     public static function onVideoFile(): self
     {
         $instance = new self();
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\VideoFileSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\VideoFileSelectionSet();
         $instance->union = 'VideoFile';
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ImageFileSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ImageFileSelectionSet>
      */
     public static function onImageFile(): self
     {
         $instance = new self();
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ImageFileSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ImageFileSelectionSet();
         $instance->union = 'ImageFile';
 
         return $instance;

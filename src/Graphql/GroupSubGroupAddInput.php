@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class GroupSubGroupAddInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -10,12 +10,12 @@ class GroupSubGroupAddInput implements \Aazsamir\Graphpql\Model\GraphObject
 
     public string $containing_group_id;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\GroupDescriptionInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\GroupDescriptionInput> */
     public array $sub_groups;
     public ?int $insert_index;
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\GroupDescriptionInput> $sub_groups
+     * @param array<\Aazsamir\Stasphp\Graphql\GroupDescriptionInput> $sub_groups
      */
     public static function new(string $containing_group_id, array $sub_groups, ?int $insert_index = null): self
     {
@@ -39,7 +39,7 @@ class GroupSubGroupAddInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\GroupDescriptionInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\GroupDescriptionInput::fromArray($data);
             }, $data['sub_groups'] ?? []);
         }
         if (isset($data['insert_index'])) {

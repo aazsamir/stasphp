@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class BulkTagUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -57,7 +57,7 @@ class BulkTagUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->description = $data['description'];
         }
         if (isset($data['aliases'])) {
-            $self->aliases = \Aazsamir\Stasphp\Graphpql\BulkUpdateStrings::fromArray($data['aliases']);
+            $self->aliases = \Aazsamir\Stasphp\Graphql\BulkUpdateStrings::fromArray($data['aliases']);
         }
         if (isset($data['ignore_auto_tag'])) {
             $self->ignore_auto_tag = $data['ignore_auto_tag'];
@@ -66,10 +66,10 @@ class BulkTagUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->favorite = $data['favorite'];
         }
         if (isset($data['parent_ids'])) {
-            $self->parent_ids = \Aazsamir\Stasphp\Graphpql\BulkUpdateIds::fromArray($data['parent_ids']);
+            $self->parent_ids = \Aazsamir\Stasphp\Graphql\BulkUpdateIds::fromArray($data['parent_ids']);
         }
         if (isset($data['child_ids'])) {
-            $self->child_ids = \Aazsamir\Stasphp\Graphpql\BulkUpdateIds::fromArray($data['child_ids']);
+            $self->child_ids = \Aazsamir\Stasphp\Graphql\BulkUpdateIds::fromArray($data['child_ids']);
         }
 
         return $self;

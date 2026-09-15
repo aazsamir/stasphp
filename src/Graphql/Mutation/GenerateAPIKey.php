@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Mutation;
+namespace Aazsamir\Stasphp\Graphql\Mutation;
 
 class GenerateAPIKey implements \Aazsamir\Graphpql\Model\Mutation
 {
@@ -23,7 +23,7 @@ class GenerateAPIKey implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\GenerateAPIKeyInput $input,
+        public \Aazsamir\Stasphp\Graphql\GenerateAPIKeyInput $input,
     ) {
     }
 

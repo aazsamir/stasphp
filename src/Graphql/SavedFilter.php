@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SavedFilter implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -17,59 +17,59 @@ class SavedFilter implements \Aazsamir\Graphpql\Model\GraphObject
     public mixed $ui_options;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SavedFilterField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SavedFilterField<mixed>
      */
     public static function id(): Fields\SavedFilterField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SavedFilterField::id();
+        return \Aazsamir\Stasphp\Graphql\Fields\SavedFilterField::id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SavedFilterField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SavedFilterField<mixed>
      */
     public static function mode(): Fields\SavedFilterField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SavedFilterField::mode();
+        return \Aazsamir\Stasphp\Graphql\Fields\SavedFilterField::mode();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SavedFilterField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SavedFilterField<mixed>
      */
     public static function name(): Fields\SavedFilterField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SavedFilterField::name();
+        return \Aazsamir\Stasphp\Graphql\Fields\SavedFilterField::name();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SavedFilterField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SavedFilterField<mixed>
      */
     public static function filter(): Fields\SavedFilterField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SavedFilterField::filter();
+        return \Aazsamir\Stasphp\Graphql\Fields\SavedFilterField::filter();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SavedFilterField<\Aazsamir\Stasphp\Graphpql\SelectionSet\SavedFindFilterTypeSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SavedFilterField<\Aazsamir\Stasphp\Graphql\SelectionSet\SavedFindFilterTypeSelectionSet>
      */
     public static function find_filter(): Fields\SavedFilterField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SavedFilterField::find_filter();
+        return \Aazsamir\Stasphp\Graphql\Fields\SavedFilterField::find_filter();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SavedFilterField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SavedFilterField<mixed>
      */
     public static function object_filter(): Fields\SavedFilterField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SavedFilterField::object_filter();
+        return \Aazsamir\Stasphp\Graphql\Fields\SavedFilterField::object_filter();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SavedFilterField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SavedFilterField<mixed>
      */
     public static function ui_options(): Fields\SavedFilterField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SavedFilterField::ui_options();
+        return \Aazsamir\Stasphp\Graphql\Fields\SavedFilterField::ui_options();
     }
 
     public static function new(
@@ -100,7 +100,7 @@ class SavedFilter implements \Aazsamir\Graphpql\Model\GraphObject
             $self->id = $data['id'];
         }
         if (isset($data['mode'])) {
-            $self->mode = \Aazsamir\Stasphp\Graphpql\FilterMode::from($data['mode']);
+            $self->mode = \Aazsamir\Stasphp\Graphql\FilterMode::from($data['mode']);
         }
         if (isset($data['name'])) {
             $self->name = $data['name'];
@@ -109,7 +109,7 @@ class SavedFilter implements \Aazsamir\Graphpql\Model\GraphObject
             $self->filter = $data['filter'];
         }
         if (isset($data['find_filter'])) {
-            $self->find_filter = \Aazsamir\Stasphp\Graphpql\SavedFindFilterType::fromArray($data['find_filter']);
+            $self->find_filter = \Aazsamir\Stasphp\Graphql\SavedFindFilterType::fromArray($data['find_filter']);
         }
         if (isset($data['object_filter'])) {
             $self->object_filter = $data['object_filter'];

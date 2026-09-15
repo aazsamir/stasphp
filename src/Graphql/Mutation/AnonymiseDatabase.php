@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Mutation;
+namespace Aazsamir\Stasphp\Graphql\Mutation;
 
 class AnonymiseDatabase implements \Aazsamir\Graphpql\Model\Mutation
 {
@@ -23,7 +23,7 @@ class AnonymiseDatabase implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\AnonymiseDatabaseInput $input,
+        public \Aazsamir\Stasphp\Graphql\AnonymiseDatabaseInput $input,
     ) {
     }
 

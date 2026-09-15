@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class HistoryMutationResultSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class HistoryMutationResultSelectionSet implements \Aazsamir\Graphpql\Model\Sele
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\HistoryMutationResultField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\HistoryMutationResultField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class HistoryMutationResultSelectionSet implements \Aazsamir\Graphpql\Model\Sele
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\HistoryMutationResultField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\HistoryMutationResultField[]
      */
     public function getSelection(): array
     {

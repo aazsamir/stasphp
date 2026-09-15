@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class Job implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -21,75 +21,75 @@ class Job implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $error;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\JobField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\JobField<mixed>
      */
     public static function id(): Fields\JobField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\JobField::id();
+        return \Aazsamir\Stasphp\Graphql\Fields\JobField::id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\JobField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\JobField<mixed>
      */
     public static function status(): Fields\JobField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\JobField::status();
+        return \Aazsamir\Stasphp\Graphql\Fields\JobField::status();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\JobField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\JobField<mixed>
      */
     public static function subTasks(): Fields\JobField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\JobField::subTasks();
+        return \Aazsamir\Stasphp\Graphql\Fields\JobField::subTasks();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\JobField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\JobField<mixed>
      */
     public static function description(): Fields\JobField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\JobField::description();
+        return \Aazsamir\Stasphp\Graphql\Fields\JobField::description();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\JobField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\JobField<mixed>
      */
     public static function progress(): Fields\JobField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\JobField::progress();
+        return \Aazsamir\Stasphp\Graphql\Fields\JobField::progress();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\JobField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\JobField<mixed>
      */
     public static function startTime(): Fields\JobField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\JobField::startTime();
+        return \Aazsamir\Stasphp\Graphql\Fields\JobField::startTime();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\JobField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\JobField<mixed>
      */
     public static function endTime(): Fields\JobField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\JobField::endTime();
+        return \Aazsamir\Stasphp\Graphql\Fields\JobField::endTime();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\JobField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\JobField<mixed>
      */
     public static function addTime(): Fields\JobField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\JobField::addTime();
+        return \Aazsamir\Stasphp\Graphql\Fields\JobField::addTime();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\JobField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\JobField<mixed>
      */
     public static function error(): Fields\JobField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\JobField::error();
+        return \Aazsamir\Stasphp\Graphql\Fields\JobField::error();
     }
 
     /**
@@ -127,7 +127,7 @@ class Job implements \Aazsamir\Graphpql\Model\GraphObject
             $self->id = $data['id'];
         }
         if (isset($data['status'])) {
-            $self->status = \Aazsamir\Stasphp\Graphpql\JobStatus::from($data['status']);
+            $self->status = \Aazsamir\Stasphp\Graphql\JobStatus::from($data['status']);
         }
         if (isset($data['description'])) {
             $self->description = $data['description'];

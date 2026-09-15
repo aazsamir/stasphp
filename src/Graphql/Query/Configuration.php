@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class Configuration implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'configuration';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\ConfigResult';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ConfigResult';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigResultSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\ConfigResultSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -33,12 +33,12 @@ class Configuration implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigResultSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\ConfigResultSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigResultSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\ConfigResultSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -46,14 +46,14 @@ class Configuration implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigResultSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\ConfigResultSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigResultSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\ConfigResultSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -66,7 +66,7 @@ class Configuration implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\ConfigResult
+    public function do(): ?\Aazsamir\Stasphp\Graphql\ConfigResult
     {
         $response = $this->graphqlClient->request($this);
 

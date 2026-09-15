@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -14,13 +14,13 @@ class IdentifyMetadataOptionsField implements \Aazsamir\Graphpql\Model\ObjectFie
     private ?string $union = null;
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\IdentifyFieldOptionsSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\IdentifyFieldOptionsSelectionSet>
      */
     public static function fieldOptions(): self
     {
         $instance = new self();
         $instance->name = 'fieldOptions';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\IdentifyFieldOptionsSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\IdentifyFieldOptionsSelectionSet();
 
         return $instance;
     }

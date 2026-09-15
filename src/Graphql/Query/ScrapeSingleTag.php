@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class ScrapeSingleTag implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'scrapeSingleTag';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\ScrapedTag';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ScrapedTag';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedTagSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedTagSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -23,8 +23,8 @@ class ScrapeSingleTag implements \Aazsamir\Graphpql\Model\Query
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\ScraperSourceInput $source,
-        public \Aazsamir\Stasphp\Graphpql\ScrapeSingleTagInput $input,
+        public \Aazsamir\Stasphp\Graphql\ScraperSourceInput $source,
+        public \Aazsamir\Stasphp\Graphql\ScrapeSingleTagInput $input,
     ) {
     }
 
@@ -37,12 +37,12 @@ class ScrapeSingleTag implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedTagSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedTagSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedTagSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedTagSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -50,14 +50,14 @@ class ScrapeSingleTag implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedTagSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedTagSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedTagSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedTagSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -71,7 +71,7 @@ class ScrapeSingleTag implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @return array<\Aazsamir\Stasphp\Graphpql\ScrapedTag>
+     * @return array<\Aazsamir\Stasphp\Graphql\ScrapedTag>
      */
     public function do(): ?array
     {

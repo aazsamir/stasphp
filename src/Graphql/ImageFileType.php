@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ImageFileType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -14,35 +14,35 @@ class ImageFileType implements \Aazsamir\Graphpql\Model\GraphObject
     public int $height;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ImageFileTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ImageFileTypeField<mixed>
      */
     public static function mod_time(): Fields\ImageFileTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ImageFileTypeField::mod_time();
+        return \Aazsamir\Stasphp\Graphql\Fields\ImageFileTypeField::mod_time();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ImageFileTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ImageFileTypeField<mixed>
      */
     public static function size(): Fields\ImageFileTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ImageFileTypeField::size();
+        return \Aazsamir\Stasphp\Graphql\Fields\ImageFileTypeField::size();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ImageFileTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ImageFileTypeField<mixed>
      */
     public static function width(): Fields\ImageFileTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ImageFileTypeField::width();
+        return \Aazsamir\Stasphp\Graphql\Fields\ImageFileTypeField::width();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ImageFileTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ImageFileTypeField<mixed>
      */
     public static function height(): Fields\ImageFileTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ImageFileTypeField::height();
+        return \Aazsamir\Stasphp\Graphql\Fields\ImageFileTypeField::height();
     }
 
     public static function new(\DateTimeInterface $mod_time, int $size, int $width, int $height): self

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class BulkSceneMarkerUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -51,7 +51,7 @@ class BulkSceneMarkerUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->primary_tag_id = $data['primary_tag_id'];
         }
         if (isset($data['tag_ids'])) {
-            $self->tag_ids = \Aazsamir\Stasphp\Graphpql\BulkUpdateIds::fromArray($data['tag_ids']);
+            $self->tag_ids = \Aazsamir\Stasphp\Graphql\BulkUpdateIds::fromArray($data['tag_ids']);
         }
 
         return $self;

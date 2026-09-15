@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ConfigDefaultSettingsResult implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -16,51 +16,51 @@ class ConfigDefaultSettingsResult implements \Aazsamir\Graphpql\Model\GraphObjec
     public ?bool $deleteGenerated;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDefaultSettingsResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScanMetadataOptionsSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDefaultSettingsResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScanMetadataOptionsSelectionSet>
      */
     public static function scan(): Fields\ConfigDefaultSettingsResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDefaultSettingsResultField::scan();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDefaultSettingsResultField::scan();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDefaultSettingsResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\IdentifyMetadataTaskOptionsSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDefaultSettingsResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\IdentifyMetadataTaskOptionsSelectionSet>
      */
     public static function identify(): Fields\ConfigDefaultSettingsResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDefaultSettingsResultField::identify();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDefaultSettingsResultField::identify();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDefaultSettingsResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\AutoTagMetadataOptionsSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDefaultSettingsResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\AutoTagMetadataOptionsSelectionSet>
      */
     public static function autoTag(): Fields\ConfigDefaultSettingsResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDefaultSettingsResultField::autoTag();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDefaultSettingsResultField::autoTag();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDefaultSettingsResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\GenerateMetadataOptionsSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDefaultSettingsResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\GenerateMetadataOptionsSelectionSet>
      */
     public static function generate(): Fields\ConfigDefaultSettingsResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDefaultSettingsResultField::generate();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDefaultSettingsResultField::generate();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDefaultSettingsResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDefaultSettingsResultField<mixed>
      */
     public static function deleteFile(): Fields\ConfigDefaultSettingsResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDefaultSettingsResultField::deleteFile();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDefaultSettingsResultField::deleteFile();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDefaultSettingsResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDefaultSettingsResultField<mixed>
      */
     public static function deleteGenerated(): Fields\ConfigDefaultSettingsResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDefaultSettingsResultField::deleteGenerated();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDefaultSettingsResultField::deleteGenerated();
     }
 
     public static function new(
@@ -86,16 +86,16 @@ class ConfigDefaultSettingsResult implements \Aazsamir\Graphpql\Model\GraphObjec
     {
         $self = new self();
         if (isset($data['scan'])) {
-            $self->scan = \Aazsamir\Stasphp\Graphpql\ScanMetadataOptions::fromArray($data['scan']);
+            $self->scan = \Aazsamir\Stasphp\Graphql\ScanMetadataOptions::fromArray($data['scan']);
         }
         if (isset($data['identify'])) {
-            $self->identify = \Aazsamir\Stasphp\Graphpql\IdentifyMetadataTaskOptions::fromArray($data['identify']);
+            $self->identify = \Aazsamir\Stasphp\Graphql\IdentifyMetadataTaskOptions::fromArray($data['identify']);
         }
         if (isset($data['autoTag'])) {
-            $self->autoTag = \Aazsamir\Stasphp\Graphpql\AutoTagMetadataOptions::fromArray($data['autoTag']);
+            $self->autoTag = \Aazsamir\Stasphp\Graphql\AutoTagMetadataOptions::fromArray($data['autoTag']);
         }
         if (isset($data['generate'])) {
-            $self->generate = \Aazsamir\Stasphp\Graphpql\GenerateMetadataOptions::fromArray($data['generate']);
+            $self->generate = \Aazsamir\Stasphp\Graphql\GenerateMetadataOptions::fromArray($data['generate']);
         }
         if (isset($data['deleteFile'])) {
             $self->deleteFile = $data['deleteFile'];

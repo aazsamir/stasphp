@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Mutation;
+namespace Aazsamir\Stasphp\Graphql\Mutation;
 
 class FileSetFingerprints implements \Aazsamir\Graphpql\Model\Mutation
 {
@@ -23,7 +23,7 @@ class FileSetFingerprints implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\FileSetFingerprintsInput $input,
+        public \Aazsamir\Stasphp\Graphql\FileSetFingerprintsInput $input,
     ) {
     }
 

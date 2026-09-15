@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class Folder implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -15,115 +15,115 @@ class Folder implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $zip_file_id;
     public ?Folder $parent_folder;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Folder> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Folder> */
     public array $parent_folders;
     public ?BasicFile $zip_file;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Folder> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Folder> */
     public array $sub_folders;
     public \DateTimeInterface $mod_time;
     public \DateTimeInterface $created_at;
     public \DateTimeInterface $updated_at;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FolderField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FolderField<mixed>
      */
     public static function id(): Fields\FolderField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FolderField::id();
+        return \Aazsamir\Stasphp\Graphql\Fields\FolderField::id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FolderField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FolderField<mixed>
      */
     public static function path(): Fields\FolderField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FolderField::path();
+        return \Aazsamir\Stasphp\Graphql\Fields\FolderField::path();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FolderField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FolderField<mixed>
      */
     public static function basename(): Fields\FolderField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FolderField::basename();
+        return \Aazsamir\Stasphp\Graphql\Fields\FolderField::basename();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FolderField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FolderField<mixed>
      */
     public static function parent_folder_id(): Fields\FolderField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FolderField::parent_folder_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\FolderField::parent_folder_id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FolderField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FolderField<mixed>
      */
     public static function zip_file_id(): Fields\FolderField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FolderField::zip_file_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\FolderField::zip_file_id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FolderField<\Aazsamir\Stasphp\Graphpql\SelectionSet\FolderSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FolderField<\Aazsamir\Stasphp\Graphql\SelectionSet\FolderSelectionSet>
      */
     public static function parent_folder(): Fields\FolderField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FolderField::parent_folder();
+        return \Aazsamir\Stasphp\Graphql\Fields\FolderField::parent_folder();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FolderField<\Aazsamir\Stasphp\Graphpql\SelectionSet\FolderSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FolderField<\Aazsamir\Stasphp\Graphql\SelectionSet\FolderSelectionSet>
      */
     public static function parent_folders(): Fields\FolderField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FolderField::parent_folders();
+        return \Aazsamir\Stasphp\Graphql\Fields\FolderField::parent_folders();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FolderField<\Aazsamir\Stasphp\Graphpql\SelectionSet\BasicFileSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FolderField<\Aazsamir\Stasphp\Graphql\SelectionSet\BasicFileSelectionSet>
      */
     public static function zip_file(): Fields\FolderField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FolderField::zip_file();
+        return \Aazsamir\Stasphp\Graphql\Fields\FolderField::zip_file();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FolderField<\Aazsamir\Stasphp\Graphpql\SelectionSet\FolderSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FolderField<\Aazsamir\Stasphp\Graphql\SelectionSet\FolderSelectionSet>
      */
     public static function sub_folders(): Fields\FolderField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FolderField::sub_folders();
+        return \Aazsamir\Stasphp\Graphql\Fields\FolderField::sub_folders();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FolderField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FolderField<mixed>
      */
     public static function mod_time(): Fields\FolderField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FolderField::mod_time();
+        return \Aazsamir\Stasphp\Graphql\Fields\FolderField::mod_time();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FolderField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FolderField<mixed>
      */
     public static function created_at(): Fields\FolderField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FolderField::created_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\FolderField::created_at();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FolderField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FolderField<mixed>
      */
     public static function updated_at(): Fields\FolderField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FolderField::updated_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\FolderField::updated_at();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\Folder> $parent_folders
-     * @param array<\Aazsamir\Stasphp\Graphpql\Folder> $sub_folders
+     * @param array<\Aazsamir\Stasphp\Graphql\Folder> $parent_folders
+     * @param array<\Aazsamir\Stasphp\Graphql\Folder> $sub_folders
      */
     public static function new(
         string $id,
@@ -174,7 +174,7 @@ class Folder implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Folder::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Folder::fromArray($data);
             }, $data['parent_folders'] ?? []);
         }
         if (isset($data['sub_folders'])) {
@@ -183,7 +183,7 @@ class Folder implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Folder::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Folder::fromArray($data);
             }, $data['sub_folders'] ?? []);
         }
         if (isset($data['mod_time'])) {
@@ -202,10 +202,10 @@ class Folder implements \Aazsamir\Graphpql\Model\GraphObject
             $self->zip_file_id = $data['zip_file_id'];
         }
         if (isset($data['parent_folder'])) {
-            $self->parent_folder = \Aazsamir\Stasphp\Graphpql\Folder::fromArray($data['parent_folder']);
+            $self->parent_folder = \Aazsamir\Stasphp\Graphql\Folder::fromArray($data['parent_folder']);
         }
         if (isset($data['zip_file'])) {
-            $self->zip_file = \Aazsamir\Stasphp\Graphpql\BasicFile::fromArray($data['zip_file']);
+            $self->zip_file = \Aazsamir\Stasphp\Graphql\BasicFile::fromArray($data['zip_file']);
         }
 
         return $self;

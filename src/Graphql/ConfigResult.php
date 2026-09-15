@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ConfigResult implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -17,59 +17,59 @@ class ConfigResult implements \Aazsamir\Graphpql\Model\GraphObject
     public mixed $plugins;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigGeneralResultSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\ConfigGeneralResultSelectionSet>
      */
     public static function general(): Fields\ConfigResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigResultField::general();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigResultField::general();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigInterfaceResultSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\ConfigInterfaceResultSelectionSet>
      */
     public static function interface(): Fields\ConfigResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigResultField::interface();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigResultField::interface();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigDLNAResultSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\ConfigDLNAResultSelectionSet>
      */
     public static function dlna(): Fields\ConfigResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigResultField::dlna();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigResultField::dlna();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigScrapingResultSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\ConfigScrapingResultSelectionSet>
      */
     public static function scraping(): Fields\ConfigResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigResultField::scraping();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigResultField::scraping();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigDefaultSettingsResultSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\ConfigDefaultSettingsResultSelectionSet>
      */
     public static function defaults(): Fields\ConfigResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigResultField::defaults();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigResultField::defaults();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigResultField<mixed>
      */
     public static function ui(): Fields\ConfigResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigResultField::ui();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigResultField::ui();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigResultField<mixed>
      */
     public static function plugins(): Fields\ConfigResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigResultField::plugins();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigResultField::plugins();
     }
 
     public static function new(
@@ -97,19 +97,19 @@ class ConfigResult implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['general'])) {
-            $self->general = \Aazsamir\Stasphp\Graphpql\ConfigGeneralResult::fromArray($data['general']);
+            $self->general = \Aazsamir\Stasphp\Graphql\ConfigGeneralResult::fromArray($data['general']);
         }
         if (isset($data['interface'])) {
-            $self->interface = \Aazsamir\Stasphp\Graphpql\ConfigInterfaceResult::fromArray($data['interface']);
+            $self->interface = \Aazsamir\Stasphp\Graphql\ConfigInterfaceResult::fromArray($data['interface']);
         }
         if (isset($data['dlna'])) {
-            $self->dlna = \Aazsamir\Stasphp\Graphpql\ConfigDLNAResult::fromArray($data['dlna']);
+            $self->dlna = \Aazsamir\Stasphp\Graphql\ConfigDLNAResult::fromArray($data['dlna']);
         }
         if (isset($data['scraping'])) {
-            $self->scraping = \Aazsamir\Stasphp\Graphpql\ConfigScrapingResult::fromArray($data['scraping']);
+            $self->scraping = \Aazsamir\Stasphp\Graphql\ConfigScrapingResult::fromArray($data['scraping']);
         }
         if (isset($data['defaults'])) {
-            $self->defaults = \Aazsamir\Stasphp\Graphpql\ConfigDefaultSettingsResult::fromArray($data['defaults']);
+            $self->defaults = \Aazsamir\Stasphp\Graphql\ConfigDefaultSettingsResult::fromArray($data['defaults']);
         }
         if (isset($data['ui'])) {
             $self->ui = $data['ui'];

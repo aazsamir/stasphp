@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ImagesDestroyInput implements \Aazsamir\Graphpql\Model\GraphObject
 {

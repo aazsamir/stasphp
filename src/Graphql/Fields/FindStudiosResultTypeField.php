@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -25,13 +25,13 @@ class FindStudiosResultTypeField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\StudioSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\StudioSelectionSet>
      */
     public static function studios(): self
     {
         $instance = new self();
         $instance->name = 'studios';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\StudioSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\StudioSelectionSet();
 
         return $instance;
     }

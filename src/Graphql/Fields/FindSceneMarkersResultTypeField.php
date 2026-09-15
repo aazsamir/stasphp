@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -25,13 +25,13 @@ class FindSceneMarkersResultTypeField implements \Aazsamir\Graphpql\Model\Object
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneMarkerSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneMarkerSelectionSet>
      */
     public static function scene_markers(): self
     {
         $instance = new self();
         $instance->name = 'scene_markers';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneMarkerSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\SceneMarkerSelectionSet();
 
         return $instance;
     }

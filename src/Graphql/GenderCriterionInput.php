@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class GenderCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -10,12 +10,12 @@ class GenderCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
 
     public ?GenderEnum $value;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\GenderEnum> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\GenderEnum> */
     public ?array $value_list;
     public CriterionModifier $modifier;
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\GenderEnum> $value_list
+     * @param array<\Aazsamir\Stasphp\Graphql\GenderEnum> $value_list
      */
     public static function new(
         CriterionModifier $modifier,
@@ -34,10 +34,10 @@ class GenderCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['modifier'])) {
-            $self->modifier = \Aazsamir\Stasphp\Graphpql\CriterionModifier::from($data['modifier']);
+            $self->modifier = \Aazsamir\Stasphp\Graphql\CriterionModifier::from($data['modifier']);
         }
         if (isset($data['value'])) {
-            $self->value = \Aazsamir\Stasphp\Graphpql\GenderEnum::from($data['value']);
+            $self->value = \Aazsamir\Stasphp\Graphql\GenderEnum::from($data['value']);
         }
         if (isset($data['value_list'])) {
             $self->value_list = array_map(function ($data) {
@@ -45,7 +45,7 @@ class GenderCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\GenderEnum::from($data);
+                return \Aazsamir\Stasphp\Graphql\GenderEnum::from($data);
             }, $data['value_list'] ?? []);
         }
 

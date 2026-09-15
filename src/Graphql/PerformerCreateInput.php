@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class PerformerCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -40,7 +40,7 @@ class PerformerCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
     public ?array $tag_ids;
     public ?string $image;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\StashIDInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\StashIDInput> */
     public ?array $stash_ids;
     public ?int $rating100;
     public ?string $details;
@@ -54,7 +54,7 @@ class PerformerCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
      * @param array<string> $urls
      * @param array<string> $alias_list
      * @param array<string> $tag_ids
-     * @param array<\Aazsamir\Stasphp\Graphpql\StashIDInput> $stash_ids
+     * @param array<\Aazsamir\Stasphp\Graphql\StashIDInput> $stash_ids
      */
     public static function new(
         string $name,
@@ -151,7 +151,7 @@ class PerformerCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
             }, $data['urls'] ?? []);
         }
         if (isset($data['gender'])) {
-            $self->gender = \Aazsamir\Stasphp\Graphpql\GenderEnum::from($data['gender']);
+            $self->gender = \Aazsamir\Stasphp\Graphql\GenderEnum::from($data['gender']);
         }
         if (isset($data['birthdate'])) {
             $self->birthdate = $data['birthdate'];
@@ -178,7 +178,7 @@ class PerformerCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->penis_length = $data['penis_length'];
         }
         if (isset($data['circumcised'])) {
-            $self->circumcised = \Aazsamir\Stasphp\Graphpql\CircumcisedEnum::from($data['circumcised']);
+            $self->circumcised = \Aazsamir\Stasphp\Graphql\CircumcisedEnum::from($data['circumcised']);
         }
         if (isset($data['career_length'])) {
             $self->career_length = $data['career_length'];
@@ -231,7 +231,7 @@ class PerformerCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\StashIDInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\StashIDInput::fromArray($data);
             }, $data['stash_ids'] ?? []);
         }
         if (isset($data['rating100'])) {

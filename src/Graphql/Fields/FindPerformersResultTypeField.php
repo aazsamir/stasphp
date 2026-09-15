@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -25,13 +25,13 @@ class FindPerformersResultTypeField implements \Aazsamir\Graphpql\Model\ObjectFi
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\PerformerSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\PerformerSelectionSet>
      */
     public static function performers(): self
     {
         $instance = new self();
         $instance->name = 'performers';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\PerformerSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\PerformerSelectionSet();
 
         return $instance;
     }

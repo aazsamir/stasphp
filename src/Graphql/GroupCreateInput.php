@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class GroupCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -23,10 +23,10 @@ class GroupCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
     /** @var array<string> */
     public ?array $tag_ids;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\GroupDescriptionInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\GroupDescriptionInput> */
     public ?array $containing_groups;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\GroupDescriptionInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\GroupDescriptionInput> */
     public ?array $sub_groups;
     public ?string $front_image;
     public ?string $back_image;
@@ -35,8 +35,8 @@ class GroupCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
     /**
      * @param array<string> $urls
      * @param array<string> $tag_ids
-     * @param array<\Aazsamir\Stasphp\Graphpql\GroupDescriptionInput> $containing_groups
-     * @param array<\Aazsamir\Stasphp\Graphpql\GroupDescriptionInput> $sub_groups
+     * @param array<\Aazsamir\Stasphp\Graphql\GroupDescriptionInput> $containing_groups
+     * @param array<\Aazsamir\Stasphp\Graphql\GroupDescriptionInput> $sub_groups
      */
     public static function new(
         string $name,
@@ -126,7 +126,7 @@ class GroupCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\GroupDescriptionInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\GroupDescriptionInput::fromArray($data);
             }, $data['containing_groups'] ?? []);
         }
         if (isset($data['sub_groups'])) {
@@ -135,7 +135,7 @@ class GroupCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\GroupDescriptionInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\GroupDescriptionInput::fromArray($data);
             }, $data['sub_groups'] ?? []);
         }
         if (isset($data['front_image'])) {

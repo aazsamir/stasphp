@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ImageFileFilterInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -29,13 +29,13 @@ class ImageFileFilterInput implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['format'])) {
-            $self->format = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['format']);
+            $self->format = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['format']);
         }
         if (isset($data['resolution'])) {
-            $self->resolution = \Aazsamir\Stasphp\Graphpql\ResolutionCriterionInput::fromArray($data['resolution']);
+            $self->resolution = \Aazsamir\Stasphp\Graphql\ResolutionCriterionInput::fromArray($data['resolution']);
         }
         if (isset($data['orientation'])) {
-            $self->orientation = \Aazsamir\Stasphp\Graphpql\OrientationCriterionInput::fromArray($data['orientation']);
+            $self->orientation = \Aazsamir\Stasphp\Graphql\OrientationCriterionInput::fromArray($data['orientation']);
         }
 
         return $self;

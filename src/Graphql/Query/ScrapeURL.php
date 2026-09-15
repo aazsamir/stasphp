@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class ScrapeURL implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'scrapeURL';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\ScrapedStudio|\Aazsamir\Stasphp\Graphpql\ScrapedTag|\Aazsamir\Stasphp\Graphpql\ScrapedScene|\Aazsamir\Stasphp\Graphpql\ScrapedGallery|\Aazsamir\Stasphp\Graphpql\ScrapedImage|\Aazsamir\Stasphp\Graphpql\ScrapedMovie|\Aazsamir\Stasphp\Graphpql\ScrapedGroup|\Aazsamir\Stasphp\Graphpql\ScrapedPerformer';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ScrapedStudio|\Aazsamir\Stasphp\Graphql\ScrapedTag|\Aazsamir\Stasphp\Graphql\ScrapedScene|\Aazsamir\Stasphp\Graphql\ScrapedGallery|\Aazsamir\Stasphp\Graphql\ScrapedImage|\Aazsamir\Stasphp\Graphql\ScrapedMovie|\Aazsamir\Stasphp\Graphql\ScrapedGroup|\Aazsamir\Stasphp\Graphql\ScrapedPerformer';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedContentSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedContentSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -24,7 +24,7 @@ class ScrapeURL implements \Aazsamir\Graphpql\Model\Query
 
     public function __construct(
         public string $url,
-        public \Aazsamir\Stasphp\Graphpql\ScrapeContentType $ty,
+        public \Aazsamir\Stasphp\Graphql\ScrapeContentType $ty,
     ) {
     }
 
@@ -37,12 +37,12 @@ class ScrapeURL implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedContentSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedContentSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedContentSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedContentSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -50,14 +50,14 @@ class ScrapeURL implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedContentSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedContentSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedContentSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedContentSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -71,7 +71,7 @@ class ScrapeURL implements \Aazsamir\Graphpql\Model\Query
     }
 
     public function do(
-    ): \Aazsamir\Stasphp\Graphpql\ScrapedStudio|\Aazsamir\Stasphp\Graphpql\ScrapedTag|\Aazsamir\Stasphp\Graphpql\ScrapedScene|\Aazsamir\Stasphp\Graphpql\ScrapedGallery|\Aazsamir\Stasphp\Graphpql\ScrapedImage|\Aazsamir\Stasphp\Graphpql\ScrapedMovie|\Aazsamir\Stasphp\Graphpql\ScrapedGroup|\Aazsamir\Stasphp\Graphpql\ScrapedPerformer|null {
+    ): \Aazsamir\Stasphp\Graphql\ScrapedStudio|\Aazsamir\Stasphp\Graphql\ScrapedTag|\Aazsamir\Stasphp\Graphql\ScrapedScene|\Aazsamir\Stasphp\Graphql\ScrapedGallery|\Aazsamir\Stasphp\Graphql\ScrapedImage|\Aazsamir\Stasphp\Graphql\ScrapedMovie|\Aazsamir\Stasphp\Graphql\ScrapedGroup|\Aazsamir\Stasphp\Graphql\ScrapedPerformer|null {
         $response = $this->graphqlClient->request($this);
 
         if ($response->data === null) {

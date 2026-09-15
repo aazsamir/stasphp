@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class GenerateMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -112,7 +112,7 @@ class GenerateMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->imagePreviews = $data['imagePreviews'];
         }
         if (isset($data['previewOptions'])) {
-            $self->previewOptions = \Aazsamir\Stasphp\Graphpql\GeneratePreviewOptionsInput::fromArray($data['previewOptions']);
+            $self->previewOptions = \Aazsamir\Stasphp\Graphql\GeneratePreviewOptionsInput::fromArray($data['previewOptions']);
         }
         if (isset($data['markers'])) {
             $self->markers = $data['markers'];

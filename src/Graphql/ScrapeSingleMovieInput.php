@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScrapeSingleMovieInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -35,7 +35,7 @@ class ScrapeSingleMovieInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->movie_id = $data['movie_id'];
         }
         if (isset($data['movie_input'])) {
-            $self->movie_input = \Aazsamir\Stasphp\Graphpql\ScrapedMovieInput::fromArray($data['movie_input']);
+            $self->movie_input = \Aazsamir\Stasphp\Graphql\ScrapedMovieInput::fromArray($data['movie_input']);
         }
 
         return $self;

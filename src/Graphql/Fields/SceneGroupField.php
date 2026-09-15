@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -14,13 +14,13 @@ class SceneGroupField implements \Aazsamir\Graphpql\Model\ObjectField
     private ?string $union = null;
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\GroupSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\GroupSelectionSet>
      */
     public static function group(): self
     {
         $instance = new self();
         $instance->name = 'group';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\GroupSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\GroupSelectionSet();
 
         return $instance;
     }

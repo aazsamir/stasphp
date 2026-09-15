@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class StudioCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -16,7 +16,7 @@ class StudioCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $parent_id;
     public ?string $image;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\StashIDInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\StashIDInput> */
     public ?array $stash_ids;
     public ?int $rating100;
     public ?bool $favorite;
@@ -33,7 +33,7 @@ class StudioCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
 
     /**
      * @param array<string> $urls
-     * @param array<\Aazsamir\Stasphp\Graphpql\StashIDInput> $stash_ids
+     * @param array<\Aazsamir\Stasphp\Graphql\StashIDInput> $stash_ids
      * @param array<string> $aliases
      * @param array<string> $tag_ids
      */
@@ -102,7 +102,7 @@ class StudioCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\StashIDInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\StashIDInput::fromArray($data);
             }, $data['stash_ids'] ?? []);
         }
         if (isset($data['rating100'])) {

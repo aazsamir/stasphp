@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class FindSavedFilters implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'findSavedFilters';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\SavedFilter';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\SavedFilter';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\SavedFilterSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\SavedFilterSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -23,7 +23,7 @@ class FindSavedFilters implements \Aazsamir\Graphpql\Model\Query
     }
 
     public function __construct(
-        public ?\Aazsamir\Stasphp\Graphpql\FilterMode $mode = null,
+        public ?\Aazsamir\Stasphp\Graphql\FilterMode $mode = null,
     ) {
     }
 
@@ -35,12 +35,12 @@ class FindSavedFilters implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\SavedFilterSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\SavedFilterSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\SavedFilterSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\SavedFilterSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -48,14 +48,14 @@ class FindSavedFilters implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\SavedFilterSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\SavedFilterSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\SavedFilterSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\SavedFilterSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -69,7 +69,7 @@ class FindSavedFilters implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @return array<\Aazsamir\Stasphp\Graphpql\SavedFilter>
+     * @return array<\Aazsamir\Stasphp\Graphql\SavedFilter>
      */
     public function do(): ?array
     {

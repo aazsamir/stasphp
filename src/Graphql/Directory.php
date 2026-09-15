@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class Directory implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -15,27 +15,27 @@ class Directory implements \Aazsamir\Graphpql\Model\GraphObject
     public array $directories;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\DirectoryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\DirectoryField<mixed>
      */
     public static function path(): Fields\DirectoryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\DirectoryField::path();
+        return \Aazsamir\Stasphp\Graphql\Fields\DirectoryField::path();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\DirectoryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\DirectoryField<mixed>
      */
     public static function parent(): Fields\DirectoryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\DirectoryField::parent();
+        return \Aazsamir\Stasphp\Graphql\Fields\DirectoryField::parent();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\DirectoryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\DirectoryField<mixed>
      */
     public static function directories(): Fields\DirectoryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\DirectoryField::directories();
+        return \Aazsamir\Stasphp\Graphql\Fields\DirectoryField::directories();
     }
 
     /**

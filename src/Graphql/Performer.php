@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class Performer implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -37,7 +37,7 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
     public array $alias_list;
     public bool $favorite;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Tag> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Tag> */
     public array $tags;
     public bool $ignore_auto_tag;
     public ?string $image_path;
@@ -49,10 +49,10 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
     public int $performer_count;
     public ?int $o_counter;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Scene> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Scene> */
     public array $scenes;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\StashID> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\StashID> */
     public array $stash_ids;
     public ?int $rating100;
     public ?string $details;
@@ -62,388 +62,388 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
     public \DateTimeInterface $created_at;
     public \DateTimeInterface $updated_at;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Group> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Group> */
     public array $groups;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Movie> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Movie> */
     public array $movies;
     public mixed $custom_fields;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function id(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::id();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function name(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::name();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::name();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function disambiguation(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::disambiguation();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::disambiguation();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function url(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::url();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::url();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function urls(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::urls();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::urls();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function gender(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::gender();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::gender();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function twitter(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::twitter();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::twitter();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function instagram(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::instagram();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::instagram();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function birthdate(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::birthdate();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::birthdate();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function ethnicity(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::ethnicity();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::ethnicity();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function country(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::country();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::country();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function eye_color(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::eye_color();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::eye_color();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function height_cm(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::height_cm();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::height_cm();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function measurements(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::measurements();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::measurements();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function fake_tits(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::fake_tits();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::fake_tits();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function penis_length(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::penis_length();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::penis_length();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function circumcised(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::circumcised();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::circumcised();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function career_length(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::career_length();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::career_length();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function career_start(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::career_start();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::career_start();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function career_end(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::career_end();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::career_end();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function tattoos(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::tattoos();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::tattoos();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function piercings(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::piercings();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::piercings();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function alias_list(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::alias_list();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::alias_list();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function favorite(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::favorite();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::favorite();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<\Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<\Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet>
      */
     public static function tags(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::tags();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::tags();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function ignore_auto_tag(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::ignore_auto_tag();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::ignore_auto_tag();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function image_path(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::image_path();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::image_path();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function scene_count(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::scene_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::scene_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function image_count(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::image_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::image_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function gallery_count(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::gallery_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::gallery_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function group_count(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::group_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::group_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function movie_count(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::movie_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::movie_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function performer_count(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::performer_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::performer_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function o_counter(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::o_counter();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::o_counter();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneSelectionSet>
      */
     public static function scenes(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::scenes();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::scenes();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<\Aazsamir\Stasphp\Graphpql\SelectionSet\StashIDSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<\Aazsamir\Stasphp\Graphql\SelectionSet\StashIDSelectionSet>
      */
     public static function stash_ids(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::stash_ids();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::stash_ids();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function rating100(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::rating100();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::rating100();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function details(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::details();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::details();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function death_date(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::death_date();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::death_date();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function hair_color(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::hair_color();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::hair_color();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function weight(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::weight();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::weight();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function created_at(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::created_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::created_at();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function updated_at(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::updated_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::updated_at();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<\Aazsamir\Stasphp\Graphpql\SelectionSet\GroupSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<\Aazsamir\Stasphp\Graphql\SelectionSet\GroupSelectionSet>
      */
     public static function groups(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::groups();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::groups();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<\Aazsamir\Stasphp\Graphpql\SelectionSet\MovieSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<\Aazsamir\Stasphp\Graphql\SelectionSet\MovieSelectionSet>
      */
     public static function movies(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::movies();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::movies();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PerformerField<mixed>
      */
     public static function custom_fields(): Fields\PerformerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PerformerField::custom_fields();
+        return \Aazsamir\Stasphp\Graphql\Fields\PerformerField::custom_fields();
     }
 
     /**
      * @param array<string> $alias_list
-     * @param array<\Aazsamir\Stasphp\Graphpql\Tag> $tags
-     * @param array<\Aazsamir\Stasphp\Graphpql\Scene> $scenes
-     * @param array<\Aazsamir\Stasphp\Graphpql\StashID> $stash_ids
-     * @param array<\Aazsamir\Stasphp\Graphpql\Group> $groups
-     * @param array<\Aazsamir\Stasphp\Graphpql\Movie> $movies
+     * @param array<\Aazsamir\Stasphp\Graphql\Tag> $tags
+     * @param array<\Aazsamir\Stasphp\Graphql\Scene> $scenes
+     * @param array<\Aazsamir\Stasphp\Graphql\StashID> $stash_ids
+     * @param array<\Aazsamir\Stasphp\Graphql\Group> $groups
+     * @param array<\Aazsamir\Stasphp\Graphql\Movie> $movies
      * @param array<string> $urls
      */
     public static function new(
@@ -572,7 +572,7 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Tag::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Tag::fromArray($data);
             }, $data['tags'] ?? []);
         }
         if (isset($data['ignore_auto_tag'])) {
@@ -602,7 +602,7 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Scene::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Scene::fromArray($data);
             }, $data['scenes'] ?? []);
         }
         if (isset($data['stash_ids'])) {
@@ -611,7 +611,7 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\StashID::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\StashID::fromArray($data);
             }, $data['stash_ids'] ?? []);
         }
         if (isset($data['created_at'])) {
@@ -626,7 +626,7 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Group::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Group::fromArray($data);
             }, $data['groups'] ?? []);
         }
         if (isset($data['movies'])) {
@@ -635,7 +635,7 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Movie::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Movie::fromArray($data);
             }, $data['movies'] ?? []);
         }
         if (isset($data['custom_fields'])) {
@@ -657,7 +657,7 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
             }, $data['urls'] ?? []);
         }
         if (isset($data['gender'])) {
-            $self->gender = \Aazsamir\Stasphp\Graphpql\GenderEnum::from($data['gender']);
+            $self->gender = \Aazsamir\Stasphp\Graphql\GenderEnum::from($data['gender']);
         }
         if (isset($data['twitter'])) {
             $self->twitter = $data['twitter'];
@@ -690,7 +690,7 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
             $self->penis_length = $data['penis_length'];
         }
         if (isset($data['circumcised'])) {
-            $self->circumcised = \Aazsamir\Stasphp\Graphpql\CircumcisedEnum::from($data['circumcised']);
+            $self->circumcised = \Aazsamir\Stasphp\Graphql\CircumcisedEnum::from($data['circumcised']);
         }
         if (isset($data['career_length'])) {
             $self->career_length = $data['career_length'];

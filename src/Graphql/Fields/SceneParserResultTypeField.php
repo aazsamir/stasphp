@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -25,13 +25,13 @@ class SceneParserResultTypeField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneParserResultSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneParserResultSelectionSet>
      */
     public static function results(): self
     {
         $instance = new self();
         $instance->name = 'results';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneParserResultSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\SceneParserResultSelectionSet();
 
         return $instance;
     }

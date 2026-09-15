@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class DLNAIP implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -12,19 +12,19 @@ class DLNAIP implements \Aazsamir\Graphpql\Model\GraphObject
     public ?\DateTimeInterface $until;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\DLNAIPField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\DLNAIPField<mixed>
      */
     public static function ipAddress(): Fields\DLNAIPField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\DLNAIPField::ipAddress();
+        return \Aazsamir\Stasphp\Graphql\Fields\DLNAIPField::ipAddress();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\DLNAIPField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\DLNAIPField<mixed>
      */
     public static function until(): Fields\DLNAIPField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\DLNAIPField::until();
+        return \Aazsamir\Stasphp\Graphql\Fields\DLNAIPField::until();
     }
 
     public static function new(string $ipAddress, ?\DateTimeInterface $until = null): self

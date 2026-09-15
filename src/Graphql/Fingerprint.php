@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class Fingerprint implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -12,19 +12,19 @@ class Fingerprint implements \Aazsamir\Graphpql\Model\GraphObject
     public string $value;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FingerprintField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FingerprintField<mixed>
      */
     public static function type(): Fields\FingerprintField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FingerprintField::type();
+        return \Aazsamir\Stasphp\Graphql\Fields\FingerprintField::type();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FingerprintField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FingerprintField<mixed>
      */
     public static function value(): Fields\FingerprintField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FingerprintField::value();
+        return \Aazsamir\Stasphp\Graphql\Fields\FingerprintField::value();
     }
 
     public static function new(string $type, string $value): self

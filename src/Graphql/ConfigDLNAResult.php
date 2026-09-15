@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ConfigDLNAResult implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -20,51 +20,51 @@ class ConfigDLNAResult implements \Aazsamir\Graphpql\Model\GraphObject
     public string $videoSortOrder;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDLNAResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDLNAResultField<mixed>
      */
     public static function serverName(): Fields\ConfigDLNAResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDLNAResultField::serverName();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDLNAResultField::serverName();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDLNAResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDLNAResultField<mixed>
      */
     public static function enabled(): Fields\ConfigDLNAResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDLNAResultField::enabled();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDLNAResultField::enabled();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDLNAResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDLNAResultField<mixed>
      */
     public static function port(): Fields\ConfigDLNAResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDLNAResultField::port();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDLNAResultField::port();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDLNAResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDLNAResultField<mixed>
      */
     public static function whitelistedIPs(): Fields\ConfigDLNAResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDLNAResultField::whitelistedIPs();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDLNAResultField::whitelistedIPs();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDLNAResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDLNAResultField<mixed>
      */
     public static function interfaces(): Fields\ConfigDLNAResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDLNAResultField::interfaces();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDLNAResultField::interfaces();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDLNAResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDLNAResultField<mixed>
      */
     public static function videoSortOrder(): Fields\ConfigDLNAResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDLNAResultField::videoSortOrder();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDLNAResultField::videoSortOrder();
     }
 
     /**

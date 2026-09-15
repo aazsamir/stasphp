@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class FindMoviesResultType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -10,27 +10,27 @@ class FindMoviesResultType implements \Aazsamir\Graphpql\Model\GraphObject
 
     public int $count;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Movie> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Movie> */
     public array $movies;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindMoviesResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindMoviesResultTypeField<mixed>
      */
     public static function count(): Fields\FindMoviesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindMoviesResultTypeField::count();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindMoviesResultTypeField::count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindMoviesResultTypeField<\Aazsamir\Stasphp\Graphpql\SelectionSet\MovieSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindMoviesResultTypeField<\Aazsamir\Stasphp\Graphql\SelectionSet\MovieSelectionSet>
      */
     public static function movies(): Fields\FindMoviesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindMoviesResultTypeField::movies();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindMoviesResultTypeField::movies();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\Movie> $movies
+     * @param array<\Aazsamir\Stasphp\Graphql\Movie> $movies
      */
     public static function new(int $count, array $movies): self
     {
@@ -53,7 +53,7 @@ class FindMoviesResultType implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Movie::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Movie::fromArray($data);
             }, $data['movies'] ?? []);
         }
 

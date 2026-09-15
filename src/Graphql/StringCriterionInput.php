@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class StringCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -27,7 +27,7 @@ class StringCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->value = $data['value'];
         }
         if (isset($data['modifier'])) {
-            $self->modifier = \Aazsamir\Stasphp\Graphpql\CriterionModifier::from($data['modifier']);
+            $self->modifier = \Aazsamir\Stasphp\Graphql\CriterionModifier::from($data['modifier']);
         }
 
         return $self;

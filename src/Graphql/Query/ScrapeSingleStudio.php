@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class ScrapeSingleStudio implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'scrapeSingleStudio';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\ScrapedStudio';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ScrapedStudio';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedStudioSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedStudioSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -23,8 +23,8 @@ class ScrapeSingleStudio implements \Aazsamir\Graphpql\Model\Query
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\ScraperSourceInput $source,
-        public \Aazsamir\Stasphp\Graphpql\ScrapeSingleStudioInput $input,
+        public \Aazsamir\Stasphp\Graphql\ScraperSourceInput $source,
+        public \Aazsamir\Stasphp\Graphql\ScrapeSingleStudioInput $input,
     ) {
     }
 
@@ -37,12 +37,12 @@ class ScrapeSingleStudio implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedStudioSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedStudioSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedStudioSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedStudioSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -50,14 +50,14 @@ class ScrapeSingleStudio implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedStudioSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedStudioSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedStudioSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedStudioSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -71,7 +71,7 @@ class ScrapeSingleStudio implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @return array<\Aazsamir\Stasphp\Graphpql\ScrapedStudio>
+     * @return array<\Aazsamir\Stasphp\Graphql\ScrapedStudio>
      */
     public function do(): ?array
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScraperSpec implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -11,27 +11,27 @@ class ScraperSpec implements \Aazsamir\Graphpql\Model\GraphObject
     /** @var array<string> */
     public ?array $urls;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\ScrapeType> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\ScrapeType> */
     public array $supported_scrapes;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScraperSpecField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScraperSpecField<mixed>
      */
     public static function urls(): Fields\ScraperSpecField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScraperSpecField::urls();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScraperSpecField::urls();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScraperSpecField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScraperSpecField<mixed>
      */
     public static function supported_scrapes(): Fields\ScraperSpecField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScraperSpecField::supported_scrapes();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScraperSpecField::supported_scrapes();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\ScrapeType> $supported_scrapes
+     * @param array<\Aazsamir\Stasphp\Graphql\ScrapeType> $supported_scrapes
      * @param array<string> $urls
      */
     public static function new(array $supported_scrapes, ?array $urls = null): self
@@ -52,7 +52,7 @@ class ScraperSpec implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\ScrapeType::from($data);
+                return \Aazsamir\Stasphp\Graphql\ScrapeType::from($data);
             }, $data['supported_scrapes'] ?? []);
         }
         if (isset($data['urls'])) {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScraperSource implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -13,27 +13,27 @@ class ScraperSource implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $scraper_id;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScraperSourceField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScraperSourceField<mixed>
      */
     public static function stash_box_index(): Fields\ScraperSourceField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScraperSourceField::stash_box_index();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScraperSourceField::stash_box_index();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScraperSourceField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScraperSourceField<mixed>
      */
     public static function stash_box_endpoint(): Fields\ScraperSourceField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScraperSourceField::stash_box_endpoint();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScraperSourceField::stash_box_endpoint();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScraperSourceField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScraperSourceField<mixed>
      */
     public static function scraper_id(): Fields\ScraperSourceField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScraperSourceField::scraper_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScraperSourceField::scraper_id();
     }
 
     public static function new(

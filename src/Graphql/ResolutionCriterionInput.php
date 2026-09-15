@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ResolutionCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -24,10 +24,10 @@ class ResolutionCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['value'])) {
-            $self->value = \Aazsamir\Stasphp\Graphpql\ResolutionEnum::from($data['value']);
+            $self->value = \Aazsamir\Stasphp\Graphql\ResolutionEnum::from($data['value']);
         }
         if (isset($data['modifier'])) {
-            $self->modifier = \Aazsamir\Stasphp\Graphpql\CriterionModifier::from($data['modifier']);
+            $self->modifier = \Aazsamir\Stasphp\Graphql\CriterionModifier::from($data['modifier']);
         }
 
         return $self;

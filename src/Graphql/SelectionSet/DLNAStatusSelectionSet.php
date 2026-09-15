@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class DLNAStatusSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class DLNAStatusSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\DLNAStatusField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class DLNAStatusSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\DLNAStatusField[]
      */
     public function getSelection(): array
     {

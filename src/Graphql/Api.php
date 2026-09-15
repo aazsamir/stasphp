@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class Api
 {
@@ -13,7 +13,7 @@ class Api
 
     public function findSavedFilter(string $id): Query\FindSavedFilter
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindSavedFilter(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindSavedFilter(
             $id,
         );
 
@@ -22,7 +22,7 @@ class Api
 
     public function findSavedFilters(?FilterMode $mode = null): Query\FindSavedFilters
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindSavedFilters(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindSavedFilters(
             $mode,
         );
 
@@ -34,7 +34,7 @@ class Api
      */
     public function findDefaultFilter(FilterMode $mode): Query\FindDefaultFilter
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindDefaultFilter(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindDefaultFilter(
             $mode,
         );
 
@@ -43,7 +43,7 @@ class Api
 
     public function findFile(?string $id = null, ?string $path = null): Query\FindFile
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindFile(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindFile(
             $id,
             $path,
         );
@@ -59,7 +59,7 @@ class Api
         ?FindFilterType $filter = null,
         ?array $ids = null,
     ): Query\FindFiles {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindFiles(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindFiles(
             $file_filter,
             $filter,
             $ids,
@@ -70,7 +70,7 @@ class Api
 
     public function findFolder(?string $id = null, ?string $path = null): Query\FindFolder
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindFolder(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindFolder(
             $id,
             $path,
         );
@@ -86,7 +86,7 @@ class Api
         ?FindFilterType $filter = null,
         ?array $ids = null,
     ): Query\FindFolders {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindFolders(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindFolders(
             $folder_filter,
             $filter,
             $ids,
@@ -97,7 +97,7 @@ class Api
 
     public function findScene(?string $id = null, ?string $checksum = null): Query\FindScene
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindScene(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindScene(
             $id,
             $checksum,
         );
@@ -107,7 +107,7 @@ class Api
 
     public function findSceneByHash(SceneHashInput $input): Query\FindSceneByHash
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindSceneByHash(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindSceneByHash(
             $input,
         );
 
@@ -124,7 +124,7 @@ class Api
         ?array $ids = null,
         ?FindFilterType $filter = null,
     ): Query\FindScenes {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindScenes(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindScenes(
             $scene_filter,
             $scene_ids,
             $ids,
@@ -136,7 +136,7 @@ class Api
 
     public function findScenesByPathRegex(?FindFilterType $filter = null): Query\FindScenesByPathRegex
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindScenesByPathRegex(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindScenesByPathRegex(
             $filter,
         );
 
@@ -147,7 +147,7 @@ class Api
         ?int $distance = null,
         ?float $duration_diff = null,
     ): Query\FindDuplicateScenes {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindDuplicateScenes(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindDuplicateScenes(
             $distance,
             $duration_diff,
         );
@@ -157,7 +157,7 @@ class Api
 
     public function sceneStreams(?string $id = null): Query\SceneStreams
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\SceneStreams(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\SceneStreams(
             $id,
         );
 
@@ -168,7 +168,7 @@ class Api
         SceneParserInput $config,
         ?FindFilterType $filter = null,
     ): Query\ParseSceneFilenames {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ParseSceneFilenames(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ParseSceneFilenames(
             $config,
             $filter,
         );
@@ -184,7 +184,7 @@ class Api
         ?FindFilterType $filter = null,
         ?array $ids = null,
     ): Query\FindSceneMarkers {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindSceneMarkers(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindSceneMarkers(
             $scene_marker_filter,
             $filter,
             $ids,
@@ -195,7 +195,7 @@ class Api
 
     public function findImage(?string $id = null, ?string $checksum = null): Query\FindImage
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindImage(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindImage(
             $id,
             $checksum,
         );
@@ -213,7 +213,7 @@ class Api
         ?array $ids = null,
         ?FindFilterType $filter = null,
     ): Query\FindImages {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindImages(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindImages(
             $image_filter,
             $image_ids,
             $ids,
@@ -225,7 +225,7 @@ class Api
 
     public function findPerformer(string $id): Query\FindPerformer
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindPerformer(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindPerformer(
             $id,
         );
 
@@ -242,7 +242,7 @@ class Api
         ?array $performer_ids = null,
         ?array $ids = null,
     ): Query\FindPerformers {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindPerformers(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindPerformers(
             $performer_filter,
             $filter,
             $performer_ids,
@@ -254,7 +254,7 @@ class Api
 
     public function findStudio(string $id): Query\FindStudio
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindStudio(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindStudio(
             $id,
         );
 
@@ -269,7 +269,7 @@ class Api
         ?FindFilterType $filter = null,
         ?array $ids = null,
     ): Query\FindStudios {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindStudios(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindStudios(
             $studio_filter,
             $filter,
             $ids,
@@ -283,7 +283,7 @@ class Api
      */
     public function findMovie(string $id): Query\FindMovie
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindMovie(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindMovie(
             $id,
         );
 
@@ -299,7 +299,7 @@ class Api
         ?FindFilterType $filter = null,
         ?array $ids = null,
     ): Query\FindMovies {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindMovies(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindMovies(
             $movie_filter,
             $filter,
             $ids,
@@ -310,7 +310,7 @@ class Api
 
     public function findGroup(string $id): Query\FindGroup
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindGroup(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindGroup(
             $id,
         );
 
@@ -325,7 +325,7 @@ class Api
         ?FindFilterType $filter = null,
         ?array $ids = null,
     ): Query\FindGroups {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindGroups(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindGroups(
             $group_filter,
             $filter,
             $ids,
@@ -336,7 +336,7 @@ class Api
 
     public function findGallery(string $id): Query\FindGallery
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindGallery(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindGallery(
             $id,
         );
 
@@ -351,7 +351,7 @@ class Api
         ?FindFilterType $filter = null,
         ?array $ids = null,
     ): Query\FindGalleries {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindGalleries(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindGalleries(
             $gallery_filter,
             $filter,
             $ids,
@@ -362,7 +362,7 @@ class Api
 
     public function findTag(string $id): Query\FindTag
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindTag(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindTag(
             $id,
         );
 
@@ -377,7 +377,7 @@ class Api
         ?FindFilterType $filter = null,
         ?array $ids = null,
     ): Query\FindTags {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindTags(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindTags(
             $tag_filter,
             $filter,
             $ids,
@@ -388,7 +388,7 @@ class Api
 
     public function markerWall(?string $q = null): Query\MarkerWall
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\MarkerWall(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\MarkerWall(
             $q,
         );
 
@@ -397,7 +397,7 @@ class Api
 
     public function sceneWall(?string $q = null): Query\SceneWall
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\SceneWall(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\SceneWall(
             $q,
         );
 
@@ -406,7 +406,7 @@ class Api
 
     public function markerStrings(?string $q = null, ?string $sort = null): Query\MarkerStrings
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\MarkerStrings(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\MarkerStrings(
             $q,
             $sort,
         );
@@ -416,7 +416,7 @@ class Api
 
     public function stats(): Query\Stats
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\Stats(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\Stats(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -424,7 +424,7 @@ class Api
 
     public function sceneMarkerTags(string $scene_id): Query\SceneMarkerTags
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\SceneMarkerTags(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\SceneMarkerTags(
             $scene_id,
         );
 
@@ -433,18 +433,18 @@ class Api
 
     public function logs(): Query\Logs
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\Logs(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\Logs(
         );
 
         return $operation->withClient($this->graphqlClient);
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\ScrapeContentType> $types
+     * @param array<\Aazsamir\Stasphp\Graphql\ScrapeContentType> $types
      */
     public function listScrapers(array $types): Query\ListScrapers
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ListScrapers(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ListScrapers(
             $types,
         );
 
@@ -455,7 +455,7 @@ class Api
         ScraperSourceInput $source,
         ScrapeSingleSceneInput $input,
     ): Query\ScrapeSingleScene {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeSingleScene(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeSingleScene(
             $source,
             $input,
         );
@@ -467,7 +467,7 @@ class Api
         ScraperSourceInput $source,
         ScrapeMultiScenesInput $input,
     ): Query\ScrapeMultiScenes {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeMultiScenes(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeMultiScenes(
             $source,
             $input,
         );
@@ -479,7 +479,7 @@ class Api
         ScraperSourceInput $source,
         ScrapeSingleStudioInput $input,
     ): Query\ScrapeSingleStudio {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeSingleStudio(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeSingleStudio(
             $source,
             $input,
         );
@@ -489,7 +489,7 @@ class Api
 
     public function scrapeSingleTag(ScraperSourceInput $source, ScrapeSingleTagInput $input): Query\ScrapeSingleTag
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeSingleTag(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeSingleTag(
             $source,
             $input,
         );
@@ -501,7 +501,7 @@ class Api
         ScraperSourceInput $source,
         ScrapeSinglePerformerInput $input,
     ): Query\ScrapeSinglePerformer {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeSinglePerformer(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeSinglePerformer(
             $source,
             $input,
         );
@@ -513,7 +513,7 @@ class Api
         ScraperSourceInput $source,
         ScrapeMultiPerformersInput $input,
     ): Query\ScrapeMultiPerformers {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeMultiPerformers(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeMultiPerformers(
             $source,
             $input,
         );
@@ -525,7 +525,7 @@ class Api
         ScraperSourceInput $source,
         ScrapeSingleGalleryInput $input,
     ): Query\ScrapeSingleGallery {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeSingleGallery(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeSingleGallery(
             $source,
             $input,
         );
@@ -540,7 +540,7 @@ class Api
         ScraperSourceInput $source,
         ScrapeSingleMovieInput $input,
     ): Query\ScrapeSingleMovie {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeSingleMovie(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeSingleMovie(
             $source,
             $input,
         );
@@ -552,7 +552,7 @@ class Api
         ScraperSourceInput $source,
         ScrapeSingleGroupInput $input,
     ): Query\ScrapeSingleGroup {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeSingleGroup(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeSingleGroup(
             $source,
             $input,
         );
@@ -564,7 +564,7 @@ class Api
         ScraperSourceInput $source,
         ScrapeSingleImageInput $input,
     ): Query\ScrapeSingleImage {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeSingleImage(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeSingleImage(
             $source,
             $input,
         );
@@ -574,7 +574,7 @@ class Api
 
     public function scrapeURL(string $url, ScrapeContentType $ty): Query\ScrapeURL
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeURL(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeURL(
             $url,
             $ty,
         );
@@ -584,7 +584,7 @@ class Api
 
     public function scrapePerformerURL(string $url): Query\ScrapePerformerURL
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapePerformerURL(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapePerformerURL(
             $url,
         );
 
@@ -593,7 +593,7 @@ class Api
 
     public function scrapeSceneURL(string $url): Query\ScrapeSceneURL
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeSceneURL(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeSceneURL(
             $url,
         );
 
@@ -602,7 +602,7 @@ class Api
 
     public function scrapeGalleryURL(string $url): Query\ScrapeGalleryURL
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeGalleryURL(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeGalleryURL(
             $url,
         );
 
@@ -611,7 +611,7 @@ class Api
 
     public function scrapeImageURL(string $url): Query\ScrapeImageURL
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeImageURL(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeImageURL(
             $url,
         );
 
@@ -623,7 +623,7 @@ class Api
      */
     public function scrapeMovieURL(string $url): Query\ScrapeMovieURL
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeMovieURL(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeMovieURL(
             $url,
         );
 
@@ -632,7 +632,7 @@ class Api
 
     public function scrapeGroupURL(string $url): Query\ScrapeGroupURL
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ScrapeGroupURL(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ScrapeGroupURL(
             $url,
         );
 
@@ -641,7 +641,7 @@ class Api
 
     public function plugins(): Query\Plugins
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\Plugins(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\Plugins(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -649,7 +649,7 @@ class Api
 
     public function pluginTasks(): Query\PluginTasks
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\PluginTasks(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\PluginTasks(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -657,7 +657,7 @@ class Api
 
     public function installedPackages(PackageType $type): Query\InstalledPackages
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\InstalledPackages(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\InstalledPackages(
             $type,
         );
 
@@ -666,7 +666,7 @@ class Api
 
     public function availablePackages(PackageType $type, string $source): Query\AvailablePackages
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\AvailablePackages(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\AvailablePackages(
             $type,
             $source,
         );
@@ -676,7 +676,7 @@ class Api
 
     public function configuration(): Query\Configuration
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\Configuration(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\Configuration(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -684,7 +684,7 @@ class Api
 
     public function directory(?string $path = null, ?string $locale = null): Query\Directory
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\Directory(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\Directory(
             $path,
             $locale,
         );
@@ -694,7 +694,7 @@ class Api
 
     public function validateStashBoxCredentials(StashBoxInput $input): Query\ValidateStashBoxCredentials
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\ValidateStashBoxCredentials(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\ValidateStashBoxCredentials(
             $input,
         );
 
@@ -703,7 +703,7 @@ class Api
 
     public function systemStatus(): Query\SystemStatus
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\SystemStatus(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\SystemStatus(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -711,7 +711,7 @@ class Api
 
     public function jobQueue(): Query\JobQueue
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\JobQueue(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\JobQueue(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -719,7 +719,7 @@ class Api
 
     public function findJob(FindJobInput $input): Query\FindJob
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\FindJob(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\FindJob(
             $input,
         );
 
@@ -728,7 +728,7 @@ class Api
 
     public function dlnaStatus(): Query\DlnaStatus
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\DlnaStatus(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\DlnaStatus(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -739,7 +739,7 @@ class Api
      */
     public function allScenes(): Query\AllScenes
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\AllScenes(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\AllScenes(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -750,7 +750,7 @@ class Api
      */
     public function allSceneMarkers(): Query\AllSceneMarkers
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\AllSceneMarkers(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\AllSceneMarkers(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -761,7 +761,7 @@ class Api
      */
     public function allImages(): Query\AllImages
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\AllImages(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\AllImages(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -772,7 +772,7 @@ class Api
      */
     public function allGalleries(): Query\AllGalleries
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\AllGalleries(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\AllGalleries(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -780,7 +780,7 @@ class Api
 
     public function allPerformers(): Query\AllPerformers
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\AllPerformers(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\AllPerformers(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -791,7 +791,7 @@ class Api
      */
     public function allTags(): Query\AllTags
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\AllTags(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\AllTags(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -802,7 +802,7 @@ class Api
      */
     public function allStudios(): Query\AllStudios
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\AllStudios(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\AllStudios(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -813,7 +813,7 @@ class Api
      */
     public function allMovies(): Query\AllMovies
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\AllMovies(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\AllMovies(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -821,7 +821,7 @@ class Api
 
     public function version(): Query\Version
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\Version(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\Version(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -829,7 +829,7 @@ class Api
 
     public function latestversion(): Query\Latestversion
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Query\Latestversion(
+        $operation = new \Aazsamir\Stasphp\Graphql\Query\Latestversion(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -837,7 +837,7 @@ class Api
 
     public function setup(SetupInput $input): Mutation\Setup
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\Setup(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\Setup(
             $input,
         );
 
@@ -846,7 +846,7 @@ class Api
 
     public function migrate(MigrateInput $input): Mutation\Migrate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\Migrate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\Migrate(
             $input,
         );
 
@@ -855,7 +855,7 @@ class Api
 
     public function downloadFFMpeg(): Mutation\DownloadFFMpeg
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\DownloadFFMpeg(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\DownloadFFMpeg(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -863,7 +863,7 @@ class Api
 
     public function sceneCreate(SceneCreateInput $input): Mutation\SceneCreate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneCreate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneCreate(
             $input,
         );
 
@@ -872,7 +872,7 @@ class Api
 
     public function sceneUpdate(SceneUpdateInput $input): Mutation\SceneUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneUpdate(
             $input,
         );
 
@@ -881,7 +881,7 @@ class Api
 
     public function sceneMerge(SceneMergeInput $input): Mutation\SceneMerge
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneMerge(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneMerge(
             $input,
         );
 
@@ -890,7 +890,7 @@ class Api
 
     public function bulkSceneUpdate(BulkSceneUpdateInput $input): Mutation\BulkSceneUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\BulkSceneUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\BulkSceneUpdate(
             $input,
         );
 
@@ -899,7 +899,7 @@ class Api
 
     public function sceneDestroy(SceneDestroyInput $input): Mutation\SceneDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneDestroy(
             $input,
         );
 
@@ -908,7 +908,7 @@ class Api
 
     public function scenesDestroy(ScenesDestroyInput $input): Mutation\ScenesDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ScenesDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ScenesDestroy(
             $input,
         );
 
@@ -916,11 +916,11 @@ class Api
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\SceneUpdateInput> $input
+     * @param array<\Aazsamir\Stasphp\Graphql\SceneUpdateInput> $input
      */
     public function scenesUpdate(array $input): Mutation\ScenesUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ScenesUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ScenesUpdate(
             $input,
         );
 
@@ -932,7 +932,7 @@ class Api
      */
     public function sceneIncrementO(string $id): Mutation\SceneIncrementO
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneIncrementO(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneIncrementO(
             $id,
         );
 
@@ -944,7 +944,7 @@ class Api
      */
     public function sceneDecrementO(string $id): Mutation\SceneDecrementO
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneDecrementO(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneDecrementO(
             $id,
         );
 
@@ -956,7 +956,7 @@ class Api
      */
     public function sceneAddO(string $id, ?array $times = null): Mutation\SceneAddO
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneAddO(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneAddO(
             $id,
             $times,
         );
@@ -969,7 +969,7 @@ class Api
      */
     public function sceneDeleteO(string $id, ?array $times = null): Mutation\SceneDeleteO
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneDeleteO(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneDeleteO(
             $id,
             $times,
         );
@@ -979,7 +979,7 @@ class Api
 
     public function sceneResetO(string $id): Mutation\SceneResetO
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneResetO(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneResetO(
             $id,
         );
 
@@ -991,7 +991,7 @@ class Api
         ?float $resume_time = null,
         ?float $playDuration = null,
     ): Mutation\SceneSaveActivity {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneSaveActivity(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneSaveActivity(
             $id,
             $resume_time,
             $playDuration,
@@ -1005,7 +1005,7 @@ class Api
         ?bool $reset_resume = null,
         ?bool $reset_duration = null,
     ): Mutation\SceneResetActivity {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneResetActivity(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneResetActivity(
             $id,
             $reset_resume,
             $reset_duration,
@@ -1019,7 +1019,7 @@ class Api
      */
     public function sceneIncrementPlayCount(string $id): Mutation\SceneIncrementPlayCount
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneIncrementPlayCount(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneIncrementPlayCount(
             $id,
         );
 
@@ -1031,7 +1031,7 @@ class Api
      */
     public function sceneAddPlay(string $id, ?array $times = null): Mutation\SceneAddPlay
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneAddPlay(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneAddPlay(
             $id,
             $times,
         );
@@ -1044,7 +1044,7 @@ class Api
      */
     public function sceneDeletePlay(string $id, ?array $times = null): Mutation\SceneDeletePlay
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneDeletePlay(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneDeletePlay(
             $id,
             $times,
         );
@@ -1054,7 +1054,7 @@ class Api
 
     public function sceneResetPlayCount(string $id): Mutation\SceneResetPlayCount
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneResetPlayCount(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneResetPlayCount(
             $id,
         );
 
@@ -1063,7 +1063,7 @@ class Api
 
     public function sceneGenerateScreenshot(string $id, ?float $at = null): Mutation\SceneGenerateScreenshot
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneGenerateScreenshot(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneGenerateScreenshot(
             $id,
             $at,
         );
@@ -1073,7 +1073,7 @@ class Api
 
     public function sceneMarkerCreate(SceneMarkerCreateInput $input): Mutation\SceneMarkerCreate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneMarkerCreate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneMarkerCreate(
             $input,
         );
 
@@ -1082,7 +1082,7 @@ class Api
 
     public function sceneMarkerUpdate(SceneMarkerUpdateInput $input): Mutation\SceneMarkerUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneMarkerUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneMarkerUpdate(
             $input,
         );
 
@@ -1091,7 +1091,7 @@ class Api
 
     public function bulkSceneMarkerUpdate(BulkSceneMarkerUpdateInput $input): Mutation\BulkSceneMarkerUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\BulkSceneMarkerUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\BulkSceneMarkerUpdate(
             $input,
         );
 
@@ -1100,7 +1100,7 @@ class Api
 
     public function sceneMarkerDestroy(string $id): Mutation\SceneMarkerDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneMarkerDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneMarkerDestroy(
             $id,
         );
 
@@ -1112,7 +1112,7 @@ class Api
      */
     public function sceneMarkersDestroy(array $ids): Mutation\SceneMarkersDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneMarkersDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneMarkersDestroy(
             $ids,
         );
 
@@ -1121,7 +1121,7 @@ class Api
 
     public function sceneAssignFile(AssignSceneFileInput $input): Mutation\SceneAssignFile
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SceneAssignFile(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SceneAssignFile(
             $input,
         );
 
@@ -1130,7 +1130,7 @@ class Api
 
     public function imageUpdate(ImageUpdateInput $input): Mutation\ImageUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ImageUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ImageUpdate(
             $input,
         );
 
@@ -1139,7 +1139,7 @@ class Api
 
     public function bulkImageUpdate(BulkImageUpdateInput $input): Mutation\BulkImageUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\BulkImageUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\BulkImageUpdate(
             $input,
         );
 
@@ -1148,7 +1148,7 @@ class Api
 
     public function imageDestroy(ImageDestroyInput $input): Mutation\ImageDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ImageDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ImageDestroy(
             $input,
         );
 
@@ -1157,7 +1157,7 @@ class Api
 
     public function imagesDestroy(ImagesDestroyInput $input): Mutation\ImagesDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ImagesDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ImagesDestroy(
             $input,
         );
 
@@ -1165,11 +1165,11 @@ class Api
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\ImageUpdateInput> $input
+     * @param array<\Aazsamir\Stasphp\Graphql\ImageUpdateInput> $input
      */
     public function imagesUpdate(array $input): Mutation\ImagesUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ImagesUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ImagesUpdate(
             $input,
         );
 
@@ -1178,7 +1178,7 @@ class Api
 
     public function imageIncrementO(string $id): Mutation\ImageIncrementO
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ImageIncrementO(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ImageIncrementO(
             $id,
         );
 
@@ -1187,7 +1187,7 @@ class Api
 
     public function imageDecrementO(string $id): Mutation\ImageDecrementO
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ImageDecrementO(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ImageDecrementO(
             $id,
         );
 
@@ -1196,7 +1196,7 @@ class Api
 
     public function imageResetO(string $id): Mutation\ImageResetO
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ImageResetO(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ImageResetO(
             $id,
         );
 
@@ -1205,7 +1205,7 @@ class Api
 
     public function galleryCreate(GalleryCreateInput $input): Mutation\GalleryCreate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\GalleryCreate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\GalleryCreate(
             $input,
         );
 
@@ -1214,7 +1214,7 @@ class Api
 
     public function galleryUpdate(GalleryUpdateInput $input): Mutation\GalleryUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\GalleryUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\GalleryUpdate(
             $input,
         );
 
@@ -1223,7 +1223,7 @@ class Api
 
     public function bulkGalleryUpdate(BulkGalleryUpdateInput $input): Mutation\BulkGalleryUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\BulkGalleryUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\BulkGalleryUpdate(
             $input,
         );
 
@@ -1232,7 +1232,7 @@ class Api
 
     public function galleryDestroy(GalleryDestroyInput $input): Mutation\GalleryDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\GalleryDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\GalleryDestroy(
             $input,
         );
 
@@ -1240,11 +1240,11 @@ class Api
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\GalleryUpdateInput> $input
+     * @param array<\Aazsamir\Stasphp\Graphql\GalleryUpdateInput> $input
      */
     public function galleriesUpdate(array $input): Mutation\GalleriesUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\GalleriesUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\GalleriesUpdate(
             $input,
         );
 
@@ -1253,7 +1253,7 @@ class Api
 
     public function addGalleryImages(GalleryAddInput $input): Mutation\AddGalleryImages
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\AddGalleryImages(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\AddGalleryImages(
             $input,
         );
 
@@ -1262,7 +1262,7 @@ class Api
 
     public function removeGalleryImages(GalleryRemoveInput $input): Mutation\RemoveGalleryImages
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\RemoveGalleryImages(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\RemoveGalleryImages(
             $input,
         );
 
@@ -1271,7 +1271,7 @@ class Api
 
     public function setGalleryCover(GallerySetCoverInput $input): Mutation\SetGalleryCover
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SetGalleryCover(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SetGalleryCover(
             $input,
         );
 
@@ -1280,7 +1280,7 @@ class Api
 
     public function resetGalleryCover(GalleryResetCoverInput $input): Mutation\ResetGalleryCover
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ResetGalleryCover(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ResetGalleryCover(
             $input,
         );
 
@@ -1289,7 +1289,7 @@ class Api
 
     public function galleryChapterCreate(GalleryChapterCreateInput $input): Mutation\GalleryChapterCreate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\GalleryChapterCreate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\GalleryChapterCreate(
             $input,
         );
 
@@ -1298,7 +1298,7 @@ class Api
 
     public function galleryChapterUpdate(GalleryChapterUpdateInput $input): Mutation\GalleryChapterUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\GalleryChapterUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\GalleryChapterUpdate(
             $input,
         );
 
@@ -1307,7 +1307,7 @@ class Api
 
     public function galleryChapterDestroy(string $id): Mutation\GalleryChapterDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\GalleryChapterDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\GalleryChapterDestroy(
             $id,
         );
 
@@ -1316,7 +1316,7 @@ class Api
 
     public function performerCreate(PerformerCreateInput $input): Mutation\PerformerCreate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\PerformerCreate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\PerformerCreate(
             $input,
         );
 
@@ -1325,7 +1325,7 @@ class Api
 
     public function performerUpdate(PerformerUpdateInput $input): Mutation\PerformerUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\PerformerUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\PerformerUpdate(
             $input,
         );
 
@@ -1334,7 +1334,7 @@ class Api
 
     public function performerDestroy(PerformerDestroyInput $input): Mutation\PerformerDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\PerformerDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\PerformerDestroy(
             $input,
         );
 
@@ -1346,7 +1346,7 @@ class Api
      */
     public function performersDestroy(array $ids): Mutation\PerformersDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\PerformersDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\PerformersDestroy(
             $ids,
         );
 
@@ -1355,7 +1355,7 @@ class Api
 
     public function bulkPerformerUpdate(BulkPerformerUpdateInput $input): Mutation\BulkPerformerUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\BulkPerformerUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\BulkPerformerUpdate(
             $input,
         );
 
@@ -1364,7 +1364,7 @@ class Api
 
     public function performerMerge(PerformerMergeInput $input): Mutation\PerformerMerge
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\PerformerMerge(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\PerformerMerge(
             $input,
         );
 
@@ -1373,7 +1373,7 @@ class Api
 
     public function studioCreate(StudioCreateInput $input): Mutation\StudioCreate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\StudioCreate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\StudioCreate(
             $input,
         );
 
@@ -1382,7 +1382,7 @@ class Api
 
     public function studioUpdate(StudioUpdateInput $input): Mutation\StudioUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\StudioUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\StudioUpdate(
             $input,
         );
 
@@ -1391,7 +1391,7 @@ class Api
 
     public function studioDestroy(StudioDestroyInput $input): Mutation\StudioDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\StudioDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\StudioDestroy(
             $input,
         );
 
@@ -1403,7 +1403,7 @@ class Api
      */
     public function studiosDestroy(array $ids): Mutation\StudiosDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\StudiosDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\StudiosDestroy(
             $ids,
         );
 
@@ -1412,7 +1412,7 @@ class Api
 
     public function bulkStudioUpdate(BulkStudioUpdateInput $input): Mutation\BulkStudioUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\BulkStudioUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\BulkStudioUpdate(
             $input,
         );
 
@@ -1424,7 +1424,7 @@ class Api
      */
     public function movieCreate(MovieCreateInput $input): Mutation\MovieCreate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MovieCreate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MovieCreate(
             $input,
         );
 
@@ -1436,7 +1436,7 @@ class Api
      */
     public function movieUpdate(MovieUpdateInput $input): Mutation\MovieUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MovieUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MovieUpdate(
             $input,
         );
 
@@ -1448,7 +1448,7 @@ class Api
      */
     public function movieDestroy(MovieDestroyInput $input): Mutation\MovieDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MovieDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MovieDestroy(
             $input,
         );
 
@@ -1461,7 +1461,7 @@ class Api
      */
     public function moviesDestroy(array $ids): Mutation\MoviesDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MoviesDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MoviesDestroy(
             $ids,
         );
 
@@ -1473,7 +1473,7 @@ class Api
      */
     public function bulkMovieUpdate(BulkMovieUpdateInput $input): Mutation\BulkMovieUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\BulkMovieUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\BulkMovieUpdate(
             $input,
         );
 
@@ -1482,7 +1482,7 @@ class Api
 
     public function groupCreate(GroupCreateInput $input): Mutation\GroupCreate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\GroupCreate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\GroupCreate(
             $input,
         );
 
@@ -1491,7 +1491,7 @@ class Api
 
     public function groupUpdate(GroupUpdateInput $input): Mutation\GroupUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\GroupUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\GroupUpdate(
             $input,
         );
 
@@ -1500,7 +1500,7 @@ class Api
 
     public function groupDestroy(GroupDestroyInput $input): Mutation\GroupDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\GroupDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\GroupDestroy(
             $input,
         );
 
@@ -1512,7 +1512,7 @@ class Api
      */
     public function groupsDestroy(array $ids): Mutation\GroupsDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\GroupsDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\GroupsDestroy(
             $ids,
         );
 
@@ -1521,7 +1521,7 @@ class Api
 
     public function bulkGroupUpdate(BulkGroupUpdateInput $input): Mutation\BulkGroupUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\BulkGroupUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\BulkGroupUpdate(
             $input,
         );
 
@@ -1530,7 +1530,7 @@ class Api
 
     public function addGroupSubGroups(GroupSubGroupAddInput $input): Mutation\AddGroupSubGroups
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\AddGroupSubGroups(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\AddGroupSubGroups(
             $input,
         );
 
@@ -1539,7 +1539,7 @@ class Api
 
     public function removeGroupSubGroups(GroupSubGroupRemoveInput $input): Mutation\RemoveGroupSubGroups
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\RemoveGroupSubGroups(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\RemoveGroupSubGroups(
             $input,
         );
 
@@ -1548,7 +1548,7 @@ class Api
 
     public function reorderSubGroups(ReorderSubGroupsInput $input): Mutation\ReorderSubGroups
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ReorderSubGroups(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ReorderSubGroups(
             $input,
         );
 
@@ -1557,7 +1557,7 @@ class Api
 
     public function tagCreate(TagCreateInput $input): Mutation\TagCreate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\TagCreate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\TagCreate(
             $input,
         );
 
@@ -1566,7 +1566,7 @@ class Api
 
     public function tagUpdate(TagUpdateInput $input): Mutation\TagUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\TagUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\TagUpdate(
             $input,
         );
 
@@ -1575,7 +1575,7 @@ class Api
 
     public function tagDestroy(TagDestroyInput $input): Mutation\TagDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\TagDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\TagDestroy(
             $input,
         );
 
@@ -1587,7 +1587,7 @@ class Api
      */
     public function tagsDestroy(array $ids): Mutation\TagsDestroy
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\TagsDestroy(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\TagsDestroy(
             $ids,
         );
 
@@ -1596,7 +1596,7 @@ class Api
 
     public function tagsMerge(TagsMergeInput $input): Mutation\TagsMerge
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\TagsMerge(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\TagsMerge(
             $input,
         );
 
@@ -1605,7 +1605,7 @@ class Api
 
     public function bulkTagUpdate(BulkTagUpdateInput $input): Mutation\BulkTagUpdate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\BulkTagUpdate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\BulkTagUpdate(
             $input,
         );
 
@@ -1614,7 +1614,7 @@ class Api
 
     public function moveFiles(MoveFilesInput $input): Mutation\MoveFiles
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MoveFiles(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MoveFiles(
             $input,
         );
 
@@ -1626,7 +1626,7 @@ class Api
      */
     public function deleteFiles(array $ids): Mutation\DeleteFiles
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\DeleteFiles(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\DeleteFiles(
             $ids,
         );
 
@@ -1638,7 +1638,7 @@ class Api
      */
     public function destroyFiles(array $ids): Mutation\DestroyFiles
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\DestroyFiles(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\DestroyFiles(
             $ids,
         );
 
@@ -1647,7 +1647,7 @@ class Api
 
     public function fileSetFingerprints(FileSetFingerprintsInput $input): Mutation\FileSetFingerprints
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\FileSetFingerprints(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\FileSetFingerprints(
             $input,
         );
 
@@ -1656,7 +1656,7 @@ class Api
 
     public function revealFileInFileManager(string $id): Mutation\RevealFileInFileManager
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\RevealFileInFileManager(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\RevealFileInFileManager(
             $id,
         );
 
@@ -1665,7 +1665,7 @@ class Api
 
     public function revealFolderInFileManager(string $id): Mutation\RevealFolderInFileManager
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\RevealFolderInFileManager(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\RevealFolderInFileManager(
             $id,
         );
 
@@ -1674,7 +1674,7 @@ class Api
 
     public function saveFilter(SaveFilterInput $input): Mutation\SaveFilter
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SaveFilter(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SaveFilter(
             $input,
         );
 
@@ -1683,7 +1683,7 @@ class Api
 
     public function destroySavedFilter(DestroyFilterInput $input): Mutation\DestroySavedFilter
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\DestroySavedFilter(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\DestroySavedFilter(
             $input,
         );
 
@@ -1695,7 +1695,7 @@ class Api
      */
     public function setDefaultFilter(SetDefaultFilterInput $input): Mutation\SetDefaultFilter
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SetDefaultFilter(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SetDefaultFilter(
             $input,
         );
 
@@ -1704,7 +1704,7 @@ class Api
 
     public function configureGeneral(ConfigGeneralInput $input): Mutation\ConfigureGeneral
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ConfigureGeneral(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ConfigureGeneral(
             $input,
         );
 
@@ -1713,7 +1713,7 @@ class Api
 
     public function configureInterface(ConfigInterfaceInput $input): Mutation\ConfigureInterface
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ConfigureInterface(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ConfigureInterface(
             $input,
         );
 
@@ -1722,7 +1722,7 @@ class Api
 
     public function configureDLNA(ConfigDLNAInput $input): Mutation\ConfigureDLNA
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ConfigureDLNA(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ConfigureDLNA(
             $input,
         );
 
@@ -1731,7 +1731,7 @@ class Api
 
     public function configureScraping(ConfigScrapingInput $input): Mutation\ConfigureScraping
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ConfigureScraping(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ConfigureScraping(
             $input,
         );
 
@@ -1740,7 +1740,7 @@ class Api
 
     public function configureDefaults(ConfigDefaultSettingsInput $input): Mutation\ConfigureDefaults
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ConfigureDefaults(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ConfigureDefaults(
             $input,
         );
 
@@ -1749,7 +1749,7 @@ class Api
 
     public function configurePlugin(string $plugin_id, mixed $input): Mutation\ConfigurePlugin
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ConfigurePlugin(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ConfigurePlugin(
             $plugin_id,
             $input,
         );
@@ -1759,7 +1759,7 @@ class Api
 
     public function configureUI(mixed $input = null, mixed $partial = null): Mutation\ConfigureUI
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ConfigureUI(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ConfigureUI(
             $input,
             $partial,
         );
@@ -1769,7 +1769,7 @@ class Api
 
     public function configureUISetting(string $key, mixed $value = null): Mutation\ConfigureUISetting
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ConfigureUISetting(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ConfigureUISetting(
             $key,
             $value,
         );
@@ -1779,7 +1779,7 @@ class Api
 
     public function generateAPIKey(GenerateAPIKeyInput $input): Mutation\GenerateAPIKey
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\GenerateAPIKey(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\GenerateAPIKey(
             $input,
         );
 
@@ -1788,7 +1788,7 @@ class Api
 
     public function exportObjects(ExportObjectsInput $input): Mutation\ExportObjects
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ExportObjects(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ExportObjects(
             $input,
         );
 
@@ -1797,7 +1797,7 @@ class Api
 
     public function importObjects(ImportObjectsInput $input): Mutation\ImportObjects
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ImportObjects(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ImportObjects(
             $input,
         );
 
@@ -1806,7 +1806,7 @@ class Api
 
     public function metadataImport(): Mutation\MetadataImport
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MetadataImport(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MetadataImport(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -1814,7 +1814,7 @@ class Api
 
     public function metadataExport(): Mutation\MetadataExport
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MetadataExport(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MetadataExport(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -1822,7 +1822,7 @@ class Api
 
     public function metadataScan(ScanMetadataInput $input): Mutation\MetadataScan
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MetadataScan(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MetadataScan(
             $input,
         );
 
@@ -1831,7 +1831,7 @@ class Api
 
     public function metadataGenerate(GenerateMetadataInput $input): Mutation\MetadataGenerate
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MetadataGenerate(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MetadataGenerate(
             $input,
         );
 
@@ -1840,7 +1840,7 @@ class Api
 
     public function metadataAutoTag(AutoTagMetadataInput $input): Mutation\MetadataAutoTag
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MetadataAutoTag(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MetadataAutoTag(
             $input,
         );
 
@@ -1849,7 +1849,7 @@ class Api
 
     public function metadataClean(CleanMetadataInput $input): Mutation\MetadataClean
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MetadataClean(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MetadataClean(
             $input,
         );
 
@@ -1858,7 +1858,7 @@ class Api
 
     public function metadataCleanGenerated(CleanGeneratedInput $input): Mutation\MetadataCleanGenerated
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MetadataCleanGenerated(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MetadataCleanGenerated(
             $input,
         );
 
@@ -1867,7 +1867,7 @@ class Api
 
     public function metadataIdentify(IdentifyMetadataInput $input): Mutation\MetadataIdentify
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MetadataIdentify(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MetadataIdentify(
             $input,
         );
 
@@ -1876,7 +1876,7 @@ class Api
 
     public function migrateHashNaming(): Mutation\MigrateHashNaming
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MigrateHashNaming(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MigrateHashNaming(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -1884,7 +1884,7 @@ class Api
 
     public function migrateSceneScreenshots(MigrateSceneScreenshotsInput $input): Mutation\MigrateSceneScreenshots
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MigrateSceneScreenshots(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MigrateSceneScreenshots(
             $input,
         );
 
@@ -1893,7 +1893,7 @@ class Api
 
     public function migrateBlobs(MigrateBlobsInput $input): Mutation\MigrateBlobs
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\MigrateBlobs(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\MigrateBlobs(
             $input,
         );
 
@@ -1902,7 +1902,7 @@ class Api
 
     public function anonymiseDatabase(AnonymiseDatabaseInput $input): Mutation\AnonymiseDatabase
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\AnonymiseDatabase(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\AnonymiseDatabase(
             $input,
         );
 
@@ -1911,7 +1911,7 @@ class Api
 
     public function optimiseDatabase(): Mutation\OptimiseDatabase
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\OptimiseDatabase(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\OptimiseDatabase(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -1919,7 +1919,7 @@ class Api
 
     public function reloadScrapers(): Mutation\ReloadScrapers
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ReloadScrapers(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ReloadScrapers(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -1927,7 +1927,7 @@ class Api
 
     public function setPluginsEnabled(mixed $enabledMap): Mutation\SetPluginsEnabled
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SetPluginsEnabled(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SetPluginsEnabled(
             $enabledMap,
         );
 
@@ -1935,7 +1935,7 @@ class Api
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\PluginArgInput> $args
+     * @param array<\Aazsamir\Stasphp\Graphql\PluginArgInput> $args
      */
     public function runPluginTask(
         string $plugin_id,
@@ -1944,7 +1944,7 @@ class Api
         ?array $args = null,
         mixed $args_map = null,
     ): Mutation\RunPluginTask {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\RunPluginTask(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\RunPluginTask(
             $plugin_id,
             $task_name,
             $description,
@@ -1957,7 +1957,7 @@ class Api
 
     public function runPluginOperation(string $plugin_id, mixed $args = null): Mutation\RunPluginOperation
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\RunPluginOperation(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\RunPluginOperation(
             $plugin_id,
             $args,
         );
@@ -1967,18 +1967,18 @@ class Api
 
     public function reloadPlugins(): Mutation\ReloadPlugins
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ReloadPlugins(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ReloadPlugins(
         );
 
         return $operation->withClient($this->graphqlClient);
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\PackageSpecInput> $packages
+     * @param array<\Aazsamir\Stasphp\Graphql\PackageSpecInput> $packages
      */
     public function installPackages(PackageType $type, array $packages): Mutation\InstallPackages
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\InstallPackages(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\InstallPackages(
             $type,
             $packages,
         );
@@ -1987,11 +1987,11 @@ class Api
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\PackageSpecInput> $packages
+     * @param array<\Aazsamir\Stasphp\Graphql\PackageSpecInput> $packages
      */
     public function updatePackages(PackageType $type, ?array $packages = null): Mutation\UpdatePackages
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\UpdatePackages(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\UpdatePackages(
             $type,
             $packages,
         );
@@ -2000,11 +2000,11 @@ class Api
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\PackageSpecInput> $packages
+     * @param array<\Aazsamir\Stasphp\Graphql\PackageSpecInput> $packages
      */
     public function uninstallPackages(PackageType $type, array $packages): Mutation\UninstallPackages
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\UninstallPackages(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\UninstallPackages(
             $type,
             $packages,
         );
@@ -2014,7 +2014,7 @@ class Api
 
     public function stopJob(string $job_id): Mutation\StopJob
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\StopJob(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\StopJob(
             $job_id,
         );
 
@@ -2023,7 +2023,7 @@ class Api
 
     public function stopAllJobs(): Mutation\StopAllJobs
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\StopAllJobs(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\StopAllJobs(
         );
 
         return $operation->withClient($this->graphqlClient);
@@ -2032,7 +2032,7 @@ class Api
     public function submitStashBoxFingerprints(
         StashBoxFingerprintSubmissionInput $input,
     ): Mutation\SubmitStashBoxFingerprints {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SubmitStashBoxFingerprints(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SubmitStashBoxFingerprints(
             $input,
         );
 
@@ -2041,7 +2041,7 @@ class Api
 
     public function submitStashBoxSceneDraft(StashBoxDraftSubmissionInput $input): Mutation\SubmitStashBoxSceneDraft
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SubmitStashBoxSceneDraft(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SubmitStashBoxSceneDraft(
             $input,
         );
 
@@ -2051,7 +2051,7 @@ class Api
     public function submitStashBoxPerformerDraft(
         StashBoxDraftSubmissionInput $input,
     ): Mutation\SubmitStashBoxPerformerDraft {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\SubmitStashBoxPerformerDraft(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\SubmitStashBoxPerformerDraft(
             $input,
         );
 
@@ -2060,7 +2060,7 @@ class Api
 
     public function backupDatabase(BackupDatabaseInput $input): Mutation\BackupDatabase
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\BackupDatabase(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\BackupDatabase(
             $input,
         );
 
@@ -2072,7 +2072,7 @@ class Api
      */
     public function querySQL(string $sql, ?array $args = null): Mutation\QuerySQL
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\QuerySQL(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\QuerySQL(
             $sql,
             $args,
         );
@@ -2085,7 +2085,7 @@ class Api
      */
     public function execSQL(string $sql, ?array $args = null): Mutation\ExecSQL
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\ExecSQL(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\ExecSQL(
             $sql,
             $args,
         );
@@ -2095,7 +2095,7 @@ class Api
 
     public function stashBoxBatchPerformerTag(StashBoxBatchTagInput $input): Mutation\StashBoxBatchPerformerTag
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\StashBoxBatchPerformerTag(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\StashBoxBatchPerformerTag(
             $input,
         );
 
@@ -2104,7 +2104,7 @@ class Api
 
     public function stashBoxBatchStudioTag(StashBoxBatchTagInput $input): Mutation\StashBoxBatchStudioTag
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\StashBoxBatchStudioTag(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\StashBoxBatchStudioTag(
             $input,
         );
 
@@ -2113,7 +2113,7 @@ class Api
 
     public function stashBoxBatchTagTag(StashBoxBatchTagInput $input): Mutation\StashBoxBatchTagTag
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\StashBoxBatchTagTag(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\StashBoxBatchTagTag(
             $input,
         );
 
@@ -2122,7 +2122,7 @@ class Api
 
     public function enableDLNA(EnableDLNAInput $input): Mutation\EnableDLNA
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\EnableDLNA(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\EnableDLNA(
             $input,
         );
 
@@ -2131,7 +2131,7 @@ class Api
 
     public function disableDLNA(DisableDLNAInput $input): Mutation\DisableDLNA
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\DisableDLNA(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\DisableDLNA(
             $input,
         );
 
@@ -2140,7 +2140,7 @@ class Api
 
     public function addTempDLNAIP(AddTempDLNAIPInput $input): Mutation\AddTempDLNAIP
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\AddTempDLNAIP(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\AddTempDLNAIP(
             $input,
         );
 
@@ -2149,7 +2149,7 @@ class Api
 
     public function removeTempDLNAIP(RemoveTempDLNAIPInput $input): Mutation\RemoveTempDLNAIP
     {
-        $operation = new \Aazsamir\Stasphp\Graphpql\Mutation\RemoveTempDLNAIP(
+        $operation = new \Aazsamir\Stasphp\Graphql\Mutation\RemoveTempDLNAIP(
             $input,
         );
 

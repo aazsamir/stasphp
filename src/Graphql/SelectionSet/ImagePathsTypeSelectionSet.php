@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class ImagePathsTypeSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class ImagePathsTypeSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSe
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\ImagePathsTypeField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\ImagePathsTypeField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class ImagePathsTypeSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSe
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ImagePathsTypeField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ImagePathsTypeField[]
      */
     public function getSelection(): array
     {

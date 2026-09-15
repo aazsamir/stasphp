@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class StatsResultType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -25,123 +25,123 @@ class StatsResultType implements \Aazsamir\Graphpql\Model\GraphObject
     public int $scenes_played;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField<mixed>
      */
     public static function scene_count(): Fields\StatsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField::scene_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField::scene_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField<mixed>
      */
     public static function scenes_size(): Fields\StatsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField::scenes_size();
+        return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField::scenes_size();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField<mixed>
      */
     public static function scenes_duration(): Fields\StatsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField::scenes_duration();
+        return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField::scenes_duration();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField<mixed>
      */
     public static function image_count(): Fields\StatsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField::image_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField::image_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField<mixed>
      */
     public static function images_size(): Fields\StatsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField::images_size();
+        return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField::images_size();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField<mixed>
      */
     public static function gallery_count(): Fields\StatsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField::gallery_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField::gallery_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField<mixed>
      */
     public static function performer_count(): Fields\StatsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField::performer_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField::performer_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField<mixed>
      */
     public static function studio_count(): Fields\StatsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField::studio_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField::studio_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField<mixed>
      */
     public static function group_count(): Fields\StatsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField::group_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField::group_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField<mixed>
      */
     public static function movie_count(): Fields\StatsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField::movie_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField::movie_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField<mixed>
      */
     public static function tag_count(): Fields\StatsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField::tag_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField::tag_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField<mixed>
      */
     public static function total_o_count(): Fields\StatsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField::total_o_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField::total_o_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField<mixed>
      */
     public static function total_play_duration(): Fields\StatsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField::total_play_duration();
+        return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField::total_play_duration();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField<mixed>
      */
     public static function total_play_count(): Fields\StatsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField::total_play_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField::total_play_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField<mixed>
      */
     public static function scenes_played(): Fields\StatsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField::scenes_played();
+        return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField::scenes_played();
     }
 
     public static function new(

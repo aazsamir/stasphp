@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class TagUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -19,7 +19,7 @@ class TagUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
     public ?bool $favorite;
     public ?string $image;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\StashIDInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\StashIDInput> */
     public ?array $stash_ids;
 
     /** @var array<string> */
@@ -31,7 +31,7 @@ class TagUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
 
     /**
      * @param array<string> $aliases
-     * @param array<\Aazsamir\Stasphp\Graphpql\StashIDInput> $stash_ids
+     * @param array<\Aazsamir\Stasphp\Graphql\StashIDInput> $stash_ids
      * @param array<string> $parent_ids
      * @param array<string> $child_ids
      */
@@ -105,7 +105,7 @@ class TagUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\StashIDInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\StashIDInput::fromArray($data);
             }, $data['stash_ids'] ?? []);
         }
         if (isset($data['parent_ids'])) {
@@ -127,7 +127,7 @@ class TagUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
             }, $data['child_ids'] ?? []);
         }
         if (isset($data['custom_fields'])) {
-            $self->custom_fields = \Aazsamir\Stasphp\Graphpql\CustomFieldsInput::fromArray($data['custom_fields']);
+            $self->custom_fields = \Aazsamir\Stasphp\Graphql\CustomFieldsInput::fromArray($data['custom_fields']);
         }
 
         return $self;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class JobSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class JobSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\JobField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\JobField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class JobSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\JobField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\JobField[]
      */
     public function getSelection(): array
     {

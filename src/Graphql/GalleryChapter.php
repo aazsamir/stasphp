@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class GalleryChapter implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -16,51 +16,51 @@ class GalleryChapter implements \Aazsamir\Graphpql\Model\GraphObject
     public \DateTimeInterface $updated_at;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryChapterField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryChapterField<mixed>
      */
     public static function id(): Fields\GalleryChapterField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryChapterField::id();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryChapterField::id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryChapterField<\Aazsamir\Stasphp\Graphpql\SelectionSet\GallerySelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryChapterField<\Aazsamir\Stasphp\Graphql\SelectionSet\GallerySelectionSet>
      */
     public static function gallery(): Fields\GalleryChapterField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryChapterField::gallery();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryChapterField::gallery();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryChapterField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryChapterField<mixed>
      */
     public static function title(): Fields\GalleryChapterField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryChapterField::title();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryChapterField::title();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryChapterField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryChapterField<mixed>
      */
     public static function image_index(): Fields\GalleryChapterField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryChapterField::image_index();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryChapterField::image_index();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryChapterField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryChapterField<mixed>
      */
     public static function created_at(): Fields\GalleryChapterField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryChapterField::created_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryChapterField::created_at();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryChapterField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryChapterField<mixed>
      */
     public static function updated_at(): Fields\GalleryChapterField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryChapterField::updated_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryChapterField::updated_at();
     }
 
     public static function new(
@@ -89,7 +89,7 @@ class GalleryChapter implements \Aazsamir\Graphpql\Model\GraphObject
             $self->id = $data['id'];
         }
         if (isset($data['gallery'])) {
-            $self->gallery = \Aazsamir\Stasphp\Graphpql\Gallery::fromArray($data['gallery']);
+            $self->gallery = \Aazsamir\Stasphp\Graphql\Gallery::fromArray($data['gallery']);
         }
         if (isset($data['title'])) {
             $self->title = $data['title'];

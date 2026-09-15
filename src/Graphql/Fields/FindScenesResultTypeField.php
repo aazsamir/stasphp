@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -47,13 +47,13 @@ class FindScenesResultTypeField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneSelectionSet>
      */
     public static function scenes(): self
     {
         $instance = new self();
         $instance->name = 'scenes';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\SceneSelectionSet();
 
         return $instance;
     }

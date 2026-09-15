@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ImportObjectsInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -32,10 +32,10 @@ class ImportObjectsInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->file = $data['file'];
         }
         if (isset($data['duplicateBehaviour'])) {
-            $self->duplicateBehaviour = \Aazsamir\Stasphp\Graphpql\ImportDuplicateEnum::from($data['duplicateBehaviour']);
+            $self->duplicateBehaviour = \Aazsamir\Stasphp\Graphql\ImportDuplicateEnum::from($data['duplicateBehaviour']);
         }
         if (isset($data['missingRefBehaviour'])) {
-            $self->missingRefBehaviour = \Aazsamir\Stasphp\Graphpql\ImportMissingRefEnum::from($data['missingRefBehaviour']);
+            $self->missingRefBehaviour = \Aazsamir\Stasphp\Graphql\ImportMissingRefEnum::from($data['missingRefBehaviour']);
         }
 
         return $self;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class GeneratePreviewOptionsSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class GeneratePreviewOptionsSelectionSet implements \Aazsamir\Graphpql\Model\Sel
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\GeneratePreviewOptionsField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\GeneratePreviewOptionsField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class GeneratePreviewOptionsSelectionSet implements \Aazsamir\Graphpql\Model\Sel
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GeneratePreviewOptionsField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GeneratePreviewOptionsField[]
      */
     public function getSelection(): array
     {

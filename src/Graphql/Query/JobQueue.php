@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class JobQueue implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'jobQueue';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\Job';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Job';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\JobSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\JobSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -33,12 +33,12 @@ class JobQueue implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\JobSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\JobSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\JobSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\JobSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -46,14 +46,14 @@ class JobQueue implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\JobSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\JobSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\JobSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\JobSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -67,7 +67,7 @@ class JobQueue implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @return array<\Aazsamir\Stasphp\Graphpql\Job>
+     * @return array<\Aazsamir\Stasphp\Graphql\Job>
      */
     public function do(): ?array
     {

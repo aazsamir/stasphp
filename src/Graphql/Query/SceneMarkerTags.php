@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class SceneMarkerTags implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'sceneMarkerTags';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\SceneMarkerTag';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\SceneMarkerTag';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneMarkerTagSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\SceneMarkerTagSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -35,12 +35,12 @@ class SceneMarkerTags implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneMarkerTagSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\SceneMarkerTagSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneMarkerTagSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\SceneMarkerTagSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -48,14 +48,14 @@ class SceneMarkerTags implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneMarkerTagSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\SceneMarkerTagSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneMarkerTagSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\SceneMarkerTagSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -69,7 +69,7 @@ class SceneMarkerTags implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @return array<\Aazsamir\Stasphp\Graphpql\SceneMarkerTag>
+     * @return array<\Aazsamir\Stasphp\Graphql\SceneMarkerTag>
      */
     public function do(): ?array
     {

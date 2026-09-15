@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class GroupDescription implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -12,19 +12,19 @@ class GroupDescription implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $description;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GroupDescriptionField<\Aazsamir\Stasphp\Graphpql\SelectionSet\GroupSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GroupDescriptionField<\Aazsamir\Stasphp\Graphql\SelectionSet\GroupSelectionSet>
      */
     public static function group(): Fields\GroupDescriptionField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GroupDescriptionField::group();
+        return \Aazsamir\Stasphp\Graphql\Fields\GroupDescriptionField::group();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GroupDescriptionField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GroupDescriptionField<mixed>
      */
     public static function description(): Fields\GroupDescriptionField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GroupDescriptionField::description();
+        return \Aazsamir\Stasphp\Graphql\Fields\GroupDescriptionField::description();
     }
 
     public static function new(Group $group, ?string $description = null): self
@@ -40,7 +40,7 @@ class GroupDescription implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['group'])) {
-            $self->group = \Aazsamir\Stasphp\Graphpql\Group::fromArray($data['group']);
+            $self->group = \Aazsamir\Stasphp\Graphql\Group::fromArray($data['group']);
         }
         if (isset($data['description'])) {
             $self->description = $data['description'];

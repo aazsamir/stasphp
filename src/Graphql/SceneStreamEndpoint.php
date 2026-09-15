@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SceneStreamEndpoint implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -13,27 +13,27 @@ class SceneStreamEndpoint implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $label;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneStreamEndpointField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneStreamEndpointField<mixed>
      */
     public static function url(): Fields\SceneStreamEndpointField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneStreamEndpointField::url();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneStreamEndpointField::url();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneStreamEndpointField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneStreamEndpointField<mixed>
      */
     public static function mime_type(): Fields\SceneStreamEndpointField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneStreamEndpointField::mime_type();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneStreamEndpointField::mime_type();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneStreamEndpointField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneStreamEndpointField<mixed>
      */
     public static function label(): Fields\SceneStreamEndpointField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneStreamEndpointField::label();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneStreamEndpointField::label();
     }
 
     public static function new(string $url, ?string $mime_type = null, ?string $label = null): self

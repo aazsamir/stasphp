@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ExportObjectsInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -47,28 +47,28 @@ class ExportObjectsInput implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['scenes'])) {
-            $self->scenes = \Aazsamir\Stasphp\Graphpql\ExportObjectTypeInput::fromArray($data['scenes']);
+            $self->scenes = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['scenes']);
         }
         if (isset($data['images'])) {
-            $self->images = \Aazsamir\Stasphp\Graphpql\ExportObjectTypeInput::fromArray($data['images']);
+            $self->images = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['images']);
         }
         if (isset($data['studios'])) {
-            $self->studios = \Aazsamir\Stasphp\Graphpql\ExportObjectTypeInput::fromArray($data['studios']);
+            $self->studios = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['studios']);
         }
         if (isset($data['performers'])) {
-            $self->performers = \Aazsamir\Stasphp\Graphpql\ExportObjectTypeInput::fromArray($data['performers']);
+            $self->performers = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['performers']);
         }
         if (isset($data['tags'])) {
-            $self->tags = \Aazsamir\Stasphp\Graphpql\ExportObjectTypeInput::fromArray($data['tags']);
+            $self->tags = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['tags']);
         }
         if (isset($data['groups'])) {
-            $self->groups = \Aazsamir\Stasphp\Graphpql\ExportObjectTypeInput::fromArray($data['groups']);
+            $self->groups = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['groups']);
         }
         if (isset($data['movies'])) {
-            $self->movies = \Aazsamir\Stasphp\Graphpql\ExportObjectTypeInput::fromArray($data['movies']);
+            $self->movies = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['movies']);
         }
         if (isset($data['galleries'])) {
-            $self->galleries = \Aazsamir\Stasphp\Graphpql\ExportObjectTypeInput::fromArray($data['galleries']);
+            $self->galleries = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['galleries']);
         }
         if (isset($data['includeDependencies'])) {
             $self->includeDependencies = $data['includeDependencies'];

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class JobStatusUpdate implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -12,19 +12,19 @@ class JobStatusUpdate implements \Aazsamir\Graphpql\Model\GraphObject
     public Job $job;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\JobStatusUpdateField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\JobStatusUpdateField<mixed>
      */
     public static function type(): Fields\JobStatusUpdateField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\JobStatusUpdateField::type();
+        return \Aazsamir\Stasphp\Graphql\Fields\JobStatusUpdateField::type();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\JobStatusUpdateField<\Aazsamir\Stasphp\Graphpql\SelectionSet\JobSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\JobStatusUpdateField<\Aazsamir\Stasphp\Graphql\SelectionSet\JobSelectionSet>
      */
     public static function job(): Fields\JobStatusUpdateField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\JobStatusUpdateField::job();
+        return \Aazsamir\Stasphp\Graphql\Fields\JobStatusUpdateField::job();
     }
 
     public static function new(JobStatusUpdateType $type, Job $job): self
@@ -40,10 +40,10 @@ class JobStatusUpdate implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['type'])) {
-            $self->type = \Aazsamir\Stasphp\Graphpql\JobStatusUpdateType::from($data['type']);
+            $self->type = \Aazsamir\Stasphp\Graphql\JobStatusUpdateType::from($data['type']);
         }
         if (isset($data['job'])) {
-            $self->job = \Aazsamir\Stasphp\Graphpql\Job::fromArray($data['job']);
+            $self->job = \Aazsamir\Stasphp\Graphql\Job::fromArray($data['job']);
         }
 
         return $self;

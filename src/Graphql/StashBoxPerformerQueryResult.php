@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class StashBoxPerformerQueryResult implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -10,27 +10,27 @@ class StashBoxPerformerQueryResult implements \Aazsamir\Graphpql\Model\GraphObje
 
     public string $query;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\ScrapedPerformer> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\ScrapedPerformer> */
     public array $results;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StashBoxPerformerQueryResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StashBoxPerformerQueryResultField<mixed>
      */
     public static function query(): Fields\StashBoxPerformerQueryResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StashBoxPerformerQueryResultField::query();
+        return \Aazsamir\Stasphp\Graphql\Fields\StashBoxPerformerQueryResultField::query();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StashBoxPerformerQueryResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedPerformerSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StashBoxPerformerQueryResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedPerformerSelectionSet>
      */
     public static function results(): Fields\StashBoxPerformerQueryResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StashBoxPerformerQueryResultField::results();
+        return \Aazsamir\Stasphp\Graphql\Fields\StashBoxPerformerQueryResultField::results();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\ScrapedPerformer> $results
+     * @param array<\Aazsamir\Stasphp\Graphql\ScrapedPerformer> $results
      */
     public static function new(string $query, array $results): self
     {
@@ -53,7 +53,7 @@ class StashBoxPerformerQueryResult implements \Aazsamir\Graphpql\Model\GraphObje
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\ScrapedPerformer::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\ScrapedPerformer::fromArray($data);
             }, $data['results'] ?? []);
         }
 

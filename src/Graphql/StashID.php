@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class StashID implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -13,27 +13,27 @@ class StashID implements \Aazsamir\Graphpql\Model\GraphObject
     public \DateTimeInterface $updated_at;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StashIDField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StashIDField<mixed>
      */
     public static function endpoint(): Fields\StashIDField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StashIDField::endpoint();
+        return \Aazsamir\Stasphp\Graphql\Fields\StashIDField::endpoint();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StashIDField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StashIDField<mixed>
      */
     public static function stash_id(): Fields\StashIDField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StashIDField::stash_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\StashIDField::stash_id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StashIDField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StashIDField<mixed>
      */
     public static function updated_at(): Fields\StashIDField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StashIDField::updated_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\StashIDField::updated_at();
     }
 
     public static function new(string $endpoint, string $stash_id, \DateTimeInterface $updated_at): self

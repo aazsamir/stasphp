@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class InstalledPackages implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'installedPackages';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\Package';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Package';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\PackageSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -23,7 +23,7 @@ class InstalledPackages implements \Aazsamir\Graphpql\Model\Query
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\PackageType $type,
+        public \Aazsamir\Stasphp\Graphql\PackageType $type,
     ) {
     }
 
@@ -35,12 +35,12 @@ class InstalledPackages implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\PackageSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\PackageSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -48,14 +48,14 @@ class InstalledPackages implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\PackageSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\PackageSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -69,7 +69,7 @@ class InstalledPackages implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @return array<\Aazsamir\Stasphp\Graphpql\Package>
+     * @return array<\Aazsamir\Stasphp\Graphql\Package>
      */
     public function do(): ?array
     {

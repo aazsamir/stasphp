@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SQLQueryResult implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -15,19 +15,19 @@ class SQLQueryResult implements \Aazsamir\Graphpql\Model\GraphObject
     public array $rows;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SQLQueryResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SQLQueryResultField<mixed>
      */
     public static function columns(): Fields\SQLQueryResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SQLQueryResultField::columns();
+        return \Aazsamir\Stasphp\Graphql\Fields\SQLQueryResultField::columns();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SQLQueryResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SQLQueryResultField<mixed>
      */
     public static function rows(): Fields\SQLQueryResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SQLQueryResultField::rows();
+        return \Aazsamir\Stasphp\Graphql\Fields\SQLQueryResultField::rows();
     }
 
     /**

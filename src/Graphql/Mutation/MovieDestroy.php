@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Mutation;
+namespace Aazsamir\Stasphp\Graphql\Mutation;
 
 /**
  * @deprecated Use groupDestroy instead
@@ -26,7 +26,7 @@ class MovieDestroy implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\MovieDestroyInput $input,
+        public \Aazsamir\Stasphp\Graphql\MovieDestroyInput $input,
     ) {
     }
 

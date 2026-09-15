@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class PluginHook implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -16,35 +16,35 @@ class PluginHook implements \Aazsamir\Graphpql\Model\GraphObject
     public Plugin $plugin;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginHookField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginHookField<mixed>
      */
     public static function name(): Fields\PluginHookField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginHookField::name();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginHookField::name();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginHookField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginHookField<mixed>
      */
     public static function description(): Fields\PluginHookField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginHookField::description();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginHookField::description();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginHookField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginHookField<mixed>
      */
     public static function hooks(): Fields\PluginHookField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginHookField::hooks();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginHookField::hooks();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginHookField<\Aazsamir\Stasphp\Graphpql\SelectionSet\PluginSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginHookField<\Aazsamir\Stasphp\Graphql\SelectionSet\PluginSelectionSet>
      */
     public static function plugin(): Fields\PluginHookField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginHookField::plugin();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginHookField::plugin();
     }
 
     /**
@@ -68,7 +68,7 @@ class PluginHook implements \Aazsamir\Graphpql\Model\GraphObject
             $self->name = $data['name'];
         }
         if (isset($data['plugin'])) {
-            $self->plugin = \Aazsamir\Stasphp\Graphpql\Plugin::fromArray($data['plugin']);
+            $self->plugin = \Aazsamir\Stasphp\Graphql\Plugin::fromArray($data['plugin']);
         }
         if (isset($data['description'])) {
             $self->description = $data['description'];

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class PluginArgInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -27,7 +27,7 @@ class PluginArgInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->key = $data['key'];
         }
         if (isset($data['value'])) {
-            $self->value = \Aazsamir\Stasphp\Graphpql\PluginValueInput::fromArray($data['value']);
+            $self->value = \Aazsamir\Stasphp\Graphql\PluginValueInput::fromArray($data['value']);
         }
 
         return $self;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SceneCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -27,17 +27,17 @@ class SceneCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
     /** @var array<string> */
     public ?array $performer_ids;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\SceneGroupInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\SceneGroupInput> */
     public ?array $groups;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\SceneMovieInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\SceneMovieInput> */
     public ?array $movies;
 
     /** @var array<string> */
     public ?array $tag_ids;
     public ?string $cover_image;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\StashIDInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\StashIDInput> */
     public ?array $stash_ids;
 
     /** @var array<string> */
@@ -48,10 +48,10 @@ class SceneCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
      * @param array<string> $urls
      * @param array<string> $gallery_ids
      * @param array<string> $performer_ids
-     * @param array<\Aazsamir\Stasphp\Graphpql\SceneGroupInput> $groups
-     * @param array<\Aazsamir\Stasphp\Graphpql\SceneMovieInput> $movies
+     * @param array<\Aazsamir\Stasphp\Graphql\SceneGroupInput> $groups
+     * @param array<\Aazsamir\Stasphp\Graphql\SceneMovieInput> $movies
      * @param array<string> $tag_ids
-     * @param array<\Aazsamir\Stasphp\Graphpql\StashIDInput> $stash_ids
+     * @param array<\Aazsamir\Stasphp\Graphql\StashIDInput> $stash_ids
      * @param array<string> $file_ids
      */
     public static function new(
@@ -162,7 +162,7 @@ class SceneCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\SceneGroupInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\SceneGroupInput::fromArray($data);
             }, $data['groups'] ?? []);
         }
         if (isset($data['movies'])) {
@@ -171,7 +171,7 @@ class SceneCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\SceneMovieInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\SceneMovieInput::fromArray($data);
             }, $data['movies'] ?? []);
         }
         if (isset($data['tag_ids'])) {
@@ -192,7 +192,7 @@ class SceneCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\StashIDInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\StashIDInput::fromArray($data);
             }, $data['stash_ids'] ?? []);
         }
         if (isset($data['file_ids'])) {

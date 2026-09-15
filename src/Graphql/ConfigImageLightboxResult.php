@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ConfigImageLightboxResult implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -17,59 +17,59 @@ class ConfigImageLightboxResult implements \Aazsamir\Graphpql\Model\GraphObject
     public ?bool $disableAnimation;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigImageLightboxResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigImageLightboxResultField<mixed>
      */
     public static function slideshowDelay(): Fields\ConfigImageLightboxResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigImageLightboxResultField::slideshowDelay();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigImageLightboxResultField::slideshowDelay();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigImageLightboxResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigImageLightboxResultField<mixed>
      */
     public static function displayMode(): Fields\ConfigImageLightboxResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigImageLightboxResultField::displayMode();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigImageLightboxResultField::displayMode();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigImageLightboxResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigImageLightboxResultField<mixed>
      */
     public static function scaleUp(): Fields\ConfigImageLightboxResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigImageLightboxResultField::scaleUp();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigImageLightboxResultField::scaleUp();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigImageLightboxResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigImageLightboxResultField<mixed>
      */
     public static function resetZoomOnNav(): Fields\ConfigImageLightboxResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigImageLightboxResultField::resetZoomOnNav();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigImageLightboxResultField::resetZoomOnNav();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigImageLightboxResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigImageLightboxResultField<mixed>
      */
     public static function scrollMode(): Fields\ConfigImageLightboxResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigImageLightboxResultField::scrollMode();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigImageLightboxResultField::scrollMode();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigImageLightboxResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigImageLightboxResultField<mixed>
      */
     public static function scrollAttemptsBeforeChange(): Fields\ConfigImageLightboxResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigImageLightboxResultField::scrollAttemptsBeforeChange();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigImageLightboxResultField::scrollAttemptsBeforeChange();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigImageLightboxResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigImageLightboxResultField<mixed>
      */
     public static function disableAnimation(): Fields\ConfigImageLightboxResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigImageLightboxResultField::disableAnimation();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigImageLightboxResultField::disableAnimation();
     }
 
     public static function new(
@@ -103,7 +103,7 @@ class ConfigImageLightboxResult implements \Aazsamir\Graphpql\Model\GraphObject
             $self->slideshowDelay = $data['slideshowDelay'];
         }
         if (isset($data['displayMode'])) {
-            $self->displayMode = \Aazsamir\Stasphp\Graphpql\ImageLightboxDisplayMode::from($data['displayMode']);
+            $self->displayMode = \Aazsamir\Stasphp\Graphql\ImageLightboxDisplayMode::from($data['displayMode']);
         }
         if (isset($data['scaleUp'])) {
             $self->scaleUp = $data['scaleUp'];
@@ -112,7 +112,7 @@ class ConfigImageLightboxResult implements \Aazsamir\Graphpql\Model\GraphObject
             $self->resetZoomOnNav = $data['resetZoomOnNav'];
         }
         if (isset($data['scrollMode'])) {
-            $self->scrollMode = \Aazsamir\Stasphp\Graphpql\ImageLightboxScrollMode::from($data['scrollMode']);
+            $self->scrollMode = \Aazsamir\Stasphp\Graphql\ImageLightboxScrollMode::from($data['scrollMode']);
         }
         if (isset($data['disableAnimation'])) {
             $self->disableAnimation = $data['disableAnimation'];

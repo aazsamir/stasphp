@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -23,22 +23,22 @@ class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
     public \DateTimeInterface $created_at;
     public \DateTimeInterface $updated_at;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\GalleryFile> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\GalleryFile> */
     public array $files;
     public ?Folder $folder;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\GalleryChapter> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\GalleryChapter> */
     public array $chapters;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Scene> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Scene> */
     public array $scenes;
     public ?Studio $studio;
     public int $image_count;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Tag> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Tag> */
     public array $tags;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Performer> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Performer> */
     public array $performers;
     public ?Image $cover;
     public GalleryPathsType $paths;
@@ -46,204 +46,204 @@ class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
     public Image $image;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<mixed>
      */
     public static function id(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::id();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<mixed>
      */
     public static function title(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::title();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::title();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<mixed>
      */
     public static function code(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::code();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::code();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<mixed>
      */
     public static function url(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::url();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::url();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<mixed>
      */
     public static function urls(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::urls();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::urls();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<mixed>
      */
     public static function date(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::date();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::date();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<mixed>
      */
     public static function details(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::details();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::details();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<mixed>
      */
     public static function photographer(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::photographer();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::photographer();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<mixed>
      */
     public static function rating100(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::rating100();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::rating100();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<mixed>
      */
     public static function organized(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::organized();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::organized();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<mixed>
      */
     public static function created_at(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::created_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::created_at();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<mixed>
      */
     public static function updated_at(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::updated_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::updated_at();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<\Aazsamir\Stasphp\Graphpql\SelectionSet\GalleryFileSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<\Aazsamir\Stasphp\Graphql\SelectionSet\GalleryFileSelectionSet>
      */
     public static function files(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::files();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::files();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<\Aazsamir\Stasphp\Graphpql\SelectionSet\FolderSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<\Aazsamir\Stasphp\Graphql\SelectionSet\FolderSelectionSet>
      */
     public static function folder(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::folder();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::folder();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<\Aazsamir\Stasphp\Graphpql\SelectionSet\GalleryChapterSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<\Aazsamir\Stasphp\Graphql\SelectionSet\GalleryChapterSelectionSet>
      */
     public static function chapters(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::chapters();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::chapters();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneSelectionSet>
      */
     public static function scenes(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::scenes();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::scenes();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<\Aazsamir\Stasphp\Graphpql\SelectionSet\StudioSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<\Aazsamir\Stasphp\Graphql\SelectionSet\StudioSelectionSet>
      */
     public static function studio(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::studio();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::studio();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<mixed>
      */
     public static function image_count(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::image_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::image_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<\Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<\Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet>
      */
     public static function tags(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::tags();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::tags();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<\Aazsamir\Stasphp\Graphpql\SelectionSet\PerformerSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<\Aazsamir\Stasphp\Graphql\SelectionSet\PerformerSelectionSet>
      */
     public static function performers(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::performers();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::performers();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ImageSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<\Aazsamir\Stasphp\Graphql\SelectionSet\ImageSelectionSet>
      */
     public static function cover(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::cover();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::cover();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<\Aazsamir\Stasphp\Graphpql\SelectionSet\GalleryPathsTypeSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<\Aazsamir\Stasphp\Graphql\SelectionSet\GalleryPathsTypeSelectionSet>
      */
     public static function paths(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::paths();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::paths();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<mixed>
      */
     public static function custom_fields(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::custom_fields();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::custom_fields();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ImageSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryField<\Aazsamir\Stasphp\Graphql\SelectionSet\ImageSelectionSet>
      */
     public static function image(): Fields\GalleryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryField::image();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryField::image();
     }
 
     /**
      * @param array<string> $urls
-     * @param array<\Aazsamir\Stasphp\Graphpql\GalleryFile> $files
-     * @param array<\Aazsamir\Stasphp\Graphpql\GalleryChapter> $chapters
-     * @param array<\Aazsamir\Stasphp\Graphpql\Scene> $scenes
-     * @param array<\Aazsamir\Stasphp\Graphpql\Tag> $tags
-     * @param array<\Aazsamir\Stasphp\Graphpql\Performer> $performers
+     * @param array<\Aazsamir\Stasphp\Graphql\GalleryFile> $files
+     * @param array<\Aazsamir\Stasphp\Graphql\GalleryChapter> $chapters
+     * @param array<\Aazsamir\Stasphp\Graphql\Scene> $scenes
+     * @param array<\Aazsamir\Stasphp\Graphql\Tag> $tags
+     * @param array<\Aazsamir\Stasphp\Graphql\Performer> $performers
      */
     public static function new(
         string $id,
@@ -330,7 +330,7 @@ class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\GalleryFile::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\GalleryFile::fromArray($data);
             }, $data['files'] ?? []);
         }
         if (isset($data['chapters'])) {
@@ -339,7 +339,7 @@ class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\GalleryChapter::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\GalleryChapter::fromArray($data);
             }, $data['chapters'] ?? []);
         }
         if (isset($data['scenes'])) {
@@ -348,7 +348,7 @@ class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Scene::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Scene::fromArray($data);
             }, $data['scenes'] ?? []);
         }
         if (isset($data['image_count'])) {
@@ -360,7 +360,7 @@ class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Tag::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Tag::fromArray($data);
             }, $data['tags'] ?? []);
         }
         if (isset($data['performers'])) {
@@ -369,17 +369,17 @@ class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Performer::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Performer::fromArray($data);
             }, $data['performers'] ?? []);
         }
         if (isset($data['paths'])) {
-            $self->paths = \Aazsamir\Stasphp\Graphpql\GalleryPathsType::fromArray($data['paths']);
+            $self->paths = \Aazsamir\Stasphp\Graphql\GalleryPathsType::fromArray($data['paths']);
         }
         if (isset($data['custom_fields'])) {
             $self->custom_fields = $data['custom_fields'];
         }
         if (isset($data['image'])) {
-            $self->image = \Aazsamir\Stasphp\Graphpql\Image::fromArray($data['image']);
+            $self->image = \Aazsamir\Stasphp\Graphql\Image::fromArray($data['image']);
         }
         if (isset($data['title'])) {
             $self->title = $data['title'];
@@ -403,13 +403,13 @@ class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
             $self->rating100 = $data['rating100'];
         }
         if (isset($data['folder'])) {
-            $self->folder = \Aazsamir\Stasphp\Graphpql\Folder::fromArray($data['folder']);
+            $self->folder = \Aazsamir\Stasphp\Graphql\Folder::fromArray($data['folder']);
         }
         if (isset($data['studio'])) {
-            $self->studio = \Aazsamir\Stasphp\Graphpql\Studio::fromArray($data['studio']);
+            $self->studio = \Aazsamir\Stasphp\Graphql\Studio::fromArray($data['studio']);
         }
         if (isset($data['cover'])) {
-            $self->cover = \Aazsamir\Stasphp\Graphpql\Image::fromArray($data['cover']);
+            $self->cover = \Aazsamir\Stasphp\Graphql\Image::fromArray($data['cover']);
         }
 
         return $self;

@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class BulkUpdateGroupDescriptionsInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
     use \Aazsamir\Graphpql\Model\ToArray;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\GroupDescriptionInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\GroupDescriptionInput> */
     public array $groups;
     public BulkUpdateIdMode $mode;
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\GroupDescriptionInput> $groups
+     * @param array<\Aazsamir\Stasphp\Graphql\GroupDescriptionInput> $groups
      */
     public static function new(array $groups, BulkUpdateIdMode $mode): self
     {
@@ -33,11 +33,11 @@ class BulkUpdateGroupDescriptionsInput implements \Aazsamir\Graphpql\Model\Graph
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\GroupDescriptionInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\GroupDescriptionInput::fromArray($data);
             }, $data['groups'] ?? []);
         }
         if (isset($data['mode'])) {
-            $self->mode = \Aazsamir\Stasphp\Graphpql\BulkUpdateIdMode::from($data['mode']);
+            $self->mode = \Aazsamir\Stasphp\Graphql\BulkUpdateIdMode::from($data['mode']);
         }
 
         return $self;

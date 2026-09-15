@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ConfigImageLightboxInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -44,7 +44,7 @@ class ConfigImageLightboxInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->slideshowDelay = $data['slideshowDelay'];
         }
         if (isset($data['displayMode'])) {
-            $self->displayMode = \Aazsamir\Stasphp\Graphpql\ImageLightboxDisplayMode::from($data['displayMode']);
+            $self->displayMode = \Aazsamir\Stasphp\Graphql\ImageLightboxDisplayMode::from($data['displayMode']);
         }
         if (isset($data['scaleUp'])) {
             $self->scaleUp = $data['scaleUp'];
@@ -53,7 +53,7 @@ class ConfigImageLightboxInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->resetZoomOnNav = $data['resetZoomOnNav'];
         }
         if (isset($data['scrollMode'])) {
-            $self->scrollMode = \Aazsamir\Stasphp\Graphpql\ImageLightboxScrollMode::from($data['scrollMode']);
+            $self->scrollMode = \Aazsamir\Stasphp\Graphql\ImageLightboxScrollMode::from($data['scrollMode']);
         }
         if (isset($data['scrollAttemptsBeforeChange'])) {
             $self->scrollAttemptsBeforeChange = $data['scrollAttemptsBeforeChange'];

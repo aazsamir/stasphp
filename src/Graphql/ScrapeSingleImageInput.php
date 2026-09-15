@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScrapeSingleImageInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -35,7 +35,7 @@ class ScrapeSingleImageInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->image_id = $data['image_id'];
         }
         if (isset($data['image_input'])) {
-            $self->image_input = \Aazsamir\Stasphp\Graphpql\ScrapedImageInput::fromArray($data['image_input']);
+            $self->image_input = \Aazsamir\Stasphp\Graphql\ScrapedImageInput::fromArray($data['image_input']);
         }
 
         return $self;

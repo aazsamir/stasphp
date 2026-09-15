@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class MarkerStringsResultType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -13,27 +13,27 @@ class MarkerStringsResultType implements \Aazsamir\Graphpql\Model\GraphObject
     public string $title;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\MarkerStringsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\MarkerStringsResultTypeField<mixed>
      */
     public static function count(): Fields\MarkerStringsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\MarkerStringsResultTypeField::count();
+        return \Aazsamir\Stasphp\Graphql\Fields\MarkerStringsResultTypeField::count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\MarkerStringsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\MarkerStringsResultTypeField<mixed>
      */
     public static function id(): Fields\MarkerStringsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\MarkerStringsResultTypeField::id();
+        return \Aazsamir\Stasphp\Graphql\Fields\MarkerStringsResultTypeField::id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\MarkerStringsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\MarkerStringsResultTypeField<mixed>
      */
     public static function title(): Fields\MarkerStringsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\MarkerStringsResultTypeField::title();
+        return \Aazsamir\Stasphp\Graphql\Fields\MarkerStringsResultTypeField::title();
     }
 
     public static function new(int $count, string $id, string $title): self

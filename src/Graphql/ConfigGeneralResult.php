@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
 {
     use \Aazsamir\Graphpql\Model\ToArray;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\StashConfig> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\StashConfig> */
     public array $stashes;
     public string $databasePath;
     public string $backupDirectoryPath;
@@ -83,490 +83,490 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
     public array $imageExcludes;
     public ?string $customPerformerImageLocation;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\StashBox> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\StashBox> */
     public array $stashBoxes;
     public string $pythonPath;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\PackageSource> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\PackageSource> */
     public array $scraperPackageSources;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\PackageSource> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\PackageSource> */
     public array $pluginPackageSources;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\StashConfigSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\StashConfigSelectionSet>
      */
     public static function stashes(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::stashes();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::stashes();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function databasePath(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::databasePath();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::databasePath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function backupDirectoryPath(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::backupDirectoryPath();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::backupDirectoryPath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function deleteTrashPath(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::deleteTrashPath();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::deleteTrashPath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function generatedPath(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::generatedPath();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::generatedPath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function metadataPath(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::metadataPath();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::metadataPath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function configFilePath(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::configFilePath();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::configFilePath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function scrapersPath(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::scrapersPath();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::scrapersPath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function pluginsPath(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::pluginsPath();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::pluginsPath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function cachePath(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::cachePath();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::cachePath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function blobsPath(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::blobsPath();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::blobsPath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function blobsStorage(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::blobsStorage();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::blobsStorage();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function ffmpegPath(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::ffmpegPath();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::ffmpegPath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function ffprobePath(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::ffprobePath();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::ffprobePath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function calculateMD5(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::calculateMD5();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::calculateMD5();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function videoFileNamingAlgorithm(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::videoFileNamingAlgorithm();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::videoFileNamingAlgorithm();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function parallelTasks(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::parallelTasks();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::parallelTasks();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function previewAudio(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::previewAudio();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::previewAudio();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function previewSegments(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::previewSegments();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::previewSegments();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function previewSegmentDuration(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::previewSegmentDuration();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::previewSegmentDuration();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function previewExcludeStart(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::previewExcludeStart();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::previewExcludeStart();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function previewExcludeEnd(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::previewExcludeEnd();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::previewExcludeEnd();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function previewPreset(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::previewPreset();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::previewPreset();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function transcodeHardwareAcceleration(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::transcodeHardwareAcceleration();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::transcodeHardwareAcceleration();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function maxTranscodeSize(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::maxTranscodeSize();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::maxTranscodeSize();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function maxStreamingTranscodeSize(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::maxStreamingTranscodeSize();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::maxStreamingTranscodeSize();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function transcodeInputArgs(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::transcodeInputArgs();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::transcodeInputArgs();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function transcodeOutputArgs(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::transcodeOutputArgs();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::transcodeOutputArgs();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function liveTranscodeInputArgs(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::liveTranscodeInputArgs();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::liveTranscodeInputArgs();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function liveTranscodeOutputArgs(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::liveTranscodeOutputArgs();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::liveTranscodeOutputArgs();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function drawFunscriptHeatmapRange(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::drawFunscriptHeatmapRange();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::drawFunscriptHeatmapRange();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function writeImageThumbnails(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::writeImageThumbnails();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::writeImageThumbnails();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function createImageClipsFromVideos(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::createImageClipsFromVideos();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::createImageClipsFromVideos();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function apiKey(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::apiKey();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::apiKey();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function username(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::username();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::username();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function password(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::password();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::password();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function maxSessionAge(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::maxSessionAge();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::maxSessionAge();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function logFile(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::logFile();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::logFile();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function logOut(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::logOut();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::logOut();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function logLevel(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::logLevel();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::logLevel();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function logAccess(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::logAccess();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::logAccess();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function logFileMaxSize(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::logFileMaxSize();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::logFileMaxSize();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function useCustomSpriteInterval(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::useCustomSpriteInterval();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::useCustomSpriteInterval();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function spriteInterval(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::spriteInterval();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::spriteInterval();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function minimumSprites(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::minimumSprites();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::minimumSprites();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function maximumSprites(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::maximumSprites();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::maximumSprites();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function spriteScreenshotSize(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::spriteScreenshotSize();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::spriteScreenshotSize();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function videoExtensions(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::videoExtensions();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::videoExtensions();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function imageExtensions(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::imageExtensions();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::imageExtensions();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function galleryExtensions(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::galleryExtensions();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::galleryExtensions();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function createGalleriesFromFolders(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::createGalleriesFromFolders();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::createGalleriesFromFolders();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function galleryCoverRegex(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::galleryCoverRegex();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::galleryCoverRegex();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function excludes(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::excludes();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::excludes();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function imageExcludes(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::imageExcludes();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::imageExcludes();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function customPerformerImageLocation(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::customPerformerImageLocation();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::customPerformerImageLocation();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\StashBoxSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\StashBoxSelectionSet>
      */
     public static function stashBoxes(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::stashBoxes();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::stashBoxes();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<mixed>
      */
     public static function pythonPath(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::pythonPath();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::pythonPath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSourceSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\PackageSourceSelectionSet>
      */
     public static function scraperPackageSources(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::scraperPackageSources();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::scraperPackageSources();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSourceSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\PackageSourceSelectionSet>
      */
     public static function pluginPackageSources(): Fields\ConfigGeneralResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigGeneralResultField::pluginPackageSources();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigGeneralResultField::pluginPackageSources();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\StashConfig> $stashes
+     * @param array<\Aazsamir\Stasphp\Graphql\StashConfig> $stashes
      * @param array<string> $transcodeInputArgs
      * @param array<string> $transcodeOutputArgs
      * @param array<string> $liveTranscodeInputArgs
@@ -576,9 +576,9 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
      * @param array<string> $galleryExtensions
      * @param array<string> $excludes
      * @param array<string> $imageExcludes
-     * @param array<\Aazsamir\Stasphp\Graphpql\StashBox> $stashBoxes
-     * @param array<\Aazsamir\Stasphp\Graphpql\PackageSource> $scraperPackageSources
-     * @param array<\Aazsamir\Stasphp\Graphpql\PackageSource> $pluginPackageSources
+     * @param array<\Aazsamir\Stasphp\Graphql\StashBox> $stashBoxes
+     * @param array<\Aazsamir\Stasphp\Graphql\PackageSource> $scraperPackageSources
+     * @param array<\Aazsamir\Stasphp\Graphql\PackageSource> $pluginPackageSources
      */
     public static function new(
         array $stashes,
@@ -714,7 +714,7 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\StashConfig::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\StashConfig::fromArray($data);
             }, $data['stashes'] ?? []);
         }
         if (isset($data['databasePath'])) {
@@ -748,7 +748,7 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
             $self->blobsPath = $data['blobsPath'];
         }
         if (isset($data['blobsStorage'])) {
-            $self->blobsStorage = \Aazsamir\Stasphp\Graphpql\BlobsStorageType::from($data['blobsStorage']);
+            $self->blobsStorage = \Aazsamir\Stasphp\Graphql\BlobsStorageType::from($data['blobsStorage']);
         }
         if (isset($data['ffmpegPath'])) {
             $self->ffmpegPath = $data['ffmpegPath'];
@@ -760,7 +760,7 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
             $self->calculateMD5 = $data['calculateMD5'];
         }
         if (isset($data['videoFileNamingAlgorithm'])) {
-            $self->videoFileNamingAlgorithm = \Aazsamir\Stasphp\Graphpql\HashAlgorithm::from($data['videoFileNamingAlgorithm']);
+            $self->videoFileNamingAlgorithm = \Aazsamir\Stasphp\Graphql\HashAlgorithm::from($data['videoFileNamingAlgorithm']);
         }
         if (isset($data['parallelTasks'])) {
             $self->parallelTasks = $data['parallelTasks'];
@@ -781,7 +781,7 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
             $self->previewExcludeEnd = $data['previewExcludeEnd'];
         }
         if (isset($data['previewPreset'])) {
-            $self->previewPreset = \Aazsamir\Stasphp\Graphpql\PreviewPreset::from($data['previewPreset']);
+            $self->previewPreset = \Aazsamir\Stasphp\Graphql\PreviewPreset::from($data['previewPreset']);
         }
         if (isset($data['transcodeHardwareAcceleration'])) {
             $self->transcodeHardwareAcceleration = $data['transcodeHardwareAcceleration'];
@@ -927,7 +927,7 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\StashBox::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\StashBox::fromArray($data);
             }, $data['stashBoxes'] ?? []);
         }
         if (isset($data['pythonPath'])) {
@@ -939,7 +939,7 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\PackageSource::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\PackageSource::fromArray($data);
             }, $data['scraperPackageSources'] ?? []);
         }
         if (isset($data['pluginPackageSources'])) {
@@ -948,14 +948,14 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\PackageSource::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\PackageSource::fromArray($data);
             }, $data['pluginPackageSources'] ?? []);
         }
         if (isset($data['maxTranscodeSize'])) {
-            $self->maxTranscodeSize = \Aazsamir\Stasphp\Graphpql\StreamingResolutionEnum::from($data['maxTranscodeSize']);
+            $self->maxTranscodeSize = \Aazsamir\Stasphp\Graphql\StreamingResolutionEnum::from($data['maxTranscodeSize']);
         }
         if (isset($data['maxStreamingTranscodeSize'])) {
-            $self->maxStreamingTranscodeSize = \Aazsamir\Stasphp\Graphpql\StreamingResolutionEnum::from($data['maxStreamingTranscodeSize']);
+            $self->maxStreamingTranscodeSize = \Aazsamir\Stasphp\Graphql\StreamingResolutionEnum::from($data['maxStreamingTranscodeSize']);
         }
         if (isset($data['logFile'])) {
             $self->logFile = $data['logFile'];

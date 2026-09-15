@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class PluginSetting implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -14,35 +14,35 @@ class PluginSetting implements \Aazsamir\Graphpql\Model\GraphObject
     public PluginSettingTypeEnum $type;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginSettingField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginSettingField<mixed>
      */
     public static function name(): Fields\PluginSettingField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginSettingField::name();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginSettingField::name();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginSettingField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginSettingField<mixed>
      */
     public static function display_name(): Fields\PluginSettingField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginSettingField::display_name();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginSettingField::display_name();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginSettingField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginSettingField<mixed>
      */
     public static function description(): Fields\PluginSettingField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginSettingField::description();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginSettingField::description();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginSettingField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginSettingField<mixed>
      */
     public static function type(): Fields\PluginSettingField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginSettingField::type();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginSettingField::type();
     }
 
     public static function new(
@@ -67,7 +67,7 @@ class PluginSetting implements \Aazsamir\Graphpql\Model\GraphObject
             $self->name = $data['name'];
         }
         if (isset($data['type'])) {
-            $self->type = \Aazsamir\Stasphp\Graphpql\PluginSettingTypeEnum::from($data['type']);
+            $self->type = \Aazsamir\Stasphp\Graphql\PluginSettingTypeEnum::from($data['type']);
         }
         if (isset($data['display_name'])) {
             $self->display_name = $data['display_name'];

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class StatsResultTypeSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class StatsResultTypeSelectionSet implements \Aazsamir\Graphpql\Model\SelectionS
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class StatsResultTypeSelectionSet implements \Aazsamir\Graphpql\Model\SelectionS
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StatsResultTypeField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StatsResultTypeField[]
      */
     public function getSelection(): array
     {

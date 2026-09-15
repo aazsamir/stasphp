@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class FindStudiosResultType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -10,27 +10,27 @@ class FindStudiosResultType implements \Aazsamir\Graphpql\Model\GraphObject
 
     public int $count;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Studio> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Studio> */
     public array $studios;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindStudiosResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindStudiosResultTypeField<mixed>
      */
     public static function count(): Fields\FindStudiosResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindStudiosResultTypeField::count();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindStudiosResultTypeField::count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindStudiosResultTypeField<\Aazsamir\Stasphp\Graphpql\SelectionSet\StudioSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindStudiosResultTypeField<\Aazsamir\Stasphp\Graphql\SelectionSet\StudioSelectionSet>
      */
     public static function studios(): Fields\FindStudiosResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindStudiosResultTypeField::studios();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindStudiosResultTypeField::studios();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\Studio> $studios
+     * @param array<\Aazsamir\Stasphp\Graphql\Studio> $studios
      */
     public static function new(int $count, array $studios): self
     {
@@ -53,7 +53,7 @@ class FindStudiosResultType implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Studio::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Studio::fromArray($data);
             }, $data['studios'] ?? []);
         }
 

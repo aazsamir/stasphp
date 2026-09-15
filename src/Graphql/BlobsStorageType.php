@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 enum BlobsStorageType: string implements \Aazsamir\Graphpql\Model\GraphEnum
 {

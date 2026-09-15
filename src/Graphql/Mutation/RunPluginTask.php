@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Mutation;
+namespace Aazsamir\Stasphp\Graphql\Mutation;
 
 class RunPluginTask implements \Aazsamir\Graphpql\Model\Mutation
 {
@@ -23,7 +23,7 @@ class RunPluginTask implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\PluginArgInput> $args
+     * @param array<\Aazsamir\Stasphp\Graphql\PluginArgInput> $args
      */
     public function __construct(
         public string $plugin_id,

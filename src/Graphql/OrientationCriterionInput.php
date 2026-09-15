@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class OrientationCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
     use \Aazsamir\Graphpql\Model\ToArray;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\OrientationEnum> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\OrientationEnum> */
     public array $value;
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\OrientationEnum> $value
+     * @param array<\Aazsamir\Stasphp\Graphql\OrientationEnum> $value
      */
     public static function new(array $value): self
     {
@@ -31,7 +31,7 @@ class OrientationCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\OrientationEnum::from($data);
+                return \Aazsamir\Stasphp\Graphql\OrientationEnum::from($data);
             }, $data['value'] ?? []);
         }
 

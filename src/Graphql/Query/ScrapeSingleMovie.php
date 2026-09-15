@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 /**
  * @deprecated Use scrapeSingleGroup instead
@@ -10,9 +10,9 @@ namespace Aazsamir\Stasphp\Graphpql\Query;
 class ScrapeSingleMovie implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'scrapeSingleMovie';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\ScrapedMovie';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ScrapedMovie';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedMovieSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedMovieSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -26,8 +26,8 @@ class ScrapeSingleMovie implements \Aazsamir\Graphpql\Model\Query
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\ScraperSourceInput $source,
-        public \Aazsamir\Stasphp\Graphpql\ScrapeSingleMovieInput $input,
+        public \Aazsamir\Stasphp\Graphql\ScraperSourceInput $source,
+        public \Aazsamir\Stasphp\Graphql\ScrapeSingleMovieInput $input,
     ) {
     }
 
@@ -40,12 +40,12 @@ class ScrapeSingleMovie implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedMovieSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedMovieSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedMovieSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedMovieSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -53,14 +53,14 @@ class ScrapeSingleMovie implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedMovieSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedMovieSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedMovieSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedMovieSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -74,7 +74,7 @@ class ScrapeSingleMovie implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @return array<\Aazsamir\Stasphp\Graphpql\ScrapedMovie>
+     * @return array<\Aazsamir\Stasphp\Graphql\ScrapedMovie>
      */
     public function do(): ?array
     {

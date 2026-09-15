@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class FindGroups implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'findGroups';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\FindGroupsResultType';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\FindGroupsResultType';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\FindGroupsResultTypeSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\FindGroupsResultTypeSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -26,8 +26,8 @@ class FindGroups implements \Aazsamir\Graphpql\Model\Query
      * @param array<string> $ids
      */
     public function __construct(
-        public ?\Aazsamir\Stasphp\Graphpql\GroupFilterType $group_filter = null,
-        public ?\Aazsamir\Stasphp\Graphpql\FindFilterType $filter = null,
+        public ?\Aazsamir\Stasphp\Graphql\GroupFilterType $group_filter = null,
+        public ?\Aazsamir\Stasphp\Graphql\FindFilterType $filter = null,
         public ?array $ids = null,
     ) {
     }
@@ -42,12 +42,12 @@ class FindGroups implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\FindGroupsResultTypeSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\FindGroupsResultTypeSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\FindGroupsResultTypeSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\FindGroupsResultTypeSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -56,14 +56,14 @@ class FindGroups implements \Aazsamir\Graphpql\Model\Query
     }
 
     public function setSelection(
-        \Aazsamir\Stasphp\Graphpql\SelectionSet\FindGroupsResultTypeSelectionSet $selection,
+        \Aazsamir\Stasphp\Graphql\SelectionSet\FindGroupsResultTypeSelectionSet $selection,
     ): self {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\FindGroupsResultTypeSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\FindGroupsResultTypeSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -76,7 +76,7 @@ class FindGroups implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\FindGroupsResultType
+    public function do(): ?\Aazsamir\Stasphp\Graphql\FindGroupsResultType
     {
         $response = $this->graphqlClient->request($this);
 

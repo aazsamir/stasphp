@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -14,25 +14,25 @@ class SceneMarkerTagField implements \Aazsamir\Graphpql\Model\ObjectField
     private ?string $union = null;
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet>
      */
     public static function tag(): self
     {
         $instance = new self();
         $instance->name = 'tag';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneMarkerSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneMarkerSelectionSet>
      */
     public static function scene_markers(): self
     {
         $instance = new self();
         $instance->name = 'scene_markers';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneMarkerSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\SceneMarkerSelectionSet();
 
         return $instance;
     }

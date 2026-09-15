@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class FileSetFingerprintsInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -10,11 +10,11 @@ class FileSetFingerprintsInput implements \Aazsamir\Graphpql\Model\GraphObject
 
     public string $id;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\SetFingerprintsInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\SetFingerprintsInput> */
     public array $fingerprints;
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\SetFingerprintsInput> $fingerprints
+     * @param array<\Aazsamir\Stasphp\Graphql\SetFingerprintsInput> $fingerprints
      */
     public static function new(string $id, array $fingerprints): self
     {
@@ -37,7 +37,7 @@ class FileSetFingerprintsInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\SetFingerprintsInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\SetFingerprintsInput::fromArray($data);
             }, $data['fingerprints'] ?? []);
         }
 

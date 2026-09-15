@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -14,13 +14,13 @@ class SceneMovieField implements \Aazsamir\Graphpql\Model\ObjectField
     private ?string $union = null;
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\MovieSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\MovieSelectionSet>
      */
     public static function movie(): self
     {
         $instance = new self();
         $instance->name = 'movie';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\MovieSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\MovieSelectionSet();
 
         return $instance;
     }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -14,49 +14,49 @@ class ConfigDefaultSettingsResultField implements \Aazsamir\Graphpql\Model\Objec
     private ?string $union = null;
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScanMetadataOptionsSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScanMetadataOptionsSelectionSet>
      */
     public static function scan(): self
     {
         $instance = new self();
         $instance->name = 'scan';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScanMetadataOptionsSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScanMetadataOptionsSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\IdentifyMetadataTaskOptionsSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\IdentifyMetadataTaskOptionsSelectionSet>
      */
     public static function identify(): self
     {
         $instance = new self();
         $instance->name = 'identify';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\IdentifyMetadataTaskOptionsSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\IdentifyMetadataTaskOptionsSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\AutoTagMetadataOptionsSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\AutoTagMetadataOptionsSelectionSet>
      */
     public static function autoTag(): self
     {
         $instance = new self();
         $instance->name = 'autoTag';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\AutoTagMetadataOptionsSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\AutoTagMetadataOptionsSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\GenerateMetadataOptionsSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\GenerateMetadataOptionsSelectionSet>
      */
     public static function generate(): self
     {
         $instance = new self();
         $instance->name = 'generate';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\GenerateMetadataOptionsSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\GenerateMetadataOptionsSelectionSet();
 
         return $instance;
     }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class GeneratePreviewOptions implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -15,43 +15,43 @@ class GeneratePreviewOptions implements \Aazsamir\Graphpql\Model\GraphObject
     public ?PreviewPreset $previewPreset;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GeneratePreviewOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GeneratePreviewOptionsField<mixed>
      */
     public static function previewSegments(): Fields\GeneratePreviewOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GeneratePreviewOptionsField::previewSegments();
+        return \Aazsamir\Stasphp\Graphql\Fields\GeneratePreviewOptionsField::previewSegments();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GeneratePreviewOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GeneratePreviewOptionsField<mixed>
      */
     public static function previewSegmentDuration(): Fields\GeneratePreviewOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GeneratePreviewOptionsField::previewSegmentDuration();
+        return \Aazsamir\Stasphp\Graphql\Fields\GeneratePreviewOptionsField::previewSegmentDuration();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GeneratePreviewOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GeneratePreviewOptionsField<mixed>
      */
     public static function previewExcludeStart(): Fields\GeneratePreviewOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GeneratePreviewOptionsField::previewExcludeStart();
+        return \Aazsamir\Stasphp\Graphql\Fields\GeneratePreviewOptionsField::previewExcludeStart();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GeneratePreviewOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GeneratePreviewOptionsField<mixed>
      */
     public static function previewExcludeEnd(): Fields\GeneratePreviewOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GeneratePreviewOptionsField::previewExcludeEnd();
+        return \Aazsamir\Stasphp\Graphql\Fields\GeneratePreviewOptionsField::previewExcludeEnd();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GeneratePreviewOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GeneratePreviewOptionsField<mixed>
      */
     public static function previewPreset(): Fields\GeneratePreviewOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GeneratePreviewOptionsField::previewPreset();
+        return \Aazsamir\Stasphp\Graphql\Fields\GeneratePreviewOptionsField::previewPreset();
     }
 
     public static function new(
@@ -87,7 +87,7 @@ class GeneratePreviewOptions implements \Aazsamir\Graphpql\Model\GraphObject
             $self->previewExcludeEnd = $data['previewExcludeEnd'];
         }
         if (isset($data['previewPreset'])) {
-            $self->previewPreset = \Aazsamir\Stasphp\Graphpql\PreviewPreset::from($data['previewPreset']);
+            $self->previewPreset = \Aazsamir\Stasphp\Graphql\PreviewPreset::from($data['previewPreset']);
         }
 
         return $self;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScrapedMovie implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -22,126 +22,126 @@ class ScrapedMovie implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $synopsis;
     public ?ScrapedStudio $studio;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\ScrapedTag> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\ScrapedTag> */
     public ?array $tags;
     public ?string $front_image;
     public ?string $back_image;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField<mixed>
      */
     public static function stored_id(): Fields\ScrapedMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField::stored_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField::stored_id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField<mixed>
      */
     public static function name(): Fields\ScrapedMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField::name();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField::name();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField<mixed>
      */
     public static function aliases(): Fields\ScrapedMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField::aliases();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField::aliases();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField<mixed>
      */
     public static function duration(): Fields\ScrapedMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField::duration();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField::duration();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField<mixed>
      */
     public static function date(): Fields\ScrapedMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField::date();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField::date();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField<mixed>
      */
     public static function rating(): Fields\ScrapedMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField::rating();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField::rating();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField<mixed>
      */
     public static function director(): Fields\ScrapedMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField::director();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField::director();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField<mixed>
      */
     public static function url(): Fields\ScrapedMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField::url();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField::url();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField<mixed>
      */
     public static function urls(): Fields\ScrapedMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField::urls();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField::urls();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField<mixed>
      */
     public static function synopsis(): Fields\ScrapedMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField::synopsis();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField::synopsis();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedStudioSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedStudioSelectionSet>
      */
     public static function studio(): Fields\ScrapedMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField::studio();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField::studio();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedTagSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedTagSelectionSet>
      */
     public static function tags(): Fields\ScrapedMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField::tags();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField::tags();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField<mixed>
      */
     public static function front_image(): Fields\ScrapedMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField::front_image();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField::front_image();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField<mixed>
      */
     public static function back_image(): Fields\ScrapedMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedMovieField::back_image();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedMovieField::back_image();
     }
 
     /**
      * @param array<string> $urls
-     * @param array<\Aazsamir\Stasphp\Graphpql\ScrapedTag> $tags
+     * @param array<\Aazsamir\Stasphp\Graphql\ScrapedTag> $tags
      */
     public static function new(
         ?string $stored_id = null,
@@ -218,7 +218,7 @@ class ScrapedMovie implements \Aazsamir\Graphpql\Model\GraphObject
             $self->synopsis = $data['synopsis'];
         }
         if (isset($data['studio'])) {
-            $self->studio = \Aazsamir\Stasphp\Graphpql\ScrapedStudio::fromArray($data['studio']);
+            $self->studio = \Aazsamir\Stasphp\Graphql\ScrapedStudio::fromArray($data['studio']);
         }
         if (isset($data['tags'])) {
             $self->tags = array_map(function ($data) {
@@ -226,7 +226,7 @@ class ScrapedMovie implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\ScrapedTag::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\ScrapedTag::fromArray($data);
             }, $data['tags'] ?? []);
         }
         if (isset($data['front_image'])) {

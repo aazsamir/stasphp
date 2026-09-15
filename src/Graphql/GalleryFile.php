@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class GalleryFile implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -19,117 +19,117 @@ class GalleryFile implements \Aazsamir\Graphpql\Model\GraphObject
     public int $size;
     public ?string $fingerprint;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Fingerprint> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Fingerprint> */
     public array $fingerprints;
     public \DateTimeInterface $created_at;
     public \DateTimeInterface $updated_at;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField<mixed>
      */
     public static function id(): Fields\GalleryFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField::id();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField::id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField<mixed>
      */
     public static function path(): Fields\GalleryFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField::path();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField::path();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField<mixed>
      */
     public static function basename(): Fields\GalleryFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField::basename();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField::basename();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField<mixed>
      */
     public static function parent_folder_id(): Fields\GalleryFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField::parent_folder_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField::parent_folder_id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField<mixed>
      */
     public static function zip_file_id(): Fields\GalleryFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField::zip_file_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField::zip_file_id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField<\Aazsamir\Stasphp\Graphpql\SelectionSet\FolderSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField<\Aazsamir\Stasphp\Graphql\SelectionSet\FolderSelectionSet>
      */
     public static function parent_folder(): Fields\GalleryFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField::parent_folder();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField::parent_folder();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField<\Aazsamir\Stasphp\Graphpql\SelectionSet\BasicFileSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField<\Aazsamir\Stasphp\Graphql\SelectionSet\BasicFileSelectionSet>
      */
     public static function zip_file(): Fields\GalleryFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField::zip_file();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField::zip_file();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField<mixed>
      */
     public static function mod_time(): Fields\GalleryFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField::mod_time();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField::mod_time();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField<mixed>
      */
     public static function size(): Fields\GalleryFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField::size();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField::size();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField<mixed>
      */
     public static function fingerprint(): Fields\GalleryFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField::fingerprint();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField::fingerprint();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField<\Aazsamir\Stasphp\Graphpql\SelectionSet\FingerprintSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField<\Aazsamir\Stasphp\Graphql\SelectionSet\FingerprintSelectionSet>
      */
     public static function fingerprints(): Fields\GalleryFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField::fingerprints();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField::fingerprints();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField<mixed>
      */
     public static function created_at(): Fields\GalleryFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField::created_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField::created_at();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField<mixed>
      */
     public static function updated_at(): Fields\GalleryFileField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryFileField::updated_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryFileField::updated_at();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\Fingerprint> $fingerprints
+     * @param array<\Aazsamir\Stasphp\Graphql\Fingerprint> $fingerprints
      */
     public static function new(
         string $id,
@@ -180,7 +180,7 @@ class GalleryFile implements \Aazsamir\Graphpql\Model\GraphObject
             $self->parent_folder_id = $data['parent_folder_id'];
         }
         if (isset($data['parent_folder'])) {
-            $self->parent_folder = \Aazsamir\Stasphp\Graphpql\Folder::fromArray($data['parent_folder']);
+            $self->parent_folder = \Aazsamir\Stasphp\Graphql\Folder::fromArray($data['parent_folder']);
         }
         if (isset($data['mod_time'])) {
             $self->mod_time = new \DateTimeImmutable($data['mod_time']);
@@ -194,7 +194,7 @@ class GalleryFile implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Fingerprint::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Fingerprint::fromArray($data);
             }, $data['fingerprints'] ?? []);
         }
         if (isset($data['created_at'])) {
@@ -207,7 +207,7 @@ class GalleryFile implements \Aazsamir\Graphpql\Model\GraphObject
             $self->zip_file_id = $data['zip_file_id'];
         }
         if (isset($data['zip_file'])) {
-            $self->zip_file = \Aazsamir\Stasphp\Graphpql\BasicFile::fromArray($data['zip_file']);
+            $self->zip_file = \Aazsamir\Stasphp\Graphql\BasicFile::fromArray($data['zip_file']);
         }
         if (isset($data['fingerprint'])) {
             $self->fingerprint = $data['fingerprint'];

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -25,13 +25,13 @@ class FindGroupsResultTypeField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\GroupSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\GroupSelectionSet>
      */
     public static function groups(): self
     {
         $instance = new self();
         $instance->name = 'groups';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\GroupSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\GroupSelectionSet();
 
         return $instance;
     }

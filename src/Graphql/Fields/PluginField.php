@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -80,37 +80,37 @@ class PluginField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\PluginTaskSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\PluginTaskSelectionSet>
      */
     public static function tasks(): self
     {
         $instance = new self();
         $instance->name = 'tasks';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\PluginTaskSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\PluginTaskSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\PluginHookSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\PluginHookSelectionSet>
      */
     public static function hooks(): self
     {
         $instance = new self();
         $instance->name = 'hooks';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\PluginHookSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\PluginHookSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\PluginSettingSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\PluginSettingSelectionSet>
      */
     public static function settings(): self
     {
         $instance = new self();
         $instance->name = 'settings';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\PluginSettingSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\PluginSettingSelectionSet();
 
         return $instance;
     }
@@ -127,13 +127,13 @@ class PluginField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\PluginPathsSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\PluginPathsSelectionSet>
      */
     public static function paths(): self
     {
         $instance = new self();
         $instance->name = 'paths';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\PluginPathsSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\PluginPathsSelectionSet();
 
         return $instance;
     }

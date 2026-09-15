@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ConfigDisableDropdownCreate implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -15,43 +15,43 @@ class ConfigDisableDropdownCreate implements \Aazsamir\Graphpql\Model\GraphObjec
     public bool $gallery;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDisableDropdownCreateField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDisableDropdownCreateField<mixed>
      */
     public static function performer(): Fields\ConfigDisableDropdownCreateField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDisableDropdownCreateField::performer();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDisableDropdownCreateField::performer();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDisableDropdownCreateField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDisableDropdownCreateField<mixed>
      */
     public static function tag(): Fields\ConfigDisableDropdownCreateField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDisableDropdownCreateField::tag();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDisableDropdownCreateField::tag();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDisableDropdownCreateField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDisableDropdownCreateField<mixed>
      */
     public static function studio(): Fields\ConfigDisableDropdownCreateField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDisableDropdownCreateField::studio();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDisableDropdownCreateField::studio();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDisableDropdownCreateField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDisableDropdownCreateField<mixed>
      */
     public static function movie(): Fields\ConfigDisableDropdownCreateField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDisableDropdownCreateField::movie();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDisableDropdownCreateField::movie();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDisableDropdownCreateField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDisableDropdownCreateField<mixed>
      */
     public static function gallery(): Fields\ConfigDisableDropdownCreateField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDisableDropdownCreateField::gallery();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigDisableDropdownCreateField::gallery();
     }
 
     public static function new(bool $performer, bool $tag, bool $studio, bool $movie, bool $gallery): self

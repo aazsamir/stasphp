@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class PackageSource implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -13,27 +13,27 @@ class PackageSource implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $local_path;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PackageSourceField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PackageSourceField<mixed>
      */
     public static function name(): Fields\PackageSourceField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PackageSourceField::name();
+        return \Aazsamir\Stasphp\Graphql\Fields\PackageSourceField::name();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PackageSourceField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PackageSourceField<mixed>
      */
     public static function url(): Fields\PackageSourceField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PackageSourceField::url();
+        return \Aazsamir\Stasphp\Graphql\Fields\PackageSourceField::url();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PackageSourceField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PackageSourceField<mixed>
      */
     public static function local_path(): Fields\PackageSourceField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PackageSourceField::local_path();
+        return \Aazsamir\Stasphp\Graphql\Fields\PackageSourceField::local_path();
     }
 
     public static function new(string $url, ?string $name = null, ?string $local_path = null): self

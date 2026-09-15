@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class StashBoxValidationResult implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -12,19 +12,19 @@ class StashBoxValidationResult implements \Aazsamir\Graphpql\Model\GraphObject
     public string $status;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StashBoxValidationResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StashBoxValidationResultField<mixed>
      */
     public static function valid(): Fields\StashBoxValidationResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StashBoxValidationResultField::valid();
+        return \Aazsamir\Stasphp\Graphql\Fields\StashBoxValidationResultField::valid();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StashBoxValidationResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StashBoxValidationResultField<mixed>
      */
     public static function status(): Fields\StashBoxValidationResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StashBoxValidationResultField::status();
+        return \Aazsamir\Stasphp\Graphql\Fields\StashBoxValidationResultField::status();
     }
 
     public static function new(bool $valid, string $status): self

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -25,13 +25,13 @@ class GalleryChapterField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\GallerySelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\GallerySelectionSet>
      */
     public static function gallery(): self
     {
         $instance = new self();
         $instance->name = 'gallery';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\GallerySelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\GallerySelectionSet();
 
         return $instance;
     }

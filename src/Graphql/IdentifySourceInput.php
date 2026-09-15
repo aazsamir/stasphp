@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class IdentifySourceInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -24,10 +24,10 @@ class IdentifySourceInput implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['source'])) {
-            $self->source = \Aazsamir\Stasphp\Graphpql\ScraperSourceInput::fromArray($data['source']);
+            $self->source = \Aazsamir\Stasphp\Graphql\ScraperSourceInput::fromArray($data['source']);
         }
         if (isset($data['options'])) {
-            $self->options = \Aazsamir\Stasphp\Graphpql\IdentifyMetadataOptionsInput::fromArray($data['options']);
+            $self->options = \Aazsamir\Stasphp\Graphql\IdentifyMetadataOptionsInput::fromArray($data['options']);
         }
 
         return $self;

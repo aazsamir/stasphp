@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class BulkGroupUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -88,19 +88,19 @@ class BulkGroupUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->director = $data['director'];
         }
         if (isset($data['urls'])) {
-            $self->urls = \Aazsamir\Stasphp\Graphpql\BulkUpdateStrings::fromArray($data['urls']);
+            $self->urls = \Aazsamir\Stasphp\Graphql\BulkUpdateStrings::fromArray($data['urls']);
         }
         if (isset($data['tag_ids'])) {
-            $self->tag_ids = \Aazsamir\Stasphp\Graphpql\BulkUpdateIds::fromArray($data['tag_ids']);
+            $self->tag_ids = \Aazsamir\Stasphp\Graphql\BulkUpdateIds::fromArray($data['tag_ids']);
         }
         if (isset($data['containing_groups'])) {
-            $self->containing_groups = \Aazsamir\Stasphp\Graphpql\BulkUpdateGroupDescriptionsInput::fromArray($data['containing_groups']);
+            $self->containing_groups = \Aazsamir\Stasphp\Graphql\BulkUpdateGroupDescriptionsInput::fromArray($data['containing_groups']);
         }
         if (isset($data['sub_groups'])) {
-            $self->sub_groups = \Aazsamir\Stasphp\Graphpql\BulkUpdateGroupDescriptionsInput::fromArray($data['sub_groups']);
+            $self->sub_groups = \Aazsamir\Stasphp\Graphql\BulkUpdateGroupDescriptionsInput::fromArray($data['sub_groups']);
         }
         if (isset($data['custom_fields'])) {
-            $self->custom_fields = \Aazsamir\Stasphp\Graphpql\CustomFieldsInput::fromArray($data['custom_fields']);
+            $self->custom_fields = \Aazsamir\Stasphp\Graphql\CustomFieldsInput::fromArray($data['custom_fields']);
         }
 
         return $self;

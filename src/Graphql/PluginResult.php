@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class PluginResult implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -12,19 +12,19 @@ class PluginResult implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $result;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginResultField<mixed>
      */
     public static function error(): Fields\PluginResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginResultField::error();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginResultField::error();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginResultField<mixed>
      */
     public static function result(): Fields\PluginResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginResultField::result();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginResultField::result();
     }
 
     public static function new(?string $error = null, ?string $result = null): self

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class MarkerStringsResultTypeSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class MarkerStringsResultTypeSelectionSet implements \Aazsamir\Graphpql\Model\Se
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\MarkerStringsResultTypeField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\MarkerStringsResultTypeField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class MarkerStringsResultTypeSelectionSet implements \Aazsamir\Graphpql\Model\Se
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\MarkerStringsResultTypeField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\MarkerStringsResultTypeField[]
      */
     public function getSelection(): array
     {

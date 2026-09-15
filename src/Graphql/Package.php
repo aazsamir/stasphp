@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class Package implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -13,78 +13,78 @@ class Package implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $version;
     public ?\DateTimeInterface $date;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Package> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Package> */
     public array $requires;
     public string $sourceURL;
     public ?Package $source_package;
     public mixed $metadata;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PackageField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PackageField<mixed>
      */
     public static function package_id(): Fields\PackageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PackageField::package_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\PackageField::package_id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PackageField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PackageField<mixed>
      */
     public static function name(): Fields\PackageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PackageField::name();
+        return \Aazsamir\Stasphp\Graphql\Fields\PackageField::name();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PackageField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PackageField<mixed>
      */
     public static function version(): Fields\PackageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PackageField::version();
+        return \Aazsamir\Stasphp\Graphql\Fields\PackageField::version();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PackageField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PackageField<mixed>
      */
     public static function date(): Fields\PackageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PackageField::date();
+        return \Aazsamir\Stasphp\Graphql\Fields\PackageField::date();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PackageField<\Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PackageField<\Aazsamir\Stasphp\Graphql\SelectionSet\PackageSelectionSet>
      */
     public static function requires(): Fields\PackageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PackageField::requires();
+        return \Aazsamir\Stasphp\Graphql\Fields\PackageField::requires();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PackageField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PackageField<mixed>
      */
     public static function sourceURL(): Fields\PackageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PackageField::sourceURL();
+        return \Aazsamir\Stasphp\Graphql\Fields\PackageField::sourceURL();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PackageField<\Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PackageField<\Aazsamir\Stasphp\Graphql\SelectionSet\PackageSelectionSet>
      */
     public static function source_package(): Fields\PackageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PackageField::source_package();
+        return \Aazsamir\Stasphp\Graphql\Fields\PackageField::source_package();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PackageField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PackageField<mixed>
      */
     public static function metadata(): Fields\PackageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PackageField::metadata();
+        return \Aazsamir\Stasphp\Graphql\Fields\PackageField::metadata();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\Package> $requires
+     * @param array<\Aazsamir\Stasphp\Graphql\Package> $requires
      */
     public static function new(
         string $package_id,
@@ -124,7 +124,7 @@ class Package implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Package::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Package::fromArray($data);
             }, $data['requires'] ?? []);
         }
         if (isset($data['sourceURL'])) {
@@ -140,7 +140,7 @@ class Package implements \Aazsamir\Graphpql\Model\GraphObject
             $self->date = new \DateTimeImmutable($data['date']);
         }
         if (isset($data['source_package'])) {
-            $self->source_package = \Aazsamir\Stasphp\Graphpql\Package::fromArray($data['source_package']);
+            $self->source_package = \Aazsamir\Stasphp\Graphql\Package::fromArray($data['source_package']);
         }
 
         return $self;

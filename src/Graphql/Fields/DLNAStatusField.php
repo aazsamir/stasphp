@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -47,13 +47,13 @@ class DLNAStatusField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\DLNAIPSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\DLNAIPSelectionSet>
      */
     public static function allowedIPAddresses(): self
     {
         $instance = new self();
         $instance->name = 'allowedIPAddresses';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\DLNAIPSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\DLNAIPSelectionSet();
 
         return $instance;
     }

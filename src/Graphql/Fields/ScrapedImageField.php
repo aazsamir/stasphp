@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -80,37 +80,37 @@ class ScrapedImageField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedStudioSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedStudioSelectionSet>
      */
     public static function studio(): self
     {
         $instance = new self();
         $instance->name = 'studio';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedStudioSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedStudioSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedTagSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedTagSelectionSet>
      */
     public static function tags(): self
     {
         $instance = new self();
         $instance->name = 'tags';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedTagSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedTagSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedPerformerSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedPerformerSelectionSet>
      */
     public static function performers(): self
     {
         $instance = new self();
         $instance->name = 'performers';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedPerformerSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedPerformerSelectionSet();
 
         return $instance;
     }

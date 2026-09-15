@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class ParseSceneFilenames implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'parseSceneFilenames';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\SceneParserResultType';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\SceneParserResultType';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneParserResultTypeSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\SceneParserResultTypeSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -23,8 +23,8 @@ class ParseSceneFilenames implements \Aazsamir\Graphpql\Model\Query
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\SceneParserInput $config,
-        public ?\Aazsamir\Stasphp\Graphpql\FindFilterType $filter = null,
+        public \Aazsamir\Stasphp\Graphql\SceneParserInput $config,
+        public ?\Aazsamir\Stasphp\Graphql\FindFilterType $filter = null,
     ) {
     }
 
@@ -37,12 +37,12 @@ class ParseSceneFilenames implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneParserResultTypeSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\SceneParserResultTypeSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneParserResultTypeSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\SceneParserResultTypeSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -51,14 +51,14 @@ class ParseSceneFilenames implements \Aazsamir\Graphpql\Model\Query
     }
 
     public function setSelection(
-        \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneParserResultTypeSelectionSet $selection,
+        \Aazsamir\Stasphp\Graphql\SelectionSet\SceneParserResultTypeSelectionSet $selection,
     ): self {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneParserResultTypeSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\SceneParserResultTypeSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -71,7 +71,7 @@ class ParseSceneFilenames implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\SceneParserResultType
+    public function do(): ?\Aazsamir\Stasphp\Graphql\SceneParserResultType
     {
         $response = $this->graphqlClient->request($this);
 

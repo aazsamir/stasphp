@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class IdentifyFieldOptions implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -13,27 +13,27 @@ class IdentifyFieldOptions implements \Aazsamir\Graphpql\Model\GraphObject
     public ?bool $createMissing;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyFieldOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\IdentifyFieldOptionsField<mixed>
      */
     public static function field(): Fields\IdentifyFieldOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyFieldOptionsField::field();
+        return \Aazsamir\Stasphp\Graphql\Fields\IdentifyFieldOptionsField::field();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyFieldOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\IdentifyFieldOptionsField<mixed>
      */
     public static function strategy(): Fields\IdentifyFieldOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyFieldOptionsField::strategy();
+        return \Aazsamir\Stasphp\Graphql\Fields\IdentifyFieldOptionsField::strategy();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyFieldOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\IdentifyFieldOptionsField<mixed>
      */
     public static function createMissing(): Fields\IdentifyFieldOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyFieldOptionsField::createMissing();
+        return \Aazsamir\Stasphp\Graphql\Fields\IdentifyFieldOptionsField::createMissing();
     }
 
     public static function new(string $field, IdentifyFieldStrategy $strategy, ?bool $createMissing = null): self
@@ -53,7 +53,7 @@ class IdentifyFieldOptions implements \Aazsamir\Graphpql\Model\GraphObject
             $self->field = $data['field'];
         }
         if (isset($data['strategy'])) {
-            $self->strategy = \Aazsamir\Stasphp\Graphpql\IdentifyFieldStrategy::from($data['strategy']);
+            $self->strategy = \Aazsamir\Stasphp\Graphql\IdentifyFieldStrategy::from($data['strategy']);
         }
         if (isset($data['createMissing'])) {
             $self->createMissing = $data['createMissing'];

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class FindImagesResultType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -12,43 +12,43 @@ class FindImagesResultType implements \Aazsamir\Graphpql\Model\GraphObject
     public float $megapixels;
     public float $filesize;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Image> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Image> */
     public array $images;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindImagesResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindImagesResultTypeField<mixed>
      */
     public static function count(): Fields\FindImagesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindImagesResultTypeField::count();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindImagesResultTypeField::count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindImagesResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindImagesResultTypeField<mixed>
      */
     public static function megapixels(): Fields\FindImagesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindImagesResultTypeField::megapixels();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindImagesResultTypeField::megapixels();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindImagesResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindImagesResultTypeField<mixed>
      */
     public static function filesize(): Fields\FindImagesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindImagesResultTypeField::filesize();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindImagesResultTypeField::filesize();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindImagesResultTypeField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ImageSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindImagesResultTypeField<\Aazsamir\Stasphp\Graphql\SelectionSet\ImageSelectionSet>
      */
     public static function images(): Fields\FindImagesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindImagesResultTypeField::images();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindImagesResultTypeField::images();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\Image> $images
+     * @param array<\Aazsamir\Stasphp\Graphql\Image> $images
      */
     public static function new(int $count, float $megapixels, float $filesize, array $images): self
     {
@@ -79,7 +79,7 @@ class FindImagesResultType implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Image::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Image::fromArray($data);
             }, $data['images'] ?? []);
         }
 

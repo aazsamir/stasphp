@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class VideoFileFilterInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -53,37 +53,37 @@ class VideoFileFilterInput implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['resolution'])) {
-            $self->resolution = \Aazsamir\Stasphp\Graphpql\ResolutionCriterionInput::fromArray($data['resolution']);
+            $self->resolution = \Aazsamir\Stasphp\Graphql\ResolutionCriterionInput::fromArray($data['resolution']);
         }
         if (isset($data['orientation'])) {
-            $self->orientation = \Aazsamir\Stasphp\Graphpql\OrientationCriterionInput::fromArray($data['orientation']);
+            $self->orientation = \Aazsamir\Stasphp\Graphql\OrientationCriterionInput::fromArray($data['orientation']);
         }
         if (isset($data['framerate'])) {
-            $self->framerate = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['framerate']);
+            $self->framerate = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['framerate']);
         }
         if (isset($data['bitrate'])) {
-            $self->bitrate = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['bitrate']);
+            $self->bitrate = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['bitrate']);
         }
         if (isset($data['format'])) {
-            $self->format = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['format']);
+            $self->format = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['format']);
         }
         if (isset($data['video_codec'])) {
-            $self->video_codec = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['video_codec']);
+            $self->video_codec = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['video_codec']);
         }
         if (isset($data['audio_codec'])) {
-            $self->audio_codec = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['audio_codec']);
+            $self->audio_codec = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['audio_codec']);
         }
         if (isset($data['duration'])) {
-            $self->duration = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['duration']);
+            $self->duration = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['duration']);
         }
         if (isset($data['captions'])) {
-            $self->captions = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['captions']);
+            $self->captions = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['captions']);
         }
         if (isset($data['interactive'])) {
             $self->interactive = $data['interactive'];
         }
         if (isset($data['interactive_speed'])) {
-            $self->interactive_speed = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['interactive_speed']);
+            $self->interactive_speed = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['interactive_speed']);
         }
 
         return $self;

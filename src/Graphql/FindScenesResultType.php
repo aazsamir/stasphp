@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class FindScenesResultType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -12,43 +12,43 @@ class FindScenesResultType implements \Aazsamir\Graphpql\Model\GraphObject
     public float $duration;
     public float $filesize;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Scene> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Scene> */
     public array $scenes;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindScenesResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindScenesResultTypeField<mixed>
      */
     public static function count(): Fields\FindScenesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindScenesResultTypeField::count();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindScenesResultTypeField::count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindScenesResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindScenesResultTypeField<mixed>
      */
     public static function duration(): Fields\FindScenesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindScenesResultTypeField::duration();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindScenesResultTypeField::duration();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindScenesResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindScenesResultTypeField<mixed>
      */
     public static function filesize(): Fields\FindScenesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindScenesResultTypeField::filesize();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindScenesResultTypeField::filesize();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindScenesResultTypeField<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindScenesResultTypeField<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneSelectionSet>
      */
     public static function scenes(): Fields\FindScenesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindScenesResultTypeField::scenes();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindScenesResultTypeField::scenes();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\Scene> $scenes
+     * @param array<\Aazsamir\Stasphp\Graphql\Scene> $scenes
      */
     public static function new(int $count, float $duration, float $filesize, array $scenes): self
     {
@@ -79,7 +79,7 @@ class FindScenesResultType implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Scene::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Scene::fromArray($data);
             }, $data['scenes'] ?? []);
         }
 

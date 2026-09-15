@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Mutation;
+namespace Aazsamir\Stasphp\Graphql\Mutation;
 
 class GalleryChapterCreate implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'galleryChapterCreate';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\GalleryChapter';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\GalleryChapter';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\GalleryChapterSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\GalleryChapterSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -23,7 +23,7 @@ class GalleryChapterCreate implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\GalleryChapterCreateInput $input,
+        public \Aazsamir\Stasphp\Graphql\GalleryChapterCreateInput $input,
     ) {
     }
 
@@ -35,12 +35,12 @@ class GalleryChapterCreate implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\GalleryChapterSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\GalleryChapterSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\GalleryChapterSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\GalleryChapterSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -48,14 +48,14 @@ class GalleryChapterCreate implements \Aazsamir\Graphpql\Model\Mutation
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\GalleryChapterSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\GalleryChapterSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\GalleryChapterSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\GalleryChapterSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -68,7 +68,7 @@ class GalleryChapterCreate implements \Aazsamir\Graphpql\Model\Mutation
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\GalleryChapter
+    public function do(): ?\Aazsamir\Stasphp\Graphql\GalleryChapter
     {
         $response = $this->graphqlClient->request($this);
 

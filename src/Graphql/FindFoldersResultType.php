@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class FindFoldersResultType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -10,27 +10,27 @@ class FindFoldersResultType implements \Aazsamir\Graphpql\Model\GraphObject
 
     public int $count;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Folder> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Folder> */
     public array $folders;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindFoldersResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindFoldersResultTypeField<mixed>
      */
     public static function count(): Fields\FindFoldersResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindFoldersResultTypeField::count();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindFoldersResultTypeField::count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindFoldersResultTypeField<\Aazsamir\Stasphp\Graphpql\SelectionSet\FolderSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindFoldersResultTypeField<\Aazsamir\Stasphp\Graphql\SelectionSet\FolderSelectionSet>
      */
     public static function folders(): Fields\FindFoldersResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindFoldersResultTypeField::folders();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindFoldersResultTypeField::folders();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\Folder> $folders
+     * @param array<\Aazsamir\Stasphp\Graphql\Folder> $folders
      */
     public static function new(int $count, array $folders): self
     {
@@ -53,7 +53,7 @@ class FindFoldersResultType implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Folder::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Folder::fromArray($data);
             }, $data['folders'] ?? []);
         }
 

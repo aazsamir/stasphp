@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScrapedScene implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -21,166 +21,166 @@ class ScrapedScene implements \Aazsamir\Graphpql\Model\GraphObject
     public ?SceneFileType $file;
     public ?ScrapedStudio $studio;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\ScrapedTag> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\ScrapedTag> */
     public ?array $tags;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\ScrapedPerformer> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\ScrapedPerformer> */
     public ?array $performers;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\ScrapedMovie> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\ScrapedMovie> */
     public ?array $movies;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\ScrapedGroup> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\ScrapedGroup> */
     public ?array $groups;
     public ?string $remote_site_id;
     public ?int $duration;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\StashBoxFingerprint> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\StashBoxFingerprint> */
     public ?array $fingerprints;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<mixed>
      */
     public static function title(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::title();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::title();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<mixed>
      */
     public static function code(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::code();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::code();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<mixed>
      */
     public static function details(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::details();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::details();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<mixed>
      */
     public static function director(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::director();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::director();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<mixed>
      */
     public static function url(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::url();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::url();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<mixed>
      */
     public static function urls(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::urls();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::urls();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<mixed>
      */
     public static function date(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::date();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::date();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<mixed>
      */
     public static function image(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::image();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::image();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneFileTypeSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneFileTypeSelectionSet>
      */
     public static function file(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::file();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::file();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedStudioSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedStudioSelectionSet>
      */
     public static function studio(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::studio();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::studio();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedTagSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedTagSelectionSet>
      */
     public static function tags(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::tags();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::tags();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedPerformerSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedPerformerSelectionSet>
      */
     public static function performers(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::performers();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::performers();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedMovieSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedMovieSelectionSet>
      */
     public static function movies(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::movies();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::movies();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedGroupSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedGroupSelectionSet>
      */
     public static function groups(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::groups();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::groups();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<mixed>
      */
     public static function remote_site_id(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::remote_site_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::remote_site_id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<mixed>
      */
     public static function duration(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::duration();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::duration();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField<\Aazsamir\Stasphp\Graphpql\SelectionSet\StashBoxFingerprintSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField<\Aazsamir\Stasphp\Graphql\SelectionSet\StashBoxFingerprintSelectionSet>
      */
     public static function fingerprints(): Fields\ScrapedSceneField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedSceneField::fingerprints();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedSceneField::fingerprints();
     }
 
     /**
      * @param array<string> $urls
-     * @param array<\Aazsamir\Stasphp\Graphpql\ScrapedTag> $tags
-     * @param array<\Aazsamir\Stasphp\Graphpql\ScrapedPerformer> $performers
-     * @param array<\Aazsamir\Stasphp\Graphpql\ScrapedMovie> $movies
-     * @param array<\Aazsamir\Stasphp\Graphpql\ScrapedGroup> $groups
-     * @param array<\Aazsamir\Stasphp\Graphpql\StashBoxFingerprint> $fingerprints
+     * @param array<\Aazsamir\Stasphp\Graphql\ScrapedTag> $tags
+     * @param array<\Aazsamir\Stasphp\Graphql\ScrapedPerformer> $performers
+     * @param array<\Aazsamir\Stasphp\Graphql\ScrapedMovie> $movies
+     * @param array<\Aazsamir\Stasphp\Graphql\ScrapedGroup> $groups
+     * @param array<\Aazsamir\Stasphp\Graphql\StashBoxFingerprint> $fingerprints
      */
     public static function new(
         ?string $title = null,
@@ -257,10 +257,10 @@ class ScrapedScene implements \Aazsamir\Graphpql\Model\GraphObject
             $self->image = $data['image'];
         }
         if (isset($data['file'])) {
-            $self->file = \Aazsamir\Stasphp\Graphpql\SceneFileType::fromArray($data['file']);
+            $self->file = \Aazsamir\Stasphp\Graphql\SceneFileType::fromArray($data['file']);
         }
         if (isset($data['studio'])) {
-            $self->studio = \Aazsamir\Stasphp\Graphpql\ScrapedStudio::fromArray($data['studio']);
+            $self->studio = \Aazsamir\Stasphp\Graphql\ScrapedStudio::fromArray($data['studio']);
         }
         if (isset($data['tags'])) {
             $self->tags = array_map(function ($data) {
@@ -268,7 +268,7 @@ class ScrapedScene implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\ScrapedTag::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\ScrapedTag::fromArray($data);
             }, $data['tags'] ?? []);
         }
         if (isset($data['performers'])) {
@@ -277,7 +277,7 @@ class ScrapedScene implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\ScrapedPerformer::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\ScrapedPerformer::fromArray($data);
             }, $data['performers'] ?? []);
         }
         if (isset($data['movies'])) {
@@ -286,7 +286,7 @@ class ScrapedScene implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\ScrapedMovie::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\ScrapedMovie::fromArray($data);
             }, $data['movies'] ?? []);
         }
         if (isset($data['groups'])) {
@@ -295,7 +295,7 @@ class ScrapedScene implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\ScrapedGroup::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\ScrapedGroup::fromArray($data);
             }, $data['groups'] ?? []);
         }
         if (isset($data['remote_site_id'])) {
@@ -310,7 +310,7 @@ class ScrapedScene implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\StashBoxFingerprint::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\StashBoxFingerprint::fromArray($data);
             }, $data['fingerprints'] ?? []);
         }
 

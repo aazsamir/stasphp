@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class GroupDescriptionSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class GroupDescriptionSelectionSet implements \Aazsamir\Graphpql\Model\Selection
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\GroupDescriptionField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\GroupDescriptionField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class GroupDescriptionSelectionSet implements \Aazsamir\Graphpql\Model\Selection
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GroupDescriptionField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GroupDescriptionField[]
      */
     public function getSelection(): array
     {

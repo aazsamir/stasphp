@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class GroupUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -24,10 +24,10 @@ class GroupUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
     /** @var array<string> */
     public ?array $tag_ids;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\GroupDescriptionInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\GroupDescriptionInput> */
     public ?array $containing_groups;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\GroupDescriptionInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\GroupDescriptionInput> */
     public ?array $sub_groups;
     public ?string $front_image;
     public ?string $back_image;
@@ -36,8 +36,8 @@ class GroupUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
     /**
      * @param array<string> $urls
      * @param array<string> $tag_ids
-     * @param array<\Aazsamir\Stasphp\Graphpql\GroupDescriptionInput> $containing_groups
-     * @param array<\Aazsamir\Stasphp\Graphpql\GroupDescriptionInput> $sub_groups
+     * @param array<\Aazsamir\Stasphp\Graphql\GroupDescriptionInput> $containing_groups
+     * @param array<\Aazsamir\Stasphp\Graphql\GroupDescriptionInput> $sub_groups
      */
     public static function new(
         string $id,
@@ -132,7 +132,7 @@ class GroupUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\GroupDescriptionInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\GroupDescriptionInput::fromArray($data);
             }, $data['containing_groups'] ?? []);
         }
         if (isset($data['sub_groups'])) {
@@ -141,7 +141,7 @@ class GroupUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\GroupDescriptionInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\GroupDescriptionInput::fromArray($data);
             }, $data['sub_groups'] ?? []);
         }
         if (isset($data['front_image'])) {
@@ -151,7 +151,7 @@ class GroupUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->back_image = $data['back_image'];
         }
         if (isset($data['custom_fields'])) {
-            $self->custom_fields = \Aazsamir\Stasphp\Graphpql\CustomFieldsInput::fromArray($data['custom_fields']);
+            $self->custom_fields = \Aazsamir\Stasphp\Graphql\CustomFieldsInput::fromArray($data['custom_fields']);
         }
 
         return $self;

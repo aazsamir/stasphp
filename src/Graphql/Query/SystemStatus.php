@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class SystemStatus implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'systemStatus';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\SystemStatus';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\SystemStatus';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\SystemStatusSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\SystemStatusSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -33,12 +33,12 @@ class SystemStatus implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\SystemStatusSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\SystemStatusSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\SystemStatusSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\SystemStatusSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -46,14 +46,14 @@ class SystemStatus implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\SystemStatusSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\SystemStatusSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\SystemStatusSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\SystemStatusSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -66,7 +66,7 @@ class SystemStatus implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\SystemStatus
+    public function do(): ?\Aazsamir\Stasphp\Graphql\SystemStatus
     {
         $response = $this->graphqlClient->request($this);
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class ScrapedGallerySelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class ScrapedGallerySelectionSet implements \Aazsamir\Graphpql\Model\SelectionSe
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\ScrapedGalleryField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\ScrapedGalleryField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class ScrapedGallerySelectionSet implements \Aazsamir\Graphpql\Model\SelectionSe
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGalleryField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGalleryField[]
      */
     public function getSelection(): array
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SceneParserResultType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -10,27 +10,27 @@ class SceneParserResultType implements \Aazsamir\Graphpql\Model\GraphObject
 
     public int $count;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\SceneParserResult> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\SceneParserResult> */
     public array $results;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultTypeField<mixed>
      */
     public static function count(): Fields\SceneParserResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultTypeField::count();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultTypeField::count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultTypeField<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneParserResultSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultTypeField<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneParserResultSelectionSet>
      */
     public static function results(): Fields\SceneParserResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultTypeField::results();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultTypeField::results();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\SceneParserResult> $results
+     * @param array<\Aazsamir\Stasphp\Graphql\SceneParserResult> $results
      */
     public static function new(int $count, array $results): self
     {
@@ -53,7 +53,7 @@ class SceneParserResultType implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\SceneParserResult::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\SceneParserResult::fromArray($data);
             }, $data['results'] ?? []);
         }
 

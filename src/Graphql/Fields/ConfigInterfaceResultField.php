@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -245,25 +245,25 @@ class ConfigInterfaceResultField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigImageLightboxResultSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ConfigImageLightboxResultSelectionSet>
      */
     public static function imageLightbox(): self
     {
         $instance = new self();
         $instance->name = 'imageLightbox';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigImageLightboxResultSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ConfigImageLightboxResultSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigDisableDropdownCreateSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ConfigDisableDropdownCreateSelectionSet>
      */
     public static function disableDropdownCreate(): self
     {
         $instance = new self();
         $instance->name = 'disableDropdownCreate';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigDisableDropdownCreateSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ConfigDisableDropdownCreateSelectionSet();
 
         return $instance;
     }

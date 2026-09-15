@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ImagePathsType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -13,27 +13,27 @@ class ImagePathsType implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $image;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ImagePathsTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ImagePathsTypeField<mixed>
      */
     public static function thumbnail(): Fields\ImagePathsTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ImagePathsTypeField::thumbnail();
+        return \Aazsamir\Stasphp\Graphql\Fields\ImagePathsTypeField::thumbnail();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ImagePathsTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ImagePathsTypeField<mixed>
      */
     public static function preview(): Fields\ImagePathsTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ImagePathsTypeField::preview();
+        return \Aazsamir\Stasphp\Graphql\Fields\ImagePathsTypeField::preview();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ImagePathsTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ImagePathsTypeField<mixed>
      */
     public static function image(): Fields\ImagePathsTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ImagePathsTypeField::image();
+        return \Aazsamir\Stasphp\Graphql\Fields\ImagePathsTypeField::image();
     }
 
     public static function new(?string $thumbnail = null, ?string $preview = null, ?string $image = null): self

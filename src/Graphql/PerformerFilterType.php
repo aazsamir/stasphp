@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class PerformerFilterType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -62,11 +62,11 @@ class PerformerFilterType implements \Aazsamir\Graphpql\Model\GraphObject
     public ?TimestampCriterionInput $created_at;
     public ?TimestampCriterionInput $updated_at;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\CustomFieldCriterionInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\CustomFieldCriterionInput> */
     public ?array $custom_fields;
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\CustomFieldCriterionInput> $custom_fields
+     * @param array<\Aazsamir\Stasphp\Graphql\CustomFieldCriterionInput> $custom_fields
      */
     public static function new(
         ?PerformerFilterType $AND = null,
@@ -187,163 +187,163 @@ class PerformerFilterType implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['AND'])) {
-            $self->AND = \Aazsamir\Stasphp\Graphpql\PerformerFilterType::fromArray($data['AND']);
+            $self->AND = \Aazsamir\Stasphp\Graphql\PerformerFilterType::fromArray($data['AND']);
         }
         if (isset($data['OR'])) {
-            $self->OR = \Aazsamir\Stasphp\Graphpql\PerformerFilterType::fromArray($data['OR']);
+            $self->OR = \Aazsamir\Stasphp\Graphql\PerformerFilterType::fromArray($data['OR']);
         }
         if (isset($data['NOT'])) {
-            $self->NOT = \Aazsamir\Stasphp\Graphpql\PerformerFilterType::fromArray($data['NOT']);
+            $self->NOT = \Aazsamir\Stasphp\Graphql\PerformerFilterType::fromArray($data['NOT']);
         }
         if (isset($data['name'])) {
-            $self->name = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['name']);
+            $self->name = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['name']);
         }
         if (isset($data['disambiguation'])) {
-            $self->disambiguation = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['disambiguation']);
+            $self->disambiguation = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['disambiguation']);
         }
         if (isset($data['details'])) {
-            $self->details = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['details']);
+            $self->details = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['details']);
         }
         if (isset($data['filter_favorites'])) {
             $self->filter_favorites = $data['filter_favorites'];
         }
         if (isset($data['birth_year'])) {
-            $self->birth_year = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['birth_year']);
+            $self->birth_year = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['birth_year']);
         }
         if (isset($data['age'])) {
-            $self->age = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['age']);
+            $self->age = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['age']);
         }
         if (isset($data['ethnicity'])) {
-            $self->ethnicity = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['ethnicity']);
+            $self->ethnicity = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['ethnicity']);
         }
         if (isset($data['country'])) {
-            $self->country = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['country']);
+            $self->country = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['country']);
         }
         if (isset($data['eye_color'])) {
-            $self->eye_color = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['eye_color']);
+            $self->eye_color = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['eye_color']);
         }
         if (isset($data['height_cm'])) {
-            $self->height_cm = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['height_cm']);
+            $self->height_cm = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['height_cm']);
         }
         if (isset($data['measurements'])) {
-            $self->measurements = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['measurements']);
+            $self->measurements = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['measurements']);
         }
         if (isset($data['fake_tits'])) {
-            $self->fake_tits = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['fake_tits']);
+            $self->fake_tits = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['fake_tits']);
         }
         if (isset($data['penis_length'])) {
-            $self->penis_length = \Aazsamir\Stasphp\Graphpql\FloatCriterionInput::fromArray($data['penis_length']);
+            $self->penis_length = \Aazsamir\Stasphp\Graphql\FloatCriterionInput::fromArray($data['penis_length']);
         }
         if (isset($data['circumcised'])) {
-            $self->circumcised = \Aazsamir\Stasphp\Graphpql\CircumcisionCriterionInput::fromArray($data['circumcised']);
+            $self->circumcised = \Aazsamir\Stasphp\Graphql\CircumcisionCriterionInput::fromArray($data['circumcised']);
         }
         if (isset($data['career_length'])) {
-            $self->career_length = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['career_length']);
+            $self->career_length = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['career_length']);
         }
         if (isset($data['career_start'])) {
-            $self->career_start = \Aazsamir\Stasphp\Graphpql\DateCriterionInput::fromArray($data['career_start']);
+            $self->career_start = \Aazsamir\Stasphp\Graphql\DateCriterionInput::fromArray($data['career_start']);
         }
         if (isset($data['career_end'])) {
-            $self->career_end = \Aazsamir\Stasphp\Graphpql\DateCriterionInput::fromArray($data['career_end']);
+            $self->career_end = \Aazsamir\Stasphp\Graphql\DateCriterionInput::fromArray($data['career_end']);
         }
         if (isset($data['tattoos'])) {
-            $self->tattoos = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['tattoos']);
+            $self->tattoos = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['tattoos']);
         }
         if (isset($data['piercings'])) {
-            $self->piercings = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['piercings']);
+            $self->piercings = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['piercings']);
         }
         if (isset($data['aliases'])) {
-            $self->aliases = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['aliases']);
+            $self->aliases = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['aliases']);
         }
         if (isset($data['gender'])) {
-            $self->gender = \Aazsamir\Stasphp\Graphpql\GenderCriterionInput::fromArray($data['gender']);
+            $self->gender = \Aazsamir\Stasphp\Graphql\GenderCriterionInput::fromArray($data['gender']);
         }
         if (isset($data['is_missing'])) {
             $self->is_missing = $data['is_missing'];
         }
         if (isset($data['tags'])) {
-            $self->tags = \Aazsamir\Stasphp\Graphpql\HierarchicalMultiCriterionInput::fromArray($data['tags']);
+            $self->tags = \Aazsamir\Stasphp\Graphql\HierarchicalMultiCriterionInput::fromArray($data['tags']);
         }
         if (isset($data['tag_count'])) {
-            $self->tag_count = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['tag_count']);
+            $self->tag_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['tag_count']);
         }
         if (isset($data['scene_count'])) {
-            $self->scene_count = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['scene_count']);
+            $self->scene_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['scene_count']);
         }
         if (isset($data['marker_count'])) {
-            $self->marker_count = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['marker_count']);
+            $self->marker_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['marker_count']);
         }
         if (isset($data['image_count'])) {
-            $self->image_count = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['image_count']);
+            $self->image_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['image_count']);
         }
         if (isset($data['gallery_count'])) {
-            $self->gallery_count = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['gallery_count']);
+            $self->gallery_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['gallery_count']);
         }
         if (isset($data['play_count'])) {
-            $self->play_count = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['play_count']);
+            $self->play_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['play_count']);
         }
         if (isset($data['o_counter'])) {
-            $self->o_counter = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['o_counter']);
+            $self->o_counter = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['o_counter']);
         }
         if (isset($data['stash_id_endpoint'])) {
-            $self->stash_id_endpoint = \Aazsamir\Stasphp\Graphpql\StashIDCriterionInput::fromArray($data['stash_id_endpoint']);
+            $self->stash_id_endpoint = \Aazsamir\Stasphp\Graphql\StashIDCriterionInput::fromArray($data['stash_id_endpoint']);
         }
         if (isset($data['stash_ids_endpoint'])) {
-            $self->stash_ids_endpoint = \Aazsamir\Stasphp\Graphpql\StashIDsCriterionInput::fromArray($data['stash_ids_endpoint']);
+            $self->stash_ids_endpoint = \Aazsamir\Stasphp\Graphql\StashIDsCriterionInput::fromArray($data['stash_ids_endpoint']);
         }
         if (isset($data['rating100'])) {
-            $self->rating100 = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['rating100']);
+            $self->rating100 = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['rating100']);
         }
         if (isset($data['url'])) {
-            $self->url = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['url']);
+            $self->url = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['url']);
         }
         if (isset($data['hair_color'])) {
-            $self->hair_color = \Aazsamir\Stasphp\Graphpql\StringCriterionInput::fromArray($data['hair_color']);
+            $self->hair_color = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['hair_color']);
         }
         if (isset($data['weight'])) {
-            $self->weight = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['weight']);
+            $self->weight = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['weight']);
         }
         if (isset($data['death_year'])) {
-            $self->death_year = \Aazsamir\Stasphp\Graphpql\IntCriterionInput::fromArray($data['death_year']);
+            $self->death_year = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['death_year']);
         }
         if (isset($data['studios'])) {
-            $self->studios = \Aazsamir\Stasphp\Graphpql\HierarchicalMultiCriterionInput::fromArray($data['studios']);
+            $self->studios = \Aazsamir\Stasphp\Graphql\HierarchicalMultiCriterionInput::fromArray($data['studios']);
         }
         if (isset($data['groups'])) {
-            $self->groups = \Aazsamir\Stasphp\Graphpql\HierarchicalMultiCriterionInput::fromArray($data['groups']);
+            $self->groups = \Aazsamir\Stasphp\Graphql\HierarchicalMultiCriterionInput::fromArray($data['groups']);
         }
         if (isset($data['performers'])) {
-            $self->performers = \Aazsamir\Stasphp\Graphpql\MultiCriterionInput::fromArray($data['performers']);
+            $self->performers = \Aazsamir\Stasphp\Graphql\MultiCriterionInput::fromArray($data['performers']);
         }
         if (isset($data['ignore_auto_tag'])) {
             $self->ignore_auto_tag = $data['ignore_auto_tag'];
         }
         if (isset($data['birthdate'])) {
-            $self->birthdate = \Aazsamir\Stasphp\Graphpql\DateCriterionInput::fromArray($data['birthdate']);
+            $self->birthdate = \Aazsamir\Stasphp\Graphql\DateCriterionInput::fromArray($data['birthdate']);
         }
         if (isset($data['death_date'])) {
-            $self->death_date = \Aazsamir\Stasphp\Graphpql\DateCriterionInput::fromArray($data['death_date']);
+            $self->death_date = \Aazsamir\Stasphp\Graphql\DateCriterionInput::fromArray($data['death_date']);
         }
         if (isset($data['scenes_filter'])) {
-            $self->scenes_filter = \Aazsamir\Stasphp\Graphpql\SceneFilterType::fromArray($data['scenes_filter']);
+            $self->scenes_filter = \Aazsamir\Stasphp\Graphql\SceneFilterType::fromArray($data['scenes_filter']);
         }
         if (isset($data['images_filter'])) {
-            $self->images_filter = \Aazsamir\Stasphp\Graphpql\ImageFilterType::fromArray($data['images_filter']);
+            $self->images_filter = \Aazsamir\Stasphp\Graphql\ImageFilterType::fromArray($data['images_filter']);
         }
         if (isset($data['galleries_filter'])) {
-            $self->galleries_filter = \Aazsamir\Stasphp\Graphpql\GalleryFilterType::fromArray($data['galleries_filter']);
+            $self->galleries_filter = \Aazsamir\Stasphp\Graphql\GalleryFilterType::fromArray($data['galleries_filter']);
         }
         if (isset($data['tags_filter'])) {
-            $self->tags_filter = \Aazsamir\Stasphp\Graphpql\TagFilterType::fromArray($data['tags_filter']);
+            $self->tags_filter = \Aazsamir\Stasphp\Graphql\TagFilterType::fromArray($data['tags_filter']);
         }
         if (isset($data['markers_filter'])) {
-            $self->markers_filter = \Aazsamir\Stasphp\Graphpql\SceneMarkerFilterType::fromArray($data['markers_filter']);
+            $self->markers_filter = \Aazsamir\Stasphp\Graphql\SceneMarkerFilterType::fromArray($data['markers_filter']);
         }
         if (isset($data['created_at'])) {
-            $self->created_at = \Aazsamir\Stasphp\Graphpql\TimestampCriterionInput::fromArray($data['created_at']);
+            $self->created_at = \Aazsamir\Stasphp\Graphql\TimestampCriterionInput::fromArray($data['created_at']);
         }
         if (isset($data['updated_at'])) {
-            $self->updated_at = \Aazsamir\Stasphp\Graphpql\TimestampCriterionInput::fromArray($data['updated_at']);
+            $self->updated_at = \Aazsamir\Stasphp\Graphql\TimestampCriterionInput::fromArray($data['updated_at']);
         }
         if (isset($data['custom_fields'])) {
             $self->custom_fields = array_map(function ($data) {
@@ -351,7 +351,7 @@ class PerformerFilterType implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\CustomFieldCriterionInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\CustomFieldCriterionInput::fromArray($data);
             }, $data['custom_fields'] ?? []);
         }
 

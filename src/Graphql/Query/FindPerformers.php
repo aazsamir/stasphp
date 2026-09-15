@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class FindPerformers implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'findPerformers';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\FindPerformersResultType';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\FindPerformersResultType';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\FindPerformersResultTypeSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\FindPerformersResultTypeSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -27,8 +27,8 @@ class FindPerformers implements \Aazsamir\Graphpql\Model\Query
      * @param array<string> $ids
      */
     public function __construct(
-        public ?\Aazsamir\Stasphp\Graphpql\PerformerFilterType $performer_filter = null,
-        public ?\Aazsamir\Stasphp\Graphpql\FindFilterType $filter = null,
+        public ?\Aazsamir\Stasphp\Graphql\PerformerFilterType $performer_filter = null,
+        public ?\Aazsamir\Stasphp\Graphql\FindFilterType $filter = null,
         public ?array $performer_ids = null,
         public ?array $ids = null,
     ) {
@@ -45,12 +45,12 @@ class FindPerformers implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\FindPerformersResultTypeSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\FindPerformersResultTypeSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\FindPerformersResultTypeSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\FindPerformersResultTypeSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -59,14 +59,14 @@ class FindPerformers implements \Aazsamir\Graphpql\Model\Query
     }
 
     public function setSelection(
-        \Aazsamir\Stasphp\Graphpql\SelectionSet\FindPerformersResultTypeSelectionSet $selection,
+        \Aazsamir\Stasphp\Graphql\SelectionSet\FindPerformersResultTypeSelectionSet $selection,
     ): self {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\FindPerformersResultTypeSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\FindPerformersResultTypeSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -79,7 +79,7 @@ class FindPerformers implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\FindPerformersResultType
+    public function do(): ?\Aazsamir\Stasphp\Graphql\FindPerformersResultType
     {
         $response = $this->graphqlClient->request($this);
 

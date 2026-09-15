@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScrapedGroup implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -21,118 +21,118 @@ class ScrapedGroup implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $synopsis;
     public ?ScrapedStudio $studio;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\ScrapedTag> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\ScrapedTag> */
     public ?array $tags;
     public ?string $front_image;
     public ?string $back_image;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField<mixed>
      */
     public static function stored_id(): Fields\ScrapedGroupField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField::stored_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField::stored_id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField<mixed>
      */
     public static function name(): Fields\ScrapedGroupField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField::name();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField::name();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField<mixed>
      */
     public static function aliases(): Fields\ScrapedGroupField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField::aliases();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField::aliases();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField<mixed>
      */
     public static function duration(): Fields\ScrapedGroupField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField::duration();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField::duration();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField<mixed>
      */
     public static function date(): Fields\ScrapedGroupField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField::date();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField::date();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField<mixed>
      */
     public static function rating(): Fields\ScrapedGroupField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField::rating();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField::rating();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField<mixed>
      */
     public static function director(): Fields\ScrapedGroupField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField::director();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField::director();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField<mixed>
      */
     public static function urls(): Fields\ScrapedGroupField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField::urls();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField::urls();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField<mixed>
      */
     public static function synopsis(): Fields\ScrapedGroupField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField::synopsis();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField::synopsis();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedStudioSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedStudioSelectionSet>
      */
     public static function studio(): Fields\ScrapedGroupField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField::studio();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField::studio();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedTagSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedTagSelectionSet>
      */
     public static function tags(): Fields\ScrapedGroupField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField::tags();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField::tags();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField<mixed>
      */
     public static function front_image(): Fields\ScrapedGroupField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField::front_image();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField::front_image();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField<mixed>
      */
     public static function back_image(): Fields\ScrapedGroupField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedGroupField::back_image();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedGroupField::back_image();
     }
 
     /**
      * @param array<string> $urls
-     * @param array<\Aazsamir\Stasphp\Graphpql\ScrapedTag> $tags
+     * @param array<\Aazsamir\Stasphp\Graphql\ScrapedTag> $tags
      */
     public static function new(
         ?string $stored_id = null,
@@ -204,7 +204,7 @@ class ScrapedGroup implements \Aazsamir\Graphpql\Model\GraphObject
             $self->synopsis = $data['synopsis'];
         }
         if (isset($data['studio'])) {
-            $self->studio = \Aazsamir\Stasphp\Graphpql\ScrapedStudio::fromArray($data['studio']);
+            $self->studio = \Aazsamir\Stasphp\Graphql\ScrapedStudio::fromArray($data['studio']);
         }
         if (isset($data['tags'])) {
             $self->tags = array_map(function ($data) {
@@ -212,7 +212,7 @@ class ScrapedGroup implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\ScrapedTag::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\ScrapedTag::fromArray($data);
             }, $data['tags'] ?? []);
         }
         if (isset($data['front_image'])) {

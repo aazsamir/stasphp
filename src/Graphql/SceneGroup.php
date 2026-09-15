@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SceneGroup implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -12,19 +12,19 @@ class SceneGroup implements \Aazsamir\Graphpql\Model\GraphObject
     public ?int $scene_index;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneGroupField<\Aazsamir\Stasphp\Graphpql\SelectionSet\GroupSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneGroupField<\Aazsamir\Stasphp\Graphql\SelectionSet\GroupSelectionSet>
      */
     public static function group(): Fields\SceneGroupField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneGroupField::group();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneGroupField::group();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneGroupField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneGroupField<mixed>
      */
     public static function scene_index(): Fields\SceneGroupField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneGroupField::scene_index();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneGroupField::scene_index();
     }
 
     public static function new(Group $group, ?int $scene_index = null): self
@@ -40,7 +40,7 @@ class SceneGroup implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['group'])) {
-            $self->group = \Aazsamir\Stasphp\Graphpql\Group::fromArray($data['group']);
+            $self->group = \Aazsamir\Stasphp\Graphql\Group::fromArray($data['group']);
         }
         if (isset($data['scene_index'])) {
             $self->scene_index = $data['scene_index'];

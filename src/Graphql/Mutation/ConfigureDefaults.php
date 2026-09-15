@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Mutation;
+namespace Aazsamir\Stasphp\Graphql\Mutation;
 
 class ConfigureDefaults implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'configureDefaults';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\ConfigDefaultSettingsResult';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ConfigDefaultSettingsResult';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigDefaultSettingsResultSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\ConfigDefaultSettingsResultSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -23,7 +23,7 @@ class ConfigureDefaults implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\ConfigDefaultSettingsInput $input,
+        public \Aazsamir\Stasphp\Graphql\ConfigDefaultSettingsInput $input,
     ) {
     }
 
@@ -35,12 +35,12 @@ class ConfigureDefaults implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigDefaultSettingsResultSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\ConfigDefaultSettingsResultSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigDefaultSettingsResultSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\ConfigDefaultSettingsResultSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -49,14 +49,14 @@ class ConfigureDefaults implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     public function setSelection(
-        \Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigDefaultSettingsResultSelectionSet $selection,
+        \Aazsamir\Stasphp\Graphql\SelectionSet\ConfigDefaultSettingsResultSelectionSet $selection,
     ): self {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigDefaultSettingsResultSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\ConfigDefaultSettingsResultSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -69,7 +69,7 @@ class ConfigureDefaults implements \Aazsamir\Graphpql\Model\Mutation
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\ConfigDefaultSettingsResult
+    public function do(): ?\Aazsamir\Stasphp\Graphql\ConfigDefaultSettingsResult
     {
         $response = $this->graphqlClient->request($this);
 

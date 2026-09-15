@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class CustomFieldCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -34,7 +34,7 @@ class CustomFieldCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->field = $data['field'];
         }
         if (isset($data['modifier'])) {
-            $self->modifier = \Aazsamir\Stasphp\Graphpql\CriterionModifier::from($data['modifier']);
+            $self->modifier = \Aazsamir\Stasphp\Graphql\CriterionModifier::from($data['modifier']);
         }
         if (isset($data['value'])) {
             $self->value = array_map(function ($data) {

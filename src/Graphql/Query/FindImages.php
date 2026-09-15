@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class FindImages implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'findImages';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\FindImagesResultType';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\FindImagesResultType';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\FindImagesResultTypeSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\FindImagesResultTypeSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -27,10 +27,10 @@ class FindImages implements \Aazsamir\Graphpql\Model\Query
      * @param array<string> $ids
      */
     public function __construct(
-        public ?\Aazsamir\Stasphp\Graphpql\ImageFilterType $image_filter = null,
+        public ?\Aazsamir\Stasphp\Graphql\ImageFilterType $image_filter = null,
         public ?array $image_ids = null,
         public ?array $ids = null,
-        public ?\Aazsamir\Stasphp\Graphpql\FindFilterType $filter = null,
+        public ?\Aazsamir\Stasphp\Graphql\FindFilterType $filter = null,
     ) {
     }
 
@@ -45,12 +45,12 @@ class FindImages implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\FindImagesResultTypeSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\FindImagesResultTypeSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\FindImagesResultTypeSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\FindImagesResultTypeSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -59,14 +59,14 @@ class FindImages implements \Aazsamir\Graphpql\Model\Query
     }
 
     public function setSelection(
-        \Aazsamir\Stasphp\Graphpql\SelectionSet\FindImagesResultTypeSelectionSet $selection,
+        \Aazsamir\Stasphp\Graphql\SelectionSet\FindImagesResultTypeSelectionSet $selection,
     ): self {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\FindImagesResultTypeSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\FindImagesResultTypeSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -79,7 +79,7 @@ class FindImages implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\FindImagesResultType
+    public function do(): ?\Aazsamir\Stasphp\Graphql\FindImagesResultType
     {
         $response = $this->graphqlClient->request($this);
 

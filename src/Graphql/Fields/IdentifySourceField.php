@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -14,25 +14,25 @@ class IdentifySourceField implements \Aazsamir\Graphpql\Model\ObjectField
     private ?string $union = null;
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScraperSourceSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScraperSourceSelectionSet>
      */
     public static function source(): self
     {
         $instance = new self();
         $instance->name = 'source';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScraperSourceSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScraperSourceSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\IdentifyMetadataOptionsSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\IdentifyMetadataOptionsSelectionSet>
      */
     public static function options(): self
     {
         $instance = new self();
         $instance->name = 'options';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\IdentifyMetadataOptionsSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\IdentifyMetadataOptionsSelectionSet();
 
         return $instance;
     }

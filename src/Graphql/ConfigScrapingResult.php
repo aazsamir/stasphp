@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ConfigScrapingResult implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -16,35 +16,35 @@ class ConfigScrapingResult implements \Aazsamir\Graphpql\Model\GraphObject
     public array $excludeTagPatterns;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigScrapingResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigScrapingResultField<mixed>
      */
     public static function scraperUserAgent(): Fields\ConfigScrapingResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigScrapingResultField::scraperUserAgent();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigScrapingResultField::scraperUserAgent();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigScrapingResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigScrapingResultField<mixed>
      */
     public static function scraperCDPPath(): Fields\ConfigScrapingResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigScrapingResultField::scraperCDPPath();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigScrapingResultField::scraperCDPPath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigScrapingResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigScrapingResultField<mixed>
      */
     public static function scraperCertCheck(): Fields\ConfigScrapingResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigScrapingResultField::scraperCertCheck();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigScrapingResultField::scraperCertCheck();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigScrapingResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigScrapingResultField<mixed>
      */
     public static function excludeTagPatterns(): Fields\ConfigScrapingResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigScrapingResultField::excludeTagPatterns();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigScrapingResultField::excludeTagPatterns();
     }
 
     /**

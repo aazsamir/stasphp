@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Mutation;
+namespace Aazsamir\Stasphp\Graphql\Mutation;
 
 class UninstallPackages implements \Aazsamir\Graphpql\Model\Mutation
 {
@@ -23,10 +23,10 @@ class UninstallPackages implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\PackageSpecInput> $packages
+     * @param array<\Aazsamir\Stasphp\Graphql\PackageSpecInput> $packages
      */
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\PackageType $type,
+        public \Aazsamir\Stasphp\Graphql\PackageType $type,
         public array $packages,
     ) {
     }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Mutation;
+namespace Aazsamir\Stasphp\Graphql\Mutation;
 
 class Migrate implements \Aazsamir\Graphpql\Model\Mutation
 {
@@ -23,7 +23,7 @@ class Migrate implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\MigrateInput $input,
+        public \Aazsamir\Stasphp\Graphql\MigrateInput $input,
     ) {
     }
 

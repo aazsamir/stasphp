@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class BulkUpdateStrings implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -28,7 +28,7 @@ class BulkUpdateStrings implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['mode'])) {
-            $self->mode = \Aazsamir\Stasphp\Graphpql\BulkUpdateIdMode::from($data['mode']);
+            $self->mode = \Aazsamir\Stasphp\Graphql\BulkUpdateIdMode::from($data['mode']);
         }
         if (isset($data['values'])) {
             $self->values = array_map(function ($data) {

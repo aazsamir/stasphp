@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -36,73 +36,73 @@ class ScraperField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScraperSpecSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScraperSpecSelectionSet>
      */
     public static function performer(): self
     {
         $instance = new self();
         $instance->name = 'performer';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScraperSpecSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScraperSpecSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScraperSpecSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScraperSpecSelectionSet>
      */
     public static function scene(): self
     {
         $instance = new self();
         $instance->name = 'scene';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScraperSpecSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScraperSpecSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScraperSpecSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScraperSpecSelectionSet>
      */
     public static function gallery(): self
     {
         $instance = new self();
         $instance->name = 'gallery';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScraperSpecSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScraperSpecSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScraperSpecSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScraperSpecSelectionSet>
      */
     public static function image(): self
     {
         $instance = new self();
         $instance->name = 'image';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScraperSpecSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScraperSpecSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScraperSpecSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScraperSpecSelectionSet>
      */
     public static function movie(): self
     {
         $instance = new self();
         $instance->name = 'movie';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScraperSpecSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScraperSpecSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScraperSpecSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScraperSpecSelectionSet>
      */
     public static function group(): self
     {
         $instance = new self();
         $instance->name = 'group';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScraperSpecSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScraperSpecSelectionSet();
 
         return $instance;
     }

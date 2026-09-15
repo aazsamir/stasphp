@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class FindGroup implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'findGroup';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\Group';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Group';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\GroupSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\GroupSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -35,12 +35,12 @@ class FindGroup implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\GroupSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\GroupSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\GroupSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\GroupSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -48,14 +48,14 @@ class FindGroup implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\GroupSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\GroupSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\GroupSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\GroupSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -68,7 +68,7 @@ class FindGroup implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\Group
+    public function do(): ?\Aazsamir\Stasphp\Graphql\Group
     {
         $response = $this->graphqlClient->request($this);
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class FindGalleryChaptersResultType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -10,27 +10,27 @@ class FindGalleryChaptersResultType implements \Aazsamir\Graphpql\Model\GraphObj
 
     public int $count;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\GalleryChapter> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\GalleryChapter> */
     public array $chapters;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindGalleryChaptersResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindGalleryChaptersResultTypeField<mixed>
      */
     public static function count(): Fields\FindGalleryChaptersResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindGalleryChaptersResultTypeField::count();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindGalleryChaptersResultTypeField::count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindGalleryChaptersResultTypeField<\Aazsamir\Stasphp\Graphpql\SelectionSet\GalleryChapterSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindGalleryChaptersResultTypeField<\Aazsamir\Stasphp\Graphql\SelectionSet\GalleryChapterSelectionSet>
      */
     public static function chapters(): Fields\FindGalleryChaptersResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindGalleryChaptersResultTypeField::chapters();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindGalleryChaptersResultTypeField::chapters();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\GalleryChapter> $chapters
+     * @param array<\Aazsamir\Stasphp\Graphql\GalleryChapter> $chapters
      */
     public static function new(int $count, array $chapters): self
     {
@@ -53,7 +53,7 @@ class FindGalleryChaptersResultType implements \Aazsamir\Graphpql\Model\GraphObj
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\GalleryChapter::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\GalleryChapter::fromArray($data);
             }, $data['chapters'] ?? []);
         }
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class GalleryPathsType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -12,19 +12,19 @@ class GalleryPathsType implements \Aazsamir\Graphpql\Model\GraphObject
     public string $preview;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryPathsTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryPathsTypeField<mixed>
      */
     public static function cover(): Fields\GalleryPathsTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryPathsTypeField::cover();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryPathsTypeField::cover();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\GalleryPathsTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\GalleryPathsTypeField<mixed>
      */
     public static function preview(): Fields\GalleryPathsTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\GalleryPathsTypeField::preview();
+        return \Aazsamir\Stasphp\Graphql\Fields\GalleryPathsTypeField::preview();
     }
 
     public static function new(string $cover, string $preview): self

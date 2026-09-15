@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class Plugin implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -15,13 +15,13 @@ class Plugin implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $version;
     public bool $enabled;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\PluginTask> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\PluginTask> */
     public ?array $tasks;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\PluginHook> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\PluginHook> */
     public ?array $hooks;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\PluginSetting> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\PluginSetting> */
     public ?array $settings;
 
     /** @var array<string> */
@@ -29,97 +29,97 @@ class Plugin implements \Aazsamir\Graphpql\Model\GraphObject
     public PluginPaths $paths;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginField<mixed>
      */
     public static function id(): Fields\PluginField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginField::id();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginField::id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginField<mixed>
      */
     public static function name(): Fields\PluginField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginField::name();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginField::name();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginField<mixed>
      */
     public static function description(): Fields\PluginField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginField::description();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginField::description();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginField<mixed>
      */
     public static function url(): Fields\PluginField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginField::url();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginField::url();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginField<mixed>
      */
     public static function version(): Fields\PluginField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginField::version();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginField::version();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginField<mixed>
      */
     public static function enabled(): Fields\PluginField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginField::enabled();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginField::enabled();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginField<\Aazsamir\Stasphp\Graphpql\SelectionSet\PluginTaskSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginField<\Aazsamir\Stasphp\Graphql\SelectionSet\PluginTaskSelectionSet>
      */
     public static function tasks(): Fields\PluginField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginField::tasks();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginField::tasks();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginField<\Aazsamir\Stasphp\Graphpql\SelectionSet\PluginHookSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginField<\Aazsamir\Stasphp\Graphql\SelectionSet\PluginHookSelectionSet>
      */
     public static function hooks(): Fields\PluginField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginField::hooks();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginField::hooks();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginField<\Aazsamir\Stasphp\Graphpql\SelectionSet\PluginSettingSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginField<\Aazsamir\Stasphp\Graphql\SelectionSet\PluginSettingSelectionSet>
      */
     public static function settings(): Fields\PluginField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginField::settings();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginField::settings();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginField<mixed>
      */
     public static function requires(): Fields\PluginField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginField::requires();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginField::requires();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginField<\Aazsamir\Stasphp\Graphpql\SelectionSet\PluginPathsSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginField<\Aazsamir\Stasphp\Graphql\SelectionSet\PluginPathsSelectionSet>
      */
     public static function paths(): Fields\PluginField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginField::paths();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginField::paths();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\PluginTask> $tasks
-     * @param array<\Aazsamir\Stasphp\Graphpql\PluginHook> $hooks
-     * @param array<\Aazsamir\Stasphp\Graphpql\PluginSetting> $settings
+     * @param array<\Aazsamir\Stasphp\Graphql\PluginTask> $tasks
+     * @param array<\Aazsamir\Stasphp\Graphql\PluginHook> $hooks
+     * @param array<\Aazsamir\Stasphp\Graphql\PluginSetting> $settings
      * @param array<string> $requires
      */
     public static function new(
@@ -164,7 +164,7 @@ class Plugin implements \Aazsamir\Graphpql\Model\GraphObject
             $self->enabled = $data['enabled'];
         }
         if (isset($data['paths'])) {
-            $self->paths = \Aazsamir\Stasphp\Graphpql\PluginPaths::fromArray($data['paths']);
+            $self->paths = \Aazsamir\Stasphp\Graphql\PluginPaths::fromArray($data['paths']);
         }
         if (isset($data['description'])) {
             $self->description = $data['description'];
@@ -181,7 +181,7 @@ class Plugin implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\PluginTask::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\PluginTask::fromArray($data);
             }, $data['tasks'] ?? []);
         }
         if (isset($data['hooks'])) {
@@ -190,7 +190,7 @@ class Plugin implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\PluginHook::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\PluginHook::fromArray($data);
             }, $data['hooks'] ?? []);
         }
         if (isset($data['settings'])) {
@@ -199,7 +199,7 @@ class Plugin implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\PluginSetting::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\PluginSetting::fromArray($data);
             }, $data['settings'] ?? []);
         }
         if (isset($data['requires'])) {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class FindGroupsResultType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -10,27 +10,27 @@ class FindGroupsResultType implements \Aazsamir\Graphpql\Model\GraphObject
 
     public int $count;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Group> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Group> */
     public array $groups;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindGroupsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindGroupsResultTypeField<mixed>
      */
     public static function count(): Fields\FindGroupsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindGroupsResultTypeField::count();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindGroupsResultTypeField::count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindGroupsResultTypeField<\Aazsamir\Stasphp\Graphpql\SelectionSet\GroupSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindGroupsResultTypeField<\Aazsamir\Stasphp\Graphql\SelectionSet\GroupSelectionSet>
      */
     public static function groups(): Fields\FindGroupsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindGroupsResultTypeField::groups();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindGroupsResultTypeField::groups();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\Group> $groups
+     * @param array<\Aazsamir\Stasphp\Graphql\Group> $groups
      */
     public static function new(int $count, array $groups): self
     {
@@ -53,7 +53,7 @@ class FindGroupsResultType implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Group::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Group::fromArray($data);
             }, $data['groups'] ?? []);
         }
 

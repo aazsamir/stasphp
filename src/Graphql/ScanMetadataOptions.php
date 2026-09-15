@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScanMetadataOptions implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -19,75 +19,75 @@ class ScanMetadataOptions implements \Aazsamir\Graphpql\Model\GraphObject
     public bool $scanGenerateClipPreviews;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField<mixed>
      */
     public static function rescan(): Fields\ScanMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField::rescan();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField::rescan();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField<mixed>
      */
     public static function scanGenerateCovers(): Fields\ScanMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField::scanGenerateCovers();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField::scanGenerateCovers();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField<mixed>
      */
     public static function scanGeneratePreviews(): Fields\ScanMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField::scanGeneratePreviews();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField::scanGeneratePreviews();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField<mixed>
      */
     public static function scanGenerateImagePreviews(): Fields\ScanMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField::scanGenerateImagePreviews();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField::scanGenerateImagePreviews();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField<mixed>
      */
     public static function scanGenerateSprites(): Fields\ScanMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField::scanGenerateSprites();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField::scanGenerateSprites();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField<mixed>
      */
     public static function scanGeneratePhashes(): Fields\ScanMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField::scanGeneratePhashes();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField::scanGeneratePhashes();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField<mixed>
      */
     public static function scanGenerateImagePhashes(): Fields\ScanMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField::scanGenerateImagePhashes();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField::scanGenerateImagePhashes();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField<mixed>
      */
     public static function scanGenerateThumbnails(): Fields\ScanMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField::scanGenerateThumbnails();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField::scanGenerateThumbnails();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField<mixed>
      */
     public static function scanGenerateClipPreviews(): Fields\ScanMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScanMetadataOptionsField::scanGenerateClipPreviews();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScanMetadataOptionsField::scanGenerateClipPreviews();
     }
 
     public static function new(

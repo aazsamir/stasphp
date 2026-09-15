@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class Directory implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'directory';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\Directory';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Directory';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\DirectorySelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\DirectorySelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -37,12 +37,12 @@ class Directory implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\DirectorySelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\DirectorySelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\DirectorySelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\DirectorySelectionSet::new();
         }
 
         $selection($this->selection);
@@ -50,14 +50,14 @@ class Directory implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\DirectorySelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\DirectorySelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\DirectorySelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\DirectorySelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -70,7 +70,7 @@ class Directory implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\Directory
+    public function do(): ?\Aazsamir\Stasphp\Graphql\Directory
     {
         $response = $this->graphqlClient->request($this);
 

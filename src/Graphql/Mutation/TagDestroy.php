@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Mutation;
+namespace Aazsamir\Stasphp\Graphql\Mutation;
 
 class TagDestroy implements \Aazsamir\Graphpql\Model\Mutation
 {
@@ -23,7 +23,7 @@ class TagDestroy implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\TagDestroyInput $input,
+        public \Aazsamir\Stasphp\Graphql\TagDestroyInput $input,
     ) {
     }
 

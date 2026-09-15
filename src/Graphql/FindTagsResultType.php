@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class FindTagsResultType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -10,27 +10,27 @@ class FindTagsResultType implements \Aazsamir\Graphpql\Model\GraphObject
 
     public int $count;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Tag> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Tag> */
     public array $tags;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindTagsResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindTagsResultTypeField<mixed>
      */
     public static function count(): Fields\FindTagsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindTagsResultTypeField::count();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindTagsResultTypeField::count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindTagsResultTypeField<\Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindTagsResultTypeField<\Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet>
      */
     public static function tags(): Fields\FindTagsResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindTagsResultTypeField::tags();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindTagsResultTypeField::tags();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\Tag> $tags
+     * @param array<\Aazsamir\Stasphp\Graphql\Tag> $tags
      */
     public static function new(int $count, array $tags): self
     {
@@ -53,7 +53,7 @@ class FindTagsResultType implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Tag::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Tag::fromArray($data);
             }, $data['tags'] ?? []);
         }
 

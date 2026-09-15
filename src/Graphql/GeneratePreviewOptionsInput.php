@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class GeneratePreviewOptionsInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -47,7 +47,7 @@ class GeneratePreviewOptionsInput implements \Aazsamir\Graphpql\Model\GraphObjec
             $self->previewExcludeEnd = $data['previewExcludeEnd'];
         }
         if (isset($data['previewPreset'])) {
-            $self->previewPreset = \Aazsamir\Stasphp\Graphpql\PreviewPreset::from($data['previewPreset']);
+            $self->previewPreset = \Aazsamir\Stasphp\Graphql\PreviewPreset::from($data['previewPreset']);
         }
 
         return $self;

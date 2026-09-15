@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class StashConfig implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -13,27 +13,27 @@ class StashConfig implements \Aazsamir\Graphpql\Model\GraphObject
     public bool $excludeImage;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StashConfigField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StashConfigField<mixed>
      */
     public static function path(): Fields\StashConfigField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StashConfigField::path();
+        return \Aazsamir\Stasphp\Graphql\Fields\StashConfigField::path();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StashConfigField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StashConfigField<mixed>
      */
     public static function excludeVideo(): Fields\StashConfigField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StashConfigField::excludeVideo();
+        return \Aazsamir\Stasphp\Graphql\Fields\StashConfigField::excludeVideo();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StashConfigField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StashConfigField<mixed>
      */
     public static function excludeImage(): Fields\StashConfigField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StashConfigField::excludeImage();
+        return \Aazsamir\Stasphp\Graphql\Fields\StashConfigField::excludeImage();
     }
 
     public static function new(string $path, bool $excludeVideo, bool $excludeImage): self

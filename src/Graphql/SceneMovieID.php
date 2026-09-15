@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SceneMovieID implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -12,19 +12,19 @@ class SceneMovieID implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $scene_index;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMovieIDField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMovieIDField<mixed>
      */
     public static function movie_id(): Fields\SceneMovieIDField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMovieIDField::movie_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMovieIDField::movie_id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMovieIDField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMovieIDField<mixed>
      */
     public static function scene_index(): Fields\SceneMovieIDField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMovieIDField::scene_index();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMovieIDField::scene_index();
     }
 
     public static function new(string $movie_id, ?string $scene_index = null): self

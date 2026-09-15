@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class AutoTagMetadataOptions implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -18,27 +18,27 @@ class AutoTagMetadataOptions implements \Aazsamir\Graphpql\Model\GraphObject
     public ?array $tags;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\AutoTagMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\AutoTagMetadataOptionsField<mixed>
      */
     public static function performers(): Fields\AutoTagMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\AutoTagMetadataOptionsField::performers();
+        return \Aazsamir\Stasphp\Graphql\Fields\AutoTagMetadataOptionsField::performers();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\AutoTagMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\AutoTagMetadataOptionsField<mixed>
      */
     public static function studios(): Fields\AutoTagMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\AutoTagMetadataOptionsField::studios();
+        return \Aazsamir\Stasphp\Graphql\Fields\AutoTagMetadataOptionsField::studios();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\AutoTagMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\AutoTagMetadataOptionsField<mixed>
      */
     public static function tags(): Fields\AutoTagMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\AutoTagMetadataOptionsField::tags();
+        return \Aazsamir\Stasphp\Graphql\Fields\AutoTagMetadataOptionsField::tags();
     }
 
     /**

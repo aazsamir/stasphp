@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -58,13 +58,13 @@ class GenerateMetadataOptionsField implements \Aazsamir\Graphpql\Model\ObjectFie
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\GeneratePreviewOptionsSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\GeneratePreviewOptionsSelectionSet>
      */
     public static function previewOptions(): self
     {
         $instance = new self();
         $instance->name = 'previewOptions';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\GeneratePreviewOptionsSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\GeneratePreviewOptionsSelectionSet();
 
         return $instance;
     }

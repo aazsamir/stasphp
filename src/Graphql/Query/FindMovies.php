@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 /**
  * @deprecated Use findGroups instead
@@ -10,9 +10,9 @@ namespace Aazsamir\Stasphp\Graphpql\Query;
 class FindMovies implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'findMovies';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\FindMoviesResultType';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\FindMoviesResultType';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\FindMoviesResultTypeSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\FindMoviesResultTypeSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -29,8 +29,8 @@ class FindMovies implements \Aazsamir\Graphpql\Model\Query
      * @param array<string> $ids
      */
     public function __construct(
-        public ?\Aazsamir\Stasphp\Graphpql\MovieFilterType $movie_filter = null,
-        public ?\Aazsamir\Stasphp\Graphpql\FindFilterType $filter = null,
+        public ?\Aazsamir\Stasphp\Graphql\MovieFilterType $movie_filter = null,
+        public ?\Aazsamir\Stasphp\Graphql\FindFilterType $filter = null,
         public ?array $ids = null,
     ) {
     }
@@ -45,12 +45,12 @@ class FindMovies implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\FindMoviesResultTypeSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\FindMoviesResultTypeSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\FindMoviesResultTypeSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\FindMoviesResultTypeSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -59,14 +59,14 @@ class FindMovies implements \Aazsamir\Graphpql\Model\Query
     }
 
     public function setSelection(
-        \Aazsamir\Stasphp\Graphpql\SelectionSet\FindMoviesResultTypeSelectionSet $selection,
+        \Aazsamir\Stasphp\Graphql\SelectionSet\FindMoviesResultTypeSelectionSet $selection,
     ): self {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\FindMoviesResultTypeSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\FindMoviesResultTypeSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -79,7 +79,7 @@ class FindMovies implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\FindMoviesResultType
+    public function do(): ?\Aazsamir\Stasphp\Graphql\FindMoviesResultType
     {
         $response = $this->graphqlClient->request($this);
 

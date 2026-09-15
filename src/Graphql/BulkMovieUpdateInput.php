@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class BulkMovieUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -67,10 +67,10 @@ class BulkMovieUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->director = $data['director'];
         }
         if (isset($data['urls'])) {
-            $self->urls = \Aazsamir\Stasphp\Graphpql\BulkUpdateStrings::fromArray($data['urls']);
+            $self->urls = \Aazsamir\Stasphp\Graphql\BulkUpdateStrings::fromArray($data['urls']);
         }
         if (isset($data['tag_ids'])) {
-            $self->tag_ids = \Aazsamir\Stasphp\Graphpql\BulkUpdateIds::fromArray($data['tag_ids']);
+            $self->tag_ids = \Aazsamir\Stasphp\Graphql\BulkUpdateIds::fromArray($data['tag_ids']);
         }
 
         return $self;

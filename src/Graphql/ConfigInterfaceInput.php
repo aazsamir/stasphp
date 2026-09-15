@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ConfigInterfaceInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -166,10 +166,10 @@ class ConfigInterfaceInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->language = $data['language'];
         }
         if (isset($data['imageLightbox'])) {
-            $self->imageLightbox = \Aazsamir\Stasphp\Graphpql\ConfigImageLightboxInput::fromArray($data['imageLightbox']);
+            $self->imageLightbox = \Aazsamir\Stasphp\Graphql\ConfigImageLightboxInput::fromArray($data['imageLightbox']);
         }
         if (isset($data['disableDropdownCreate'])) {
-            $self->disableDropdownCreate = \Aazsamir\Stasphp\Graphpql\ConfigDisableDropdownCreateInput::fromArray($data['disableDropdownCreate']);
+            $self->disableDropdownCreate = \Aazsamir\Stasphp\Graphql\ConfigDisableDropdownCreateInput::fromArray($data['disableDropdownCreate']);
         }
         if (isset($data['handyKey'])) {
             $self->handyKey = $data['handyKey'];

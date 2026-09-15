@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class FindFilterType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -47,7 +47,7 @@ class FindFilterType implements \Aazsamir\Graphpql\Model\GraphObject
             $self->sort = $data['sort'];
         }
         if (isset($data['direction'])) {
-            $self->direction = \Aazsamir\Stasphp\Graphpql\SortDirectionEnum::from($data['direction']);
+            $self->direction = \Aazsamir\Stasphp\Graphql\SortDirectionEnum::from($data['direction']);
         }
 
         return $self;

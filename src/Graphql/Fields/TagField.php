@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -113,13 +113,13 @@ class TagField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\StashIDSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\StashIDSelectionSet>
      */
     public static function stash_ids(): self
     {
         $instance = new self();
         $instance->name = 'stash_ids';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\StashIDSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\StashIDSelectionSet();
 
         return $instance;
     }
@@ -224,25 +224,25 @@ class TagField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet>
      */
     public static function parents(): self
     {
         $instance = new self();
         $instance->name = 'parents';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet>
      */
     public static function children(): self
     {
         $instance = new self();
         $instance->name = 'children';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet();
 
         return $instance;
     }

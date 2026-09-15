@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 /**
  * @deprecated Use findGroups instead
@@ -10,9 +10,9 @@ namespace Aazsamir\Stasphp\Graphpql\Query;
 class AllMovies implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'allMovies';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\Movie';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Movie';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\MovieSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\MovieSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -36,12 +36,12 @@ class AllMovies implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\MovieSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\MovieSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\MovieSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\MovieSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -49,14 +49,14 @@ class AllMovies implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\MovieSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\MovieSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\MovieSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\MovieSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -70,7 +70,7 @@ class AllMovies implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @return array<\Aazsamir\Stasphp\Graphpql\Movie>
+     * @return array<\Aazsamir\Stasphp\Graphql\Movie>
      */
     public function do(): ?array
     {

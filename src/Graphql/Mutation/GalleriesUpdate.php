@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Mutation;
+namespace Aazsamir\Stasphp\Graphql\Mutation;
 
 class GalleriesUpdate implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'galleriesUpdate';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\Gallery';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Gallery';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\GallerySelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\GallerySelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -23,7 +23,7 @@ class GalleriesUpdate implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\GalleryUpdateInput> $input
+     * @param array<\Aazsamir\Stasphp\Graphql\GalleryUpdateInput> $input
      */
     public function __construct(
         public array $input,
@@ -38,12 +38,12 @@ class GalleriesUpdate implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\GallerySelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\GallerySelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\GallerySelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\GallerySelectionSet::new();
         }
 
         $selection($this->selection);
@@ -51,14 +51,14 @@ class GalleriesUpdate implements \Aazsamir\Graphpql\Model\Mutation
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\GallerySelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\GallerySelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\GallerySelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\GallerySelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -72,7 +72,7 @@ class GalleriesUpdate implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     /**
-     * @return array<\Aazsamir\Stasphp\Graphpql\Gallery>
+     * @return array<\Aazsamir\Stasphp\Graphql\Gallery>
      */
     public function do(): ?array
     {

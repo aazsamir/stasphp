@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -80,13 +80,13 @@ class MovieField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\StudioSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\StudioSelectionSet>
      */
     public static function studio(): self
     {
         $instance = new self();
         $instance->name = 'studio';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\StudioSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\StudioSelectionSet();
 
         return $instance;
     }
@@ -136,13 +136,13 @@ class MovieField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet>
      */
     public static function tags(): self
     {
         $instance = new self();
         $instance->name = 'tags';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet();
 
         return $instance;
     }
@@ -203,13 +203,13 @@ class MovieField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneSelectionSet>
      */
     public static function scenes(): self
     {
         $instance = new self();
         $instance->name = 'scenes';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\SceneSelectionSet();
 
         return $instance;
     }

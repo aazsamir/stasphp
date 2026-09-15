@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ImageUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -157,7 +157,7 @@ class ImageUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->primary_file_id = $data['primary_file_id'];
         }
         if (isset($data['custom_fields'])) {
-            $self->custom_fields = \Aazsamir\Stasphp\Graphpql\CustomFieldsInput::fromArray($data['custom_fields']);
+            $self->custom_fields = \Aazsamir\Stasphp\Graphql\CustomFieldsInput::fromArray($data['custom_fields']);
         }
 
         return $self;

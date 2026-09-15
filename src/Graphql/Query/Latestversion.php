@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class Latestversion implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'latestversion';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\LatestVersion';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\LatestVersion';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\LatestVersionSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\LatestVersionSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -33,12 +33,12 @@ class Latestversion implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\LatestVersionSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\LatestVersionSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\LatestVersionSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\LatestVersionSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -46,14 +46,14 @@ class Latestversion implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\LatestVersionSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\LatestVersionSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\LatestVersionSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\LatestVersionSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -66,7 +66,7 @@ class Latestversion implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\LatestVersion
+    public function do(): ?\Aazsamir\Stasphp\Graphql\LatestVersion
     {
         $response = $this->graphqlClient->request($this);
 

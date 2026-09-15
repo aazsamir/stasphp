@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SceneFileType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -18,67 +18,67 @@ class SceneFileType implements \Aazsamir\Graphpql\Model\GraphObject
     public ?int $bitrate;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField<mixed>
      */
     public static function size(): Fields\SceneFileTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField::size();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField::size();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField<mixed>
      */
     public static function duration(): Fields\SceneFileTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField::duration();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField::duration();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField<mixed>
      */
     public static function video_codec(): Fields\SceneFileTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField::video_codec();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField::video_codec();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField<mixed>
      */
     public static function audio_codec(): Fields\SceneFileTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField::audio_codec();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField::audio_codec();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField<mixed>
      */
     public static function width(): Fields\SceneFileTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField::width();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField::width();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField<mixed>
      */
     public static function height(): Fields\SceneFileTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField::height();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField::height();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField<mixed>
      */
     public static function framerate(): Fields\SceneFileTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField::framerate();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField::framerate();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField<mixed>
      */
     public static function bitrate(): Fields\SceneFileTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneFileTypeField::bitrate();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneFileTypeField::bitrate();
     }
 
     public static function new(

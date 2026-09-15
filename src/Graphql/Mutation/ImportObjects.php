@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Mutation;
+namespace Aazsamir\Stasphp\Graphql\Mutation;
 
 class ImportObjects implements \Aazsamir\Graphpql\Model\Mutation
 {
@@ -23,7 +23,7 @@ class ImportObjects implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\ImportObjectsInput $input,
+        public \Aazsamir\Stasphp\Graphql\ImportObjectsInput $input,
     ) {
     }
 

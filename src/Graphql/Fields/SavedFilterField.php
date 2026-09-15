@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -58,13 +58,13 @@ class SavedFilterField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\SavedFindFilterTypeSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\SavedFindFilterTypeSelectionSet>
      */
     public static function find_filter(): self
     {
         $instance = new self();
         $instance->name = 'find_filter';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\SavedFindFilterTypeSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\SavedFindFilterTypeSelectionSet();
 
         return $instance;
     }

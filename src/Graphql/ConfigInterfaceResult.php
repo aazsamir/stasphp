@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ConfigInterfaceResult implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -38,211 +38,211 @@ class ConfigInterfaceResult implements \Aazsamir\Graphpql\Model\GraphObject
     public ?bool $useStashHostedFunscript;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function sfwContentMode(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::sfwContentMode();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::sfwContentMode();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function menuItems(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::menuItems();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::menuItems();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function soundOnPreview(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::soundOnPreview();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::soundOnPreview();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function wallShowTitle(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::wallShowTitle();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::wallShowTitle();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function wallPlayback(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::wallPlayback();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::wallPlayback();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function showScrubber(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::showScrubber();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::showScrubber();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function maximumLoopDuration(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::maximumLoopDuration();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::maximumLoopDuration();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function noBrowser(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::noBrowser();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::noBrowser();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function notificationsEnabled(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::notificationsEnabled();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::notificationsEnabled();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function autostartVideo(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::autostartVideo();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::autostartVideo();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function autostartVideoOnPlaySelected(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::autostartVideoOnPlaySelected();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::autostartVideoOnPlaySelected();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function continuePlaylistDefault(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::continuePlaylistDefault();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::continuePlaylistDefault();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function showStudioAsText(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::showStudioAsText();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::showStudioAsText();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function css(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::css();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::css();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function cssEnabled(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::cssEnabled();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::cssEnabled();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function javascript(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::javascript();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::javascript();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function javascriptEnabled(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::javascriptEnabled();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::javascriptEnabled();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function customLocales(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::customLocales();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::customLocales();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function customLocalesEnabled(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::customLocalesEnabled();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::customLocalesEnabled();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function disableCustomizations(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::disableCustomizations();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::disableCustomizations();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function language(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::language();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::language();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigImageLightboxResultSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\ConfigImageLightboxResultSelectionSet>
      */
     public static function imageLightbox(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::imageLightbox();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::imageLightbox();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ConfigDisableDropdownCreateSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\ConfigDisableDropdownCreateSelectionSet>
      */
     public static function disableDropdownCreate(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::disableDropdownCreate();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::disableDropdownCreate();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function handyKey(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::handyKey();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::handyKey();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function funscriptOffset(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::funscriptOffset();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::funscriptOffset();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField<mixed>
      */
     public static function useStashHostedFunscript(): Fields\ConfigInterfaceResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField::useStashHostedFunscript();
+        return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField::useStashHostedFunscript();
     }
 
     /**
@@ -314,10 +314,10 @@ class ConfigInterfaceResult implements \Aazsamir\Graphpql\Model\GraphObject
             $self->sfwContentMode = $data['sfwContentMode'];
         }
         if (isset($data['imageLightbox'])) {
-            $self->imageLightbox = \Aazsamir\Stasphp\Graphpql\ConfigImageLightboxResult::fromArray($data['imageLightbox']);
+            $self->imageLightbox = \Aazsamir\Stasphp\Graphql\ConfigImageLightboxResult::fromArray($data['imageLightbox']);
         }
         if (isset($data['disableDropdownCreate'])) {
-            $self->disableDropdownCreate = \Aazsamir\Stasphp\Graphpql\ConfigDisableDropdownCreate::fromArray($data['disableDropdownCreate']);
+            $self->disableDropdownCreate = \Aazsamir\Stasphp\Graphql\ConfigDisableDropdownCreate::fromArray($data['disableDropdownCreate']);
         }
         if (isset($data['menuItems'])) {
             $self->menuItems = array_map(function ($data) {

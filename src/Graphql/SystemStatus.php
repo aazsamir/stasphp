@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SystemStatus implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -20,83 +20,83 @@ class SystemStatus implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $ffprobePath;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField<mixed>
      */
     public static function databaseSchema(): Fields\SystemStatusField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField::databaseSchema();
+        return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField::databaseSchema();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField<mixed>
      */
     public static function databasePath(): Fields\SystemStatusField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField::databasePath();
+        return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField::databasePath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField<mixed>
      */
     public static function configPath(): Fields\SystemStatusField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField::configPath();
+        return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField::configPath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField<mixed>
      */
     public static function appSchema(): Fields\SystemStatusField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField::appSchema();
+        return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField::appSchema();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField<mixed>
      */
     public static function status(): Fields\SystemStatusField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField::status();
+        return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField::status();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField<mixed>
      */
     public static function os(): Fields\SystemStatusField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField::os();
+        return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField::os();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField<mixed>
      */
     public static function workingDir(): Fields\SystemStatusField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField::workingDir();
+        return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField::workingDir();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField<mixed>
      */
     public static function homeDir(): Fields\SystemStatusField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField::homeDir();
+        return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField::homeDir();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField<mixed>
      */
     public static function ffmpegPath(): Fields\SystemStatusField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField::ffmpegPath();
+        return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField::ffmpegPath();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField<mixed>
      */
     public static function ffprobePath(): Fields\SystemStatusField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SystemStatusField::ffprobePath();
+        return \Aazsamir\Stasphp\Graphql\Fields\SystemStatusField::ffprobePath();
     }
 
     public static function new(
@@ -133,7 +133,7 @@ class SystemStatus implements \Aazsamir\Graphpql\Model\GraphObject
             $self->appSchema = $data['appSchema'];
         }
         if (isset($data['status'])) {
-            $self->status = \Aazsamir\Stasphp\Graphpql\SystemStatusEnum::from($data['status']);
+            $self->status = \Aazsamir\Stasphp\Graphql\SystemStatusEnum::from($data['status']);
         }
         if (isset($data['os'])) {
             $self->os = $data['os'];

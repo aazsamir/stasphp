@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScenePathsType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -19,75 +19,75 @@ class ScenePathsType implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $caption;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField<mixed>
      */
     public static function screenshot(): Fields\ScenePathsTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField::screenshot();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField::screenshot();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField<mixed>
      */
     public static function preview(): Fields\ScenePathsTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField::preview();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField::preview();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField<mixed>
      */
     public static function stream(): Fields\ScenePathsTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField::stream();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField::stream();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField<mixed>
      */
     public static function webp(): Fields\ScenePathsTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField::webp();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField::webp();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField<mixed>
      */
     public static function vtt(): Fields\ScenePathsTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField::vtt();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField::vtt();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField<mixed>
      */
     public static function sprite(): Fields\ScenePathsTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField::sprite();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField::sprite();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField<mixed>
      */
     public static function funscript(): Fields\ScenePathsTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField::funscript();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField::funscript();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField<mixed>
      */
     public static function interactive_heatmap(): Fields\ScenePathsTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField::interactive_heatmap();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField::interactive_heatmap();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField<mixed>
      */
     public static function caption(): Fields\ScenePathsTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScenePathsTypeField::caption();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScenePathsTypeField::caption();
     }
 
     public static function new(

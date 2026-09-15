@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class SceneMovieSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class SceneMovieSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\SceneMovieField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\SceneMovieField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class SceneMovieSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMovieField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMovieField[]
      */
     public function getSelection(): array
     {

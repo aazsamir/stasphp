@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class TagCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -18,7 +18,7 @@ class TagCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
     public ?bool $favorite;
     public ?string $image;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\StashIDInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\StashIDInput> */
     public ?array $stash_ids;
 
     /** @var array<string> */
@@ -30,7 +30,7 @@ class TagCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
 
     /**
      * @param array<string> $aliases
-     * @param array<\Aazsamir\Stasphp\Graphpql\StashIDInput> $stash_ids
+     * @param array<\Aazsamir\Stasphp\Graphql\StashIDInput> $stash_ids
      * @param array<string> $parent_ids
      * @param array<string> $child_ids
      */
@@ -99,7 +99,7 @@ class TagCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\StashIDInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\StashIDInput::fromArray($data);
             }, $data['stash_ids'] ?? []);
         }
         if (isset($data['parent_ids'])) {

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class PluginTasks implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'pluginTasks';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\PluginTask';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\PluginTask';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\PluginTaskSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\PluginTaskSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -33,12 +33,12 @@ class PluginTasks implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\PluginTaskSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\PluginTaskSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\PluginTaskSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\PluginTaskSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -46,14 +46,14 @@ class PluginTasks implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\PluginTaskSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\PluginTaskSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\PluginTaskSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\PluginTaskSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -67,7 +67,7 @@ class PluginTasks implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @return array<\Aazsamir\Stasphp\Graphpql\PluginTask>
+     * @return array<\Aazsamir\Stasphp\Graphql\PluginTask>
      */
     public function do(): ?array
     {

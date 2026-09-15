@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScrapeSingleSceneInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -35,7 +35,7 @@ class ScrapeSingleSceneInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->scene_id = $data['scene_id'];
         }
         if (isset($data['scene_input'])) {
-            $self->scene_input = \Aazsamir\Stasphp\Graphpql\ScrapedSceneInput::fromArray($data['scene_input']);
+            $self->scene_input = \Aazsamir\Stasphp\Graphql\ScrapedSceneInput::fromArray($data['scene_input']);
         }
 
         return $self;

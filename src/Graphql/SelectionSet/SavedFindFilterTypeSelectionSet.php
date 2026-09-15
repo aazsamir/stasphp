@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class SavedFindFilterTypeSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class SavedFindFilterTypeSelectionSet implements \Aazsamir\Graphpql\Model\Select
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\SavedFindFilterTypeField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\SavedFindFilterTypeField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class SavedFindFilterTypeSelectionSet implements \Aazsamir\Graphpql\Model\Select
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SavedFindFilterTypeField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SavedFindFilterTypeField[]
      */
     public function getSelection(): array
     {

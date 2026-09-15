@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class LatestVersion implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -14,35 +14,35 @@ class LatestVersion implements \Aazsamir\Graphpql\Model\GraphObject
     public string $url;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\LatestVersionField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\LatestVersionField<mixed>
      */
     public static function version(): Fields\LatestVersionField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\LatestVersionField::version();
+        return \Aazsamir\Stasphp\Graphql\Fields\LatestVersionField::version();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\LatestVersionField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\LatestVersionField<mixed>
      */
     public static function shorthash(): Fields\LatestVersionField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\LatestVersionField::shorthash();
+        return \Aazsamir\Stasphp\Graphql\Fields\LatestVersionField::shorthash();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\LatestVersionField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\LatestVersionField<mixed>
      */
     public static function release_date(): Fields\LatestVersionField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\LatestVersionField::release_date();
+        return \Aazsamir\Stasphp\Graphql\Fields\LatestVersionField::release_date();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\LatestVersionField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\LatestVersionField<mixed>
      */
     public static function url(): Fields\LatestVersionField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\LatestVersionField::url();
+        return \Aazsamir\Stasphp\Graphql\Fields\LatestVersionField::url();
     }
 
     public static function new(string $version, string $shorthash, string $release_date, string $url): self

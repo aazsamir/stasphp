@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -14,13 +14,13 @@ class SceneParserResultField implements \Aazsamir\Graphpql\Model\ObjectField
     private ?string $union = null;
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneSelectionSet>
      */
     public static function scene(): self
     {
         $instance = new self();
         $instance->name = 'scene';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\SceneSelectionSet();
 
         return $instance;
     }
@@ -147,13 +147,13 @@ class SceneParserResultField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneMovieIDSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneMovieIDSelectionSet>
      */
     public static function movies(): self
     {
         $instance = new self();
         $instance->name = 'movies';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneMovieIDSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\SceneMovieIDSelectionSet();
 
         return $instance;
     }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class BulkStudioUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -66,7 +66,7 @@ class BulkStudioUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->url = $data['url'];
         }
         if (isset($data['urls'])) {
-            $self->urls = \Aazsamir\Stasphp\Graphpql\BulkUpdateStrings::fromArray($data['urls']);
+            $self->urls = \Aazsamir\Stasphp\Graphql\BulkUpdateStrings::fromArray($data['urls']);
         }
         if (isset($data['parent_id'])) {
             $self->parent_id = $data['parent_id'];
@@ -81,7 +81,7 @@ class BulkStudioUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->details = $data['details'];
         }
         if (isset($data['tag_ids'])) {
-            $self->tag_ids = \Aazsamir\Stasphp\Graphpql\BulkUpdateIds::fromArray($data['tag_ids']);
+            $self->tag_ids = \Aazsamir\Stasphp\Graphql\BulkUpdateIds::fromArray($data['tag_ids']);
         }
         if (isset($data['ignore_auto_tag'])) {
             $self->ignore_auto_tag = $data['ignore_auto_tag'];

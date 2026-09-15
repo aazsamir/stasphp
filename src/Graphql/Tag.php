@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class Tag implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -20,7 +20,7 @@ class Tag implements \Aazsamir\Graphpql\Model\GraphObject
     public \DateTimeInterface $updated_at;
     public bool $favorite;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\StashID> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\StashID> */
     public array $stash_ids;
     public ?string $image_path;
     public int $scene_count;
@@ -32,212 +32,212 @@ class Tag implements \Aazsamir\Graphpql\Model\GraphObject
     public int $group_count;
     public int $movie_count;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Tag> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Tag> */
     public array $parents;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Tag> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Tag> */
     public array $children;
     public int $parent_count;
     public int $child_count;
     public mixed $custom_fields;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function id(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::id();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function name(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::name();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::name();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function sort_name(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::sort_name();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::sort_name();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function description(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::description();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::description();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function aliases(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::aliases();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::aliases();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function ignore_auto_tag(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::ignore_auto_tag();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::ignore_auto_tag();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function created_at(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::created_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::created_at();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function updated_at(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::updated_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::updated_at();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function favorite(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::favorite();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::favorite();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<\Aazsamir\Stasphp\Graphpql\SelectionSet\StashIDSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<\Aazsamir\Stasphp\Graphql\SelectionSet\StashIDSelectionSet>
      */
     public static function stash_ids(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::stash_ids();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::stash_ids();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function image_path(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::image_path();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::image_path();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function scene_count(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::scene_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::scene_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function scene_marker_count(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::scene_marker_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::scene_marker_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function image_count(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::image_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::image_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function gallery_count(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::gallery_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::gallery_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function performer_count(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::performer_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::performer_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function studio_count(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::studio_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::studio_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function group_count(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::group_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::group_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function movie_count(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::movie_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::movie_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<\Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<\Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet>
      */
     public static function parents(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::parents();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::parents();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<\Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<\Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet>
      */
     public static function children(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::children();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::children();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function parent_count(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::parent_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::parent_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function child_count(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::child_count();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::child_count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\TagField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\TagField<mixed>
      */
     public static function custom_fields(): Fields\TagField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\TagField::custom_fields();
+        return \Aazsamir\Stasphp\Graphql\Fields\TagField::custom_fields();
     }
 
     /**
      * @param array<string> $aliases
-     * @param array<\Aazsamir\Stasphp\Graphpql\StashID> $stash_ids
-     * @param array<\Aazsamir\Stasphp\Graphpql\Tag> $parents
-     * @param array<\Aazsamir\Stasphp\Graphpql\Tag> $children
+     * @param array<\Aazsamir\Stasphp\Graphql\StashID> $stash_ids
+     * @param array<\Aazsamir\Stasphp\Graphql\Tag> $parents
+     * @param array<\Aazsamir\Stasphp\Graphql\Tag> $children
      */
     public static function new(
         string $id,
@@ -330,7 +330,7 @@ class Tag implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\StashID::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\StashID::fromArray($data);
             }, $data['stash_ids'] ?? []);
         }
         if (isset($data['scene_count'])) {
@@ -363,7 +363,7 @@ class Tag implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Tag::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Tag::fromArray($data);
             }, $data['parents'] ?? []);
         }
         if (isset($data['children'])) {
@@ -372,7 +372,7 @@ class Tag implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Tag::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Tag::fromArray($data);
             }, $data['children'] ?? []);
         }
         if (isset($data['parent_count'])) {

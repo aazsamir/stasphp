@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class IdentifyMetadataOptionsInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
     use \Aazsamir\Graphpql\Model\ToArray;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\IdentifyFieldOptionsInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\IdentifyFieldOptionsInput> */
     public ?array $fieldOptions;
     public ?bool $setCoverImage;
     public ?bool $setOrganized;
     public ?bool $includeMalePerformers;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\GenderEnum> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\GenderEnum> */
     public ?array $performerGenders;
     public ?bool $skipMultipleMatches;
     public ?string $skipMultipleMatchTag;
@@ -22,8 +22,8 @@ class IdentifyMetadataOptionsInput implements \Aazsamir\Graphpql\Model\GraphObje
     public ?string $skipSingleNamePerformerTag;
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\IdentifyFieldOptionsInput> $fieldOptions
-     * @param array<\Aazsamir\Stasphp\Graphpql\GenderEnum> $performerGenders
+     * @param array<\Aazsamir\Stasphp\Graphql\IdentifyFieldOptionsInput> $fieldOptions
+     * @param array<\Aazsamir\Stasphp\Graphql\GenderEnum> $performerGenders
      */
     public static function new(
         ?array $fieldOptions = null,
@@ -59,7 +59,7 @@ class IdentifyMetadataOptionsInput implements \Aazsamir\Graphpql\Model\GraphObje
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\IdentifyFieldOptionsInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\IdentifyFieldOptionsInput::fromArray($data);
             }, $data['fieldOptions'] ?? []);
         }
         if (isset($data['setCoverImage'])) {
@@ -77,7 +77,7 @@ class IdentifyMetadataOptionsInput implements \Aazsamir\Graphpql\Model\GraphObje
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\GenderEnum::from($data);
+                return \Aazsamir\Stasphp\Graphql\GenderEnum::from($data);
             }, $data['performerGenders'] ?? []);
         }
         if (isset($data['skipMultipleMatches'])) {

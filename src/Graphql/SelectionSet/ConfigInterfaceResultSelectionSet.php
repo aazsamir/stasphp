@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class ConfigInterfaceResultSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class ConfigInterfaceResultSelectionSet implements \Aazsamir\Graphpql\Model\Sele
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class ConfigInterfaceResultSelectionSet implements \Aazsamir\Graphpql\Model\Sele
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigInterfaceResultField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigInterfaceResultField[]
      */
     public function getSelection(): array
     {

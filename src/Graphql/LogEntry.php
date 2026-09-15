@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class LogEntry implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -13,27 +13,27 @@ class LogEntry implements \Aazsamir\Graphpql\Model\GraphObject
     public string $message;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\LogEntryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\LogEntryField<mixed>
      */
     public static function time(): Fields\LogEntryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\LogEntryField::time();
+        return \Aazsamir\Stasphp\Graphql\Fields\LogEntryField::time();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\LogEntryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\LogEntryField<mixed>
      */
     public static function level(): Fields\LogEntryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\LogEntryField::level();
+        return \Aazsamir\Stasphp\Graphql\Fields\LogEntryField::level();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\LogEntryField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\LogEntryField<mixed>
      */
     public static function message(): Fields\LogEntryField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\LogEntryField::message();
+        return \Aazsamir\Stasphp\Graphql\Fields\LogEntryField::message();
     }
 
     public static function new(\DateTimeInterface $time, LogLevel $level, string $message): self
@@ -53,7 +53,7 @@ class LogEntry implements \Aazsamir\Graphpql\Model\GraphObject
             $self->time = new \DateTimeImmutable($data['time']);
         }
         if (isset($data['level'])) {
-            $self->level = \Aazsamir\Stasphp\Graphpql\LogLevel::from($data['level']);
+            $self->level = \Aazsamir\Stasphp\Graphql\LogLevel::from($data['level']);
         }
         if (isset($data['message'])) {
             $self->message = $data['message'];

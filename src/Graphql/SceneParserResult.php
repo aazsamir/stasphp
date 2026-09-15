@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SceneParserResult implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -25,128 +25,128 @@ class SceneParserResult implements \Aazsamir\Graphpql\Model\GraphObject
     /** @var array<string> */
     public ?array $performer_ids;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\SceneMovieID> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\SceneMovieID> */
     public ?array $movies;
 
     /** @var array<string> */
     public ?array $tag_ids;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneSelectionSet>
      */
     public static function scene(): Fields\SceneParserResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField::scene();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField::scene();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField<mixed>
      */
     public static function title(): Fields\SceneParserResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField::title();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField::title();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField<mixed>
      */
     public static function code(): Fields\SceneParserResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField::code();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField::code();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField<mixed>
      */
     public static function details(): Fields\SceneParserResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField::details();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField::details();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField<mixed>
      */
     public static function director(): Fields\SceneParserResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField::director();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField::director();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField<mixed>
      */
     public static function url(): Fields\SceneParserResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField::url();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField::url();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField<mixed>
      */
     public static function date(): Fields\SceneParserResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField::date();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField::date();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField<mixed>
      */
     public static function rating(): Fields\SceneParserResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField::rating();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField::rating();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField<mixed>
      */
     public static function rating100(): Fields\SceneParserResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField::rating100();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField::rating100();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField<mixed>
      */
     public static function studio_id(): Fields\SceneParserResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField::studio_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField::studio_id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField<mixed>
      */
     public static function gallery_ids(): Fields\SceneParserResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField::gallery_ids();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField::gallery_ids();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField<mixed>
      */
     public static function performer_ids(): Fields\SceneParserResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField::performer_ids();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField::performer_ids();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneMovieIDSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneMovieIDSelectionSet>
      */
     public static function movies(): Fields\SceneParserResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField::movies();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField::movies();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField<mixed>
      */
     public static function tag_ids(): Fields\SceneParserResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneParserResultField::tag_ids();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneParserResultField::tag_ids();
     }
 
     /**
      * @param array<string> $gallery_ids
      * @param array<string> $performer_ids
-     * @param array<\Aazsamir\Stasphp\Graphpql\SceneMovieID> $movies
+     * @param array<\Aazsamir\Stasphp\Graphql\SceneMovieID> $movies
      * @param array<string> $tag_ids
      */
     public static function new(
@@ -188,7 +188,7 @@ class SceneParserResult implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['scene'])) {
-            $self->scene = \Aazsamir\Stasphp\Graphpql\Scene::fromArray($data['scene']);
+            $self->scene = \Aazsamir\Stasphp\Graphql\Scene::fromArray($data['scene']);
         }
         if (isset($data['title'])) {
             $self->title = $data['title'];
@@ -241,7 +241,7 @@ class SceneParserResult implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\SceneMovieID::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\SceneMovieID::fromArray($data);
             }, $data['movies'] ?? []);
         }
         if (isset($data['tag_ids'])) {

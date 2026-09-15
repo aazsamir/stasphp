@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class PluginPaths implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -15,19 +15,19 @@ class PluginPaths implements \Aazsamir\Graphpql\Model\GraphObject
     public ?array $css;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginPathsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginPathsField<mixed>
      */
     public static function javascript(): Fields\PluginPathsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginPathsField::javascript();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginPathsField::javascript();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\PluginPathsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\PluginPathsField<mixed>
      */
     public static function css(): Fields\PluginPathsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\PluginPathsField::css();
+        return \Aazsamir\Stasphp\Graphql\Fields\PluginPathsField::css();
     }
 
     /**

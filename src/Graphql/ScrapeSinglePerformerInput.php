@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScrapeSinglePerformerInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -35,7 +35,7 @@ class ScrapeSinglePerformerInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->performer_id = $data['performer_id'];
         }
         if (isset($data['performer_input'])) {
-            $self->performer_input = \Aazsamir\Stasphp\Graphpql\ScrapedPerformerInput::fromArray($data['performer_input']);
+            $self->performer_input = \Aazsamir\Stasphp\Graphql\ScrapedPerformerInput::fromArray($data['performer_input']);
         }
 
         return $self;

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class ScrapeGalleryURL implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'scrapeGalleryURL';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\ScrapedGallery';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ScrapedGallery';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedGallerySelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedGallerySelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -35,12 +35,12 @@ class ScrapeGalleryURL implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedGallerySelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedGallerySelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedGallerySelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedGallerySelectionSet::new();
         }
 
         $selection($this->selection);
@@ -48,14 +48,14 @@ class ScrapeGalleryURL implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedGallerySelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedGallerySelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedGallerySelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedGallerySelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -68,7 +68,7 @@ class ScrapeGalleryURL implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\ScrapedGallery
+    public function do(): ?\Aazsamir\Stasphp\Graphql\ScrapedGallery
     {
         $response = $this->graphqlClient->request($this);
 

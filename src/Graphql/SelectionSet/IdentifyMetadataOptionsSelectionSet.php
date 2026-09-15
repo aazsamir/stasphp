@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class IdentifyMetadataOptionsSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class IdentifyMetadataOptionsSelectionSet implements \Aazsamir\Graphpql\Model\Se
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class IdentifyMetadataOptionsSelectionSet implements \Aazsamir\Graphpql\Model\Se
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField[]
      */
     public function getSelection(): array
     {

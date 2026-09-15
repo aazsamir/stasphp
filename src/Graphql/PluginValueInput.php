@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class PluginValueInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -13,15 +13,15 @@ class PluginValueInput implements \Aazsamir\Graphpql\Model\GraphObject
     public ?bool $b;
     public ?float $f;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\PluginArgInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\PluginArgInput> */
     public ?array $o;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\PluginValueInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\PluginValueInput> */
     public ?array $a;
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\PluginArgInput> $o
-     * @param array<\Aazsamir\Stasphp\Graphpql\PluginValueInput> $a
+     * @param array<\Aazsamir\Stasphp\Graphql\PluginArgInput> $o
+     * @param array<\Aazsamir\Stasphp\Graphql\PluginValueInput> $a
      */
     public static function new(
         ?string $str = null,
@@ -63,7 +63,7 @@ class PluginValueInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\PluginArgInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\PluginArgInput::fromArray($data);
             }, $data['o'] ?? []);
         }
         if (isset($data['a'])) {
@@ -72,7 +72,7 @@ class PluginValueInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\PluginValueInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\PluginValueInput::fromArray($data);
             }, $data['a'] ?? []);
         }
 

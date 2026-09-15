@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class FindFoldersResultTypeSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class FindFoldersResultTypeSelectionSet implements \Aazsamir\Graphpql\Model\Sele
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\FindFoldersResultTypeField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\FindFoldersResultTypeField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class FindFoldersResultTypeSelectionSet implements \Aazsamir\Graphpql\Model\Sele
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindFoldersResultTypeField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindFoldersResultTypeField[]
      */
     public function getSelection(): array
     {

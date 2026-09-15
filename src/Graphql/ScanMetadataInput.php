@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScanMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -93,7 +93,7 @@ class ScanMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->scanGenerateClipPreviews = $data['scanGenerateClipPreviews'];
         }
         if (isset($data['filter'])) {
-            $self->filter = \Aazsamir\Stasphp\Graphpql\ScanMetaDataFilterInput::fromArray($data['filter']);
+            $self->filter = \Aazsamir\Stasphp\Graphql\ScanMetaDataFilterInput::fromArray($data['filter']);
         }
 
         return $self;

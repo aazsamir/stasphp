@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ConfigGeneralInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
     use \Aazsamir\Graphpql\Model\ToArray;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\StashConfigInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\StashConfigInput> */
     public ?array $stashes;
     public ?string $databasePath;
     public ?string $backupDirectoryPath;
@@ -76,14 +76,14 @@ class ConfigGeneralInput implements \Aazsamir\Graphpql\Model\GraphObject
     public ?array $imageExcludes;
     public ?string $customPerformerImageLocation;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\StashBoxInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\StashBoxInput> */
     public ?array $stashBoxes;
     public ?string $pythonPath;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\PackageSourceInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\PackageSourceInput> */
     public ?array $scraperPackageSources;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\PackageSourceInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\PackageSourceInput> */
     public ?array $pluginPackageSources;
     public ?int $spriteScreenshotSize;
     public ?bool $useCustomSpriteInterval;
@@ -92,7 +92,7 @@ class ConfigGeneralInput implements \Aazsamir\Graphpql\Model\GraphObject
     public ?int $maximumSprites;
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\StashConfigInput> $stashes
+     * @param array<\Aazsamir\Stasphp\Graphql\StashConfigInput> $stashes
      * @param array<string> $transcodeInputArgs
      * @param array<string> $transcodeOutputArgs
      * @param array<string> $liveTranscodeInputArgs
@@ -102,9 +102,9 @@ class ConfigGeneralInput implements \Aazsamir\Graphpql\Model\GraphObject
      * @param array<string> $galleryExtensions
      * @param array<string> $excludes
      * @param array<string> $imageExcludes
-     * @param array<\Aazsamir\Stasphp\Graphpql\StashBoxInput> $stashBoxes
-     * @param array<\Aazsamir\Stasphp\Graphpql\PackageSourceInput> $scraperPackageSources
-     * @param array<\Aazsamir\Stasphp\Graphpql\PackageSourceInput> $pluginPackageSources
+     * @param array<\Aazsamir\Stasphp\Graphql\StashBoxInput> $stashBoxes
+     * @param array<\Aazsamir\Stasphp\Graphql\PackageSourceInput> $scraperPackageSources
+     * @param array<\Aazsamir\Stasphp\Graphql\PackageSourceInput> $pluginPackageSources
      */
     public static function new(
         ?array $stashes = null,
@@ -236,7 +236,7 @@ class ConfigGeneralInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\StashConfigInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\StashConfigInput::fromArray($data);
             }, $data['stashes'] ?? []);
         }
         if (isset($data['databasePath'])) {
@@ -267,7 +267,7 @@ class ConfigGeneralInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->blobsPath = $data['blobsPath'];
         }
         if (isset($data['blobsStorage'])) {
-            $self->blobsStorage = \Aazsamir\Stasphp\Graphpql\BlobsStorageType::from($data['blobsStorage']);
+            $self->blobsStorage = \Aazsamir\Stasphp\Graphql\BlobsStorageType::from($data['blobsStorage']);
         }
         if (isset($data['ffmpegPath'])) {
             $self->ffmpegPath = $data['ffmpegPath'];
@@ -279,7 +279,7 @@ class ConfigGeneralInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->calculateMD5 = $data['calculateMD5'];
         }
         if (isset($data['videoFileNamingAlgorithm'])) {
-            $self->videoFileNamingAlgorithm = \Aazsamir\Stasphp\Graphpql\HashAlgorithm::from($data['videoFileNamingAlgorithm']);
+            $self->videoFileNamingAlgorithm = \Aazsamir\Stasphp\Graphql\HashAlgorithm::from($data['videoFileNamingAlgorithm']);
         }
         if (isset($data['parallelTasks'])) {
             $self->parallelTasks = $data['parallelTasks'];
@@ -300,16 +300,16 @@ class ConfigGeneralInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->previewExcludeEnd = $data['previewExcludeEnd'];
         }
         if (isset($data['previewPreset'])) {
-            $self->previewPreset = \Aazsamir\Stasphp\Graphpql\PreviewPreset::from($data['previewPreset']);
+            $self->previewPreset = \Aazsamir\Stasphp\Graphql\PreviewPreset::from($data['previewPreset']);
         }
         if (isset($data['transcodeHardwareAcceleration'])) {
             $self->transcodeHardwareAcceleration = $data['transcodeHardwareAcceleration'];
         }
         if (isset($data['maxTranscodeSize'])) {
-            $self->maxTranscodeSize = \Aazsamir\Stasphp\Graphpql\StreamingResolutionEnum::from($data['maxTranscodeSize']);
+            $self->maxTranscodeSize = \Aazsamir\Stasphp\Graphql\StreamingResolutionEnum::from($data['maxTranscodeSize']);
         }
         if (isset($data['maxStreamingTranscodeSize'])) {
-            $self->maxStreamingTranscodeSize = \Aazsamir\Stasphp\Graphpql\StreamingResolutionEnum::from($data['maxStreamingTranscodeSize']);
+            $self->maxStreamingTranscodeSize = \Aazsamir\Stasphp\Graphql\StreamingResolutionEnum::from($data['maxStreamingTranscodeSize']);
         }
         if (isset($data['transcodeInputArgs'])) {
             $self->transcodeInputArgs = array_map(function ($data) {
@@ -440,7 +440,7 @@ class ConfigGeneralInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\StashBoxInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\StashBoxInput::fromArray($data);
             }, $data['stashBoxes'] ?? []);
         }
         if (isset($data['pythonPath'])) {
@@ -452,7 +452,7 @@ class ConfigGeneralInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\PackageSourceInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\PackageSourceInput::fromArray($data);
             }, $data['scraperPackageSources'] ?? []);
         }
         if (isset($data['pluginPackageSources'])) {
@@ -461,7 +461,7 @@ class ConfigGeneralInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\PackageSourceInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\PackageSourceInput::fromArray($data);
             }, $data['pluginPackageSources'] ?? []);
         }
         if (isset($data['spriteScreenshotSize'])) {

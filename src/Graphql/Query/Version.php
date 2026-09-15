@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class Version implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'version';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\Version';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Version';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\VersionSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\VersionSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -33,12 +33,12 @@ class Version implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\VersionSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\VersionSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\VersionSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\VersionSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -46,14 +46,14 @@ class Version implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\VersionSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\VersionSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\VersionSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\VersionSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -66,7 +66,7 @@ class Version implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\Version
+    public function do(): ?\Aazsamir\Stasphp\Graphql\Version
     {
         $response = $this->graphqlClient->request($this);
 

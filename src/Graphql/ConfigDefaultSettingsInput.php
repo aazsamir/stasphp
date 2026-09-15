@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ConfigDefaultSettingsInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -38,16 +38,16 @@ class ConfigDefaultSettingsInput implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['scan'])) {
-            $self->scan = \Aazsamir\Stasphp\Graphpql\ScanMetadataInput::fromArray($data['scan']);
+            $self->scan = \Aazsamir\Stasphp\Graphql\ScanMetadataInput::fromArray($data['scan']);
         }
         if (isset($data['identify'])) {
-            $self->identify = \Aazsamir\Stasphp\Graphpql\IdentifyMetadataInput::fromArray($data['identify']);
+            $self->identify = \Aazsamir\Stasphp\Graphql\IdentifyMetadataInput::fromArray($data['identify']);
         }
         if (isset($data['autoTag'])) {
-            $self->autoTag = \Aazsamir\Stasphp\Graphpql\AutoTagMetadataInput::fromArray($data['autoTag']);
+            $self->autoTag = \Aazsamir\Stasphp\Graphql\AutoTagMetadataInput::fromArray($data['autoTag']);
         }
         if (isset($data['generate'])) {
-            $self->generate = \Aazsamir\Stasphp\Graphpql\GenerateMetadataInput::fromArray($data['generate']);
+            $self->generate = \Aazsamir\Stasphp\Graphql\GenerateMetadataInput::fromArray($data['generate']);
         }
         if (isset($data['deleteFile'])) {
             $self->deleteFile = $data['deleteFile'];

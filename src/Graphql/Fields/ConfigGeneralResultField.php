@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -14,13 +14,13 @@ class ConfigGeneralResultField implements \Aazsamir\Graphpql\Model\ObjectField
     private ?string $union = null;
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\StashConfigSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\StashConfigSelectionSet>
      */
     public static function stashes(): self
     {
         $instance = new self();
         $instance->name = 'stashes';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\StashConfigSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\StashConfigSelectionSet();
 
         return $instance;
     }
@@ -620,13 +620,13 @@ class ConfigGeneralResultField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\StashBoxSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\StashBoxSelectionSet>
      */
     public static function stashBoxes(): self
     {
         $instance = new self();
         $instance->name = 'stashBoxes';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\StashBoxSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\StashBoxSelectionSet();
 
         return $instance;
     }
@@ -643,25 +643,25 @@ class ConfigGeneralResultField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSourceSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\PackageSourceSelectionSet>
      */
     public static function scraperPackageSources(): self
     {
         $instance = new self();
         $instance->name = 'scraperPackageSources';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSourceSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\PackageSourceSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSourceSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\PackageSourceSelectionSet>
      */
     public static function pluginPackageSources(): self
     {
         $instance = new self();
         $instance->name = 'pluginPackageSources';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSourceSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\PackageSourceSelectionSet();
 
         return $instance;
     }

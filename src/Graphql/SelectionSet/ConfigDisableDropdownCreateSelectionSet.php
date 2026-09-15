@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class ConfigDisableDropdownCreateSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class ConfigDisableDropdownCreateSelectionSet implements \Aazsamir\Graphpql\Mode
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\ConfigDisableDropdownCreateField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\ConfigDisableDropdownCreateField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class ConfigDisableDropdownCreateSelectionSet implements \Aazsamir\Graphpql\Mode
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigDisableDropdownCreateField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigDisableDropdownCreateField[]
      */
     public function getSelection(): array
     {

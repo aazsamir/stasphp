@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class TagsMergeInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -42,7 +42,7 @@ class TagsMergeInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->destination = $data['destination'];
         }
         if (isset($data['values'])) {
-            $self->values = \Aazsamir\Stasphp\Graphpql\TagUpdateInput::fromArray($data['values']);
+            $self->values = \Aazsamir\Stasphp\Graphql\TagUpdateInput::fromArray($data['values']);
         }
 
         return $self;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SetupInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -10,7 +10,7 @@ class SetupInput implements \Aazsamir\Graphpql\Model\GraphObject
 
     public string $configLocation;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\StashConfigInput> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\StashConfigInput> */
     public array $stashes;
     public ?bool $sfwContentMode;
     public string $databaseFile;
@@ -20,7 +20,7 @@ class SetupInput implements \Aazsamir\Graphpql\Model\GraphObject
     public string $blobsLocation;
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\StashConfigInput> $stashes
+     * @param array<\Aazsamir\Stasphp\Graphql\StashConfigInput> $stashes
      */
     public static function new(
         string $configLocation,
@@ -57,7 +57,7 @@ class SetupInput implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\StashConfigInput::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\StashConfigInput::fromArray($data);
             }, $data['stashes'] ?? []);
         }
         if (isset($data['databaseFile'])) {

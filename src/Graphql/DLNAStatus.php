@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class DLNAStatus implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -14,44 +14,44 @@ class DLNAStatus implements \Aazsamir\Graphpql\Model\GraphObject
     /** @var array<string> */
     public array $recentIPAddresses;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\DLNAIP> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\DLNAIP> */
     public array $allowedIPAddresses;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\DLNAStatusField<mixed>
      */
     public static function running(): Fields\DLNAStatusField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField::running();
+        return \Aazsamir\Stasphp\Graphql\Fields\DLNAStatusField::running();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\DLNAStatusField<mixed>
      */
     public static function until(): Fields\DLNAStatusField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField::until();
+        return \Aazsamir\Stasphp\Graphql\Fields\DLNAStatusField::until();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\DLNAStatusField<mixed>
      */
     public static function recentIPAddresses(): Fields\DLNAStatusField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField::recentIPAddresses();
+        return \Aazsamir\Stasphp\Graphql\Fields\DLNAStatusField::recentIPAddresses();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField<\Aazsamir\Stasphp\Graphpql\SelectionSet\DLNAIPSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\DLNAStatusField<\Aazsamir\Stasphp\Graphql\SelectionSet\DLNAIPSelectionSet>
      */
     public static function allowedIPAddresses(): Fields\DLNAStatusField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\DLNAStatusField::allowedIPAddresses();
+        return \Aazsamir\Stasphp\Graphql\Fields\DLNAStatusField::allowedIPAddresses();
     }
 
     /**
      * @param array<string> $recentIPAddresses
-     * @param array<\Aazsamir\Stasphp\Graphpql\DLNAIP> $allowedIPAddresses
+     * @param array<\Aazsamir\Stasphp\Graphql\DLNAIP> $allowedIPAddresses
      */
     public static function new(
         bool $running,
@@ -89,7 +89,7 @@ class DLNAStatus implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\DLNAIP::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\DLNAIP::fromArray($data);
             }, $data['allowedIPAddresses'] ?? []);
         }
         if (isset($data['until'])) {

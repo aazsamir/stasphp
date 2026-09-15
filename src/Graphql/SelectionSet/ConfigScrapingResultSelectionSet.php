@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\SelectionSet;
+namespace Aazsamir\Stasphp\Graphql\SelectionSet;
 
 class ConfigScrapingResultSelectionSet implements \Aazsamir\Graphpql\Model\SelectionSet
 {
@@ -13,7 +13,7 @@ class ConfigScrapingResultSelectionSet implements \Aazsamir\Graphpql\Model\Selec
         return new self();
     }
 
-    public function select(\Aazsamir\Stasphp\Graphpql\Fields\ConfigScrapingResultField ...$selection): self
+    public function select(\Aazsamir\Stasphp\Graphql\Fields\ConfigScrapingResultField ...$selection): self
     {
         $this->selection = $selection;
 
@@ -21,7 +21,7 @@ class ConfigScrapingResultSelectionSet implements \Aazsamir\Graphpql\Model\Selec
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ConfigScrapingResultField[]
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ConfigScrapingResultField[]
      */
     public function getSelection(): array
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SceneMarker implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -15,7 +15,7 @@ class SceneMarker implements \Aazsamir\Graphpql\Model\GraphObject
     public ?float $end_seconds;
     public Tag $primary_tag;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Tag> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Tag> */
     public array $tags;
     public \DateTimeInterface $created_at;
     public \DateTimeInterface $updated_at;
@@ -24,103 +24,103 @@ class SceneMarker implements \Aazsamir\Graphpql\Model\GraphObject
     public string $screenshot;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField<mixed>
      */
     public static function id(): Fields\SceneMarkerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField::id();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField::id();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneSelectionSet>
      */
     public static function scene(): Fields\SceneMarkerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField::scene();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField::scene();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField<mixed>
      */
     public static function title(): Fields\SceneMarkerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField::title();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField::title();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField<mixed>
      */
     public static function seconds(): Fields\SceneMarkerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField::seconds();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField::seconds();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField<mixed>
      */
     public static function end_seconds(): Fields\SceneMarkerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField::end_seconds();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField::end_seconds();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField<\Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField<\Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet>
      */
     public static function primary_tag(): Fields\SceneMarkerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField::primary_tag();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField::primary_tag();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField<\Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField<\Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet>
      */
     public static function tags(): Fields\SceneMarkerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField::tags();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField::tags();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField<mixed>
      */
     public static function created_at(): Fields\SceneMarkerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField::created_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField::created_at();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField<mixed>
      */
     public static function updated_at(): Fields\SceneMarkerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField::updated_at();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField::updated_at();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField<mixed>
      */
     public static function stream(): Fields\SceneMarkerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField::stream();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField::stream();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField<mixed>
      */
     public static function preview(): Fields\SceneMarkerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField::preview();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField::preview();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField<mixed>
      */
     public static function screenshot(): Fields\SceneMarkerField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMarkerField::screenshot();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMarkerField::screenshot();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\Tag> $tags
+     * @param array<\Aazsamir\Stasphp\Graphql\Tag> $tags
      */
     public static function new(
         string $id,
@@ -160,7 +160,7 @@ class SceneMarker implements \Aazsamir\Graphpql\Model\GraphObject
             $self->id = $data['id'];
         }
         if (isset($data['scene'])) {
-            $self->scene = \Aazsamir\Stasphp\Graphpql\Scene::fromArray($data['scene']);
+            $self->scene = \Aazsamir\Stasphp\Graphql\Scene::fromArray($data['scene']);
         }
         if (isset($data['title'])) {
             $self->title = $data['title'];
@@ -169,7 +169,7 @@ class SceneMarker implements \Aazsamir\Graphpql\Model\GraphObject
             $self->seconds = $data['seconds'];
         }
         if (isset($data['primary_tag'])) {
-            $self->primary_tag = \Aazsamir\Stasphp\Graphpql\Tag::fromArray($data['primary_tag']);
+            $self->primary_tag = \Aazsamir\Stasphp\Graphql\Tag::fromArray($data['primary_tag']);
         }
         if (isset($data['tags'])) {
             $self->tags = array_map(function ($data) {
@@ -177,7 +177,7 @@ class SceneMarker implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Tag::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Tag::fromArray($data);
             }, $data['tags'] ?? []);
         }
         if (isset($data['created_at'])) {

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class FindScenes implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'findScenes';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\FindScenesResultType';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\FindScenesResultType';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\FindScenesResultTypeSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\FindScenesResultTypeSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -27,10 +27,10 @@ class FindScenes implements \Aazsamir\Graphpql\Model\Query
      * @param array<string> $ids
      */
     public function __construct(
-        public ?\Aazsamir\Stasphp\Graphpql\SceneFilterType $scene_filter = null,
+        public ?\Aazsamir\Stasphp\Graphql\SceneFilterType $scene_filter = null,
         public ?array $scene_ids = null,
         public ?array $ids = null,
-        public ?\Aazsamir\Stasphp\Graphpql\FindFilterType $filter = null,
+        public ?\Aazsamir\Stasphp\Graphql\FindFilterType $filter = null,
     ) {
     }
 
@@ -45,12 +45,12 @@ class FindScenes implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\FindScenesResultTypeSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\FindScenesResultTypeSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\FindScenesResultTypeSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\FindScenesResultTypeSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -59,14 +59,14 @@ class FindScenes implements \Aazsamir\Graphpql\Model\Query
     }
 
     public function setSelection(
-        \Aazsamir\Stasphp\Graphpql\SelectionSet\FindScenesResultTypeSelectionSet $selection,
+        \Aazsamir\Stasphp\Graphql\SelectionSet\FindScenesResultTypeSelectionSet $selection,
     ): self {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\FindScenesResultTypeSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\FindScenesResultTypeSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -79,7 +79,7 @@ class FindScenes implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\FindScenesResultType
+    public function do(): ?\Aazsamir\Stasphp\Graphql\FindScenesResultType
     {
         $response = $this->graphqlClient->request($this);
 

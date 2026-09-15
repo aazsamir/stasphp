@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SceneMovie implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -12,19 +12,19 @@ class SceneMovie implements \Aazsamir\Graphpql\Model\GraphObject
     public ?int $scene_index;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMovieField<\Aazsamir\Stasphp\Graphpql\SelectionSet\MovieSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMovieField<\Aazsamir\Stasphp\Graphql\SelectionSet\MovieSelectionSet>
      */
     public static function movie(): Fields\SceneMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMovieField::movie();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMovieField::movie();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SceneMovieField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SceneMovieField<mixed>
      */
     public static function scene_index(): Fields\SceneMovieField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SceneMovieField::scene_index();
+        return \Aazsamir\Stasphp\Graphql\Fields\SceneMovieField::scene_index();
     }
 
     public static function new(Movie $movie, ?int $scene_index = null): self
@@ -40,7 +40,7 @@ class SceneMovie implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['movie'])) {
-            $self->movie = \Aazsamir\Stasphp\Graphpql\Movie::fromArray($data['movie']);
+            $self->movie = \Aazsamir\Stasphp\Graphql\Movie::fromArray($data['movie']);
         }
         if (isset($data['scene_index'])) {
             $self->scene_index = $data['scene_index'];

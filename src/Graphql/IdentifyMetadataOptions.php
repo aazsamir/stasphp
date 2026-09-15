@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class IdentifyMetadataOptions implements \Aazsamir\Graphpql\Model\GraphObject
 {
     use \Aazsamir\Graphpql\Model\ToArray;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\IdentifyFieldOptions> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\IdentifyFieldOptions> */
     public ?array $fieldOptions;
     public ?bool $setCoverImage;
     public ?bool $setOrganized;
     public ?bool $includeMalePerformers;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\GenderEnum> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\GenderEnum> */
     public ?array $performerGenders;
     public ?bool $skipMultipleMatches;
     public ?string $skipMultipleMatchTag;
@@ -22,80 +22,80 @@ class IdentifyMetadataOptions implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $skipSingleNamePerformerTag;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField<\Aazsamir\Stasphp\Graphpql\SelectionSet\IdentifyFieldOptionsSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField<\Aazsamir\Stasphp\Graphql\SelectionSet\IdentifyFieldOptionsSelectionSet>
      */
     public static function fieldOptions(): Fields\IdentifyMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField::fieldOptions();
+        return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField::fieldOptions();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField<mixed>
      */
     public static function setCoverImage(): Fields\IdentifyMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField::setCoverImage();
+        return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField::setCoverImage();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField<mixed>
      */
     public static function setOrganized(): Fields\IdentifyMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField::setOrganized();
+        return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField::setOrganized();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField<mixed>
      */
     public static function includeMalePerformers(): Fields\IdentifyMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField::includeMalePerformers();
+        return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField::includeMalePerformers();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField<mixed>
      */
     public static function performerGenders(): Fields\IdentifyMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField::performerGenders();
+        return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField::performerGenders();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField<mixed>
      */
     public static function skipMultipleMatches(): Fields\IdentifyMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField::skipMultipleMatches();
+        return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField::skipMultipleMatches();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField<mixed>
      */
     public static function skipMultipleMatchTag(): Fields\IdentifyMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField::skipMultipleMatchTag();
+        return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField::skipMultipleMatchTag();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField<mixed>
      */
     public static function skipSingleNamePerformers(): Fields\IdentifyMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField::skipSingleNamePerformers();
+        return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField::skipSingleNamePerformers();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField<mixed>
      */
     public static function skipSingleNamePerformerTag(): Fields\IdentifyMetadataOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataOptionsField::skipSingleNamePerformerTag();
+        return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataOptionsField::skipSingleNamePerformerTag();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\IdentifyFieldOptions> $fieldOptions
-     * @param array<\Aazsamir\Stasphp\Graphpql\GenderEnum> $performerGenders
+     * @param array<\Aazsamir\Stasphp\Graphql\IdentifyFieldOptions> $fieldOptions
+     * @param array<\Aazsamir\Stasphp\Graphql\GenderEnum> $performerGenders
      */
     public static function new(
         ?array $fieldOptions = null,
@@ -131,7 +131,7 @@ class IdentifyMetadataOptions implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\IdentifyFieldOptions::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\IdentifyFieldOptions::fromArray($data);
             }, $data['fieldOptions'] ?? []);
         }
         if (isset($data['setCoverImage'])) {
@@ -149,7 +149,7 @@ class IdentifyMetadataOptions implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\GenderEnum::from($data);
+                return \Aazsamir\Stasphp\Graphql\GenderEnum::from($data);
             }, $data['performerGenders'] ?? []);
         }
         if (isset($data['skipMultipleMatches'])) {

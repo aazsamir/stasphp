@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class SceneStreams implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'sceneStreams';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\SceneStreamEndpoint';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\SceneStreamEndpoint';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneStreamEndpointSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\SceneStreamEndpointSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -35,12 +35,12 @@ class SceneStreams implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneStreamEndpointSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\SceneStreamEndpointSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneStreamEndpointSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\SceneStreamEndpointSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -49,14 +49,14 @@ class SceneStreams implements \Aazsamir\Graphpql\Model\Query
     }
 
     public function setSelection(
-        \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneStreamEndpointSelectionSet $selection,
+        \Aazsamir\Stasphp\Graphql\SelectionSet\SceneStreamEndpointSelectionSet $selection,
     ): self {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneStreamEndpointSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\SceneStreamEndpointSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -70,7 +70,7 @@ class SceneStreams implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @return array<\Aazsamir\Stasphp\Graphpql\SceneStreamEndpoint>
+     * @return array<\Aazsamir\Stasphp\Graphql\SceneStreamEndpoint>
      */
     public function do(): ?array
     {

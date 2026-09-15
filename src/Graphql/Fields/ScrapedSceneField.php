@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -102,73 +102,73 @@ class ScrapedSceneField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneFileTypeSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneFileTypeSelectionSet>
      */
     public static function file(): self
     {
         $instance = new self();
         $instance->name = 'file';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\SceneFileTypeSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\SceneFileTypeSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedStudioSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedStudioSelectionSet>
      */
     public static function studio(): self
     {
         $instance = new self();
         $instance->name = 'studio';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedStudioSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedStudioSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedTagSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedTagSelectionSet>
      */
     public static function tags(): self
     {
         $instance = new self();
         $instance->name = 'tags';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedTagSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedTagSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedPerformerSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedPerformerSelectionSet>
      */
     public static function performers(): self
     {
         $instance = new self();
         $instance->name = 'performers';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedPerformerSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedPerformerSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedMovieSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedMovieSelectionSet>
      */
     public static function movies(): self
     {
         $instance = new self();
         $instance->name = 'movies';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedMovieSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedMovieSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedGroupSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedGroupSelectionSet>
      */
     public static function groups(): self
     {
         $instance = new self();
         $instance->name = 'groups';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedGroupSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedGroupSelectionSet();
 
         return $instance;
     }
@@ -196,13 +196,13 @@ class ScrapedSceneField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\StashBoxFingerprintSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\StashBoxFingerprintSelectionSet>
      */
     public static function fingerprints(): self
     {
         $instance = new self();
         $instance->name = 'fingerprints';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\StashBoxFingerprintSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\StashBoxFingerprintSelectionSet();
 
         return $instance;
     }

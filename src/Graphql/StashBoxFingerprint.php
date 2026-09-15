@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class StashBoxFingerprint implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -13,27 +13,27 @@ class StashBoxFingerprint implements \Aazsamir\Graphpql\Model\GraphObject
     public int $duration;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StashBoxFingerprintField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StashBoxFingerprintField<mixed>
      */
     public static function algorithm(): Fields\StashBoxFingerprintField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StashBoxFingerprintField::algorithm();
+        return \Aazsamir\Stasphp\Graphql\Fields\StashBoxFingerprintField::algorithm();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StashBoxFingerprintField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StashBoxFingerprintField<mixed>
      */
     public static function hash(): Fields\StashBoxFingerprintField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StashBoxFingerprintField::hash();
+        return \Aazsamir\Stasphp\Graphql\Fields\StashBoxFingerprintField::hash();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\StashBoxFingerprintField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\StashBoxFingerprintField<mixed>
      */
     public static function duration(): Fields\StashBoxFingerprintField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\StashBoxFingerprintField::duration();
+        return \Aazsamir\Stasphp\Graphql\Fields\StashBoxFingerprintField::duration();
     }
 
     public static function new(string $algorithm, string $hash, int $duration): self

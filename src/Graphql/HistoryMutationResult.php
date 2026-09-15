@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class HistoryMutationResult implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -14,19 +14,19 @@ class HistoryMutationResult implements \Aazsamir\Graphpql\Model\GraphObject
     public array $history;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\HistoryMutationResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\HistoryMutationResultField<mixed>
      */
     public static function count(): Fields\HistoryMutationResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\HistoryMutationResultField::count();
+        return \Aazsamir\Stasphp\Graphql\Fields\HistoryMutationResultField::count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\HistoryMutationResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\HistoryMutationResultField<mixed>
      */
     public static function history(): Fields\HistoryMutationResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\HistoryMutationResultField::history();
+        return \Aazsamir\Stasphp\Graphql\Fields\HistoryMutationResultField::history();
     }
 
     /**

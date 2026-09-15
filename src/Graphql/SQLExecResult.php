@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SQLExecResult implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -12,19 +12,19 @@ class SQLExecResult implements \Aazsamir\Graphpql\Model\GraphObject
     public ?int $last_insert_id;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SQLExecResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SQLExecResultField<mixed>
      */
     public static function rows_affected(): Fields\SQLExecResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SQLExecResultField::rows_affected();
+        return \Aazsamir\Stasphp\Graphql\Fields\SQLExecResultField::rows_affected();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\SQLExecResultField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\SQLExecResultField<mixed>
      */
     public static function last_insert_id(): Fields\SQLExecResultField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\SQLExecResultField::last_insert_id();
+        return \Aazsamir\Stasphp\Graphql\Fields\SQLExecResultField::last_insert_id();
     }
 
     public static function new(?int $rows_affected = null, ?int $last_insert_id = null): self

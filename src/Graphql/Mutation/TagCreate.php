@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Mutation;
+namespace Aazsamir\Stasphp\Graphql\Mutation;
 
 class TagCreate implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'tagCreate';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\Tag';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Tag';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -23,7 +23,7 @@ class TagCreate implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\TagCreateInput $input,
+        public \Aazsamir\Stasphp\Graphql\TagCreateInput $input,
     ) {
     }
 
@@ -35,12 +35,12 @@ class TagCreate implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -48,14 +48,14 @@ class TagCreate implements \Aazsamir\Graphpql\Model\Mutation
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -68,7 +68,7 @@ class TagCreate implements \Aazsamir\Graphpql\Model\Mutation
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\Tag
+    public function do(): ?\Aazsamir\Stasphp\Graphql\Tag
     {
         $response = $this->graphqlClient->request($this);
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -157,85 +157,85 @@ class ImageField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ImageFileSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ImageFileSelectionSet>
      */
     public static function files(): self
     {
         $instance = new self();
         $instance->name = 'files';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ImageFileSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ImageFileSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\VisualFileSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\VisualFileSelectionSet>
      */
     public static function visual_files(): self
     {
         $instance = new self();
         $instance->name = 'visual_files';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\VisualFileSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\VisualFileSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ImagePathsTypeSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ImagePathsTypeSelectionSet>
      */
     public static function paths(): self
     {
         $instance = new self();
         $instance->name = 'paths';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ImagePathsTypeSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ImagePathsTypeSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\GallerySelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\GallerySelectionSet>
      */
     public static function galleries(): self
     {
         $instance = new self();
         $instance->name = 'galleries';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\GallerySelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\GallerySelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\StudioSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\StudioSelectionSet>
      */
     public static function studio(): self
     {
         $instance = new self();
         $instance->name = 'studio';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\StudioSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\StudioSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet>
      */
     public static function tags(): self
     {
         $instance = new self();
         $instance->name = 'tags';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\TagSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\TagSelectionSet();
 
         return $instance;
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\PerformerSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\PerformerSelectionSet>
      */
     public static function performers(): self
     {
         $instance = new self();
         $instance->name = 'performers';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\PerformerSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\PerformerSelectionSet();
 
         return $instance;
     }

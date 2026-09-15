@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class HierarchicalMultiCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -39,7 +39,7 @@ class HierarchicalMultiCriterionInput implements \Aazsamir\Graphpql\Model\GraphO
     {
         $self = new self();
         if (isset($data['modifier'])) {
-            $self->modifier = \Aazsamir\Stasphp\Graphpql\CriterionModifier::from($data['modifier']);
+            $self->modifier = \Aazsamir\Stasphp\Graphql\CriterionModifier::from($data['modifier']);
         }
         if (isset($data['value'])) {
             $self->value = array_map(function ($data) {

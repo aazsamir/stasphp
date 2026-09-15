@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class FindGalleriesResultType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -10,27 +10,27 @@ class FindGalleriesResultType implements \Aazsamir\Graphpql\Model\GraphObject
 
     public int $count;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Gallery> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Gallery> */
     public array $galleries;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindGalleriesResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindGalleriesResultTypeField<mixed>
      */
     public static function count(): Fields\FindGalleriesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindGalleriesResultTypeField::count();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindGalleriesResultTypeField::count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindGalleriesResultTypeField<\Aazsamir\Stasphp\Graphpql\SelectionSet\GallerySelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindGalleriesResultTypeField<\Aazsamir\Stasphp\Graphql\SelectionSet\GallerySelectionSet>
      */
     public static function galleries(): Fields\FindGalleriesResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindGalleriesResultTypeField::galleries();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindGalleriesResultTypeField::galleries();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\Gallery> $galleries
+     * @param array<\Aazsamir\Stasphp\Graphql\Gallery> $galleries
      */
     public static function new(int $count, array $galleries): self
     {
@@ -53,7 +53,7 @@ class FindGalleriesResultType implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Gallery::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Gallery::fromArray($data);
             }, $data['galleries'] ?? []);
         }
 

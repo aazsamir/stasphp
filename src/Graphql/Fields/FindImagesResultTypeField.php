@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -47,13 +47,13 @@ class FindImagesResultTypeField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\ImageSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\ImageSelectionSet>
      */
     public static function images(): self
     {
         $instance = new self();
         $instance->name = 'images';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\ImageSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\ImageSelectionSet();
 
         return $instance;
     }

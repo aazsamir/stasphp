@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class ScrapeMultiPerformers implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'scrapeMultiPerformers';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\ScrapedPerformer';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ScrapedPerformer';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedPerformerSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedPerformerSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -23,8 +23,8 @@ class ScrapeMultiPerformers implements \Aazsamir\Graphpql\Model\Query
     }
 
     public function __construct(
-        public \Aazsamir\Stasphp\Graphpql\ScraperSourceInput $source,
-        public \Aazsamir\Stasphp\Graphpql\ScrapeMultiPerformersInput $input,
+        public \Aazsamir\Stasphp\Graphql\ScraperSourceInput $source,
+        public \Aazsamir\Stasphp\Graphql\ScrapeMultiPerformersInput $input,
     ) {
     }
 
@@ -37,12 +37,12 @@ class ScrapeMultiPerformers implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedPerformerSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedPerformerSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedPerformerSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedPerformerSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -50,15 +50,14 @@ class ScrapeMultiPerformers implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(
-        \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedPerformerSelectionSet $selection,
-    ): self {
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedPerformerSelectionSet $selection): self
+    {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedPerformerSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedPerformerSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -72,7 +71,7 @@ class ScrapeMultiPerformers implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @return array<\Aazsamir\Stasphp\Graphpql\ScrapedPerformer>
+     * @return array<\Aazsamir\Stasphp\Graphql\ScrapedPerformer>
      */
     public function do(): ?array
     {

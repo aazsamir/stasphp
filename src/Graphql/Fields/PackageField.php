@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -58,13 +58,13 @@ class PackageField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\PackageSelectionSet>
      */
     public static function requires(): self
     {
         $instance = new self();
         $instance->name = 'requires';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\PackageSelectionSet();
 
         return $instance;
     }
@@ -81,13 +81,13 @@ class PackageField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\PackageSelectionSet>
      */
     public static function source_package(): self
     {
         $instance = new self();
         $instance->name = 'source_package';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\PackageSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\PackageSelectionSet();
 
         return $instance;
     }

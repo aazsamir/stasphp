@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 class ScrapeGroupURL implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'scrapeGroupURL';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\ScrapedGroup';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\ScrapedGroup';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedGroupSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedGroupSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -35,12 +35,12 @@ class ScrapeGroupURL implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedGroupSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedGroupSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedGroupSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedGroupSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -48,14 +48,14 @@ class ScrapeGroupURL implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedGroupSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedGroupSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedGroupSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedGroupSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -68,7 +68,7 @@ class ScrapeGroupURL implements \Aazsamir\Graphpql\Model\Query
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\ScrapedGroup
+    public function do(): ?\Aazsamir\Stasphp\Graphql\ScrapedGroup
     {
         $response = $this->graphqlClient->request($this);
 

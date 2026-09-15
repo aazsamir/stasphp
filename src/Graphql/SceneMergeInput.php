@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SceneMergeInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -51,7 +51,7 @@ class SceneMergeInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->destination = $data['destination'];
         }
         if (isset($data['values'])) {
-            $self->values = \Aazsamir\Stasphp\Graphpql\SceneUpdateInput::fromArray($data['values']);
+            $self->values = \Aazsamir\Stasphp\Graphql\SceneUpdateInput::fromArray($data['values']);
         }
         if (isset($data['play_history'])) {
             $self->play_history = $data['play_history'];

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class IdentifyFieldOptionsInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -29,7 +29,7 @@ class IdentifyFieldOptionsInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->field = $data['field'];
         }
         if (isset($data['strategy'])) {
-            $self->strategy = \Aazsamir\Stasphp\Graphpql\IdentifyFieldStrategy::from($data['strategy']);
+            $self->strategy = \Aazsamir\Stasphp\Graphql\IdentifyFieldStrategy::from($data['strategy']);
         }
         if (isset($data['createMissing'])) {
             $self->createMissing = $data['createMissing'];

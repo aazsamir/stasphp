@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Fields;
+namespace Aazsamir\Stasphp\Graphql\Fields;
 
 /**
  * @template T
@@ -25,13 +25,13 @@ class FindFoldersResultTypeField implements \Aazsamir\Graphpql\Model\ObjectField
     }
 
     /**
-     * @return self<\Aazsamir\Stasphp\Graphpql\SelectionSet\FolderSelectionSet>
+     * @return self<\Aazsamir\Stasphp\Graphql\SelectionSet\FolderSelectionSet>
      */
     public static function folders(): self
     {
         $instance = new self();
         $instance->name = 'folders';
-        $instance->child = new \Aazsamir\Stasphp\Graphpql\SelectionSet\FolderSelectionSet();
+        $instance->child = new \Aazsamir\Stasphp\Graphql\SelectionSet\FolderSelectionSet();
 
         return $instance;
     }

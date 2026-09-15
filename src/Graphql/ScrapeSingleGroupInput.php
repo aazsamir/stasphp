@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScrapeSingleGroupInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -35,7 +35,7 @@ class ScrapeSingleGroupInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->group_id = $data['group_id'];
         }
         if (isset($data['group_input'])) {
-            $self->group_input = \Aazsamir\Stasphp\Graphpql\ScrapedGroupInput::fromArray($data['group_input']);
+            $self->group_input = \Aazsamir\Stasphp\Graphql\ScrapedGroupInput::fromArray($data['group_input']);
         }
 
         return $self;

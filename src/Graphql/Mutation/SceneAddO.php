@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Mutation;
+namespace Aazsamir\Stasphp\Graphql\Mutation;
 
 class SceneAddO implements \Aazsamir\Graphpql\Model\Mutation
 {
     public const NAME = 'sceneAddO';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\HistoryMutationResult';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\HistoryMutationResult';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\HistoryMutationResultSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\HistoryMutationResultSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -40,12 +40,12 @@ class SceneAddO implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\HistoryMutationResultSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\HistoryMutationResultSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\HistoryMutationResultSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\HistoryMutationResultSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -54,14 +54,14 @@ class SceneAddO implements \Aazsamir\Graphpql\Model\Mutation
     }
 
     public function setSelection(
-        \Aazsamir\Stasphp\Graphpql\SelectionSet\HistoryMutationResultSelectionSet $selection,
+        \Aazsamir\Stasphp\Graphql\SelectionSet\HistoryMutationResultSelectionSet $selection,
     ): self {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\HistoryMutationResultSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\HistoryMutationResultSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -74,7 +74,7 @@ class SceneAddO implements \Aazsamir\Graphpql\Model\Mutation
         return $clone;
     }
 
-    public function do(): ?\Aazsamir\Stasphp\Graphpql\HistoryMutationResult
+    public function do(): ?\Aazsamir\Stasphp\Graphql\HistoryMutationResult
     {
         $response = $this->graphqlClient->request($this);
 

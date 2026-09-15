@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql\Query;
+namespace Aazsamir\Stasphp\Graphql\Query;
 
 /**
  * @deprecated Use findImages instead
@@ -10,9 +10,9 @@ namespace Aazsamir\Stasphp\Graphpql\Query;
 class AllImages implements \Aazsamir\Graphpql\Model\Query
 {
     public const NAME = 'allImages';
-    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphpql\Image';
+    public const RETURN_TYPE = '\Aazsamir\Stasphp\Graphql\Image';
 
-    private \Aazsamir\Stasphp\Graphpql\SelectionSet\ImageSelectionSet $selection;
+    private \Aazsamir\Stasphp\Graphql\SelectionSet\ImageSelectionSet $selection;
     private \Aazsamir\Graphpql\Client\GraphqlClient $graphqlClient;
 
     public static function getName(): string
@@ -36,12 +36,12 @@ class AllImages implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @param callable(\Aazsamir\Stasphp\Graphpql\SelectionSet\ImageSelectionSet): void $selection
+     * @param callable(\Aazsamir\Stasphp\Graphql\SelectionSet\ImageSelectionSet): void $selection
      */
     public function selector(callable $selection): self
     {
         if (!isset($this->child)) {
-            $this->selection = \Aazsamir\Stasphp\Graphpql\SelectionSet\ImageSelectionSet::new();
+            $this->selection = \Aazsamir\Stasphp\Graphql\SelectionSet\ImageSelectionSet::new();
         }
 
         $selection($this->selection);
@@ -49,14 +49,14 @@ class AllImages implements \Aazsamir\Graphpql\Model\Query
         return $this;
     }
 
-    public function setSelection(\Aazsamir\Stasphp\Graphpql\SelectionSet\ImageSelectionSet $selection): self
+    public function setSelection(\Aazsamir\Stasphp\Graphql\SelectionSet\ImageSelectionSet $selection): self
     {
         $this->selection = $selection;
 
         return $this;
     }
 
-    public function getSelectionSet(): \Aazsamir\Stasphp\Graphpql\SelectionSet\ImageSelectionSet
+    public function getSelectionSet(): \Aazsamir\Stasphp\Graphql\SelectionSet\ImageSelectionSet
     {
         return isset($this->selection) ? $this->selection : new \Aazsamir\Graphpql\Model\NullSelectionSet;
     }
@@ -70,7 +70,7 @@ class AllImages implements \Aazsamir\Graphpql\Model\Query
     }
 
     /**
-     * @return array<\Aazsamir\Stasphp\Graphpql\Image>
+     * @return array<\Aazsamir\Stasphp\Graphql\Image>
      */
     public function do(): ?array
     {

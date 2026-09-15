@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class ScrapedImage implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -18,88 +18,88 @@ class ScrapedImage implements \Aazsamir\Graphpql\Model\GraphObject
     public ?string $date;
     public ?ScrapedStudio $studio;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\ScrapedTag> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\ScrapedTag> */
     public ?array $tags;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\ScrapedPerformer> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\ScrapedPerformer> */
     public ?array $performers;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField<mixed>
      */
     public static function title(): Fields\ScrapedImageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField::title();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField::title();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField<mixed>
      */
     public static function code(): Fields\ScrapedImageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField::code();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField::code();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField<mixed>
      */
     public static function details(): Fields\ScrapedImageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField::details();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField::details();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField<mixed>
      */
     public static function photographer(): Fields\ScrapedImageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField::photographer();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField::photographer();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField<mixed>
      */
     public static function urls(): Fields\ScrapedImageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField::urls();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField::urls();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField<mixed>
      */
     public static function date(): Fields\ScrapedImageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField::date();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField::date();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedStudioSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedStudioSelectionSet>
      */
     public static function studio(): Fields\ScrapedImageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField::studio();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField::studio();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedTagSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedTagSelectionSet>
      */
     public static function tags(): Fields\ScrapedImageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField::tags();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField::tags();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField<\Aazsamir\Stasphp\Graphpql\SelectionSet\ScrapedPerformerSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField<\Aazsamir\Stasphp\Graphql\SelectionSet\ScrapedPerformerSelectionSet>
      */
     public static function performers(): Fields\ScrapedImageField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\ScrapedImageField::performers();
+        return \Aazsamir\Stasphp\Graphql\Fields\ScrapedImageField::performers();
     }
 
     /**
      * @param array<string> $urls
-     * @param array<\Aazsamir\Stasphp\Graphpql\ScrapedTag> $tags
-     * @param array<\Aazsamir\Stasphp\Graphpql\ScrapedPerformer> $performers
+     * @param array<\Aazsamir\Stasphp\Graphql\ScrapedTag> $tags
+     * @param array<\Aazsamir\Stasphp\Graphql\ScrapedPerformer> $performers
      */
     public static function new(
         ?string $title = null,
@@ -154,7 +154,7 @@ class ScrapedImage implements \Aazsamir\Graphpql\Model\GraphObject
             $self->date = $data['date'];
         }
         if (isset($data['studio'])) {
-            $self->studio = \Aazsamir\Stasphp\Graphpql\ScrapedStudio::fromArray($data['studio']);
+            $self->studio = \Aazsamir\Stasphp\Graphql\ScrapedStudio::fromArray($data['studio']);
         }
         if (isset($data['tags'])) {
             $self->tags = array_map(function ($data) {
@@ -162,7 +162,7 @@ class ScrapedImage implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\ScrapedTag::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\ScrapedTag::fromArray($data);
             }, $data['tags'] ?? []);
         }
         if (isset($data['performers'])) {
@@ -171,7 +171,7 @@ class ScrapedImage implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\ScrapedPerformer::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\ScrapedPerformer::fromArray($data);
             }, $data['performers'] ?? []);
         }
 

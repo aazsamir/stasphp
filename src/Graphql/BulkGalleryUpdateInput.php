@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class BulkGalleryUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -88,7 +88,7 @@ class BulkGalleryUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->url = $data['url'];
         }
         if (isset($data['urls'])) {
-            $self->urls = \Aazsamir\Stasphp\Graphpql\BulkUpdateStrings::fromArray($data['urls']);
+            $self->urls = \Aazsamir\Stasphp\Graphql\BulkUpdateStrings::fromArray($data['urls']);
         }
         if (isset($data['date'])) {
             $self->date = $data['date'];
@@ -106,19 +106,19 @@ class BulkGalleryUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->organized = $data['organized'];
         }
         if (isset($data['scene_ids'])) {
-            $self->scene_ids = \Aazsamir\Stasphp\Graphpql\BulkUpdateIds::fromArray($data['scene_ids']);
+            $self->scene_ids = \Aazsamir\Stasphp\Graphql\BulkUpdateIds::fromArray($data['scene_ids']);
         }
         if (isset($data['studio_id'])) {
             $self->studio_id = $data['studio_id'];
         }
         if (isset($data['tag_ids'])) {
-            $self->tag_ids = \Aazsamir\Stasphp\Graphpql\BulkUpdateIds::fromArray($data['tag_ids']);
+            $self->tag_ids = \Aazsamir\Stasphp\Graphql\BulkUpdateIds::fromArray($data['tag_ids']);
         }
         if (isset($data['performer_ids'])) {
-            $self->performer_ids = \Aazsamir\Stasphp\Graphpql\BulkUpdateIds::fromArray($data['performer_ids']);
+            $self->performer_ids = \Aazsamir\Stasphp\Graphql\BulkUpdateIds::fromArray($data['performer_ids']);
         }
         if (isset($data['custom_fields'])) {
-            $self->custom_fields = \Aazsamir\Stasphp\Graphpql\CustomFieldsInput::fromArray($data['custom_fields']);
+            $self->custom_fields = \Aazsamir\Stasphp\Graphql\CustomFieldsInput::fromArray($data['custom_fields']);
         }
 
         return $self;

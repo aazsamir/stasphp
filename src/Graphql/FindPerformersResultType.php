@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class FindPerformersResultType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -10,27 +10,27 @@ class FindPerformersResultType implements \Aazsamir\Graphpql\Model\GraphObject
 
     public int $count;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\Performer> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\Performer> */
     public array $performers;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindPerformersResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindPerformersResultTypeField<mixed>
      */
     public static function count(): Fields\FindPerformersResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindPerformersResultTypeField::count();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindPerformersResultTypeField::count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindPerformersResultTypeField<\Aazsamir\Stasphp\Graphpql\SelectionSet\PerformerSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindPerformersResultTypeField<\Aazsamir\Stasphp\Graphql\SelectionSet\PerformerSelectionSet>
      */
     public static function performers(): Fields\FindPerformersResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindPerformersResultTypeField::performers();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindPerformersResultTypeField::performers();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\Performer> $performers
+     * @param array<\Aazsamir\Stasphp\Graphql\Performer> $performers
      */
     public static function new(int $count, array $performers): self
     {
@@ -53,7 +53,7 @@ class FindPerformersResultType implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\Performer::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\Performer::fromArray($data);
             }, $data['performers'] ?? []);
         }
 

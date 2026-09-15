@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class VideoCaption implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -12,19 +12,19 @@ class VideoCaption implements \Aazsamir\Graphpql\Model\GraphObject
     public string $caption_type;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoCaptionField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoCaptionField<mixed>
      */
     public static function language_code(): Fields\VideoCaptionField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoCaptionField::language_code();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoCaptionField::language_code();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\VideoCaptionField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\VideoCaptionField<mixed>
      */
     public static function caption_type(): Fields\VideoCaptionField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\VideoCaptionField::caption_type();
+        return \Aazsamir\Stasphp\Graphql\Fields\VideoCaptionField::caption_type();
     }
 
     public static function new(string $language_code, string $caption_type): self

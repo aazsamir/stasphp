@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class PerformerMergeInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -42,7 +42,7 @@ class PerformerMergeInput implements \Aazsamir\Graphpql\Model\GraphObject
             $self->destination = $data['destination'];
         }
         if (isset($data['values'])) {
-            $self->values = \Aazsamir\Stasphp\Graphpql\PerformerUpdateInput::fromArray($data['values']);
+            $self->values = \Aazsamir\Stasphp\Graphql\PerformerUpdateInput::fromArray($data['values']);
         }
 
         return $self;

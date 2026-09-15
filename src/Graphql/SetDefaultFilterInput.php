@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class SetDefaultFilterInput implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -32,10 +32,10 @@ class SetDefaultFilterInput implements \Aazsamir\Graphpql\Model\GraphObject
     {
         $self = new self();
         if (isset($data['mode'])) {
-            $self->mode = \Aazsamir\Stasphp\Graphpql\FilterMode::from($data['mode']);
+            $self->mode = \Aazsamir\Stasphp\Graphql\FilterMode::from($data['mode']);
         }
         if (isset($data['find_filter'])) {
-            $self->find_filter = \Aazsamir\Stasphp\Graphpql\FindFilterType::fromArray($data['find_filter']);
+            $self->find_filter = \Aazsamir\Stasphp\Graphql\FindFilterType::fromArray($data['find_filter']);
         }
         if (isset($data['object_filter'])) {
             $self->object_filter = $data['object_filter'];

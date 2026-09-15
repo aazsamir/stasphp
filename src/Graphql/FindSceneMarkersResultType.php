@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class FindSceneMarkersResultType implements \Aazsamir\Graphpql\Model\GraphObject
 {
@@ -10,27 +10,27 @@ class FindSceneMarkersResultType implements \Aazsamir\Graphpql\Model\GraphObject
 
     public int $count;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\SceneMarker> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\SceneMarker> */
     public array $scene_markers;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindSceneMarkersResultTypeField<mixed>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindSceneMarkersResultTypeField<mixed>
      */
     public static function count(): Fields\FindSceneMarkersResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindSceneMarkersResultTypeField::count();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindSceneMarkersResultTypeField::count();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\FindSceneMarkersResultTypeField<\Aazsamir\Stasphp\Graphpql\SelectionSet\SceneMarkerSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\FindSceneMarkersResultTypeField<\Aazsamir\Stasphp\Graphql\SelectionSet\SceneMarkerSelectionSet>
      */
     public static function scene_markers(): Fields\FindSceneMarkersResultTypeField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\FindSceneMarkersResultTypeField::scene_markers();
+        return \Aazsamir\Stasphp\Graphql\Fields\FindSceneMarkersResultTypeField::scene_markers();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\SceneMarker> $scene_markers
+     * @param array<\Aazsamir\Stasphp\Graphql\SceneMarker> $scene_markers
      */
     public static function new(int $count, array $scene_markers): self
     {
@@ -53,7 +53,7 @@ class FindSceneMarkersResultType implements \Aazsamir\Graphpql\Model\GraphObject
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\SceneMarker::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\SceneMarker::fromArray($data);
             }, $data['scene_markers'] ?? []);
         }
 

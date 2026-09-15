@@ -2,34 +2,34 @@
 
 declare(strict_types=1);
 
-namespace Aazsamir\Stasphp\Graphpql;
+namespace Aazsamir\Stasphp\Graphql;
 
 class IdentifyMetadataTaskOptions implements \Aazsamir\Graphpql\Model\GraphObject
 {
     use \Aazsamir\Graphpql\Model\ToArray;
 
-    /** @var array<\Aazsamir\Stasphp\Graphpql\IdentifySource> */
+    /** @var array<\Aazsamir\Stasphp\Graphql\IdentifySource> */
     public array $sources;
     public ?IdentifyMetadataOptions $options;
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataTaskOptionsField<\Aazsamir\Stasphp\Graphpql\SelectionSet\IdentifySourceSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataTaskOptionsField<\Aazsamir\Stasphp\Graphql\SelectionSet\IdentifySourceSelectionSet>
      */
     public static function sources(): Fields\IdentifyMetadataTaskOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataTaskOptionsField::sources();
+        return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataTaskOptionsField::sources();
     }
 
     /**
-     * @return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataTaskOptionsField<\Aazsamir\Stasphp\Graphpql\SelectionSet\IdentifyMetadataOptionsSelectionSet>
+     * @return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataTaskOptionsField<\Aazsamir\Stasphp\Graphql\SelectionSet\IdentifyMetadataOptionsSelectionSet>
      */
     public static function options(): Fields\IdentifyMetadataTaskOptionsField
     {
-        return \Aazsamir\Stasphp\Graphpql\Fields\IdentifyMetadataTaskOptionsField::options();
+        return \Aazsamir\Stasphp\Graphql\Fields\IdentifyMetadataTaskOptionsField::options();
     }
 
     /**
-     * @param array<\Aazsamir\Stasphp\Graphpql\IdentifySource> $sources
+     * @param array<\Aazsamir\Stasphp\Graphql\IdentifySource> $sources
      */
     public static function new(array $sources, ?IdentifyMetadataOptions $options = null): self
     {
@@ -49,11 +49,11 @@ class IdentifyMetadataTaskOptions implements \Aazsamir\Graphpql\Model\GraphObjec
                     return [];
                 }
 
-                return \Aazsamir\Stasphp\Graphpql\IdentifySource::fromArray($data);
+                return \Aazsamir\Stasphp\Graphql\IdentifySource::fromArray($data);
             }, $data['sources'] ?? []);
         }
         if (isset($data['options'])) {
-            $self->options = \Aazsamir\Stasphp\Graphpql\IdentifyMetadataOptions::fromArray($data['options']);
+            $self->options = \Aazsamir\Stasphp\Graphql\IdentifyMetadataOptions::fromArray($data['options']);
         }
 
         return $self;
