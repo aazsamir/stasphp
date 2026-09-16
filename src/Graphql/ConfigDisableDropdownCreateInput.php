@@ -34,19 +34,19 @@ class ConfigDisableDropdownCreateInput implements \Aazsamir\Graphpql\Model\Graph
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['performer'])) {
+        if (array_key_exists('performer', $data)) {
             $self->performer = $data['performer'];
         }
-        if (isset($data['tag'])) {
+        if (array_key_exists('tag', $data)) {
             $self->tag = $data['tag'];
         }
-        if (isset($data['studio'])) {
+        if (array_key_exists('studio', $data)) {
             $self->studio = $data['studio'];
         }
-        if (isset($data['movie'])) {
+        if (array_key_exists('movie', $data)) {
             $self->movie = $data['movie'];
         }
-        if (isset($data['gallery'])) {
+        if (array_key_exists('gallery', $data)) {
             $self->gallery = $data['gallery'];
         }
 

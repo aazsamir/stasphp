@@ -74,19 +74,19 @@ class GeneratePreviewOptions implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['previewSegments'])) {
+        if (array_key_exists('previewSegments', $data)) {
             $self->previewSegments = $data['previewSegments'];
         }
-        if (isset($data['previewSegmentDuration'])) {
+        if (array_key_exists('previewSegmentDuration', $data)) {
             $self->previewSegmentDuration = $data['previewSegmentDuration'];
         }
-        if (isset($data['previewExcludeStart'])) {
+        if (array_key_exists('previewExcludeStart', $data)) {
             $self->previewExcludeStart = $data['previewExcludeStart'];
         }
-        if (isset($data['previewExcludeEnd'])) {
+        if (array_key_exists('previewExcludeEnd', $data)) {
             $self->previewExcludeEnd = $data['previewExcludeEnd'];
         }
-        if (isset($data['previewPreset'])) {
+        if (array_key_exists('previewPreset', $data)) {
             $self->previewPreset = \Aazsamir\Stasphp\Graphql\PreviewPreset::from($data['previewPreset']);
         }
 

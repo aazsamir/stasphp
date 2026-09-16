@@ -64,16 +64,16 @@ class FindImagesResultType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['count'])) {
+        if (array_key_exists('count', $data)) {
             $self->count = $data['count'];
         }
-        if (isset($data['megapixels'])) {
+        if (array_key_exists('megapixels', $data)) {
             $self->megapixels = $data['megapixels'];
         }
-        if (isset($data['filesize'])) {
+        if (array_key_exists('filesize', $data)) {
             $self->filesize = $data['filesize'];
         }
-        if (isset($data['images'])) {
+        if (array_key_exists('images', $data)) {
             $self->images = array_map(function ($data) {
                 if ($data === []) {
                     return [];

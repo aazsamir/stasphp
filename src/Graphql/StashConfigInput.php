@@ -25,13 +25,13 @@ class StashConfigInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['path'])) {
+        if (array_key_exists('path', $data)) {
             $self->path = $data['path'];
         }
-        if (isset($data['excludeVideo'])) {
+        if (array_key_exists('excludeVideo', $data)) {
             $self->excludeVideo = $data['excludeVideo'];
         }
-        if (isset($data['excludeImage'])) {
+        if (array_key_exists('excludeImage', $data)) {
             $self->excludeImage = $data['excludeImage'];
         }
 

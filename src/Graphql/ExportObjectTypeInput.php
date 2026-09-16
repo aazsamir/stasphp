@@ -27,7 +27,7 @@ class ExportObjectTypeInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['ids'])) {
+        if (array_key_exists('ids', $data)) {
             $self->ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -36,7 +36,7 @@ class ExportObjectTypeInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['ids'] ?? []);
         }
-        if (isset($data['all'])) {
+        if (array_key_exists('all', $data)) {
             $self->all = $data['all'];
         }
 

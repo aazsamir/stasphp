@@ -39,10 +39,10 @@ class SceneGroup implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['group'])) {
+        if (array_key_exists('group', $data)) {
             $self->group = \Aazsamir\Stasphp\Graphql\Group::fromArray($data['group']);
         }
-        if (isset($data['scene_index'])) {
+        if (array_key_exists('scene_index', $data)) {
             $self->scene_index = $data['scene_index'];
         }
 

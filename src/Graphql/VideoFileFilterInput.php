@@ -52,37 +52,37 @@ class VideoFileFilterInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['resolution'])) {
+        if (array_key_exists('resolution', $data)) {
             $self->resolution = \Aazsamir\Stasphp\Graphql\ResolutionCriterionInput::fromArray($data['resolution']);
         }
-        if (isset($data['orientation'])) {
+        if (array_key_exists('orientation', $data)) {
             $self->orientation = \Aazsamir\Stasphp\Graphql\OrientationCriterionInput::fromArray($data['orientation']);
         }
-        if (isset($data['framerate'])) {
+        if (array_key_exists('framerate', $data)) {
             $self->framerate = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['framerate']);
         }
-        if (isset($data['bitrate'])) {
+        if (array_key_exists('bitrate', $data)) {
             $self->bitrate = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['bitrate']);
         }
-        if (isset($data['format'])) {
+        if (array_key_exists('format', $data)) {
             $self->format = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['format']);
         }
-        if (isset($data['video_codec'])) {
+        if (array_key_exists('video_codec', $data)) {
             $self->video_codec = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['video_codec']);
         }
-        if (isset($data['audio_codec'])) {
+        if (array_key_exists('audio_codec', $data)) {
             $self->audio_codec = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['audio_codec']);
         }
-        if (isset($data['duration'])) {
+        if (array_key_exists('duration', $data)) {
             $self->duration = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['duration']);
         }
-        if (isset($data['captions'])) {
+        if (array_key_exists('captions', $data)) {
             $self->captions = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['captions']);
         }
-        if (isset($data['interactive'])) {
+        if (array_key_exists('interactive', $data)) {
             $self->interactive = $data['interactive'];
         }
-        if (isset($data['interactive_speed'])) {
+        if (array_key_exists('interactive_speed', $data)) {
             $self->interactive_speed = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['interactive_speed']);
         }
 

@@ -29,10 +29,10 @@ class CleanMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['dryRun'])) {
+        if (array_key_exists('dryRun', $data)) {
             $self->dryRun = $data['dryRun'];
         }
-        if (isset($data['paths'])) {
+        if (array_key_exists('paths', $data)) {
             $self->paths = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -41,7 +41,7 @@ class CleanMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['paths'] ?? []);
         }
-        if (isset($data['ignoreZipFileContents'])) {
+        if (array_key_exists('ignoreZipFileContents', $data)) {
             $self->ignoreZipFileContents = $data['ignoreZipFileContents'];
         }
 

@@ -69,19 +69,19 @@ class StashBoxBatchTagInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['refresh'])) {
+        if (array_key_exists('refresh', $data)) {
             $self->refresh = $data['refresh'];
         }
-        if (isset($data['createParent'])) {
+        if (array_key_exists('createParent', $data)) {
             $self->createParent = $data['createParent'];
         }
-        if (isset($data['endpoint'])) {
+        if (array_key_exists('endpoint', $data)) {
             $self->endpoint = $data['endpoint'];
         }
-        if (isset($data['stash_box_endpoint'])) {
+        if (array_key_exists('stash_box_endpoint', $data)) {
             $self->stash_box_endpoint = $data['stash_box_endpoint'];
         }
-        if (isset($data['exclude_fields'])) {
+        if (array_key_exists('exclude_fields', $data)) {
             $self->exclude_fields = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -90,7 +90,7 @@ class StashBoxBatchTagInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['exclude_fields'] ?? []);
         }
-        if (isset($data['ids'])) {
+        if (array_key_exists('ids', $data)) {
             $self->ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -99,7 +99,7 @@ class StashBoxBatchTagInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['ids'] ?? []);
         }
-        if (isset($data['names'])) {
+        if (array_key_exists('names', $data)) {
             $self->names = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -108,7 +108,7 @@ class StashBoxBatchTagInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['names'] ?? []);
         }
-        if (isset($data['stash_ids'])) {
+        if (array_key_exists('stash_ids', $data)) {
             $self->stash_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -117,7 +117,7 @@ class StashBoxBatchTagInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['stash_ids'] ?? []);
         }
-        if (isset($data['performer_ids'])) {
+        if (array_key_exists('performer_ids', $data)) {
             $self->performer_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -126,7 +126,7 @@ class StashBoxBatchTagInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['performer_ids'] ?? []);
         }
-        if (isset($data['performer_names'])) {
+        if (array_key_exists('performer_names', $data)) {
             $self->performer_names = array_map(function ($data) {
                 if ($data === []) {
                     return [];

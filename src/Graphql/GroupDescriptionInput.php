@@ -23,10 +23,10 @@ class GroupDescriptionInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['group_id'])) {
+        if (array_key_exists('group_id', $data)) {
             $self->group_id = $data['group_id'];
         }
-        if (isset($data['description'])) {
+        if (array_key_exists('description', $data)) {
             $self->description = $data['description'];
         }
 

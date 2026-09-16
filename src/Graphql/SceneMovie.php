@@ -39,10 +39,10 @@ class SceneMovie implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['movie'])) {
+        if (array_key_exists('movie', $data)) {
             $self->movie = \Aazsamir\Stasphp\Graphql\Movie::fromArray($data['movie']);
         }
-        if (isset($data['scene_index'])) {
+        if (array_key_exists('scene_index', $data)) {
             $self->scene_index = $data['scene_index'];
         }
 

@@ -44,10 +44,10 @@ class SceneMarkerTag implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['tag'])) {
+        if (array_key_exists('tag', $data)) {
             $self->tag = \Aazsamir\Stasphp\Graphql\Tag::fromArray($data['tag']);
         }
-        if (isset($data['scene_markers'])) {
+        if (array_key_exists('scene_markers', $data)) {
             $self->scene_markers = array_map(function ($data) {
                 if ($data === []) {
                     return [];

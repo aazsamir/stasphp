@@ -37,22 +37,22 @@ class ConfigDefaultSettingsInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['scan'])) {
+        if (array_key_exists('scan', $data)) {
             $self->scan = \Aazsamir\Stasphp\Graphql\ScanMetadataInput::fromArray($data['scan']);
         }
-        if (isset($data['identify'])) {
+        if (array_key_exists('identify', $data)) {
             $self->identify = \Aazsamir\Stasphp\Graphql\IdentifyMetadataInput::fromArray($data['identify']);
         }
-        if (isset($data['autoTag'])) {
+        if (array_key_exists('autoTag', $data)) {
             $self->autoTag = \Aazsamir\Stasphp\Graphql\AutoTagMetadataInput::fromArray($data['autoTag']);
         }
-        if (isset($data['generate'])) {
+        if (array_key_exists('generate', $data)) {
             $self->generate = \Aazsamir\Stasphp\Graphql\GenerateMetadataInput::fromArray($data['generate']);
         }
-        if (isset($data['deleteFile'])) {
+        if (array_key_exists('deleteFile', $data)) {
             $self->deleteFile = $data['deleteFile'];
         }
-        if (isset($data['deleteGenerated'])) {
+        if (array_key_exists('deleteGenerated', $data)) {
             $self->deleteGenerated = $data['deleteGenerated'];
         }
 

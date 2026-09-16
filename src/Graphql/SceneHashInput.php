@@ -23,10 +23,10 @@ class SceneHashInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['checksum'])) {
+        if (array_key_exists('checksum', $data)) {
             $self->checksum = $data['checksum'];
         }
-        if (isset($data['oshash'])) {
+        if (array_key_exists('oshash', $data)) {
             $self->oshash = $data['oshash'];
         }
 

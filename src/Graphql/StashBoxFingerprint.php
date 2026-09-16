@@ -49,13 +49,13 @@ class StashBoxFingerprint implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['algorithm'])) {
+        if (array_key_exists('algorithm', $data)) {
             $self->algorithm = $data['algorithm'];
         }
-        if (isset($data['hash'])) {
+        if (array_key_exists('hash', $data)) {
             $self->hash = $data['hash'];
         }
-        if (isset($data['duration'])) {
+        if (array_key_exists('duration', $data)) {
             $self->duration = $data['duration'];
         }
 

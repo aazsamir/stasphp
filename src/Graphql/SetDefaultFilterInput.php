@@ -31,16 +31,16 @@ class SetDefaultFilterInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['mode'])) {
+        if (array_key_exists('mode', $data)) {
             $self->mode = \Aazsamir\Stasphp\Graphql\FilterMode::from($data['mode']);
         }
-        if (isset($data['find_filter'])) {
+        if (array_key_exists('find_filter', $data)) {
             $self->find_filter = \Aazsamir\Stasphp\Graphql\FindFilterType::fromArray($data['find_filter']);
         }
-        if (isset($data['object_filter'])) {
+        if (array_key_exists('object_filter', $data)) {
             $self->object_filter = $data['object_filter'];
         }
-        if (isset($data['ui_options'])) {
+        if (array_key_exists('ui_options', $data)) {
             $self->ui_options = $data['ui_options'];
         }
 

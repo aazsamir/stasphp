@@ -45,10 +45,10 @@ class BulkMovieUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['clientMutationId'])) {
+        if (array_key_exists('clientMutationId', $data)) {
             $self->clientMutationId = $data['clientMutationId'];
         }
-        if (isset($data['ids'])) {
+        if (array_key_exists('ids', $data)) {
             $self->ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -57,19 +57,19 @@ class BulkMovieUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['ids'] ?? []);
         }
-        if (isset($data['rating100'])) {
+        if (array_key_exists('rating100', $data)) {
             $self->rating100 = $data['rating100'];
         }
-        if (isset($data['studio_id'])) {
+        if (array_key_exists('studio_id', $data)) {
             $self->studio_id = $data['studio_id'];
         }
-        if (isset($data['director'])) {
+        if (array_key_exists('director', $data)) {
             $self->director = $data['director'];
         }
-        if (isset($data['urls'])) {
+        if (array_key_exists('urls', $data)) {
             $self->urls = \Aazsamir\Stasphp\Graphql\BulkUpdateStrings::fromArray($data['urls']);
         }
-        if (isset($data['tag_ids'])) {
+        if (array_key_exists('tag_ids', $data)) {
             $self->tag_ids = \Aazsamir\Stasphp\Graphql\BulkUpdateIds::fromArray($data['tag_ids']);
         }
 

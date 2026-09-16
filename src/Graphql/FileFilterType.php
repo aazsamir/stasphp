@@ -87,37 +87,37 @@ class FileFilterType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['AND'])) {
+        if (array_key_exists('AND', $data)) {
             $self->AND = \Aazsamir\Stasphp\Graphql\FileFilterType::fromArray($data['AND']);
         }
-        if (isset($data['OR'])) {
+        if (array_key_exists('OR', $data)) {
             $self->OR = \Aazsamir\Stasphp\Graphql\FileFilterType::fromArray($data['OR']);
         }
-        if (isset($data['NOT'])) {
+        if (array_key_exists('NOT', $data)) {
             $self->NOT = \Aazsamir\Stasphp\Graphql\FileFilterType::fromArray($data['NOT']);
         }
-        if (isset($data['path'])) {
+        if (array_key_exists('path', $data)) {
             $self->path = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['path']);
         }
-        if (isset($data['basename'])) {
+        if (array_key_exists('basename', $data)) {
             $self->basename = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['basename']);
         }
-        if (isset($data['dir'])) {
+        if (array_key_exists('dir', $data)) {
             $self->dir = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['dir']);
         }
-        if (isset($data['parent_folder'])) {
+        if (array_key_exists('parent_folder', $data)) {
             $self->parent_folder = \Aazsamir\Stasphp\Graphql\HierarchicalMultiCriterionInput::fromArray($data['parent_folder']);
         }
-        if (isset($data['zip_file'])) {
+        if (array_key_exists('zip_file', $data)) {
             $self->zip_file = \Aazsamir\Stasphp\Graphql\MultiCriterionInput::fromArray($data['zip_file']);
         }
-        if (isset($data['mod_time'])) {
+        if (array_key_exists('mod_time', $data)) {
             $self->mod_time = \Aazsamir\Stasphp\Graphql\TimestampCriterionInput::fromArray($data['mod_time']);
         }
-        if (isset($data['duplicated'])) {
+        if (array_key_exists('duplicated', $data)) {
             $self->duplicated = \Aazsamir\Stasphp\Graphql\FileDuplicationCriterionInput::fromArray($data['duplicated']);
         }
-        if (isset($data['hashes'])) {
+        if (array_key_exists('hashes', $data)) {
             $self->hashes = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -126,34 +126,34 @@ class FileFilterType implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\FingerprintFilterInput::fromArray($data);
             }, $data['hashes'] ?? []);
         }
-        if (isset($data['video_file_filter'])) {
+        if (array_key_exists('video_file_filter', $data)) {
             $self->video_file_filter = \Aazsamir\Stasphp\Graphql\VideoFileFilterInput::fromArray($data['video_file_filter']);
         }
-        if (isset($data['image_file_filter'])) {
+        if (array_key_exists('image_file_filter', $data)) {
             $self->image_file_filter = \Aazsamir\Stasphp\Graphql\ImageFileFilterInput::fromArray($data['image_file_filter']);
         }
-        if (isset($data['scene_count'])) {
+        if (array_key_exists('scene_count', $data)) {
             $self->scene_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['scene_count']);
         }
-        if (isset($data['image_count'])) {
+        if (array_key_exists('image_count', $data)) {
             $self->image_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['image_count']);
         }
-        if (isset($data['gallery_count'])) {
+        if (array_key_exists('gallery_count', $data)) {
             $self->gallery_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['gallery_count']);
         }
-        if (isset($data['scenes_filter'])) {
+        if (array_key_exists('scenes_filter', $data)) {
             $self->scenes_filter = \Aazsamir\Stasphp\Graphql\SceneFilterType::fromArray($data['scenes_filter']);
         }
-        if (isset($data['images_filter'])) {
+        if (array_key_exists('images_filter', $data)) {
             $self->images_filter = \Aazsamir\Stasphp\Graphql\ImageFilterType::fromArray($data['images_filter']);
         }
-        if (isset($data['galleries_filter'])) {
+        if (array_key_exists('galleries_filter', $data)) {
             $self->galleries_filter = \Aazsamir\Stasphp\Graphql\GalleryFilterType::fromArray($data['galleries_filter']);
         }
-        if (isset($data['created_at'])) {
+        if (array_key_exists('created_at', $data)) {
             $self->created_at = \Aazsamir\Stasphp\Graphql\TimestampCriterionInput::fromArray($data['created_at']);
         }
-        if (isset($data['updated_at'])) {
+        if (array_key_exists('updated_at', $data)) {
             $self->updated_at = \Aazsamir\Stasphp\Graphql\TimestampCriterionInput::fromArray($data['updated_at']);
         }
 

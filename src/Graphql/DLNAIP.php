@@ -39,10 +39,10 @@ class DLNAIP implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['ipAddress'])) {
+        if (array_key_exists('ipAddress', $data)) {
             $self->ipAddress = $data['ipAddress'];
         }
-        if (isset($data['until'])) {
+        if (array_key_exists('until', $data)) {
             $self->until = new \DateTimeImmutable($data['until']);
         }
 

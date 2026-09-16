@@ -23,10 +23,10 @@ class AddTempDLNAIPInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['address'])) {
+        if (array_key_exists('address', $data)) {
             $self->address = $data['address'];
         }
-        if (isset($data['duration'])) {
+        if (array_key_exists('duration', $data)) {
             $self->duration = $data['duration'];
         }
 

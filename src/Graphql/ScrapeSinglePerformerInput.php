@@ -28,13 +28,13 @@ class ScrapeSinglePerformerInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['query'])) {
+        if (array_key_exists('query', $data)) {
             $self->query = $data['query'];
         }
-        if (isset($data['performer_id'])) {
+        if (array_key_exists('performer_id', $data)) {
             $self->performer_id = $data['performer_id'];
         }
-        if (isset($data['performer_input'])) {
+        if (array_key_exists('performer_input', $data)) {
             $self->performer_input = \Aazsamir\Stasphp\Graphql\ScrapedPerformerInput::fromArray($data['performer_input']);
         }
 

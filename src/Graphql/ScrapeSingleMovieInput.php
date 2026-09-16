@@ -28,13 +28,13 @@ class ScrapeSingleMovieInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['query'])) {
+        if (array_key_exists('query', $data)) {
             $self->query = $data['query'];
         }
-        if (isset($data['movie_id'])) {
+        if (array_key_exists('movie_id', $data)) {
             $self->movie_id = $data['movie_id'];
         }
-        if (isset($data['movie_input'])) {
+        if (array_key_exists('movie_input', $data)) {
             $self->movie_input = \Aazsamir\Stasphp\Graphql\ScrapedMovieInput::fromArray($data['movie_input']);
         }
 

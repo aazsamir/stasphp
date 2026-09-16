@@ -28,13 +28,13 @@ class ImageFileFilterInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['format'])) {
+        if (array_key_exists('format', $data)) {
             $self->format = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['format']);
         }
-        if (isset($data['resolution'])) {
+        if (array_key_exists('resolution', $data)) {
             $self->resolution = \Aazsamir\Stasphp\Graphql\ResolutionCriterionInput::fromArray($data['resolution']);
         }
-        if (isset($data['orientation'])) {
+        if (array_key_exists('orientation', $data)) {
             $self->orientation = \Aazsamir\Stasphp\Graphql\OrientationCriterionInput::fromArray($data['orientation']);
         }
 

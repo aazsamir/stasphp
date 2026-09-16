@@ -49,13 +49,13 @@ class LogEntry implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['time'])) {
+        if (array_key_exists('time', $data)) {
             $self->time = new \DateTimeImmutable($data['time']);
         }
-        if (isset($data['level'])) {
+        if (array_key_exists('level', $data)) {
             $self->level = \Aazsamir\Stasphp\Graphql\LogLevel::from($data['level']);
         }
-        if (isset($data['message'])) {
+        if (array_key_exists('message', $data)) {
             $self->message = $data['message'];
         }
 

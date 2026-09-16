@@ -96,25 +96,25 @@ class ConfigImageLightboxResult implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['scrollAttemptsBeforeChange'])) {
+        if (array_key_exists('scrollAttemptsBeforeChange', $data)) {
             $self->scrollAttemptsBeforeChange = $data['scrollAttemptsBeforeChange'];
         }
-        if (isset($data['slideshowDelay'])) {
+        if (array_key_exists('slideshowDelay', $data)) {
             $self->slideshowDelay = $data['slideshowDelay'];
         }
-        if (isset($data['displayMode'])) {
+        if (array_key_exists('displayMode', $data)) {
             $self->displayMode = \Aazsamir\Stasphp\Graphql\ImageLightboxDisplayMode::from($data['displayMode']);
         }
-        if (isset($data['scaleUp'])) {
+        if (array_key_exists('scaleUp', $data)) {
             $self->scaleUp = $data['scaleUp'];
         }
-        if (isset($data['resetZoomOnNav'])) {
+        if (array_key_exists('resetZoomOnNav', $data)) {
             $self->resetZoomOnNav = $data['resetZoomOnNav'];
         }
-        if (isset($data['scrollMode'])) {
+        if (array_key_exists('scrollMode', $data)) {
             $self->scrollMode = \Aazsamir\Stasphp\Graphql\ImageLightboxScrollMode::from($data['scrollMode']);
         }
-        if (isset($data['disableAnimation'])) {
+        if (array_key_exists('disableAnimation', $data)) {
             $self->disableAnimation = $data['disableAnimation'];
         }
 

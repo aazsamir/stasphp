@@ -226,22 +226,22 @@ class ScrapedScene implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['title'])) {
+        if (array_key_exists('title', $data)) {
             $self->title = $data['title'];
         }
-        if (isset($data['code'])) {
+        if (array_key_exists('code', $data)) {
             $self->code = $data['code'];
         }
-        if (isset($data['details'])) {
+        if (array_key_exists('details', $data)) {
             $self->details = $data['details'];
         }
-        if (isset($data['director'])) {
+        if (array_key_exists('director', $data)) {
             $self->director = $data['director'];
         }
-        if (isset($data['url'])) {
+        if (array_key_exists('url', $data)) {
             $self->url = $data['url'];
         }
-        if (isset($data['urls'])) {
+        if (array_key_exists('urls', $data)) {
             $self->urls = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -250,19 +250,19 @@ class ScrapedScene implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['urls'] ?? []);
         }
-        if (isset($data['date'])) {
+        if (array_key_exists('date', $data)) {
             $self->date = $data['date'];
         }
-        if (isset($data['image'])) {
+        if (array_key_exists('image', $data)) {
             $self->image = $data['image'];
         }
-        if (isset($data['file'])) {
+        if (array_key_exists('file', $data)) {
             $self->file = \Aazsamir\Stasphp\Graphql\SceneFileType::fromArray($data['file']);
         }
-        if (isset($data['studio'])) {
+        if (array_key_exists('studio', $data)) {
             $self->studio = \Aazsamir\Stasphp\Graphql\ScrapedStudio::fromArray($data['studio']);
         }
-        if (isset($data['tags'])) {
+        if (array_key_exists('tags', $data)) {
             $self->tags = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -271,7 +271,7 @@ class ScrapedScene implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\ScrapedTag::fromArray($data);
             }, $data['tags'] ?? []);
         }
-        if (isset($data['performers'])) {
+        if (array_key_exists('performers', $data)) {
             $self->performers = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -280,7 +280,7 @@ class ScrapedScene implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\ScrapedPerformer::fromArray($data);
             }, $data['performers'] ?? []);
         }
-        if (isset($data['movies'])) {
+        if (array_key_exists('movies', $data)) {
             $self->movies = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -289,7 +289,7 @@ class ScrapedScene implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\ScrapedMovie::fromArray($data);
             }, $data['movies'] ?? []);
         }
-        if (isset($data['groups'])) {
+        if (array_key_exists('groups', $data)) {
             $self->groups = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -298,13 +298,13 @@ class ScrapedScene implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\ScrapedGroup::fromArray($data);
             }, $data['groups'] ?? []);
         }
-        if (isset($data['remote_site_id'])) {
+        if (array_key_exists('remote_site_id', $data)) {
             $self->remote_site_id = $data['remote_site_id'];
         }
-        if (isset($data['duration'])) {
+        if (array_key_exists('duration', $data)) {
             $self->duration = $data['duration'];
         }
-        if (isset($data['fingerprints'])) {
+        if (array_key_exists('fingerprints', $data)) {
             $self->fingerprints = array_map(function ($data) {
                 if ($data === []) {
                     return [];

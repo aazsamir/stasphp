@@ -53,7 +53,7 @@ class IdentifyMetadataOptionsInput implements \Aazsamir\Graphpql\Model\GraphObje
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['fieldOptions'])) {
+        if (array_key_exists('fieldOptions', $data)) {
             $self->fieldOptions = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -62,16 +62,16 @@ class IdentifyMetadataOptionsInput implements \Aazsamir\Graphpql\Model\GraphObje
                 return \Aazsamir\Stasphp\Graphql\IdentifyFieldOptionsInput::fromArray($data);
             }, $data['fieldOptions'] ?? []);
         }
-        if (isset($data['setCoverImage'])) {
+        if (array_key_exists('setCoverImage', $data)) {
             $self->setCoverImage = $data['setCoverImage'];
         }
-        if (isset($data['setOrganized'])) {
+        if (array_key_exists('setOrganized', $data)) {
             $self->setOrganized = $data['setOrganized'];
         }
-        if (isset($data['includeMalePerformers'])) {
+        if (array_key_exists('includeMalePerformers', $data)) {
             $self->includeMalePerformers = $data['includeMalePerformers'];
         }
-        if (isset($data['performerGenders'])) {
+        if (array_key_exists('performerGenders', $data)) {
             $self->performerGenders = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -80,16 +80,16 @@ class IdentifyMetadataOptionsInput implements \Aazsamir\Graphpql\Model\GraphObje
                 return \Aazsamir\Stasphp\Graphql\GenderEnum::from($data);
             }, $data['performerGenders'] ?? []);
         }
-        if (isset($data['skipMultipleMatches'])) {
+        if (array_key_exists('skipMultipleMatches', $data)) {
             $self->skipMultipleMatches = $data['skipMultipleMatches'];
         }
-        if (isset($data['skipMultipleMatchTag'])) {
+        if (array_key_exists('skipMultipleMatchTag', $data)) {
             $self->skipMultipleMatchTag = $data['skipMultipleMatchTag'];
         }
-        if (isset($data['skipSingleNamePerformers'])) {
+        if (array_key_exists('skipSingleNamePerformers', $data)) {
             $self->skipSingleNamePerformers = $data['skipSingleNamePerformers'];
         }
-        if (isset($data['skipSingleNamePerformerTag'])) {
+        if (array_key_exists('skipSingleNamePerformerTag', $data)) {
             $self->skipSingleNamePerformerTag = $data['skipSingleNamePerformerTag'];
         }
 

@@ -23,10 +23,10 @@ class IdentifySourceInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['source'])) {
+        if (array_key_exists('source', $data)) {
             $self->source = \Aazsamir\Stasphp\Graphql\ScraperSourceInput::fromArray($data['source']);
         }
-        if (isset($data['options'])) {
+        if (array_key_exists('options', $data)) {
             $self->options = \Aazsamir\Stasphp\Graphql\IdentifyMetadataOptionsInput::fromArray($data['options']);
         }
 

@@ -39,10 +39,10 @@ class StashBoxValidationResult implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['valid'])) {
+        if (array_key_exists('valid', $data)) {
             $self->valid = $data['valid'];
         }
-        if (isset($data['status'])) {
+        if (array_key_exists('status', $data)) {
             $self->status = $data['status'];
         }
 

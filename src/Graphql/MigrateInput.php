@@ -21,7 +21,7 @@ class MigrateInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['backupPath'])) {
+        if (array_key_exists('backupPath', $data)) {
             $self->backupPath = $data['backupPath'];
         }
 

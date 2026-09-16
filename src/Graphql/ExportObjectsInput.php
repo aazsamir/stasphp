@@ -46,31 +46,31 @@ class ExportObjectsInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['scenes'])) {
+        if (array_key_exists('scenes', $data)) {
             $self->scenes = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['scenes']);
         }
-        if (isset($data['images'])) {
+        if (array_key_exists('images', $data)) {
             $self->images = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['images']);
         }
-        if (isset($data['studios'])) {
+        if (array_key_exists('studios', $data)) {
             $self->studios = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['studios']);
         }
-        if (isset($data['performers'])) {
+        if (array_key_exists('performers', $data)) {
             $self->performers = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['performers']);
         }
-        if (isset($data['tags'])) {
+        if (array_key_exists('tags', $data)) {
             $self->tags = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['tags']);
         }
-        if (isset($data['groups'])) {
+        if (array_key_exists('groups', $data)) {
             $self->groups = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['groups']);
         }
-        if (isset($data['movies'])) {
+        if (array_key_exists('movies', $data)) {
             $self->movies = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['movies']);
         }
-        if (isset($data['galleries'])) {
+        if (array_key_exists('galleries', $data)) {
             $self->galleries = \Aazsamir\Stasphp\Graphql\ExportObjectTypeInput::fromArray($data['galleries']);
         }
-        if (isset($data['includeDependencies'])) {
+        if (array_key_exists('includeDependencies', $data)) {
             $self->includeDependencies = $data['includeDependencies'];
         }
 

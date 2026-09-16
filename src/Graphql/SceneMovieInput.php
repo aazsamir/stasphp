@@ -23,10 +23,10 @@ class SceneMovieInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['movie_id'])) {
+        if (array_key_exists('movie_id', $data)) {
             $self->movie_id = $data['movie_id'];
         }
-        if (isset($data['scene_index'])) {
+        if (array_key_exists('scene_index', $data)) {
             $self->scene_index = $data['scene_index'];
         }
 

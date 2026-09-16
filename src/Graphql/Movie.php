@@ -228,13 +228,13 @@ class Movie implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['urls'])) {
+        if (array_key_exists('urls', $data)) {
             $self->urls = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -243,7 +243,7 @@ class Movie implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['urls'] ?? []);
         }
-        if (isset($data['tags'])) {
+        if (array_key_exists('tags', $data)) {
             $self->tags = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -252,16 +252,16 @@ class Movie implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Tag::fromArray($data);
             }, $data['tags'] ?? []);
         }
-        if (isset($data['created_at'])) {
+        if (array_key_exists('created_at', $data)) {
             $self->created_at = new \DateTimeImmutable($data['created_at']);
         }
-        if (isset($data['updated_at'])) {
+        if (array_key_exists('updated_at', $data)) {
             $self->updated_at = new \DateTimeImmutable($data['updated_at']);
         }
-        if (isset($data['scene_count'])) {
+        if (array_key_exists('scene_count', $data)) {
             $self->scene_count = $data['scene_count'];
         }
-        if (isset($data['scenes'])) {
+        if (array_key_exists('scenes', $data)) {
             $self->scenes = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -270,34 +270,34 @@ class Movie implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Scene::fromArray($data);
             }, $data['scenes'] ?? []);
         }
-        if (isset($data['aliases'])) {
+        if (array_key_exists('aliases', $data)) {
             $self->aliases = $data['aliases'];
         }
-        if (isset($data['duration'])) {
+        if (array_key_exists('duration', $data)) {
             $self->duration = $data['duration'];
         }
-        if (isset($data['date'])) {
+        if (array_key_exists('date', $data)) {
             $self->date = $data['date'];
         }
-        if (isset($data['rating100'])) {
+        if (array_key_exists('rating100', $data)) {
             $self->rating100 = $data['rating100'];
         }
-        if (isset($data['studio'])) {
+        if (array_key_exists('studio', $data)) {
             $self->studio = \Aazsamir\Stasphp\Graphql\Studio::fromArray($data['studio']);
         }
-        if (isset($data['director'])) {
+        if (array_key_exists('director', $data)) {
             $self->director = $data['director'];
         }
-        if (isset($data['synopsis'])) {
+        if (array_key_exists('synopsis', $data)) {
             $self->synopsis = $data['synopsis'];
         }
-        if (isset($data['url'])) {
+        if (array_key_exists('url', $data)) {
             $self->url = $data['url'];
         }
-        if (isset($data['front_image_path'])) {
+        if (array_key_exists('front_image_path', $data)) {
             $self->front_image_path = $data['front_image_path'];
         }
-        if (isset($data['back_image_path'])) {
+        if (array_key_exists('back_image_path', $data)) {
             $self->back_image_path = $data['back_image_path'];
         }
 

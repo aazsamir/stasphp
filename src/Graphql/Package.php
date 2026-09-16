@@ -112,13 +112,13 @@ class Package implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['package_id'])) {
+        if (array_key_exists('package_id', $data)) {
             $self->package_id = $data['package_id'];
         }
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['requires'])) {
+        if (array_key_exists('requires', $data)) {
             $self->requires = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -127,19 +127,19 @@ class Package implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Package::fromArray($data);
             }, $data['requires'] ?? []);
         }
-        if (isset($data['sourceURL'])) {
+        if (array_key_exists('sourceURL', $data)) {
             $self->sourceURL = $data['sourceURL'];
         }
-        if (isset($data['metadata'])) {
+        if (array_key_exists('metadata', $data)) {
             $self->metadata = $data['metadata'];
         }
-        if (isset($data['version'])) {
+        if (array_key_exists('version', $data)) {
             $self->version = $data['version'];
         }
-        if (isset($data['date'])) {
+        if (array_key_exists('date', $data)) {
             $self->date = new \DateTimeImmutable($data['date']);
         }
-        if (isset($data['source_package'])) {
+        if (array_key_exists('source_package', $data)) {
             $self->source_package = \Aazsamir\Stasphp\Graphql\Package::fromArray($data['source_package']);
         }
 

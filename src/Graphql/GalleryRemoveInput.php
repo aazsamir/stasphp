@@ -28,10 +28,10 @@ class GalleryRemoveInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['gallery_id'])) {
+        if (array_key_exists('gallery_id', $data)) {
             $self->gallery_id = $data['gallery_id'];
         }
-        if (isset($data['image_ids'])) {
+        if (array_key_exists('image_ids', $data)) {
             $self->image_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];

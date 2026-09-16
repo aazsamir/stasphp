@@ -21,7 +21,7 @@ class ScanMetaDataFilterInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['minModTime'])) {
+        if (array_key_exists('minModTime', $data)) {
             $self->minModTime = new \DateTimeImmutable($data['minModTime']);
         }
 

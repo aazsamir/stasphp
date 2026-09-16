@@ -81,34 +81,34 @@ class GroupUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['aliases'])) {
+        if (array_key_exists('aliases', $data)) {
             $self->aliases = $data['aliases'];
         }
-        if (isset($data['duration'])) {
+        if (array_key_exists('duration', $data)) {
             $self->duration = $data['duration'];
         }
-        if (isset($data['date'])) {
+        if (array_key_exists('date', $data)) {
             $self->date = $data['date'];
         }
-        if (isset($data['rating100'])) {
+        if (array_key_exists('rating100', $data)) {
             $self->rating100 = $data['rating100'];
         }
-        if (isset($data['studio_id'])) {
+        if (array_key_exists('studio_id', $data)) {
             $self->studio_id = $data['studio_id'];
         }
-        if (isset($data['director'])) {
+        if (array_key_exists('director', $data)) {
             $self->director = $data['director'];
         }
-        if (isset($data['synopsis'])) {
+        if (array_key_exists('synopsis', $data)) {
             $self->synopsis = $data['synopsis'];
         }
-        if (isset($data['urls'])) {
+        if (array_key_exists('urls', $data)) {
             $self->urls = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -117,7 +117,7 @@ class GroupUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['urls'] ?? []);
         }
-        if (isset($data['tag_ids'])) {
+        if (array_key_exists('tag_ids', $data)) {
             $self->tag_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -126,7 +126,7 @@ class GroupUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['tag_ids'] ?? []);
         }
-        if (isset($data['containing_groups'])) {
+        if (array_key_exists('containing_groups', $data)) {
             $self->containing_groups = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -135,7 +135,7 @@ class GroupUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\GroupDescriptionInput::fromArray($data);
             }, $data['containing_groups'] ?? []);
         }
-        if (isset($data['sub_groups'])) {
+        if (array_key_exists('sub_groups', $data)) {
             $self->sub_groups = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -144,13 +144,13 @@ class GroupUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\GroupDescriptionInput::fromArray($data);
             }, $data['sub_groups'] ?? []);
         }
-        if (isset($data['front_image'])) {
+        if (array_key_exists('front_image', $data)) {
             $self->front_image = $data['front_image'];
         }
-        if (isset($data['back_image'])) {
+        if (array_key_exists('back_image', $data)) {
             $self->back_image = $data['back_image'];
         }
-        if (isset($data['custom_fields'])) {
+        if (array_key_exists('custom_fields', $data)) {
             $self->custom_fields = \Aazsamir\Stasphp\Graphql\CustomFieldsInput::fromArray($data['custom_fields']);
         }
 

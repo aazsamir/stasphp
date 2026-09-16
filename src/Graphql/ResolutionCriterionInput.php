@@ -23,10 +23,10 @@ class ResolutionCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['value'])) {
+        if (array_key_exists('value', $data)) {
             $self->value = \Aazsamir\Stasphp\Graphql\ResolutionEnum::from($data['value']);
         }
-        if (isset($data['modifier'])) {
+        if (array_key_exists('modifier', $data)) {
             $self->modifier = \Aazsamir\Stasphp\Graphql\CriterionModifier::from($data['modifier']);
         }
 

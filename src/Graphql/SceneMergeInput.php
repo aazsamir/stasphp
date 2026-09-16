@@ -38,7 +38,7 @@ class SceneMergeInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['source'])) {
+        if (array_key_exists('source', $data)) {
             $self->source = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -47,16 +47,16 @@ class SceneMergeInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['source'] ?? []);
         }
-        if (isset($data['destination'])) {
+        if (array_key_exists('destination', $data)) {
             $self->destination = $data['destination'];
         }
-        if (isset($data['values'])) {
+        if (array_key_exists('values', $data)) {
             $self->values = \Aazsamir\Stasphp\Graphql\SceneUpdateInput::fromArray($data['values']);
         }
-        if (isset($data['play_history'])) {
+        if (array_key_exists('play_history', $data)) {
             $self->play_history = $data['play_history'];
         }
-        if (isset($data['o_history'])) {
+        if (array_key_exists('o_history', $data)) {
             $self->o_history = $data['o_history'];
         }
 

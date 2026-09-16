@@ -45,19 +45,19 @@ class PluginValueInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['str'])) {
+        if (array_key_exists('str', $data)) {
             $self->str = $data['str'];
         }
-        if (isset($data['i'])) {
+        if (array_key_exists('i', $data)) {
             $self->i = $data['i'];
         }
-        if (isset($data['b'])) {
+        if (array_key_exists('b', $data)) {
             $self->b = $data['b'];
         }
-        if (isset($data['f'])) {
+        if (array_key_exists('f', $data)) {
             $self->f = $data['f'];
         }
-        if (isset($data['o'])) {
+        if (array_key_exists('o', $data)) {
             $self->o = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -66,7 +66,7 @@ class PluginValueInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\PluginArgInput::fromArray($data);
             }, $data['o'] ?? []);
         }
-        if (isset($data['a'])) {
+        if (array_key_exists('a', $data)) {
             $self->a = array_map(function ($data) {
                 if ($data === []) {
                     return [];

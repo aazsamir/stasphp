@@ -36,13 +36,13 @@ class StashBoxPerformerQueryInput implements \Aazsamir\Graphpql\Model\GraphObjec
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['stash_box_index'])) {
+        if (array_key_exists('stash_box_index', $data)) {
             $self->stash_box_index = $data['stash_box_index'];
         }
-        if (isset($data['stash_box_endpoint'])) {
+        if (array_key_exists('stash_box_endpoint', $data)) {
             $self->stash_box_endpoint = $data['stash_box_endpoint'];
         }
-        if (isset($data['performer_ids'])) {
+        if (array_key_exists('performer_ids', $data)) {
             $self->performer_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -51,7 +51,7 @@ class StashBoxPerformerQueryInput implements \Aazsamir\Graphpql\Model\GraphObjec
                 return $data;
             }, $data['performer_ids'] ?? []);
         }
-        if (isset($data['q'])) {
+        if (array_key_exists('q', $data)) {
             $self->q = $data['q'];
         }
 

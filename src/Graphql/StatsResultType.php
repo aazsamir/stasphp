@@ -184,49 +184,49 @@ class StatsResultType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['scene_count'])) {
+        if (array_key_exists('scene_count', $data)) {
             $self->scene_count = $data['scene_count'];
         }
-        if (isset($data['scenes_size'])) {
+        if (array_key_exists('scenes_size', $data)) {
             $self->scenes_size = $data['scenes_size'];
         }
-        if (isset($data['scenes_duration'])) {
+        if (array_key_exists('scenes_duration', $data)) {
             $self->scenes_duration = $data['scenes_duration'];
         }
-        if (isset($data['image_count'])) {
+        if (array_key_exists('image_count', $data)) {
             $self->image_count = $data['image_count'];
         }
-        if (isset($data['images_size'])) {
+        if (array_key_exists('images_size', $data)) {
             $self->images_size = $data['images_size'];
         }
-        if (isset($data['gallery_count'])) {
+        if (array_key_exists('gallery_count', $data)) {
             $self->gallery_count = $data['gallery_count'];
         }
-        if (isset($data['performer_count'])) {
+        if (array_key_exists('performer_count', $data)) {
             $self->performer_count = $data['performer_count'];
         }
-        if (isset($data['studio_count'])) {
+        if (array_key_exists('studio_count', $data)) {
             $self->studio_count = $data['studio_count'];
         }
-        if (isset($data['group_count'])) {
+        if (array_key_exists('group_count', $data)) {
             $self->group_count = $data['group_count'];
         }
-        if (isset($data['movie_count'])) {
+        if (array_key_exists('movie_count', $data)) {
             $self->movie_count = $data['movie_count'];
         }
-        if (isset($data['tag_count'])) {
+        if (array_key_exists('tag_count', $data)) {
             $self->tag_count = $data['tag_count'];
         }
-        if (isset($data['total_o_count'])) {
+        if (array_key_exists('total_o_count', $data)) {
             $self->total_o_count = $data['total_o_count'];
         }
-        if (isset($data['total_play_duration'])) {
+        if (array_key_exists('total_play_duration', $data)) {
             $self->total_play_duration = $data['total_play_duration'];
         }
-        if (isset($data['total_play_count'])) {
+        if (array_key_exists('total_play_count', $data)) {
             $self->total_play_count = $data['total_play_count'];
         }
-        if (isset($data['scenes_played'])) {
+        if (array_key_exists('scenes_played', $data)) {
             $self->scenes_played = $data['scenes_played'];
         }
 

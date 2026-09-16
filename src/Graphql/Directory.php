@@ -54,10 +54,10 @@ class Directory implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['path'])) {
+        if (array_key_exists('path', $data)) {
             $self->path = $data['path'];
         }
-        if (isset($data['directories'])) {
+        if (array_key_exists('directories', $data)) {
             $self->directories = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -66,7 +66,7 @@ class Directory implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['directories'] ?? []);
         }
-        if (isset($data['parent'])) {
+        if (array_key_exists('parent', $data)) {
             $self->parent = $data['parent'];
         }
 

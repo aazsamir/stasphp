@@ -36,16 +36,16 @@ class ConfigScrapingInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['scraperUserAgent'])) {
+        if (array_key_exists('scraperUserAgent', $data)) {
             $self->scraperUserAgent = $data['scraperUserAgent'];
         }
-        if (isset($data['scraperCDPPath'])) {
+        if (array_key_exists('scraperCDPPath', $data)) {
             $self->scraperCDPPath = $data['scraperCDPPath'];
         }
-        if (isset($data['scraperCertCheck'])) {
+        if (array_key_exists('scraperCertCheck', $data)) {
             $self->scraperCertCheck = $data['scraperCertCheck'];
         }
-        if (isset($data['excludeTagPatterns'])) {
+        if (array_key_exists('excludeTagPatterns', $data)) {
             $self->excludeTagPatterns = array_map(function ($data) {
                 if ($data === []) {
                     return [];

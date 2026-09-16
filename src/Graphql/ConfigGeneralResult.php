@@ -708,7 +708,7 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['stashes'])) {
+        if (array_key_exists('stashes', $data)) {
             $self->stashes = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -717,76 +717,76 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\StashConfig::fromArray($data);
             }, $data['stashes'] ?? []);
         }
-        if (isset($data['databasePath'])) {
+        if (array_key_exists('databasePath', $data)) {
             $self->databasePath = $data['databasePath'];
         }
-        if (isset($data['backupDirectoryPath'])) {
+        if (array_key_exists('backupDirectoryPath', $data)) {
             $self->backupDirectoryPath = $data['backupDirectoryPath'];
         }
-        if (isset($data['deleteTrashPath'])) {
+        if (array_key_exists('deleteTrashPath', $data)) {
             $self->deleteTrashPath = $data['deleteTrashPath'];
         }
-        if (isset($data['generatedPath'])) {
+        if (array_key_exists('generatedPath', $data)) {
             $self->generatedPath = $data['generatedPath'];
         }
-        if (isset($data['metadataPath'])) {
+        if (array_key_exists('metadataPath', $data)) {
             $self->metadataPath = $data['metadataPath'];
         }
-        if (isset($data['configFilePath'])) {
+        if (array_key_exists('configFilePath', $data)) {
             $self->configFilePath = $data['configFilePath'];
         }
-        if (isset($data['scrapersPath'])) {
+        if (array_key_exists('scrapersPath', $data)) {
             $self->scrapersPath = $data['scrapersPath'];
         }
-        if (isset($data['pluginsPath'])) {
+        if (array_key_exists('pluginsPath', $data)) {
             $self->pluginsPath = $data['pluginsPath'];
         }
-        if (isset($data['cachePath'])) {
+        if (array_key_exists('cachePath', $data)) {
             $self->cachePath = $data['cachePath'];
         }
-        if (isset($data['blobsPath'])) {
+        if (array_key_exists('blobsPath', $data)) {
             $self->blobsPath = $data['blobsPath'];
         }
-        if (isset($data['blobsStorage'])) {
+        if (array_key_exists('blobsStorage', $data)) {
             $self->blobsStorage = \Aazsamir\Stasphp\Graphql\BlobsStorageType::from($data['blobsStorage']);
         }
-        if (isset($data['ffmpegPath'])) {
+        if (array_key_exists('ffmpegPath', $data)) {
             $self->ffmpegPath = $data['ffmpegPath'];
         }
-        if (isset($data['ffprobePath'])) {
+        if (array_key_exists('ffprobePath', $data)) {
             $self->ffprobePath = $data['ffprobePath'];
         }
-        if (isset($data['calculateMD5'])) {
+        if (array_key_exists('calculateMD5', $data)) {
             $self->calculateMD5 = $data['calculateMD5'];
         }
-        if (isset($data['videoFileNamingAlgorithm'])) {
+        if (array_key_exists('videoFileNamingAlgorithm', $data)) {
             $self->videoFileNamingAlgorithm = \Aazsamir\Stasphp\Graphql\HashAlgorithm::from($data['videoFileNamingAlgorithm']);
         }
-        if (isset($data['parallelTasks'])) {
+        if (array_key_exists('parallelTasks', $data)) {
             $self->parallelTasks = $data['parallelTasks'];
         }
-        if (isset($data['previewAudio'])) {
+        if (array_key_exists('previewAudio', $data)) {
             $self->previewAudio = $data['previewAudio'];
         }
-        if (isset($data['previewSegments'])) {
+        if (array_key_exists('previewSegments', $data)) {
             $self->previewSegments = $data['previewSegments'];
         }
-        if (isset($data['previewSegmentDuration'])) {
+        if (array_key_exists('previewSegmentDuration', $data)) {
             $self->previewSegmentDuration = $data['previewSegmentDuration'];
         }
-        if (isset($data['previewExcludeStart'])) {
+        if (array_key_exists('previewExcludeStart', $data)) {
             $self->previewExcludeStart = $data['previewExcludeStart'];
         }
-        if (isset($data['previewExcludeEnd'])) {
+        if (array_key_exists('previewExcludeEnd', $data)) {
             $self->previewExcludeEnd = $data['previewExcludeEnd'];
         }
-        if (isset($data['previewPreset'])) {
+        if (array_key_exists('previewPreset', $data)) {
             $self->previewPreset = \Aazsamir\Stasphp\Graphql\PreviewPreset::from($data['previewPreset']);
         }
-        if (isset($data['transcodeHardwareAcceleration'])) {
+        if (array_key_exists('transcodeHardwareAcceleration', $data)) {
             $self->transcodeHardwareAcceleration = $data['transcodeHardwareAcceleration'];
         }
-        if (isset($data['transcodeInputArgs'])) {
+        if (array_key_exists('transcodeInputArgs', $data)) {
             $self->transcodeInputArgs = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -795,7 +795,7 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['transcodeInputArgs'] ?? []);
         }
-        if (isset($data['transcodeOutputArgs'])) {
+        if (array_key_exists('transcodeOutputArgs', $data)) {
             $self->transcodeOutputArgs = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -804,7 +804,7 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['transcodeOutputArgs'] ?? []);
         }
-        if (isset($data['liveTranscodeInputArgs'])) {
+        if (array_key_exists('liveTranscodeInputArgs', $data)) {
             $self->liveTranscodeInputArgs = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -813,7 +813,7 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['liveTranscodeInputArgs'] ?? []);
         }
-        if (isset($data['liveTranscodeOutputArgs'])) {
+        if (array_key_exists('liveTranscodeOutputArgs', $data)) {
             $self->liveTranscodeOutputArgs = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -822,55 +822,55 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['liveTranscodeOutputArgs'] ?? []);
         }
-        if (isset($data['drawFunscriptHeatmapRange'])) {
+        if (array_key_exists('drawFunscriptHeatmapRange', $data)) {
             $self->drawFunscriptHeatmapRange = $data['drawFunscriptHeatmapRange'];
         }
-        if (isset($data['writeImageThumbnails'])) {
+        if (array_key_exists('writeImageThumbnails', $data)) {
             $self->writeImageThumbnails = $data['writeImageThumbnails'];
         }
-        if (isset($data['createImageClipsFromVideos'])) {
+        if (array_key_exists('createImageClipsFromVideos', $data)) {
             $self->createImageClipsFromVideos = $data['createImageClipsFromVideos'];
         }
-        if (isset($data['apiKey'])) {
+        if (array_key_exists('apiKey', $data)) {
             $self->apiKey = $data['apiKey'];
         }
-        if (isset($data['username'])) {
+        if (array_key_exists('username', $data)) {
             $self->username = $data['username'];
         }
-        if (isset($data['password'])) {
+        if (array_key_exists('password', $data)) {
             $self->password = $data['password'];
         }
-        if (isset($data['maxSessionAge'])) {
+        if (array_key_exists('maxSessionAge', $data)) {
             $self->maxSessionAge = $data['maxSessionAge'];
         }
-        if (isset($data['logOut'])) {
+        if (array_key_exists('logOut', $data)) {
             $self->logOut = $data['logOut'];
         }
-        if (isset($data['logLevel'])) {
+        if (array_key_exists('logLevel', $data)) {
             $self->logLevel = $data['logLevel'];
         }
-        if (isset($data['logAccess'])) {
+        if (array_key_exists('logAccess', $data)) {
             $self->logAccess = $data['logAccess'];
         }
-        if (isset($data['logFileMaxSize'])) {
+        if (array_key_exists('logFileMaxSize', $data)) {
             $self->logFileMaxSize = $data['logFileMaxSize'];
         }
-        if (isset($data['useCustomSpriteInterval'])) {
+        if (array_key_exists('useCustomSpriteInterval', $data)) {
             $self->useCustomSpriteInterval = $data['useCustomSpriteInterval'];
         }
-        if (isset($data['spriteInterval'])) {
+        if (array_key_exists('spriteInterval', $data)) {
             $self->spriteInterval = $data['spriteInterval'];
         }
-        if (isset($data['minimumSprites'])) {
+        if (array_key_exists('minimumSprites', $data)) {
             $self->minimumSprites = $data['minimumSprites'];
         }
-        if (isset($data['maximumSprites'])) {
+        if (array_key_exists('maximumSprites', $data)) {
             $self->maximumSprites = $data['maximumSprites'];
         }
-        if (isset($data['spriteScreenshotSize'])) {
+        if (array_key_exists('spriteScreenshotSize', $data)) {
             $self->spriteScreenshotSize = $data['spriteScreenshotSize'];
         }
-        if (isset($data['videoExtensions'])) {
+        if (array_key_exists('videoExtensions', $data)) {
             $self->videoExtensions = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -879,7 +879,7 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['videoExtensions'] ?? []);
         }
-        if (isset($data['imageExtensions'])) {
+        if (array_key_exists('imageExtensions', $data)) {
             $self->imageExtensions = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -888,7 +888,7 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['imageExtensions'] ?? []);
         }
-        if (isset($data['galleryExtensions'])) {
+        if (array_key_exists('galleryExtensions', $data)) {
             $self->galleryExtensions = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -897,13 +897,13 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['galleryExtensions'] ?? []);
         }
-        if (isset($data['createGalleriesFromFolders'])) {
+        if (array_key_exists('createGalleriesFromFolders', $data)) {
             $self->createGalleriesFromFolders = $data['createGalleriesFromFolders'];
         }
-        if (isset($data['galleryCoverRegex'])) {
+        if (array_key_exists('galleryCoverRegex', $data)) {
             $self->galleryCoverRegex = $data['galleryCoverRegex'];
         }
-        if (isset($data['excludes'])) {
+        if (array_key_exists('excludes', $data)) {
             $self->excludes = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -912,7 +912,7 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['excludes'] ?? []);
         }
-        if (isset($data['imageExcludes'])) {
+        if (array_key_exists('imageExcludes', $data)) {
             $self->imageExcludes = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -921,7 +921,7 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['imageExcludes'] ?? []);
         }
-        if (isset($data['stashBoxes'])) {
+        if (array_key_exists('stashBoxes', $data)) {
             $self->stashBoxes = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -930,10 +930,10 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\StashBox::fromArray($data);
             }, $data['stashBoxes'] ?? []);
         }
-        if (isset($data['pythonPath'])) {
+        if (array_key_exists('pythonPath', $data)) {
             $self->pythonPath = $data['pythonPath'];
         }
-        if (isset($data['scraperPackageSources'])) {
+        if (array_key_exists('scraperPackageSources', $data)) {
             $self->scraperPackageSources = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -942,7 +942,7 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\PackageSource::fromArray($data);
             }, $data['scraperPackageSources'] ?? []);
         }
-        if (isset($data['pluginPackageSources'])) {
+        if (array_key_exists('pluginPackageSources', $data)) {
             $self->pluginPackageSources = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -951,16 +951,16 @@ class ConfigGeneralResult implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\PackageSource::fromArray($data);
             }, $data['pluginPackageSources'] ?? []);
         }
-        if (isset($data['maxTranscodeSize'])) {
+        if (array_key_exists('maxTranscodeSize', $data)) {
             $self->maxTranscodeSize = \Aazsamir\Stasphp\Graphql\StreamingResolutionEnum::from($data['maxTranscodeSize']);
         }
-        if (isset($data['maxStreamingTranscodeSize'])) {
+        if (array_key_exists('maxStreamingTranscodeSize', $data)) {
             $self->maxStreamingTranscodeSize = \Aazsamir\Stasphp\Graphql\StreamingResolutionEnum::from($data['maxStreamingTranscodeSize']);
         }
-        if (isset($data['logFile'])) {
+        if (array_key_exists('logFile', $data)) {
             $self->logFile = $data['logFile'];
         }
-        if (isset($data['customPerformerImageLocation'])) {
+        if (array_key_exists('customPerformerImageLocation', $data)) {
             $self->customPerformerImageLocation = $data['customPerformerImageLocation'];
         }
 

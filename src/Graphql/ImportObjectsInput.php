@@ -28,13 +28,13 @@ class ImportObjectsInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['file'])) {
+        if (array_key_exists('file', $data)) {
             $self->file = $data['file'];
         }
-        if (isset($data['duplicateBehaviour'])) {
+        if (array_key_exists('duplicateBehaviour', $data)) {
             $self->duplicateBehaviour = \Aazsamir\Stasphp\Graphql\ImportDuplicateEnum::from($data['duplicateBehaviour']);
         }
-        if (isset($data['missingRefBehaviour'])) {
+        if (array_key_exists('missingRefBehaviour', $data)) {
             $self->missingRefBehaviour = \Aazsamir\Stasphp\Graphql\ImportMissingRefEnum::from($data['missingRefBehaviour']);
         }
 

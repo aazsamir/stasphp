@@ -25,13 +25,13 @@ class FloatCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['value'])) {
+        if (array_key_exists('value', $data)) {
             $self->value = $data['value'];
         }
-        if (isset($data['modifier'])) {
+        if (array_key_exists('modifier', $data)) {
             $self->modifier = \Aazsamir\Stasphp\Graphql\CriterionModifier::from($data['modifier']);
         }
-        if (isset($data['value2'])) {
+        if (array_key_exists('value2', $data)) {
             $self->value2 = $data['value2'];
         }
 

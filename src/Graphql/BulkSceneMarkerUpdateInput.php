@@ -35,7 +35,7 @@ class BulkSceneMarkerUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['ids'])) {
+        if (array_key_exists('ids', $data)) {
             $self->ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -44,13 +44,13 @@ class BulkSceneMarkerUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['ids'] ?? []);
         }
-        if (isset($data['title'])) {
+        if (array_key_exists('title', $data)) {
             $self->title = $data['title'];
         }
-        if (isset($data['primary_tag_id'])) {
+        if (array_key_exists('primary_tag_id', $data)) {
             $self->primary_tag_id = $data['primary_tag_id'];
         }
-        if (isset($data['tag_ids'])) {
+        if (array_key_exists('tag_ids', $data)) {
             $self->tag_ids = \Aazsamir\Stasphp\Graphql\BulkUpdateIds::fromArray($data['tag_ids']);
         }
 

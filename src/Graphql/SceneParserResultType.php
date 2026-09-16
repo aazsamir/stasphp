@@ -44,10 +44,10 @@ class SceneParserResultType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['count'])) {
+        if (array_key_exists('count', $data)) {
             $self->count = $data['count'];
         }
-        if (isset($data['results'])) {
+        if (array_key_exists('results', $data)) {
             $self->results = array_map(function ($data) {
                 if ($data === []) {
                     return [];

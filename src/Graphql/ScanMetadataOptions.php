@@ -118,31 +118,31 @@ class ScanMetadataOptions implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['rescan'])) {
+        if (array_key_exists('rescan', $data)) {
             $self->rescan = $data['rescan'];
         }
-        if (isset($data['scanGenerateCovers'])) {
+        if (array_key_exists('scanGenerateCovers', $data)) {
             $self->scanGenerateCovers = $data['scanGenerateCovers'];
         }
-        if (isset($data['scanGeneratePreviews'])) {
+        if (array_key_exists('scanGeneratePreviews', $data)) {
             $self->scanGeneratePreviews = $data['scanGeneratePreviews'];
         }
-        if (isset($data['scanGenerateImagePreviews'])) {
+        if (array_key_exists('scanGenerateImagePreviews', $data)) {
             $self->scanGenerateImagePreviews = $data['scanGenerateImagePreviews'];
         }
-        if (isset($data['scanGenerateSprites'])) {
+        if (array_key_exists('scanGenerateSprites', $data)) {
             $self->scanGenerateSprites = $data['scanGenerateSprites'];
         }
-        if (isset($data['scanGeneratePhashes'])) {
+        if (array_key_exists('scanGeneratePhashes', $data)) {
             $self->scanGeneratePhashes = $data['scanGeneratePhashes'];
         }
-        if (isset($data['scanGenerateThumbnails'])) {
+        if (array_key_exists('scanGenerateThumbnails', $data)) {
             $self->scanGenerateThumbnails = $data['scanGenerateThumbnails'];
         }
-        if (isset($data['scanGenerateClipPreviews'])) {
+        if (array_key_exists('scanGenerateClipPreviews', $data)) {
             $self->scanGenerateClipPreviews = $data['scanGenerateClipPreviews'];
         }
-        if (isset($data['scanGenerateImagePhashes'])) {
+        if (array_key_exists('scanGenerateImagePhashes', $data)) {
             $self->scanGenerateImagePhashes = $data['scanGenerateImagePhashes'];
         }
 

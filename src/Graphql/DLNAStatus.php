@@ -71,10 +71,10 @@ class DLNAStatus implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['running'])) {
+        if (array_key_exists('running', $data)) {
             $self->running = $data['running'];
         }
-        if (isset($data['recentIPAddresses'])) {
+        if (array_key_exists('recentIPAddresses', $data)) {
             $self->recentIPAddresses = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -83,7 +83,7 @@ class DLNAStatus implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['recentIPAddresses'] ?? []);
         }
-        if (isset($data['allowedIPAddresses'])) {
+        if (array_key_exists('allowedIPAddresses', $data)) {
             $self->allowedIPAddresses = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -92,7 +92,7 @@ class DLNAStatus implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\DLNAIP::fromArray($data);
             }, $data['allowedIPAddresses'] ?? []);
         }
-        if (isset($data['until'])) {
+        if (array_key_exists('until', $data)) {
             $self->until = new \DateTimeImmutable($data['until']);
         }
 

@@ -107,28 +107,28 @@ class Scraper implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['performer'])) {
+        if (array_key_exists('performer', $data)) {
             $self->performer = \Aazsamir\Stasphp\Graphql\ScraperSpec::fromArray($data['performer']);
         }
-        if (isset($data['scene'])) {
+        if (array_key_exists('scene', $data)) {
             $self->scene = \Aazsamir\Stasphp\Graphql\ScraperSpec::fromArray($data['scene']);
         }
-        if (isset($data['gallery'])) {
+        if (array_key_exists('gallery', $data)) {
             $self->gallery = \Aazsamir\Stasphp\Graphql\ScraperSpec::fromArray($data['gallery']);
         }
-        if (isset($data['image'])) {
+        if (array_key_exists('image', $data)) {
             $self->image = \Aazsamir\Stasphp\Graphql\ScraperSpec::fromArray($data['image']);
         }
-        if (isset($data['movie'])) {
+        if (array_key_exists('movie', $data)) {
             $self->movie = \Aazsamir\Stasphp\Graphql\ScraperSpec::fromArray($data['movie']);
         }
-        if (isset($data['group'])) {
+        if (array_key_exists('group', $data)) {
             $self->group = \Aazsamir\Stasphp\Graphql\ScraperSpec::fromArray($data['group']);
         }
 

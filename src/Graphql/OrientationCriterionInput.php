@@ -25,7 +25,7 @@ class OrientationCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['value'])) {
+        if (array_key_exists('value', $data)) {
             $self->value = array_map(function ($data) {
                 if ($data === []) {
                     return [];

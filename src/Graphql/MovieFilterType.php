@@ -76,61 +76,61 @@ class MovieFilterType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['AND'])) {
+        if (array_key_exists('AND', $data)) {
             $self->AND = \Aazsamir\Stasphp\Graphql\MovieFilterType::fromArray($data['AND']);
         }
-        if (isset($data['OR'])) {
+        if (array_key_exists('OR', $data)) {
             $self->OR = \Aazsamir\Stasphp\Graphql\MovieFilterType::fromArray($data['OR']);
         }
-        if (isset($data['NOT'])) {
+        if (array_key_exists('NOT', $data)) {
             $self->NOT = \Aazsamir\Stasphp\Graphql\MovieFilterType::fromArray($data['NOT']);
         }
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['name']);
         }
-        if (isset($data['director'])) {
+        if (array_key_exists('director', $data)) {
             $self->director = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['director']);
         }
-        if (isset($data['synopsis'])) {
+        if (array_key_exists('synopsis', $data)) {
             $self->synopsis = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['synopsis']);
         }
-        if (isset($data['duration'])) {
+        if (array_key_exists('duration', $data)) {
             $self->duration = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['duration']);
         }
-        if (isset($data['rating100'])) {
+        if (array_key_exists('rating100', $data)) {
             $self->rating100 = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['rating100']);
         }
-        if (isset($data['studios'])) {
+        if (array_key_exists('studios', $data)) {
             $self->studios = \Aazsamir\Stasphp\Graphql\HierarchicalMultiCriterionInput::fromArray($data['studios']);
         }
-        if (isset($data['is_missing'])) {
+        if (array_key_exists('is_missing', $data)) {
             $self->is_missing = $data['is_missing'];
         }
-        if (isset($data['url'])) {
+        if (array_key_exists('url', $data)) {
             $self->url = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['url']);
         }
-        if (isset($data['performers'])) {
+        if (array_key_exists('performers', $data)) {
             $self->performers = \Aazsamir\Stasphp\Graphql\MultiCriterionInput::fromArray($data['performers']);
         }
-        if (isset($data['tags'])) {
+        if (array_key_exists('tags', $data)) {
             $self->tags = \Aazsamir\Stasphp\Graphql\HierarchicalMultiCriterionInput::fromArray($data['tags']);
         }
-        if (isset($data['tag_count'])) {
+        if (array_key_exists('tag_count', $data)) {
             $self->tag_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['tag_count']);
         }
-        if (isset($data['date'])) {
+        if (array_key_exists('date', $data)) {
             $self->date = \Aazsamir\Stasphp\Graphql\DateCriterionInput::fromArray($data['date']);
         }
-        if (isset($data['created_at'])) {
+        if (array_key_exists('created_at', $data)) {
             $self->created_at = \Aazsamir\Stasphp\Graphql\TimestampCriterionInput::fromArray($data['created_at']);
         }
-        if (isset($data['updated_at'])) {
+        if (array_key_exists('updated_at', $data)) {
             $self->updated_at = \Aazsamir\Stasphp\Graphql\TimestampCriterionInput::fromArray($data['updated_at']);
         }
-        if (isset($data['scenes_filter'])) {
+        if (array_key_exists('scenes_filter', $data)) {
             $self->scenes_filter = \Aazsamir\Stasphp\Graphql\SceneFilterType::fromArray($data['scenes_filter']);
         }
-        if (isset($data['studios_filter'])) {
+        if (array_key_exists('studios_filter', $data)) {
             $self->studios_filter = \Aazsamir\Stasphp\Graphql\StudioFilterType::fromArray($data['studios_filter']);
         }
 

@@ -23,10 +23,10 @@ class BackupDatabaseInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['download'])) {
+        if (array_key_exists('download', $data)) {
             $self->download = $data['download'];
         }
-        if (isset($data['includeBlobs'])) {
+        if (array_key_exists('includeBlobs', $data)) {
             $self->includeBlobs = $data['includeBlobs'];
         }
 

@@ -30,13 +30,13 @@ class CustomFieldsInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['full'])) {
+        if (array_key_exists('full', $data)) {
             $self->full = $data['full'];
         }
-        if (isset($data['partial'])) {
+        if (array_key_exists('partial', $data)) {
             $self->partial = $data['partial'];
         }
-        if (isset($data['remove'])) {
+        if (array_key_exists('remove', $data)) {
             $self->remove = array_map(function ($data) {
                 if ($data === []) {
                     return [];

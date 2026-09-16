@@ -25,13 +25,13 @@ class FileDuplicationCriterionInput implements \Aazsamir\Graphpql\Model\GraphObj
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['duplicated'])) {
+        if (array_key_exists('duplicated', $data)) {
             $self->duplicated = $data['duplicated'];
         }
-        if (isset($data['distance'])) {
+        if (array_key_exists('distance', $data)) {
             $self->distance = $data['distance'];
         }
-        if (isset($data['phash'])) {
+        if (array_key_exists('phash', $data)) {
             $self->phash = $data['phash'];
         }
 

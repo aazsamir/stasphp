@@ -43,7 +43,7 @@ class IdentifyMetadataTaskOptions implements \Aazsamir\Graphpql\Model\GraphObjec
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['sources'])) {
+        if (array_key_exists('sources', $data)) {
             $self->sources = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -52,7 +52,7 @@ class IdentifyMetadataTaskOptions implements \Aazsamir\Graphpql\Model\GraphObjec
                 return \Aazsamir\Stasphp\Graphql\IdentifySource::fromArray($data);
             }, $data['sources'] ?? []);
         }
-        if (isset($data['options'])) {
+        if (array_key_exists('options', $data)) {
             $self->options = \Aazsamir\Stasphp\Graphql\IdentifyMetadataOptions::fromArray($data['options']);
         }
 

@@ -21,7 +21,7 @@ class GenerateAPIKeyInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['clear'])) {
+        if (array_key_exists('clear', $data)) {
             $self->clear = $data['clear'];
         }
 

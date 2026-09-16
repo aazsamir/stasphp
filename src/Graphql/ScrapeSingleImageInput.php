@@ -28,13 +28,13 @@ class ScrapeSingleImageInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['query'])) {
+        if (array_key_exists('query', $data)) {
             $self->query = $data['query'];
         }
-        if (isset($data['image_id'])) {
+        if (array_key_exists('image_id', $data)) {
             $self->image_id = $data['image_id'];
         }
-        if (isset($data['image_input'])) {
+        if (array_key_exists('image_input', $data)) {
             $self->image_input = \Aazsamir\Stasphp\Graphql\ScrapedImageInput::fromArray($data['image_input']);
         }
 

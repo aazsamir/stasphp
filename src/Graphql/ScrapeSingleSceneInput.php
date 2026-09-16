@@ -28,13 +28,13 @@ class ScrapeSingleSceneInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['query'])) {
+        if (array_key_exists('query', $data)) {
             $self->query = $data['query'];
         }
-        if (isset($data['scene_id'])) {
+        if (array_key_exists('scene_id', $data)) {
             $self->scene_id = $data['scene_id'];
         }
-        if (isset($data['scene_input'])) {
+        if (array_key_exists('scene_input', $data)) {
             $self->scene_input = \Aazsamir\Stasphp\Graphql\ScrapedSceneInput::fromArray($data['scene_input']);
         }
 

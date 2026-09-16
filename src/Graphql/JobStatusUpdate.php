@@ -39,10 +39,10 @@ class JobStatusUpdate implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['type'])) {
+        if (array_key_exists('type', $data)) {
             $self->type = \Aazsamir\Stasphp\Graphql\JobStatusUpdateType::from($data['type']);
         }
-        if (isset($data['job'])) {
+        if (array_key_exists('job', $data)) {
             $self->job = \Aazsamir\Stasphp\Graphql\Job::fromArray($data['job']);
         }
 

@@ -52,37 +52,37 @@ class SceneMarkerFilterType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['tags'])) {
+        if (array_key_exists('tags', $data)) {
             $self->tags = \Aazsamir\Stasphp\Graphql\HierarchicalMultiCriterionInput::fromArray($data['tags']);
         }
-        if (isset($data['scene_tags'])) {
+        if (array_key_exists('scene_tags', $data)) {
             $self->scene_tags = \Aazsamir\Stasphp\Graphql\HierarchicalMultiCriterionInput::fromArray($data['scene_tags']);
         }
-        if (isset($data['performers'])) {
+        if (array_key_exists('performers', $data)) {
             $self->performers = \Aazsamir\Stasphp\Graphql\MultiCriterionInput::fromArray($data['performers']);
         }
-        if (isset($data['scenes'])) {
+        if (array_key_exists('scenes', $data)) {
             $self->scenes = \Aazsamir\Stasphp\Graphql\MultiCriterionInput::fromArray($data['scenes']);
         }
-        if (isset($data['duration'])) {
+        if (array_key_exists('duration', $data)) {
             $self->duration = \Aazsamir\Stasphp\Graphql\FloatCriterionInput::fromArray($data['duration']);
         }
-        if (isset($data['created_at'])) {
+        if (array_key_exists('created_at', $data)) {
             $self->created_at = \Aazsamir\Stasphp\Graphql\TimestampCriterionInput::fromArray($data['created_at']);
         }
-        if (isset($data['updated_at'])) {
+        if (array_key_exists('updated_at', $data)) {
             $self->updated_at = \Aazsamir\Stasphp\Graphql\TimestampCriterionInput::fromArray($data['updated_at']);
         }
-        if (isset($data['scene_date'])) {
+        if (array_key_exists('scene_date', $data)) {
             $self->scene_date = \Aazsamir\Stasphp\Graphql\DateCriterionInput::fromArray($data['scene_date']);
         }
-        if (isset($data['scene_created_at'])) {
+        if (array_key_exists('scene_created_at', $data)) {
             $self->scene_created_at = \Aazsamir\Stasphp\Graphql\TimestampCriterionInput::fromArray($data['scene_created_at']);
         }
-        if (isset($data['scene_updated_at'])) {
+        if (array_key_exists('scene_updated_at', $data)) {
             $self->scene_updated_at = \Aazsamir\Stasphp\Graphql\TimestampCriterionInput::fromArray($data['scene_updated_at']);
         }
-        if (isset($data['scene_filter'])) {
+        if (array_key_exists('scene_filter', $data)) {
             $self->scene_filter = \Aazsamir\Stasphp\Graphql\SceneFilterType::fromArray($data['scene_filter']);
         }
 

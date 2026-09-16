@@ -21,7 +21,7 @@ class MigrateBlobsInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['deleteOld'])) {
+        if (array_key_exists('deleteOld', $data)) {
             $self->deleteOld = $data['deleteOld'];
         }
 

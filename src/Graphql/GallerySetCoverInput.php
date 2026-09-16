@@ -23,10 +23,10 @@ class GallerySetCoverInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['gallery_id'])) {
+        if (array_key_exists('gallery_id', $data)) {
             $self->gallery_id = $data['gallery_id'];
         }
-        if (isset($data['cover_image_id'])) {
+        if (array_key_exists('cover_image_id', $data)) {
             $self->cover_image_id = $data['cover_image_id'];
         }
 

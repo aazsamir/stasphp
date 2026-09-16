@@ -21,7 +21,7 @@ class StudioDestroyInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
 

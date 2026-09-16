@@ -39,10 +39,10 @@ class GalleryPathsType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['cover'])) {
+        if (array_key_exists('cover', $data)) {
             $self->cover = $data['cover'];
         }
-        if (isset($data['preview'])) {
+        if (array_key_exists('preview', $data)) {
             $self->preview = $data['preview'];
         }
 

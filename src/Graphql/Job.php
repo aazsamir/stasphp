@@ -123,19 +123,19 @@ class Job implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['status'])) {
+        if (array_key_exists('status', $data)) {
             $self->status = \Aazsamir\Stasphp\Graphql\JobStatus::from($data['status']);
         }
-        if (isset($data['description'])) {
+        if (array_key_exists('description', $data)) {
             $self->description = $data['description'];
         }
-        if (isset($data['addTime'])) {
+        if (array_key_exists('addTime', $data)) {
             $self->addTime = new \DateTimeImmutable($data['addTime']);
         }
-        if (isset($data['subTasks'])) {
+        if (array_key_exists('subTasks', $data)) {
             $self->subTasks = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -144,16 +144,16 @@ class Job implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['subTasks'] ?? []);
         }
-        if (isset($data['progress'])) {
+        if (array_key_exists('progress', $data)) {
             $self->progress = $data['progress'];
         }
-        if (isset($data['startTime'])) {
+        if (array_key_exists('startTime', $data)) {
             $self->startTime = new \DateTimeImmutable($data['startTime']);
         }
-        if (isset($data['endTime'])) {
+        if (array_key_exists('endTime', $data)) {
             $self->endTime = new \DateTimeImmutable($data['endTime']);
         }
-        if (isset($data['error'])) {
+        if (array_key_exists('error', $data)) {
             $self->error = $data['error'];
         }
 

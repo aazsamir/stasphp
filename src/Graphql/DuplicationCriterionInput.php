@@ -37,22 +37,22 @@ class DuplicationCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['duplicated'])) {
+        if (array_key_exists('duplicated', $data)) {
             $self->duplicated = $data['duplicated'];
         }
-        if (isset($data['distance'])) {
+        if (array_key_exists('distance', $data)) {
             $self->distance = $data['distance'];
         }
-        if (isset($data['phash'])) {
+        if (array_key_exists('phash', $data)) {
             $self->phash = $data['phash'];
         }
-        if (isset($data['url'])) {
+        if (array_key_exists('url', $data)) {
             $self->url = $data['url'];
         }
-        if (isset($data['stash_id'])) {
+        if (array_key_exists('stash_id', $data)) {
             $self->stash_id = $data['stash_id'];
         }
-        if (isset($data['title'])) {
+        if (array_key_exists('title', $data)) {
             $self->title = $data['title'];
         }
 

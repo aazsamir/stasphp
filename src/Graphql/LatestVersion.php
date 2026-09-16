@@ -59,16 +59,16 @@ class LatestVersion implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['version'])) {
+        if (array_key_exists('version', $data)) {
             $self->version = $data['version'];
         }
-        if (isset($data['shorthash'])) {
+        if (array_key_exists('shorthash', $data)) {
             $self->shorthash = $data['shorthash'];
         }
-        if (isset($data['release_date'])) {
+        if (array_key_exists('release_date', $data)) {
             $self->release_date = $data['release_date'];
         }
-        if (isset($data['url'])) {
+        if (array_key_exists('url', $data)) {
             $self->url = $data['url'];
         }
 

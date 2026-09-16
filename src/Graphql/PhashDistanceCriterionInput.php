@@ -25,13 +25,13 @@ class PhashDistanceCriterionInput implements \Aazsamir\Graphpql\Model\GraphObjec
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['value'])) {
+        if (array_key_exists('value', $data)) {
             $self->value = $data['value'];
         }
-        if (isset($data['modifier'])) {
+        if (array_key_exists('modifier', $data)) {
             $self->modifier = \Aazsamir\Stasphp\Graphql\CriterionModifier::from($data['modifier']);
         }
-        if (isset($data['distance'])) {
+        if (array_key_exists('distance', $data)) {
             $self->distance = $data['distance'];
         }
 

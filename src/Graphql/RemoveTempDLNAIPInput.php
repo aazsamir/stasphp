@@ -21,7 +21,7 @@ class RemoveTempDLNAIPInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['address'])) {
+        if (array_key_exists('address', $data)) {
             $self->address = $data['address'];
         }
 

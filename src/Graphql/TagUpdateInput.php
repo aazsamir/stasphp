@@ -69,19 +69,19 @@ class TagUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['sort_name'])) {
+        if (array_key_exists('sort_name', $data)) {
             $self->sort_name = $data['sort_name'];
         }
-        if (isset($data['description'])) {
+        if (array_key_exists('description', $data)) {
             $self->description = $data['description'];
         }
-        if (isset($data['aliases'])) {
+        if (array_key_exists('aliases', $data)) {
             $self->aliases = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -90,16 +90,16 @@ class TagUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['aliases'] ?? []);
         }
-        if (isset($data['ignore_auto_tag'])) {
+        if (array_key_exists('ignore_auto_tag', $data)) {
             $self->ignore_auto_tag = $data['ignore_auto_tag'];
         }
-        if (isset($data['favorite'])) {
+        if (array_key_exists('favorite', $data)) {
             $self->favorite = $data['favorite'];
         }
-        if (isset($data['image'])) {
+        if (array_key_exists('image', $data)) {
             $self->image = $data['image'];
         }
-        if (isset($data['stash_ids'])) {
+        if (array_key_exists('stash_ids', $data)) {
             $self->stash_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -108,7 +108,7 @@ class TagUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\StashIDInput::fromArray($data);
             }, $data['stash_ids'] ?? []);
         }
-        if (isset($data['parent_ids'])) {
+        if (array_key_exists('parent_ids', $data)) {
             $self->parent_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -117,7 +117,7 @@ class TagUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['parent_ids'] ?? []);
         }
-        if (isset($data['child_ids'])) {
+        if (array_key_exists('child_ids', $data)) {
             $self->child_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -126,7 +126,7 @@ class TagUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['child_ids'] ?? []);
         }
-        if (isset($data['custom_fields'])) {
+        if (array_key_exists('custom_fields', $data)) {
             $self->custom_fields = \Aazsamir\Stasphp\Graphql\CustomFieldsInput::fromArray($data['custom_fields']);
         }
 

@@ -548,13 +548,13 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['alias_list'])) {
+        if (array_key_exists('alias_list', $data)) {
             $self->alias_list = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -563,10 +563,10 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['alias_list'] ?? []);
         }
-        if (isset($data['favorite'])) {
+        if (array_key_exists('favorite', $data)) {
             $self->favorite = $data['favorite'];
         }
-        if (isset($data['tags'])) {
+        if (array_key_exists('tags', $data)) {
             $self->tags = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -575,28 +575,28 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Tag::fromArray($data);
             }, $data['tags'] ?? []);
         }
-        if (isset($data['ignore_auto_tag'])) {
+        if (array_key_exists('ignore_auto_tag', $data)) {
             $self->ignore_auto_tag = $data['ignore_auto_tag'];
         }
-        if (isset($data['scene_count'])) {
+        if (array_key_exists('scene_count', $data)) {
             $self->scene_count = $data['scene_count'];
         }
-        if (isset($data['image_count'])) {
+        if (array_key_exists('image_count', $data)) {
             $self->image_count = $data['image_count'];
         }
-        if (isset($data['gallery_count'])) {
+        if (array_key_exists('gallery_count', $data)) {
             $self->gallery_count = $data['gallery_count'];
         }
-        if (isset($data['group_count'])) {
+        if (array_key_exists('group_count', $data)) {
             $self->group_count = $data['group_count'];
         }
-        if (isset($data['movie_count'])) {
+        if (array_key_exists('movie_count', $data)) {
             $self->movie_count = $data['movie_count'];
         }
-        if (isset($data['performer_count'])) {
+        if (array_key_exists('performer_count', $data)) {
             $self->performer_count = $data['performer_count'];
         }
-        if (isset($data['scenes'])) {
+        if (array_key_exists('scenes', $data)) {
             $self->scenes = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -605,7 +605,7 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Scene::fromArray($data);
             }, $data['scenes'] ?? []);
         }
-        if (isset($data['stash_ids'])) {
+        if (array_key_exists('stash_ids', $data)) {
             $self->stash_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -614,13 +614,13 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\StashID::fromArray($data);
             }, $data['stash_ids'] ?? []);
         }
-        if (isset($data['created_at'])) {
+        if (array_key_exists('created_at', $data)) {
             $self->created_at = new \DateTimeImmutable($data['created_at']);
         }
-        if (isset($data['updated_at'])) {
+        if (array_key_exists('updated_at', $data)) {
             $self->updated_at = new \DateTimeImmutable($data['updated_at']);
         }
-        if (isset($data['groups'])) {
+        if (array_key_exists('groups', $data)) {
             $self->groups = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -629,7 +629,7 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Group::fromArray($data);
             }, $data['groups'] ?? []);
         }
-        if (isset($data['movies'])) {
+        if (array_key_exists('movies', $data)) {
             $self->movies = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -638,16 +638,16 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Movie::fromArray($data);
             }, $data['movies'] ?? []);
         }
-        if (isset($data['custom_fields'])) {
+        if (array_key_exists('custom_fields', $data)) {
             $self->custom_fields = $data['custom_fields'];
         }
-        if (isset($data['disambiguation'])) {
+        if (array_key_exists('disambiguation', $data)) {
             $self->disambiguation = $data['disambiguation'];
         }
-        if (isset($data['url'])) {
+        if (array_key_exists('url', $data)) {
             $self->url = $data['url'];
         }
-        if (isset($data['urls'])) {
+        if (array_key_exists('urls', $data)) {
             $self->urls = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -656,76 +656,76 @@ class Performer implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['urls'] ?? []);
         }
-        if (isset($data['gender'])) {
+        if (array_key_exists('gender', $data)) {
             $self->gender = \Aazsamir\Stasphp\Graphql\GenderEnum::from($data['gender']);
         }
-        if (isset($data['twitter'])) {
+        if (array_key_exists('twitter', $data)) {
             $self->twitter = $data['twitter'];
         }
-        if (isset($data['instagram'])) {
+        if (array_key_exists('instagram', $data)) {
             $self->instagram = $data['instagram'];
         }
-        if (isset($data['birthdate'])) {
+        if (array_key_exists('birthdate', $data)) {
             $self->birthdate = $data['birthdate'];
         }
-        if (isset($data['ethnicity'])) {
+        if (array_key_exists('ethnicity', $data)) {
             $self->ethnicity = $data['ethnicity'];
         }
-        if (isset($data['country'])) {
+        if (array_key_exists('country', $data)) {
             $self->country = $data['country'];
         }
-        if (isset($data['eye_color'])) {
+        if (array_key_exists('eye_color', $data)) {
             $self->eye_color = $data['eye_color'];
         }
-        if (isset($data['height_cm'])) {
+        if (array_key_exists('height_cm', $data)) {
             $self->height_cm = $data['height_cm'];
         }
-        if (isset($data['measurements'])) {
+        if (array_key_exists('measurements', $data)) {
             $self->measurements = $data['measurements'];
         }
-        if (isset($data['fake_tits'])) {
+        if (array_key_exists('fake_tits', $data)) {
             $self->fake_tits = $data['fake_tits'];
         }
-        if (isset($data['penis_length'])) {
+        if (array_key_exists('penis_length', $data)) {
             $self->penis_length = $data['penis_length'];
         }
-        if (isset($data['circumcised'])) {
+        if (array_key_exists('circumcised', $data)) {
             $self->circumcised = \Aazsamir\Stasphp\Graphql\CircumcisedEnum::from($data['circumcised']);
         }
-        if (isset($data['career_length'])) {
+        if (array_key_exists('career_length', $data)) {
             $self->career_length = $data['career_length'];
         }
-        if (isset($data['career_start'])) {
+        if (array_key_exists('career_start', $data)) {
             $self->career_start = $data['career_start'];
         }
-        if (isset($data['career_end'])) {
+        if (array_key_exists('career_end', $data)) {
             $self->career_end = $data['career_end'];
         }
-        if (isset($data['tattoos'])) {
+        if (array_key_exists('tattoos', $data)) {
             $self->tattoos = $data['tattoos'];
         }
-        if (isset($data['piercings'])) {
+        if (array_key_exists('piercings', $data)) {
             $self->piercings = $data['piercings'];
         }
-        if (isset($data['image_path'])) {
+        if (array_key_exists('image_path', $data)) {
             $self->image_path = $data['image_path'];
         }
-        if (isset($data['o_counter'])) {
+        if (array_key_exists('o_counter', $data)) {
             $self->o_counter = $data['o_counter'];
         }
-        if (isset($data['rating100'])) {
+        if (array_key_exists('rating100', $data)) {
             $self->rating100 = $data['rating100'];
         }
-        if (isset($data['details'])) {
+        if (array_key_exists('details', $data)) {
             $self->details = $data['details'];
         }
-        if (isset($data['death_date'])) {
+        if (array_key_exists('death_date', $data)) {
             $self->death_date = $data['death_date'];
         }
-        if (isset($data['hair_color'])) {
+        if (array_key_exists('hair_color', $data)) {
             $self->hair_color = $data['hair_color'];
         }
-        if (isset($data['weight'])) {
+        if (array_key_exists('weight', $data)) {
             $self->weight = $data['weight'];
         }
 

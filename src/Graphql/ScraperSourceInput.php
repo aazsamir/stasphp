@@ -28,13 +28,13 @@ class ScraperSourceInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['stash_box_index'])) {
+        if (array_key_exists('stash_box_index', $data)) {
             $self->stash_box_index = $data['stash_box_index'];
         }
-        if (isset($data['stash_box_endpoint'])) {
+        if (array_key_exists('stash_box_endpoint', $data)) {
             $self->stash_box_endpoint = $data['stash_box_endpoint'];
         }
-        if (isset($data['scraper_id'])) {
+        if (array_key_exists('scraper_id', $data)) {
             $self->scraper_id = $data['scraper_id'];
         }
 

@@ -49,13 +49,13 @@ class MarkerStringsResultType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['count'])) {
+        if (array_key_exists('count', $data)) {
             $self->count = $data['count'];
         }
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['title'])) {
+        if (array_key_exists('title', $data)) {
             $self->title = $data['title'];
         }
 

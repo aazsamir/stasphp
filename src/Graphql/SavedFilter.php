@@ -96,25 +96,25 @@ class SavedFilter implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['mode'])) {
+        if (array_key_exists('mode', $data)) {
             $self->mode = \Aazsamir\Stasphp\Graphql\FilterMode::from($data['mode']);
         }
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['filter'])) {
+        if (array_key_exists('filter', $data)) {
             $self->filter = $data['filter'];
         }
-        if (isset($data['find_filter'])) {
+        if (array_key_exists('find_filter', $data)) {
             $self->find_filter = \Aazsamir\Stasphp\Graphql\SavedFindFilterType::fromArray($data['find_filter']);
         }
-        if (isset($data['object_filter'])) {
+        if (array_key_exists('object_filter', $data)) {
             $self->object_filter = $data['object_filter'];
         }
-        if (isset($data['ui_options'])) {
+        if (array_key_exists('ui_options', $data)) {
             $self->ui_options = $data['ui_options'];
         }
 

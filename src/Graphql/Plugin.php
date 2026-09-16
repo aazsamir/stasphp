@@ -154,28 +154,28 @@ class Plugin implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['enabled'])) {
+        if (array_key_exists('enabled', $data)) {
             $self->enabled = $data['enabled'];
         }
-        if (isset($data['paths'])) {
+        if (array_key_exists('paths', $data)) {
             $self->paths = \Aazsamir\Stasphp\Graphql\PluginPaths::fromArray($data['paths']);
         }
-        if (isset($data['description'])) {
+        if (array_key_exists('description', $data)) {
             $self->description = $data['description'];
         }
-        if (isset($data['url'])) {
+        if (array_key_exists('url', $data)) {
             $self->url = $data['url'];
         }
-        if (isset($data['version'])) {
+        if (array_key_exists('version', $data)) {
             $self->version = $data['version'];
         }
-        if (isset($data['tasks'])) {
+        if (array_key_exists('tasks', $data)) {
             $self->tasks = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -184,7 +184,7 @@ class Plugin implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\PluginTask::fromArray($data);
             }, $data['tasks'] ?? []);
         }
-        if (isset($data['hooks'])) {
+        if (array_key_exists('hooks', $data)) {
             $self->hooks = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -193,7 +193,7 @@ class Plugin implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\PluginHook::fromArray($data);
             }, $data['hooks'] ?? []);
         }
-        if (isset($data['settings'])) {
+        if (array_key_exists('settings', $data)) {
             $self->settings = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -202,7 +202,7 @@ class Plugin implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\PluginSetting::fromArray($data);
             }, $data['settings'] ?? []);
         }
-        if (isset($data['requires'])) {
+        if (array_key_exists('requires', $data)) {
             $self->requires = array_map(function ($data) {
                 if ($data === []) {
                     return [];

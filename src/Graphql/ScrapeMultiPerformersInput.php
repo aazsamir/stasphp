@@ -25,7 +25,7 @@ class ScrapeMultiPerformersInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['performer_ids'])) {
+        if (array_key_exists('performer_ids', $data)) {
             $self->performer_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];

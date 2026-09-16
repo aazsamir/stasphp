@@ -137,16 +137,16 @@ class ScrapedStudio implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['stored_id'])) {
+        if (array_key_exists('stored_id', $data)) {
             $self->stored_id = $data['stored_id'];
         }
-        if (isset($data['url'])) {
+        if (array_key_exists('url', $data)) {
             $self->url = $data['url'];
         }
-        if (isset($data['urls'])) {
+        if (array_key_exists('urls', $data)) {
             $self->urls = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -155,19 +155,19 @@ class ScrapedStudio implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['urls'] ?? []);
         }
-        if (isset($data['parent'])) {
+        if (array_key_exists('parent', $data)) {
             $self->parent = \Aazsamir\Stasphp\Graphql\ScrapedStudio::fromArray($data['parent']);
         }
-        if (isset($data['image'])) {
+        if (array_key_exists('image', $data)) {
             $self->image = $data['image'];
         }
-        if (isset($data['details'])) {
+        if (array_key_exists('details', $data)) {
             $self->details = $data['details'];
         }
-        if (isset($data['aliases'])) {
+        if (array_key_exists('aliases', $data)) {
             $self->aliases = $data['aliases'];
         }
-        if (isset($data['tags'])) {
+        if (array_key_exists('tags', $data)) {
             $self->tags = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -176,7 +176,7 @@ class ScrapedStudio implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\ScrapedTag::fromArray($data);
             }, $data['tags'] ?? []);
         }
-        if (isset($data['remote_site_id'])) {
+        if (array_key_exists('remote_site_id', $data)) {
             $self->remote_site_id = $data['remote_site_id'];
         }
 

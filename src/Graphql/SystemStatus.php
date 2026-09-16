@@ -129,34 +129,34 @@ class SystemStatus implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['appSchema'])) {
+        if (array_key_exists('appSchema', $data)) {
             $self->appSchema = $data['appSchema'];
         }
-        if (isset($data['status'])) {
+        if (array_key_exists('status', $data)) {
             $self->status = \Aazsamir\Stasphp\Graphql\SystemStatusEnum::from($data['status']);
         }
-        if (isset($data['os'])) {
+        if (array_key_exists('os', $data)) {
             $self->os = $data['os'];
         }
-        if (isset($data['workingDir'])) {
+        if (array_key_exists('workingDir', $data)) {
             $self->workingDir = $data['workingDir'];
         }
-        if (isset($data['homeDir'])) {
+        if (array_key_exists('homeDir', $data)) {
             $self->homeDir = $data['homeDir'];
         }
-        if (isset($data['databaseSchema'])) {
+        if (array_key_exists('databaseSchema', $data)) {
             $self->databaseSchema = $data['databaseSchema'];
         }
-        if (isset($data['databasePath'])) {
+        if (array_key_exists('databasePath', $data)) {
             $self->databasePath = $data['databasePath'];
         }
-        if (isset($data['configPath'])) {
+        if (array_key_exists('configPath', $data)) {
             $self->configPath = $data['configPath'];
         }
-        if (isset($data['ffmpegPath'])) {
+        if (array_key_exists('ffmpegPath', $data)) {
             $self->ffmpegPath = $data['ffmpegPath'];
         }
-        if (isset($data['ffprobePath'])) {
+        if (array_key_exists('ffprobePath', $data)) {
             $self->ffprobePath = $data['ffprobePath'];
         }
 

@@ -46,7 +46,7 @@ class PluginPaths implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['javascript'])) {
+        if (array_key_exists('javascript', $data)) {
             $self->javascript = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -55,7 +55,7 @@ class PluginPaths implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['javascript'] ?? []);
         }
-        if (isset($data['css'])) {
+        if (array_key_exists('css', $data)) {
             $self->css = array_map(function ($data) {
                 if ($data === []) {
                     return [];

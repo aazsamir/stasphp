@@ -39,10 +39,10 @@ class SQLExecResult implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['rows_affected'])) {
+        if (array_key_exists('rows_affected', $data)) {
             $self->rows_affected = $data['rows_affected'];
         }
-        if (isset($data['last_insert_id'])) {
+        if (array_key_exists('last_insert_id', $data)) {
             $self->last_insert_id = $data['last_insert_id'];
         }
 

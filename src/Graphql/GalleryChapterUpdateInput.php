@@ -31,16 +31,16 @@ class GalleryChapterUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['gallery_id'])) {
+        if (array_key_exists('gallery_id', $data)) {
             $self->gallery_id = $data['gallery_id'];
         }
-        if (isset($data['title'])) {
+        if (array_key_exists('title', $data)) {
             $self->title = $data['title'];
         }
-        if (isset($data['image_index'])) {
+        if (array_key_exists('image_index', $data)) {
             $self->image_index = $data['image_index'];
         }
 

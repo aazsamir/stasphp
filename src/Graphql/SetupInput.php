@@ -48,10 +48,10 @@ class SetupInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['configLocation'])) {
+        if (array_key_exists('configLocation', $data)) {
             $self->configLocation = $data['configLocation'];
         }
-        if (isset($data['stashes'])) {
+        if (array_key_exists('stashes', $data)) {
             $self->stashes = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -60,22 +60,22 @@ class SetupInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\StashConfigInput::fromArray($data);
             }, $data['stashes'] ?? []);
         }
-        if (isset($data['databaseFile'])) {
+        if (array_key_exists('databaseFile', $data)) {
             $self->databaseFile = $data['databaseFile'];
         }
-        if (isset($data['generatedLocation'])) {
+        if (array_key_exists('generatedLocation', $data)) {
             $self->generatedLocation = $data['generatedLocation'];
         }
-        if (isset($data['cacheLocation'])) {
+        if (array_key_exists('cacheLocation', $data)) {
             $self->cacheLocation = $data['cacheLocation'];
         }
-        if (isset($data['storeBlobsInDatabase'])) {
+        if (array_key_exists('storeBlobsInDatabase', $data)) {
             $self->storeBlobsInDatabase = $data['storeBlobsInDatabase'];
         }
-        if (isset($data['blobsLocation'])) {
+        if (array_key_exists('blobsLocation', $data)) {
             $self->blobsLocation = $data['blobsLocation'];
         }
-        if (isset($data['sfwContentMode'])) {
+        if (array_key_exists('sfwContentMode', $data)) {
             $self->sfwContentMode = $data['sfwContentMode'];
         }
 

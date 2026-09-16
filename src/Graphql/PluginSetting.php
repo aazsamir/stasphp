@@ -63,16 +63,16 @@ class PluginSetting implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['type'])) {
+        if (array_key_exists('type', $data)) {
             $self->type = \Aazsamir\Stasphp\Graphql\PluginSettingTypeEnum::from($data['type']);
         }
-        if (isset($data['display_name'])) {
+        if (array_key_exists('display_name', $data)) {
             $self->display_name = $data['display_name'];
         }
-        if (isset($data['description'])) {
+        if (array_key_exists('description', $data)) {
             $self->description = $data['description'];
         }
 

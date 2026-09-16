@@ -42,22 +42,22 @@ class SceneMarkerCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['title'])) {
+        if (array_key_exists('title', $data)) {
             $self->title = $data['title'];
         }
-        if (isset($data['seconds'])) {
+        if (array_key_exists('seconds', $data)) {
             $self->seconds = $data['seconds'];
         }
-        if (isset($data['scene_id'])) {
+        if (array_key_exists('scene_id', $data)) {
             $self->scene_id = $data['scene_id'];
         }
-        if (isset($data['primary_tag_id'])) {
+        if (array_key_exists('primary_tag_id', $data)) {
             $self->primary_tag_id = $data['primary_tag_id'];
         }
-        if (isset($data['end_seconds'])) {
+        if (array_key_exists('end_seconds', $data)) {
             $self->end_seconds = $data['end_seconds'];
         }
-        if (isset($data['tag_ids'])) {
+        if (array_key_exists('tag_ids', $data)) {
             $self->tag_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];

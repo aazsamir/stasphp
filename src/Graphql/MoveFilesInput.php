@@ -35,7 +35,7 @@ class MoveFilesInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['ids'])) {
+        if (array_key_exists('ids', $data)) {
             $self->ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -44,13 +44,13 @@ class MoveFilesInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['ids'] ?? []);
         }
-        if (isset($data['destination_folder'])) {
+        if (array_key_exists('destination_folder', $data)) {
             $self->destination_folder = $data['destination_folder'];
         }
-        if (isset($data['destination_folder_id'])) {
+        if (array_key_exists('destination_folder_id', $data)) {
             $self->destination_folder_id = $data['destination_folder_id'];
         }
-        if (isset($data['destination_basename'])) {
+        if (array_key_exists('destination_basename', $data)) {
             $self->destination_basename = $data['destination_basename'];
         }
 

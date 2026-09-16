@@ -126,106 +126,106 @@ class TagFilterType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['AND'])) {
+        if (array_key_exists('AND', $data)) {
             $self->AND = \Aazsamir\Stasphp\Graphql\TagFilterType::fromArray($data['AND']);
         }
-        if (isset($data['OR'])) {
+        if (array_key_exists('OR', $data)) {
             $self->OR = \Aazsamir\Stasphp\Graphql\TagFilterType::fromArray($data['OR']);
         }
-        if (isset($data['NOT'])) {
+        if (array_key_exists('NOT', $data)) {
             $self->NOT = \Aazsamir\Stasphp\Graphql\TagFilterType::fromArray($data['NOT']);
         }
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['name']);
         }
-        if (isset($data['sort_name'])) {
+        if (array_key_exists('sort_name', $data)) {
             $self->sort_name = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['sort_name']);
         }
-        if (isset($data['aliases'])) {
+        if (array_key_exists('aliases', $data)) {
             $self->aliases = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['aliases']);
         }
-        if (isset($data['favorite'])) {
+        if (array_key_exists('favorite', $data)) {
             $self->favorite = $data['favorite'];
         }
-        if (isset($data['description'])) {
+        if (array_key_exists('description', $data)) {
             $self->description = \Aazsamir\Stasphp\Graphql\StringCriterionInput::fromArray($data['description']);
         }
-        if (isset($data['is_missing'])) {
+        if (array_key_exists('is_missing', $data)) {
             $self->is_missing = $data['is_missing'];
         }
-        if (isset($data['scene_count'])) {
+        if (array_key_exists('scene_count', $data)) {
             $self->scene_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['scene_count']);
         }
-        if (isset($data['image_count'])) {
+        if (array_key_exists('image_count', $data)) {
             $self->image_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['image_count']);
         }
-        if (isset($data['gallery_count'])) {
+        if (array_key_exists('gallery_count', $data)) {
             $self->gallery_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['gallery_count']);
         }
-        if (isset($data['performer_count'])) {
+        if (array_key_exists('performer_count', $data)) {
             $self->performer_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['performer_count']);
         }
-        if (isset($data['studio_count'])) {
+        if (array_key_exists('studio_count', $data)) {
             $self->studio_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['studio_count']);
         }
-        if (isset($data['movie_count'])) {
+        if (array_key_exists('movie_count', $data)) {
             $self->movie_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['movie_count']);
         }
-        if (isset($data['group_count'])) {
+        if (array_key_exists('group_count', $data)) {
             $self->group_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['group_count']);
         }
-        if (isset($data['marker_count'])) {
+        if (array_key_exists('marker_count', $data)) {
             $self->marker_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['marker_count']);
         }
-        if (isset($data['parents'])) {
+        if (array_key_exists('parents', $data)) {
             $self->parents = \Aazsamir\Stasphp\Graphql\HierarchicalMultiCriterionInput::fromArray($data['parents']);
         }
-        if (isset($data['children'])) {
+        if (array_key_exists('children', $data)) {
             $self->children = \Aazsamir\Stasphp\Graphql\HierarchicalMultiCriterionInput::fromArray($data['children']);
         }
-        if (isset($data['parent_count'])) {
+        if (array_key_exists('parent_count', $data)) {
             $self->parent_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['parent_count']);
         }
-        if (isset($data['child_count'])) {
+        if (array_key_exists('child_count', $data)) {
             $self->child_count = \Aazsamir\Stasphp\Graphql\IntCriterionInput::fromArray($data['child_count']);
         }
-        if (isset($data['ignore_auto_tag'])) {
+        if (array_key_exists('ignore_auto_tag', $data)) {
             $self->ignore_auto_tag = $data['ignore_auto_tag'];
         }
-        if (isset($data['stash_id_endpoint'])) {
+        if (array_key_exists('stash_id_endpoint', $data)) {
             $self->stash_id_endpoint = \Aazsamir\Stasphp\Graphql\StashIDCriterionInput::fromArray($data['stash_id_endpoint']);
         }
-        if (isset($data['stash_ids_endpoint'])) {
+        if (array_key_exists('stash_ids_endpoint', $data)) {
             $self->stash_ids_endpoint = \Aazsamir\Stasphp\Graphql\StashIDsCriterionInput::fromArray($data['stash_ids_endpoint']);
         }
-        if (isset($data['scenes_filter'])) {
+        if (array_key_exists('scenes_filter', $data)) {
             $self->scenes_filter = \Aazsamir\Stasphp\Graphql\SceneFilterType::fromArray($data['scenes_filter']);
         }
-        if (isset($data['images_filter'])) {
+        if (array_key_exists('images_filter', $data)) {
             $self->images_filter = \Aazsamir\Stasphp\Graphql\ImageFilterType::fromArray($data['images_filter']);
         }
-        if (isset($data['galleries_filter'])) {
+        if (array_key_exists('galleries_filter', $data)) {
             $self->galleries_filter = \Aazsamir\Stasphp\Graphql\GalleryFilterType::fromArray($data['galleries_filter']);
         }
-        if (isset($data['groups_filter'])) {
+        if (array_key_exists('groups_filter', $data)) {
             $self->groups_filter = \Aazsamir\Stasphp\Graphql\GroupFilterType::fromArray($data['groups_filter']);
         }
-        if (isset($data['performers_filter'])) {
+        if (array_key_exists('performers_filter', $data)) {
             $self->performers_filter = \Aazsamir\Stasphp\Graphql\PerformerFilterType::fromArray($data['performers_filter']);
         }
-        if (isset($data['studios_filter'])) {
+        if (array_key_exists('studios_filter', $data)) {
             $self->studios_filter = \Aazsamir\Stasphp\Graphql\StudioFilterType::fromArray($data['studios_filter']);
         }
-        if (isset($data['markers_filter'])) {
+        if (array_key_exists('markers_filter', $data)) {
             $self->markers_filter = \Aazsamir\Stasphp\Graphql\SceneMarkerFilterType::fromArray($data['markers_filter']);
         }
-        if (isset($data['created_at'])) {
+        if (array_key_exists('created_at', $data)) {
             $self->created_at = \Aazsamir\Stasphp\Graphql\TimestampCriterionInput::fromArray($data['created_at']);
         }
-        if (isset($data['updated_at'])) {
+        if (array_key_exists('updated_at', $data)) {
             $self->updated_at = \Aazsamir\Stasphp\Graphql\TimestampCriterionInput::fromArray($data['updated_at']);
         }
-        if (isset($data['custom_fields'])) {
+        if (array_key_exists('custom_fields', $data)) {
             $self->custom_fields = array_map(function ($data) {
                 if ($data === []) {
                     return [];

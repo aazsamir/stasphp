@@ -44,10 +44,10 @@ class FindGroupsResultType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['count'])) {
+        if (array_key_exists('count', $data)) {
             $self->count = $data['count'];
         }
-        if (isset($data['groups'])) {
+        if (array_key_exists('groups', $data)) {
             $self->groups = array_map(function ($data) {
                 if ($data === []) {
                     return [];

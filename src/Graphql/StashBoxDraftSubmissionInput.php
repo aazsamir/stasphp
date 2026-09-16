@@ -25,13 +25,13 @@ class StashBoxDraftSubmissionInput implements \Aazsamir\Graphpql\Model\GraphObje
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['stash_box_index'])) {
+        if (array_key_exists('stash_box_index', $data)) {
             $self->stash_box_index = $data['stash_box_index'];
         }
-        if (isset($data['stash_box_endpoint'])) {
+        if (array_key_exists('stash_box_endpoint', $data)) {
             $self->stash_box_endpoint = $data['stash_box_endpoint'];
         }
 

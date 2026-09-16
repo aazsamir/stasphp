@@ -25,13 +25,13 @@ class IdentifyFieldOptionsInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['field'])) {
+        if (array_key_exists('field', $data)) {
             $self->field = $data['field'];
         }
-        if (isset($data['strategy'])) {
+        if (array_key_exists('strategy', $data)) {
             $self->strategy = \Aazsamir\Stasphp\Graphql\IdentifyFieldStrategy::from($data['strategy']);
         }
-        if (isset($data['createMissing'])) {
+        if (array_key_exists('createMissing', $data)) {
             $self->createMissing = $data['createMissing'];
         }
 

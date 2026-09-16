@@ -34,19 +34,19 @@ class FindFilterType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['q'])) {
+        if (array_key_exists('q', $data)) {
             $self->q = $data['q'];
         }
-        if (isset($data['page'])) {
+        if (array_key_exists('page', $data)) {
             $self->page = $data['page'];
         }
-        if (isset($data['per_page'])) {
+        if (array_key_exists('per_page', $data)) {
             $self->per_page = $data['per_page'];
         }
-        if (isset($data['sort'])) {
+        if (array_key_exists('sort', $data)) {
             $self->sort = $data['sort'];
         }
-        if (isset($data['direction'])) {
+        if (array_key_exists('direction', $data)) {
             $self->direction = \Aazsamir\Stasphp\Graphql\SortDirectionEnum::from($data['direction']);
         }
 

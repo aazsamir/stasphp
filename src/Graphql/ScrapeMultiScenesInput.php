@@ -25,7 +25,7 @@ class ScrapeMultiScenesInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['scene_ids'])) {
+        if (array_key_exists('scene_ids', $data)) {
             $self->scene_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];

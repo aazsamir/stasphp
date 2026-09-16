@@ -23,10 +23,10 @@ class PluginArgInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['key'])) {
+        if (array_key_exists('key', $data)) {
             $self->key = $data['key'];
         }
-        if (isset($data['value'])) {
+        if (array_key_exists('value', $data)) {
             $self->value = \Aazsamir\Stasphp\Graphql\PluginValueInput::fromArray($data['value']);
         }
 

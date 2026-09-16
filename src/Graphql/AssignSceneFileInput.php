@@ -23,10 +23,10 @@ class AssignSceneFileInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['scene_id'])) {
+        if (array_key_exists('scene_id', $data)) {
             $self->scene_id = $data['scene_id'];
         }
-        if (isset($data['file_id'])) {
+        if (array_key_exists('file_id', $data)) {
             $self->file_id = $data['file_id'];
         }
 

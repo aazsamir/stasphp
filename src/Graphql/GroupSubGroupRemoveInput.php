@@ -28,10 +28,10 @@ class GroupSubGroupRemoveInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['containing_group_id'])) {
+        if (array_key_exists('containing_group_id', $data)) {
             $self->containing_group_id = $data['containing_group_id'];
         }
-        if (isset($data['sub_group_ids'])) {
+        if (array_key_exists('sub_group_ids', $data)) {
             $self->sub_group_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];

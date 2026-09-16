@@ -310,16 +310,16 @@ class ConfigInterfaceResult implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['sfwContentMode'])) {
+        if (array_key_exists('sfwContentMode', $data)) {
             $self->sfwContentMode = $data['sfwContentMode'];
         }
-        if (isset($data['imageLightbox'])) {
+        if (array_key_exists('imageLightbox', $data)) {
             $self->imageLightbox = \Aazsamir\Stasphp\Graphql\ConfigImageLightboxResult::fromArray($data['imageLightbox']);
         }
-        if (isset($data['disableDropdownCreate'])) {
+        if (array_key_exists('disableDropdownCreate', $data)) {
             $self->disableDropdownCreate = \Aazsamir\Stasphp\Graphql\ConfigDisableDropdownCreate::fromArray($data['disableDropdownCreate']);
         }
-        if (isset($data['menuItems'])) {
+        if (array_key_exists('menuItems', $data)) {
             $self->menuItems = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -328,70 +328,70 @@ class ConfigInterfaceResult implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['menuItems'] ?? []);
         }
-        if (isset($data['soundOnPreview'])) {
+        if (array_key_exists('soundOnPreview', $data)) {
             $self->soundOnPreview = $data['soundOnPreview'];
         }
-        if (isset($data['wallShowTitle'])) {
+        if (array_key_exists('wallShowTitle', $data)) {
             $self->wallShowTitle = $data['wallShowTitle'];
         }
-        if (isset($data['wallPlayback'])) {
+        if (array_key_exists('wallPlayback', $data)) {
             $self->wallPlayback = $data['wallPlayback'];
         }
-        if (isset($data['showScrubber'])) {
+        if (array_key_exists('showScrubber', $data)) {
             $self->showScrubber = $data['showScrubber'];
         }
-        if (isset($data['maximumLoopDuration'])) {
+        if (array_key_exists('maximumLoopDuration', $data)) {
             $self->maximumLoopDuration = $data['maximumLoopDuration'];
         }
-        if (isset($data['noBrowser'])) {
+        if (array_key_exists('noBrowser', $data)) {
             $self->noBrowser = $data['noBrowser'];
         }
-        if (isset($data['notificationsEnabled'])) {
+        if (array_key_exists('notificationsEnabled', $data)) {
             $self->notificationsEnabled = $data['notificationsEnabled'];
         }
-        if (isset($data['autostartVideo'])) {
+        if (array_key_exists('autostartVideo', $data)) {
             $self->autostartVideo = $data['autostartVideo'];
         }
-        if (isset($data['autostartVideoOnPlaySelected'])) {
+        if (array_key_exists('autostartVideoOnPlaySelected', $data)) {
             $self->autostartVideoOnPlaySelected = $data['autostartVideoOnPlaySelected'];
         }
-        if (isset($data['continuePlaylistDefault'])) {
+        if (array_key_exists('continuePlaylistDefault', $data)) {
             $self->continuePlaylistDefault = $data['continuePlaylistDefault'];
         }
-        if (isset($data['showStudioAsText'])) {
+        if (array_key_exists('showStudioAsText', $data)) {
             $self->showStudioAsText = $data['showStudioAsText'];
         }
-        if (isset($data['css'])) {
+        if (array_key_exists('css', $data)) {
             $self->css = $data['css'];
         }
-        if (isset($data['cssEnabled'])) {
+        if (array_key_exists('cssEnabled', $data)) {
             $self->cssEnabled = $data['cssEnabled'];
         }
-        if (isset($data['javascript'])) {
+        if (array_key_exists('javascript', $data)) {
             $self->javascript = $data['javascript'];
         }
-        if (isset($data['javascriptEnabled'])) {
+        if (array_key_exists('javascriptEnabled', $data)) {
             $self->javascriptEnabled = $data['javascriptEnabled'];
         }
-        if (isset($data['customLocales'])) {
+        if (array_key_exists('customLocales', $data)) {
             $self->customLocales = $data['customLocales'];
         }
-        if (isset($data['customLocalesEnabled'])) {
+        if (array_key_exists('customLocalesEnabled', $data)) {
             $self->customLocalesEnabled = $data['customLocalesEnabled'];
         }
-        if (isset($data['disableCustomizations'])) {
+        if (array_key_exists('disableCustomizations', $data)) {
             $self->disableCustomizations = $data['disableCustomizations'];
         }
-        if (isset($data['language'])) {
+        if (array_key_exists('language', $data)) {
             $self->language = $data['language'];
         }
-        if (isset($data['handyKey'])) {
+        if (array_key_exists('handyKey', $data)) {
             $self->handyKey = $data['handyKey'];
         }
-        if (isset($data['funscriptOffset'])) {
+        if (array_key_exists('funscriptOffset', $data)) {
             $self->funscriptOffset = $data['funscriptOffset'];
         }
-        if (isset($data['useStashHostedFunscript'])) {
+        if (array_key_exists('useStashHostedFunscript', $data)) {
             $self->useStashHostedFunscript = $data['useStashHostedFunscript'];
         }
 

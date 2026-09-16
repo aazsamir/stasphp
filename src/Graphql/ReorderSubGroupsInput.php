@@ -36,10 +36,10 @@ class ReorderSubGroupsInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['group_id'])) {
+        if (array_key_exists('group_id', $data)) {
             $self->group_id = $data['group_id'];
         }
-        if (isset($data['sub_group_ids'])) {
+        if (array_key_exists('sub_group_ids', $data)) {
             $self->sub_group_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -48,10 +48,10 @@ class ReorderSubGroupsInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['sub_group_ids'] ?? []);
         }
-        if (isset($data['insert_at_id'])) {
+        if (array_key_exists('insert_at_id', $data)) {
             $self->insert_at_id = $data['insert_at_id'];
         }
-        if (isset($data['insert_after'])) {
+        if (array_key_exists('insert_after', $data)) {
             $self->insert_after = $data['insert_after'];
         }
 

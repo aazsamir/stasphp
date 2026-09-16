@@ -27,10 +27,10 @@ class BulkUpdateIds implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['mode'])) {
+        if (array_key_exists('mode', $data)) {
             $self->mode = \Aazsamir\Stasphp\Graphql\BulkUpdateIdMode::from($data['mode']);
         }
-        if (isset($data['ids'])) {
+        if (array_key_exists('ids', $data)) {
             $self->ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];

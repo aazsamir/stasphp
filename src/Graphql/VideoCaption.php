@@ -39,10 +39,10 @@ class VideoCaption implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['language_code'])) {
+        if (array_key_exists('language_code', $data)) {
             $self->language_code = $data['language_code'];
         }
-        if (isset($data['caption_type'])) {
+        if (array_key_exists('caption_type', $data)) {
             $self->caption_type = $data['caption_type'];
         }
 

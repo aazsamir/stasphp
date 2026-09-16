@@ -35,7 +35,7 @@ class SceneParserInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['ignoreWords'])) {
+        if (array_key_exists('ignoreWords', $data)) {
             $self->ignoreWords = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -44,13 +44,13 @@ class SceneParserInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['ignoreWords'] ?? []);
         }
-        if (isset($data['whitespaceCharacters'])) {
+        if (array_key_exists('whitespaceCharacters', $data)) {
             $self->whitespaceCharacters = $data['whitespaceCharacters'];
         }
-        if (isset($data['capitalizeTitle'])) {
+        if (array_key_exists('capitalizeTitle', $data)) {
             $self->capitalizeTitle = $data['capitalizeTitle'];
         }
-        if (isset($data['ignoreOrganized'])) {
+        if (array_key_exists('ignoreOrganized', $data)) {
             $self->ignoreOrganized = $data['ignoreOrganized'];
         }
 

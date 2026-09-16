@@ -23,10 +23,10 @@ class PackageSpecInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['sourceURL'])) {
+        if (array_key_exists('sourceURL', $data)) {
             $self->sourceURL = $data['sourceURL'];
         }
 

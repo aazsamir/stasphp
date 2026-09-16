@@ -46,7 +46,7 @@ class ScraperSpec implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['supported_scrapes'])) {
+        if (array_key_exists('supported_scrapes', $data)) {
             $self->supported_scrapes = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -55,7 +55,7 @@ class ScraperSpec implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\ScrapeType::from($data);
             }, $data['supported_scrapes'] ?? []);
         }
-        if (isset($data['urls'])) {
+        if (array_key_exists('urls', $data)) {
             $self->urls = array_map(function ($data) {
                 if ($data === []) {
                     return [];

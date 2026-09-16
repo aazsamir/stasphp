@@ -44,10 +44,10 @@ class FindPerformersResultType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['count'])) {
+        if (array_key_exists('count', $data)) {
             $self->count = $data['count'];
         }
-        if (isset($data['performers'])) {
+        if (array_key_exists('performers', $data)) {
             $self->performers = array_map(function ($data) {
                 if ($data === []) {
                     return [];

@@ -181,31 +181,31 @@ class ScrapedMovie implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['stored_id'])) {
+        if (array_key_exists('stored_id', $data)) {
             $self->stored_id = $data['stored_id'];
         }
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['aliases'])) {
+        if (array_key_exists('aliases', $data)) {
             $self->aliases = $data['aliases'];
         }
-        if (isset($data['duration'])) {
+        if (array_key_exists('duration', $data)) {
             $self->duration = $data['duration'];
         }
-        if (isset($data['date'])) {
+        if (array_key_exists('date', $data)) {
             $self->date = $data['date'];
         }
-        if (isset($data['rating'])) {
+        if (array_key_exists('rating', $data)) {
             $self->rating = $data['rating'];
         }
-        if (isset($data['director'])) {
+        if (array_key_exists('director', $data)) {
             $self->director = $data['director'];
         }
-        if (isset($data['url'])) {
+        if (array_key_exists('url', $data)) {
             $self->url = $data['url'];
         }
-        if (isset($data['urls'])) {
+        if (array_key_exists('urls', $data)) {
             $self->urls = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -214,13 +214,13 @@ class ScrapedMovie implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['urls'] ?? []);
         }
-        if (isset($data['synopsis'])) {
+        if (array_key_exists('synopsis', $data)) {
             $self->synopsis = $data['synopsis'];
         }
-        if (isset($data['studio'])) {
+        if (array_key_exists('studio', $data)) {
             $self->studio = \Aazsamir\Stasphp\Graphql\ScrapedStudio::fromArray($data['studio']);
         }
-        if (isset($data['tags'])) {
+        if (array_key_exists('tags', $data)) {
             $self->tags = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -229,10 +229,10 @@ class ScrapedMovie implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\ScrapedTag::fromArray($data);
             }, $data['tags'] ?? []);
         }
-        if (isset($data['front_image'])) {
+        if (array_key_exists('front_image', $data)) {
             $self->front_image = $data['front_image'];
         }
-        if (isset($data['back_image'])) {
+        if (array_key_exists('back_image', $data)) {
             $self->back_image = $data['back_image'];
         }
 

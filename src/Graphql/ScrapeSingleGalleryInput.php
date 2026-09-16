@@ -28,13 +28,13 @@ class ScrapeSingleGalleryInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['query'])) {
+        if (array_key_exists('query', $data)) {
             $self->query = $data['query'];
         }
-        if (isset($data['gallery_id'])) {
+        if (array_key_exists('gallery_id', $data)) {
             $self->gallery_id = $data['gallery_id'];
         }
-        if (isset($data['gallery_input'])) {
+        if (array_key_exists('gallery_input', $data)) {
             $self->gallery_input = \Aazsamir\Stasphp\Graphql\ScrapedGalleryInput::fromArray($data['gallery_input']);
         }
 

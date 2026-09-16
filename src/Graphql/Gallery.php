@@ -303,10 +303,10 @@ class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['urls'])) {
+        if (array_key_exists('urls', $data)) {
             $self->urls = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -315,16 +315,16 @@ class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['urls'] ?? []);
         }
-        if (isset($data['organized'])) {
+        if (array_key_exists('organized', $data)) {
             $self->organized = $data['organized'];
         }
-        if (isset($data['created_at'])) {
+        if (array_key_exists('created_at', $data)) {
             $self->created_at = new \DateTimeImmutable($data['created_at']);
         }
-        if (isset($data['updated_at'])) {
+        if (array_key_exists('updated_at', $data)) {
             $self->updated_at = new \DateTimeImmutable($data['updated_at']);
         }
-        if (isset($data['files'])) {
+        if (array_key_exists('files', $data)) {
             $self->files = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -333,7 +333,7 @@ class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\GalleryFile::fromArray($data);
             }, $data['files'] ?? []);
         }
-        if (isset($data['chapters'])) {
+        if (array_key_exists('chapters', $data)) {
             $self->chapters = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -342,7 +342,7 @@ class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\GalleryChapter::fromArray($data);
             }, $data['chapters'] ?? []);
         }
-        if (isset($data['scenes'])) {
+        if (array_key_exists('scenes', $data)) {
             $self->scenes = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -351,10 +351,10 @@ class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Scene::fromArray($data);
             }, $data['scenes'] ?? []);
         }
-        if (isset($data['image_count'])) {
+        if (array_key_exists('image_count', $data)) {
             $self->image_count = $data['image_count'];
         }
-        if (isset($data['tags'])) {
+        if (array_key_exists('tags', $data)) {
             $self->tags = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -363,7 +363,7 @@ class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Tag::fromArray($data);
             }, $data['tags'] ?? []);
         }
-        if (isset($data['performers'])) {
+        if (array_key_exists('performers', $data)) {
             $self->performers = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -372,43 +372,43 @@ class Gallery implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Performer::fromArray($data);
             }, $data['performers'] ?? []);
         }
-        if (isset($data['paths'])) {
+        if (array_key_exists('paths', $data)) {
             $self->paths = \Aazsamir\Stasphp\Graphql\GalleryPathsType::fromArray($data['paths']);
         }
-        if (isset($data['custom_fields'])) {
+        if (array_key_exists('custom_fields', $data)) {
             $self->custom_fields = $data['custom_fields'];
         }
-        if (isset($data['image'])) {
+        if (array_key_exists('image', $data)) {
             $self->image = \Aazsamir\Stasphp\Graphql\Image::fromArray($data['image']);
         }
-        if (isset($data['title'])) {
+        if (array_key_exists('title', $data)) {
             $self->title = $data['title'];
         }
-        if (isset($data['code'])) {
+        if (array_key_exists('code', $data)) {
             $self->code = $data['code'];
         }
-        if (isset($data['url'])) {
+        if (array_key_exists('url', $data)) {
             $self->url = $data['url'];
         }
-        if (isset($data['date'])) {
+        if (array_key_exists('date', $data)) {
             $self->date = $data['date'];
         }
-        if (isset($data['details'])) {
+        if (array_key_exists('details', $data)) {
             $self->details = $data['details'];
         }
-        if (isset($data['photographer'])) {
+        if (array_key_exists('photographer', $data)) {
             $self->photographer = $data['photographer'];
         }
-        if (isset($data['rating100'])) {
+        if (array_key_exists('rating100', $data)) {
             $self->rating100 = $data['rating100'];
         }
-        if (isset($data['folder'])) {
+        if (array_key_exists('folder', $data)) {
             $self->folder = \Aazsamir\Stasphp\Graphql\Folder::fromArray($data['folder']);
         }
-        if (isset($data['studio'])) {
+        if (array_key_exists('studio', $data)) {
             $self->studio = \Aazsamir\Stasphp\Graphql\Studio::fromArray($data['studio']);
         }
-        if (isset($data['cover'])) {
+        if (array_key_exists('cover', $data)) {
             $self->cover = \Aazsamir\Stasphp\Graphql\Image::fromArray($data['cover']);
         }
 

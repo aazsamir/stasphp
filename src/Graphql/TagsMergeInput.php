@@ -29,7 +29,7 @@ class TagsMergeInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['source'])) {
+        if (array_key_exists('source', $data)) {
             $self->source = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -38,10 +38,10 @@ class TagsMergeInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['source'] ?? []);
         }
-        if (isset($data['destination'])) {
+        if (array_key_exists('destination', $data)) {
             $self->destination = $data['destination'];
         }
-        if (isset($data['values'])) {
+        if (array_key_exists('values', $data)) {
             $self->values = \Aazsamir\Stasphp\Graphql\TagUpdateInput::fromArray($data['values']);
         }
 

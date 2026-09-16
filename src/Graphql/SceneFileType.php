@@ -107,28 +107,28 @@ class SceneFileType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['size'])) {
+        if (array_key_exists('size', $data)) {
             $self->size = $data['size'];
         }
-        if (isset($data['duration'])) {
+        if (array_key_exists('duration', $data)) {
             $self->duration = $data['duration'];
         }
-        if (isset($data['video_codec'])) {
+        if (array_key_exists('video_codec', $data)) {
             $self->video_codec = $data['video_codec'];
         }
-        if (isset($data['audio_codec'])) {
+        if (array_key_exists('audio_codec', $data)) {
             $self->audio_codec = $data['audio_codec'];
         }
-        if (isset($data['width'])) {
+        if (array_key_exists('width', $data)) {
             $self->width = $data['width'];
         }
-        if (isset($data['height'])) {
+        if (array_key_exists('height', $data)) {
             $self->height = $data['height'];
         }
-        if (isset($data['framerate'])) {
+        if (array_key_exists('framerate', $data)) {
             $self->framerate = $data['framerate'];
         }
-        if (isset($data['bitrate'])) {
+        if (array_key_exists('bitrate', $data)) {
             $self->bitrate = $data['bitrate'];
         }
 

@@ -39,10 +39,10 @@ class PluginResult implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['error'])) {
+        if (array_key_exists('error', $data)) {
             $self->error = $data['error'];
         }
-        if (isset($data['result'])) {
+        if (array_key_exists('result', $data)) {
             $self->result = $data['result'];
         }
 

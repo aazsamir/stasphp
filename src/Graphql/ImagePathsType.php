@@ -49,13 +49,13 @@ class ImagePathsType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['thumbnail'])) {
+        if (array_key_exists('thumbnail', $data)) {
             $self->thumbnail = $data['thumbnail'];
         }
-        if (isset($data['preview'])) {
+        if (array_key_exists('preview', $data)) {
             $self->preview = $data['preview'];
         }
-        if (isset($data['image'])) {
+        if (array_key_exists('image', $data)) {
             $self->image = $data['image'];
         }
 

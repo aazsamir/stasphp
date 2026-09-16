@@ -156,22 +156,22 @@ class SceneMarker implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['scene'])) {
+        if (array_key_exists('scene', $data)) {
             $self->scene = \Aazsamir\Stasphp\Graphql\Scene::fromArray($data['scene']);
         }
-        if (isset($data['title'])) {
+        if (array_key_exists('title', $data)) {
             $self->title = $data['title'];
         }
-        if (isset($data['seconds'])) {
+        if (array_key_exists('seconds', $data)) {
             $self->seconds = $data['seconds'];
         }
-        if (isset($data['primary_tag'])) {
+        if (array_key_exists('primary_tag', $data)) {
             $self->primary_tag = \Aazsamir\Stasphp\Graphql\Tag::fromArray($data['primary_tag']);
         }
-        if (isset($data['tags'])) {
+        if (array_key_exists('tags', $data)) {
             $self->tags = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -180,22 +180,22 @@ class SceneMarker implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Tag::fromArray($data);
             }, $data['tags'] ?? []);
         }
-        if (isset($data['created_at'])) {
+        if (array_key_exists('created_at', $data)) {
             $self->created_at = new \DateTimeImmutable($data['created_at']);
         }
-        if (isset($data['updated_at'])) {
+        if (array_key_exists('updated_at', $data)) {
             $self->updated_at = new \DateTimeImmutable($data['updated_at']);
         }
-        if (isset($data['stream'])) {
+        if (array_key_exists('stream', $data)) {
             $self->stream = $data['stream'];
         }
-        if (isset($data['preview'])) {
+        if (array_key_exists('preview', $data)) {
             $self->preview = $data['preview'];
         }
-        if (isset($data['screenshot'])) {
+        if (array_key_exists('screenshot', $data)) {
             $self->screenshot = $data['screenshot'];
         }
-        if (isset($data['end_seconds'])) {
+        if (array_key_exists('end_seconds', $data)) {
             $self->end_seconds = $data['end_seconds'];
         }
 

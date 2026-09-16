@@ -162,43 +162,43 @@ class GenerateMetadataOptions implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['covers'])) {
+        if (array_key_exists('covers', $data)) {
             $self->covers = $data['covers'];
         }
-        if (isset($data['sprites'])) {
+        if (array_key_exists('sprites', $data)) {
             $self->sprites = $data['sprites'];
         }
-        if (isset($data['previews'])) {
+        if (array_key_exists('previews', $data)) {
             $self->previews = $data['previews'];
         }
-        if (isset($data['imagePreviews'])) {
+        if (array_key_exists('imagePreviews', $data)) {
             $self->imagePreviews = $data['imagePreviews'];
         }
-        if (isset($data['previewOptions'])) {
+        if (array_key_exists('previewOptions', $data)) {
             $self->previewOptions = \Aazsamir\Stasphp\Graphql\GeneratePreviewOptions::fromArray($data['previewOptions']);
         }
-        if (isset($data['markers'])) {
+        if (array_key_exists('markers', $data)) {
             $self->markers = $data['markers'];
         }
-        if (isset($data['markerImagePreviews'])) {
+        if (array_key_exists('markerImagePreviews', $data)) {
             $self->markerImagePreviews = $data['markerImagePreviews'];
         }
-        if (isset($data['markerScreenshots'])) {
+        if (array_key_exists('markerScreenshots', $data)) {
             $self->markerScreenshots = $data['markerScreenshots'];
         }
-        if (isset($data['transcodes'])) {
+        if (array_key_exists('transcodes', $data)) {
             $self->transcodes = $data['transcodes'];
         }
-        if (isset($data['phashes'])) {
+        if (array_key_exists('phashes', $data)) {
             $self->phashes = $data['phashes'];
         }
-        if (isset($data['interactiveHeatmapsSpeeds'])) {
+        if (array_key_exists('interactiveHeatmapsSpeeds', $data)) {
             $self->interactiveHeatmapsSpeeds = $data['interactiveHeatmapsSpeeds'];
         }
-        if (isset($data['imageThumbnails'])) {
+        if (array_key_exists('imageThumbnails', $data)) {
             $self->imageThumbnails = $data['imageThumbnails'];
         }
-        if (isset($data['clipPreviews'])) {
+        if (array_key_exists('clipPreviews', $data)) {
             $self->clipPreviews = $data['clipPreviews'];
         }
 

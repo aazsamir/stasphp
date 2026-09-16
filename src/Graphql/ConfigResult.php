@@ -96,25 +96,25 @@ class ConfigResult implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['general'])) {
+        if (array_key_exists('general', $data)) {
             $self->general = \Aazsamir\Stasphp\Graphql\ConfigGeneralResult::fromArray($data['general']);
         }
-        if (isset($data['interface'])) {
+        if (array_key_exists('interface', $data)) {
             $self->interface = \Aazsamir\Stasphp\Graphql\ConfigInterfaceResult::fromArray($data['interface']);
         }
-        if (isset($data['dlna'])) {
+        if (array_key_exists('dlna', $data)) {
             $self->dlna = \Aazsamir\Stasphp\Graphql\ConfigDLNAResult::fromArray($data['dlna']);
         }
-        if (isset($data['scraping'])) {
+        if (array_key_exists('scraping', $data)) {
             $self->scraping = \Aazsamir\Stasphp\Graphql\ConfigScrapingResult::fromArray($data['scraping']);
         }
-        if (isset($data['defaults'])) {
+        if (array_key_exists('defaults', $data)) {
             $self->defaults = \Aazsamir\Stasphp\Graphql\ConfigDefaultSettingsResult::fromArray($data['defaults']);
         }
-        if (isset($data['ui'])) {
+        if (array_key_exists('ui', $data)) {
             $self->ui = $data['ui'];
         }
-        if (isset($data['plugins'])) {
+        if (array_key_exists('plugins', $data)) {
             $self->plugins = $data['plugins'];
         }
 

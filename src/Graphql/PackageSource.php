@@ -49,13 +49,13 @@ class PackageSource implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['url'])) {
+        if (array_key_exists('url', $data)) {
             $self->url = $data['url'];
         }
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['local_path'])) {
+        if (array_key_exists('local_path', $data)) {
             $self->local_path = $data['local_path'];
         }
 

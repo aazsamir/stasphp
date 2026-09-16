@@ -49,13 +49,13 @@ class SceneStreamEndpoint implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['url'])) {
+        if (array_key_exists('url', $data)) {
             $self->url = $data['url'];
         }
-        if (isset($data['mime_type'])) {
+        if (array_key_exists('mime_type', $data)) {
             $self->mime_type = $data['mime_type'];
         }
-        if (isset($data['label'])) {
+        if (array_key_exists('label', $data)) {
             $self->label = $data['label'];
         }
 

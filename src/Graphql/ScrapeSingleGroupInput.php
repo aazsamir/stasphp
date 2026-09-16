@@ -28,13 +28,13 @@ class ScrapeSingleGroupInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['query'])) {
+        if (array_key_exists('query', $data)) {
             $self->query = $data['query'];
         }
-        if (isset($data['group_id'])) {
+        if (array_key_exists('group_id', $data)) {
             $self->group_id = $data['group_id'];
         }
-        if (isset($data['group_input'])) {
+        if (array_key_exists('group_input', $data)) {
             $self->group_input = \Aazsamir\Stasphp\Graphql\ScrapedGroupInput::fromArray($data['group_input']);
         }
 

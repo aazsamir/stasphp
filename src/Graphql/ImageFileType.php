@@ -59,16 +59,16 @@ class ImageFileType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['mod_time'])) {
+        if (array_key_exists('mod_time', $data)) {
             $self->mod_time = new \DateTimeImmutable($data['mod_time']);
         }
-        if (isset($data['size'])) {
+        if (array_key_exists('size', $data)) {
             $self->size = $data['size'];
         }
-        if (isset($data['width'])) {
+        if (array_key_exists('width', $data)) {
             $self->width = $data['width'];
         }
-        if (isset($data['height'])) {
+        if (array_key_exists('height', $data)) {
             $self->height = $data['height'];
         }
 

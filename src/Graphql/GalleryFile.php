@@ -167,28 +167,28 @@ class GalleryFile implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['path'])) {
+        if (array_key_exists('path', $data)) {
             $self->path = $data['path'];
         }
-        if (isset($data['basename'])) {
+        if (array_key_exists('basename', $data)) {
             $self->basename = $data['basename'];
         }
-        if (isset($data['parent_folder_id'])) {
+        if (array_key_exists('parent_folder_id', $data)) {
             $self->parent_folder_id = $data['parent_folder_id'];
         }
-        if (isset($data['parent_folder'])) {
+        if (array_key_exists('parent_folder', $data)) {
             $self->parent_folder = \Aazsamir\Stasphp\Graphql\Folder::fromArray($data['parent_folder']);
         }
-        if (isset($data['mod_time'])) {
+        if (array_key_exists('mod_time', $data)) {
             $self->mod_time = new \DateTimeImmutable($data['mod_time']);
         }
-        if (isset($data['size'])) {
+        if (array_key_exists('size', $data)) {
             $self->size = $data['size'];
         }
-        if (isset($data['fingerprints'])) {
+        if (array_key_exists('fingerprints', $data)) {
             $self->fingerprints = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -197,19 +197,19 @@ class GalleryFile implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Fingerprint::fromArray($data);
             }, $data['fingerprints'] ?? []);
         }
-        if (isset($data['created_at'])) {
+        if (array_key_exists('created_at', $data)) {
             $self->created_at = new \DateTimeImmutable($data['created_at']);
         }
-        if (isset($data['updated_at'])) {
+        if (array_key_exists('updated_at', $data)) {
             $self->updated_at = new \DateTimeImmutable($data['updated_at']);
         }
-        if (isset($data['zip_file_id'])) {
+        if (array_key_exists('zip_file_id', $data)) {
             $self->zip_file_id = $data['zip_file_id'];
         }
-        if (isset($data['zip_file'])) {
+        if (array_key_exists('zip_file', $data)) {
             $self->zip_file = \Aazsamir\Stasphp\Graphql\BasicFile::fromArray($data['zip_file']);
         }
-        if (isset($data['fingerprint'])) {
+        if (array_key_exists('fingerprint', $data)) {
             $self->fingerprint = $data['fingerprint'];
         }
 

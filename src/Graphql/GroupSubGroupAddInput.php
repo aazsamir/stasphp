@@ -30,10 +30,10 @@ class GroupSubGroupAddInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['containing_group_id'])) {
+        if (array_key_exists('containing_group_id', $data)) {
             $self->containing_group_id = $data['containing_group_id'];
         }
-        if (isset($data['sub_groups'])) {
+        if (array_key_exists('sub_groups', $data)) {
             $self->sub_groups = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -42,7 +42,7 @@ class GroupSubGroupAddInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\GroupDescriptionInput::fromArray($data);
             }, $data['sub_groups'] ?? []);
         }
-        if (isset($data['insert_index'])) {
+        if (array_key_exists('insert_index', $data)) {
             $self->insert_index = $data['insert_index'];
         }
 

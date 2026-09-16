@@ -59,16 +59,16 @@ class StashBox implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['endpoint'])) {
+        if (array_key_exists('endpoint', $data)) {
             $self->endpoint = $data['endpoint'];
         }
-        if (isset($data['api_key'])) {
+        if (array_key_exists('api_key', $data)) {
             $self->api_key = $data['api_key'];
         }
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['max_requests_per_minute'])) {
+        if (array_key_exists('max_requests_per_minute', $data)) {
             $self->max_requests_per_minute = $data['max_requests_per_minute'];
         }
 

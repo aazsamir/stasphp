@@ -85,22 +85,22 @@ class GalleryChapter implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['gallery'])) {
+        if (array_key_exists('gallery', $data)) {
             $self->gallery = \Aazsamir\Stasphp\Graphql\Gallery::fromArray($data['gallery']);
         }
-        if (isset($data['title'])) {
+        if (array_key_exists('title', $data)) {
             $self->title = $data['title'];
         }
-        if (isset($data['image_index'])) {
+        if (array_key_exists('image_index', $data)) {
             $self->image_index = $data['image_index'];
         }
-        if (isset($data['created_at'])) {
+        if (array_key_exists('created_at', $data)) {
             $self->created_at = new \DateTimeImmutable($data['created_at']);
         }
-        if (isset($data['updated_at'])) {
+        if (array_key_exists('updated_at', $data)) {
             $self->updated_at = new \DateTimeImmutable($data['updated_at']);
         }
 

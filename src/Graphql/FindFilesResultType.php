@@ -74,19 +74,19 @@ class FindFilesResultType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['count'])) {
+        if (array_key_exists('count', $data)) {
             $self->count = $data['count'];
         }
-        if (isset($data['megapixels'])) {
+        if (array_key_exists('megapixels', $data)) {
             $self->megapixels = $data['megapixels'];
         }
-        if (isset($data['duration'])) {
+        if (array_key_exists('duration', $data)) {
             $self->duration = $data['duration'];
         }
-        if (isset($data['size'])) {
+        if (array_key_exists('size', $data)) {
             $self->size = $data['size'];
         }
-        if (isset($data['files'])) {
+        if (array_key_exists('files', $data)) {
             $self->files = array_map(function ($data) {
                 if ($data === []) {
                     return [];

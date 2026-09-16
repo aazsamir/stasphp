@@ -90,16 +90,16 @@ class ScrapedTag implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['stored_id'])) {
+        if (array_key_exists('stored_id', $data)) {
             $self->stored_id = $data['stored_id'];
         }
-        if (isset($data['description'])) {
+        if (array_key_exists('description', $data)) {
             $self->description = $data['description'];
         }
-        if (isset($data['alias_list'])) {
+        if (array_key_exists('alias_list', $data)) {
             $self->alias_list = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -108,10 +108,10 @@ class ScrapedTag implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['alias_list'] ?? []);
         }
-        if (isset($data['parent'])) {
+        if (array_key_exists('parent', $data)) {
             $self->parent = \Aazsamir\Stasphp\Graphql\ScrapedTag::fromArray($data['parent']);
         }
-        if (isset($data['remote_site_id'])) {
+        if (array_key_exists('remote_site_id', $data)) {
             $self->remote_site_id = $data['remote_site_id'];
         }
 

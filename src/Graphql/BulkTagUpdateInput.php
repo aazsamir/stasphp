@@ -44,7 +44,7 @@ class BulkTagUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['ids'])) {
+        if (array_key_exists('ids', $data)) {
             $self->ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -53,22 +53,22 @@ class BulkTagUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['ids'] ?? []);
         }
-        if (isset($data['description'])) {
+        if (array_key_exists('description', $data)) {
             $self->description = $data['description'];
         }
-        if (isset($data['aliases'])) {
+        if (array_key_exists('aliases', $data)) {
             $self->aliases = \Aazsamir\Stasphp\Graphql\BulkUpdateStrings::fromArray($data['aliases']);
         }
-        if (isset($data['ignore_auto_tag'])) {
+        if (array_key_exists('ignore_auto_tag', $data)) {
             $self->ignore_auto_tag = $data['ignore_auto_tag'];
         }
-        if (isset($data['favorite'])) {
+        if (array_key_exists('favorite', $data)) {
             $self->favorite = $data['favorite'];
         }
-        if (isset($data['parent_ids'])) {
+        if (array_key_exists('parent_ids', $data)) {
             $self->parent_ids = \Aazsamir\Stasphp\Graphql\BulkUpdateIds::fromArray($data['parent_ids']);
         }
-        if (isset($data['child_ids'])) {
+        if (array_key_exists('child_ids', $data)) {
             $self->child_ids = \Aazsamir\Stasphp\Graphql\BulkUpdateIds::fromArray($data['child_ids']);
         }
 

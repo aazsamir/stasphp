@@ -46,7 +46,7 @@ class SQLQueryResult implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['columns'])) {
+        if (array_key_exists('columns', $data)) {
             $self->columns = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -55,7 +55,7 @@ class SQLQueryResult implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['columns'] ?? []);
         }
-        if (isset($data['rows'])) {
+        if (array_key_exists('rows', $data)) {
             $self->rows = array_map(function ($data) {
                 if ($data === []) {
                     return [];

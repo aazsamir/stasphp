@@ -39,10 +39,10 @@ class Fingerprint implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['type'])) {
+        if (array_key_exists('type', $data)) {
             $self->type = $data['type'];
         }
-        if (isset($data['value'])) {
+        if (array_key_exists('value', $data)) {
             $self->value = $data['value'];
         }
 

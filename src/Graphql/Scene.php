@@ -434,10 +434,10 @@ class Scene implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['urls'])) {
+        if (array_key_exists('urls', $data)) {
             $self->urls = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -446,19 +446,19 @@ class Scene implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['urls'] ?? []);
         }
-        if (isset($data['organized'])) {
+        if (array_key_exists('organized', $data)) {
             $self->organized = $data['organized'];
         }
-        if (isset($data['interactive'])) {
+        if (array_key_exists('interactive', $data)) {
             $self->interactive = $data['interactive'];
         }
-        if (isset($data['created_at'])) {
+        if (array_key_exists('created_at', $data)) {
             $self->created_at = new \DateTimeImmutable($data['created_at']);
         }
-        if (isset($data['updated_at'])) {
+        if (array_key_exists('updated_at', $data)) {
             $self->updated_at = new \DateTimeImmutable($data['updated_at']);
         }
-        if (isset($data['play_history'])) {
+        if (array_key_exists('play_history', $data)) {
             $self->play_history = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -467,7 +467,7 @@ class Scene implements \Aazsamir\Graphpql\Model\GraphObject
                 return new \DateTimeImmutable($data);
             }, $data['play_history'] ?? []);
         }
-        if (isset($data['o_history'])) {
+        if (array_key_exists('o_history', $data)) {
             $self->o_history = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -476,7 +476,7 @@ class Scene implements \Aazsamir\Graphpql\Model\GraphObject
                 return new \DateTimeImmutable($data);
             }, $data['o_history'] ?? []);
         }
-        if (isset($data['files'])) {
+        if (array_key_exists('files', $data)) {
             $self->files = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -485,10 +485,10 @@ class Scene implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\VideoFile::fromArray($data);
             }, $data['files'] ?? []);
         }
-        if (isset($data['paths'])) {
+        if (array_key_exists('paths', $data)) {
             $self->paths = \Aazsamir\Stasphp\Graphql\ScenePathsType::fromArray($data['paths']);
         }
-        if (isset($data['scene_markers'])) {
+        if (array_key_exists('scene_markers', $data)) {
             $self->scene_markers = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -497,7 +497,7 @@ class Scene implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\SceneMarker::fromArray($data);
             }, $data['scene_markers'] ?? []);
         }
-        if (isset($data['galleries'])) {
+        if (array_key_exists('galleries', $data)) {
             $self->galleries = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -506,7 +506,7 @@ class Scene implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Gallery::fromArray($data);
             }, $data['galleries'] ?? []);
         }
-        if (isset($data['groups'])) {
+        if (array_key_exists('groups', $data)) {
             $self->groups = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -515,7 +515,7 @@ class Scene implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\SceneGroup::fromArray($data);
             }, $data['groups'] ?? []);
         }
-        if (isset($data['movies'])) {
+        if (array_key_exists('movies', $data)) {
             $self->movies = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -524,7 +524,7 @@ class Scene implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\SceneMovie::fromArray($data);
             }, $data['movies'] ?? []);
         }
-        if (isset($data['tags'])) {
+        if (array_key_exists('tags', $data)) {
             $self->tags = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -533,7 +533,7 @@ class Scene implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Tag::fromArray($data);
             }, $data['tags'] ?? []);
         }
-        if (isset($data['performers'])) {
+        if (array_key_exists('performers', $data)) {
             $self->performers = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -542,7 +542,7 @@ class Scene implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Performer::fromArray($data);
             }, $data['performers'] ?? []);
         }
-        if (isset($data['stash_ids'])) {
+        if (array_key_exists('stash_ids', $data)) {
             $self->stash_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -551,10 +551,10 @@ class Scene implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\StashID::fromArray($data);
             }, $data['stash_ids'] ?? []);
         }
-        if (isset($data['custom_fields'])) {
+        if (array_key_exists('custom_fields', $data)) {
             $self->custom_fields = $data['custom_fields'];
         }
-        if (isset($data['sceneStreams'])) {
+        if (array_key_exists('sceneStreams', $data)) {
             $self->sceneStreams = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -563,34 +563,34 @@ class Scene implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\SceneStreamEndpoint::fromArray($data);
             }, $data['sceneStreams'] ?? []);
         }
-        if (isset($data['title'])) {
+        if (array_key_exists('title', $data)) {
             $self->title = $data['title'];
         }
-        if (isset($data['code'])) {
+        if (array_key_exists('code', $data)) {
             $self->code = $data['code'];
         }
-        if (isset($data['details'])) {
+        if (array_key_exists('details', $data)) {
             $self->details = $data['details'];
         }
-        if (isset($data['director'])) {
+        if (array_key_exists('director', $data)) {
             $self->director = $data['director'];
         }
-        if (isset($data['url'])) {
+        if (array_key_exists('url', $data)) {
             $self->url = $data['url'];
         }
-        if (isset($data['date'])) {
+        if (array_key_exists('date', $data)) {
             $self->date = $data['date'];
         }
-        if (isset($data['rating100'])) {
+        if (array_key_exists('rating100', $data)) {
             $self->rating100 = $data['rating100'];
         }
-        if (isset($data['o_counter'])) {
+        if (array_key_exists('o_counter', $data)) {
             $self->o_counter = $data['o_counter'];
         }
-        if (isset($data['interactive_speed'])) {
+        if (array_key_exists('interactive_speed', $data)) {
             $self->interactive_speed = $data['interactive_speed'];
         }
-        if (isset($data['captions'])) {
+        if (array_key_exists('captions', $data)) {
             $self->captions = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -599,19 +599,19 @@ class Scene implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\VideoCaption::fromArray($data);
             }, $data['captions'] ?? []);
         }
-        if (isset($data['last_played_at'])) {
+        if (array_key_exists('last_played_at', $data)) {
             $self->last_played_at = new \DateTimeImmutable($data['last_played_at']);
         }
-        if (isset($data['resume_time'])) {
+        if (array_key_exists('resume_time', $data)) {
             $self->resume_time = $data['resume_time'];
         }
-        if (isset($data['play_duration'])) {
+        if (array_key_exists('play_duration', $data)) {
             $self->play_duration = $data['play_duration'];
         }
-        if (isset($data['play_count'])) {
+        if (array_key_exists('play_count', $data)) {
             $self->play_count = $data['play_count'];
         }
-        if (isset($data['studio'])) {
+        if (array_key_exists('studio', $data)) {
             $self->studio = \Aazsamir\Stasphp\Graphql\Studio::fromArray($data['studio']);
         }
 

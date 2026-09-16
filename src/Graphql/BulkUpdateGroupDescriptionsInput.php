@@ -27,7 +27,7 @@ class BulkUpdateGroupDescriptionsInput implements \Aazsamir\Graphpql\Model\Graph
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['groups'])) {
+        if (array_key_exists('groups', $data)) {
             $self->groups = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -36,7 +36,7 @@ class BulkUpdateGroupDescriptionsInput implements \Aazsamir\Graphpql\Model\Graph
                 return \Aazsamir\Stasphp\Graphql\GroupDescriptionInput::fromArray($data);
             }, $data['groups'] ?? []);
         }
-        if (isset($data['mode'])) {
+        if (array_key_exists('mode', $data)) {
             $self->mode = \Aazsamir\Stasphp\Graphql\BulkUpdateIdMode::from($data['mode']);
         }
 

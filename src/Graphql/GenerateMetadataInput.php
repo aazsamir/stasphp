@@ -99,52 +99,52 @@ class GenerateMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['covers'])) {
+        if (array_key_exists('covers', $data)) {
             $self->covers = $data['covers'];
         }
-        if (isset($data['sprites'])) {
+        if (array_key_exists('sprites', $data)) {
             $self->sprites = $data['sprites'];
         }
-        if (isset($data['previews'])) {
+        if (array_key_exists('previews', $data)) {
             $self->previews = $data['previews'];
         }
-        if (isset($data['imagePreviews'])) {
+        if (array_key_exists('imagePreviews', $data)) {
             $self->imagePreviews = $data['imagePreviews'];
         }
-        if (isset($data['previewOptions'])) {
+        if (array_key_exists('previewOptions', $data)) {
             $self->previewOptions = \Aazsamir\Stasphp\Graphql\GeneratePreviewOptionsInput::fromArray($data['previewOptions']);
         }
-        if (isset($data['markers'])) {
+        if (array_key_exists('markers', $data)) {
             $self->markers = $data['markers'];
         }
-        if (isset($data['markerImagePreviews'])) {
+        if (array_key_exists('markerImagePreviews', $data)) {
             $self->markerImagePreviews = $data['markerImagePreviews'];
         }
-        if (isset($data['markerScreenshots'])) {
+        if (array_key_exists('markerScreenshots', $data)) {
             $self->markerScreenshots = $data['markerScreenshots'];
         }
-        if (isset($data['transcodes'])) {
+        if (array_key_exists('transcodes', $data)) {
             $self->transcodes = $data['transcodes'];
         }
-        if (isset($data['forceTranscodes'])) {
+        if (array_key_exists('forceTranscodes', $data)) {
             $self->forceTranscodes = $data['forceTranscodes'];
         }
-        if (isset($data['phashes'])) {
+        if (array_key_exists('phashes', $data)) {
             $self->phashes = $data['phashes'];
         }
-        if (isset($data['interactiveHeatmapsSpeeds'])) {
+        if (array_key_exists('interactiveHeatmapsSpeeds', $data)) {
             $self->interactiveHeatmapsSpeeds = $data['interactiveHeatmapsSpeeds'];
         }
-        if (isset($data['imagePhashes'])) {
+        if (array_key_exists('imagePhashes', $data)) {
             $self->imagePhashes = $data['imagePhashes'];
         }
-        if (isset($data['imageThumbnails'])) {
+        if (array_key_exists('imageThumbnails', $data)) {
             $self->imageThumbnails = $data['imageThumbnails'];
         }
-        if (isset($data['clipPreviews'])) {
+        if (array_key_exists('clipPreviews', $data)) {
             $self->clipPreviews = $data['clipPreviews'];
         }
-        if (isset($data['sceneIDs'])) {
+        if (array_key_exists('sceneIDs', $data)) {
             $self->sceneIDs = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -153,7 +153,7 @@ class GenerateMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['sceneIDs'] ?? []);
         }
-        if (isset($data['markerIDs'])) {
+        if (array_key_exists('markerIDs', $data)) {
             $self->markerIDs = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -162,7 +162,7 @@ class GenerateMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['markerIDs'] ?? []);
         }
-        if (isset($data['imageIDs'])) {
+        if (array_key_exists('imageIDs', $data)) {
             $self->imageIDs = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -171,7 +171,7 @@ class GenerateMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['imageIDs'] ?? []);
         }
-        if (isset($data['galleryIDs'])) {
+        if (array_key_exists('galleryIDs', $data)) {
             $self->galleryIDs = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -180,7 +180,7 @@ class GenerateMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['galleryIDs'] ?? []);
         }
-        if (isset($data['paths'])) {
+        if (array_key_exists('paths', $data)) {
             $self->paths = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -189,7 +189,7 @@ class GenerateMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['paths'] ?? []);
         }
-        if (isset($data['overwrite'])) {
+        if (array_key_exists('overwrite', $data)) {
             $self->overwrite = $data['overwrite'];
         }
 

@@ -118,31 +118,31 @@ class ScenePathsType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['screenshot'])) {
+        if (array_key_exists('screenshot', $data)) {
             $self->screenshot = $data['screenshot'];
         }
-        if (isset($data['preview'])) {
+        if (array_key_exists('preview', $data)) {
             $self->preview = $data['preview'];
         }
-        if (isset($data['stream'])) {
+        if (array_key_exists('stream', $data)) {
             $self->stream = $data['stream'];
         }
-        if (isset($data['webp'])) {
+        if (array_key_exists('webp', $data)) {
             $self->webp = $data['webp'];
         }
-        if (isset($data['vtt'])) {
+        if (array_key_exists('vtt', $data)) {
             $self->vtt = $data['vtt'];
         }
-        if (isset($data['sprite'])) {
+        if (array_key_exists('sprite', $data)) {
             $self->sprite = $data['sprite'];
         }
-        if (isset($data['funscript'])) {
+        if (array_key_exists('funscript', $data)) {
             $self->funscript = $data['funscript'];
         }
-        if (isset($data['interactive_heatmap'])) {
+        if (array_key_exists('interactive_heatmap', $data)) {
             $self->interactive_heatmap = $data['interactive_heatmap'];
         }
-        if (isset($data['caption'])) {
+        if (array_key_exists('caption', $data)) {
             $self->caption = $data['caption'];
         }
 

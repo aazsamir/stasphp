@@ -40,25 +40,25 @@ class CleanGeneratedInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['blobFiles'])) {
+        if (array_key_exists('blobFiles', $data)) {
             $self->blobFiles = $data['blobFiles'];
         }
-        if (isset($data['sprites'])) {
+        if (array_key_exists('sprites', $data)) {
             $self->sprites = $data['sprites'];
         }
-        if (isset($data['screenshots'])) {
+        if (array_key_exists('screenshots', $data)) {
             $self->screenshots = $data['screenshots'];
         }
-        if (isset($data['transcodes'])) {
+        if (array_key_exists('transcodes', $data)) {
             $self->transcodes = $data['transcodes'];
         }
-        if (isset($data['markers'])) {
+        if (array_key_exists('markers', $data)) {
             $self->markers = $data['markers'];
         }
-        if (isset($data['imageThumbnails'])) {
+        if (array_key_exists('imageThumbnails', $data)) {
             $self->imageThumbnails = $data['imageThumbnails'];
         }
-        if (isset($data['dryRun'])) {
+        if (array_key_exists('dryRun', $data)) {
             $self->dryRun = $data['dryRun'];
         }
 

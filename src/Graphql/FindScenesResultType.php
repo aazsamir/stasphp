@@ -64,16 +64,16 @@ class FindScenesResultType implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['count'])) {
+        if (array_key_exists('count', $data)) {
             $self->count = $data['count'];
         }
-        if (isset($data['duration'])) {
+        if (array_key_exists('duration', $data)) {
             $self->duration = $data['duration'];
         }
-        if (isset($data['filesize'])) {
+        if (array_key_exists('filesize', $data)) {
             $self->filesize = $data['filesize'];
         }
-        if (isset($data['scenes'])) {
+        if (array_key_exists('scenes', $data)) {
             $self->scenes = array_map(function ($data) {
                 if ($data === []) {
                     return [];

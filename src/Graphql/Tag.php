@@ -297,13 +297,13 @@ class Tag implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['id'])) {
+        if (array_key_exists('id', $data)) {
             $self->id = $data['id'];
         }
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['aliases'])) {
+        if (array_key_exists('aliases', $data)) {
             $self->aliases = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -312,19 +312,19 @@ class Tag implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['aliases'] ?? []);
         }
-        if (isset($data['ignore_auto_tag'])) {
+        if (array_key_exists('ignore_auto_tag', $data)) {
             $self->ignore_auto_tag = $data['ignore_auto_tag'];
         }
-        if (isset($data['created_at'])) {
+        if (array_key_exists('created_at', $data)) {
             $self->created_at = new \DateTimeImmutable($data['created_at']);
         }
-        if (isset($data['updated_at'])) {
+        if (array_key_exists('updated_at', $data)) {
             $self->updated_at = new \DateTimeImmutable($data['updated_at']);
         }
-        if (isset($data['favorite'])) {
+        if (array_key_exists('favorite', $data)) {
             $self->favorite = $data['favorite'];
         }
-        if (isset($data['stash_ids'])) {
+        if (array_key_exists('stash_ids', $data)) {
             $self->stash_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -333,31 +333,31 @@ class Tag implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\StashID::fromArray($data);
             }, $data['stash_ids'] ?? []);
         }
-        if (isset($data['scene_count'])) {
+        if (array_key_exists('scene_count', $data)) {
             $self->scene_count = $data['scene_count'];
         }
-        if (isset($data['scene_marker_count'])) {
+        if (array_key_exists('scene_marker_count', $data)) {
             $self->scene_marker_count = $data['scene_marker_count'];
         }
-        if (isset($data['image_count'])) {
+        if (array_key_exists('image_count', $data)) {
             $self->image_count = $data['image_count'];
         }
-        if (isset($data['gallery_count'])) {
+        if (array_key_exists('gallery_count', $data)) {
             $self->gallery_count = $data['gallery_count'];
         }
-        if (isset($data['performer_count'])) {
+        if (array_key_exists('performer_count', $data)) {
             $self->performer_count = $data['performer_count'];
         }
-        if (isset($data['studio_count'])) {
+        if (array_key_exists('studio_count', $data)) {
             $self->studio_count = $data['studio_count'];
         }
-        if (isset($data['group_count'])) {
+        if (array_key_exists('group_count', $data)) {
             $self->group_count = $data['group_count'];
         }
-        if (isset($data['movie_count'])) {
+        if (array_key_exists('movie_count', $data)) {
             $self->movie_count = $data['movie_count'];
         }
-        if (isset($data['parents'])) {
+        if (array_key_exists('parents', $data)) {
             $self->parents = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -366,7 +366,7 @@ class Tag implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Tag::fromArray($data);
             }, $data['parents'] ?? []);
         }
-        if (isset($data['children'])) {
+        if (array_key_exists('children', $data)) {
             $self->children = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -375,22 +375,22 @@ class Tag implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\Tag::fromArray($data);
             }, $data['children'] ?? []);
         }
-        if (isset($data['parent_count'])) {
+        if (array_key_exists('parent_count', $data)) {
             $self->parent_count = $data['parent_count'];
         }
-        if (isset($data['child_count'])) {
+        if (array_key_exists('child_count', $data)) {
             $self->child_count = $data['child_count'];
         }
-        if (isset($data['custom_fields'])) {
+        if (array_key_exists('custom_fields', $data)) {
             $self->custom_fields = $data['custom_fields'];
         }
-        if (isset($data['sort_name'])) {
+        if (array_key_exists('sort_name', $data)) {
             $self->sort_name = $data['sort_name'];
         }
-        if (isset($data['description'])) {
+        if (array_key_exists('description', $data)) {
             $self->description = $data['description'];
         }
-        if (isset($data['image_path'])) {
+        if (array_key_exists('image_path', $data)) {
             $self->image_path = $data['image_path'];
         }
 

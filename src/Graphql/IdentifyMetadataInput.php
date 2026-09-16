@@ -41,7 +41,7 @@ class IdentifyMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['sources'])) {
+        if (array_key_exists('sources', $data)) {
             $self->sources = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -50,10 +50,10 @@ class IdentifyMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return \Aazsamir\Stasphp\Graphql\IdentifySourceInput::fromArray($data);
             }, $data['sources'] ?? []);
         }
-        if (isset($data['options'])) {
+        if (array_key_exists('options', $data)) {
             $self->options = \Aazsamir\Stasphp\Graphql\IdentifyMetadataOptionsInput::fromArray($data['options']);
         }
-        if (isset($data['sceneIDs'])) {
+        if (array_key_exists('sceneIDs', $data)) {
             $self->sceneIDs = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -62,7 +62,7 @@ class IdentifyMetadataInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['sceneIDs'] ?? []);
         }
-        if (isset($data['paths'])) {
+        if (array_key_exists('paths', $data)) {
             $self->paths = array_map(function ($data) {
                 if ($data === []) {
                     return [];

@@ -49,13 +49,13 @@ class PluginTask implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['name'])) {
+        if (array_key_exists('name', $data)) {
             $self->name = $data['name'];
         }
-        if (isset($data['plugin'])) {
+        if (array_key_exists('plugin', $data)) {
             $self->plugin = \Aazsamir\Stasphp\Graphql\Plugin::fromArray($data['plugin']);
         }
-        if (isset($data['description'])) {
+        if (array_key_exists('description', $data)) {
             $self->description = $data['description'];
         }
 

@@ -120,10 +120,10 @@ class BulkPerformerUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['clientMutationId'])) {
+        if (array_key_exists('clientMutationId', $data)) {
             $self->clientMutationId = $data['clientMutationId'];
         }
-        if (isset($data['ids'])) {
+        if (array_key_exists('ids', $data)) {
             $self->ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -132,94 +132,94 @@ class BulkPerformerUpdateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['ids'] ?? []);
         }
-        if (isset($data['disambiguation'])) {
+        if (array_key_exists('disambiguation', $data)) {
             $self->disambiguation = $data['disambiguation'];
         }
-        if (isset($data['url'])) {
+        if (array_key_exists('url', $data)) {
             $self->url = $data['url'];
         }
-        if (isset($data['urls'])) {
+        if (array_key_exists('urls', $data)) {
             $self->urls = \Aazsamir\Stasphp\Graphql\BulkUpdateStrings::fromArray($data['urls']);
         }
-        if (isset($data['gender'])) {
+        if (array_key_exists('gender', $data)) {
             $self->gender = \Aazsamir\Stasphp\Graphql\GenderEnum::from($data['gender']);
         }
-        if (isset($data['birthdate'])) {
+        if (array_key_exists('birthdate', $data)) {
             $self->birthdate = $data['birthdate'];
         }
-        if (isset($data['ethnicity'])) {
+        if (array_key_exists('ethnicity', $data)) {
             $self->ethnicity = $data['ethnicity'];
         }
-        if (isset($data['country'])) {
+        if (array_key_exists('country', $data)) {
             $self->country = $data['country'];
         }
-        if (isset($data['eye_color'])) {
+        if (array_key_exists('eye_color', $data)) {
             $self->eye_color = $data['eye_color'];
         }
-        if (isset($data['height_cm'])) {
+        if (array_key_exists('height_cm', $data)) {
             $self->height_cm = $data['height_cm'];
         }
-        if (isset($data['measurements'])) {
+        if (array_key_exists('measurements', $data)) {
             $self->measurements = $data['measurements'];
         }
-        if (isset($data['fake_tits'])) {
+        if (array_key_exists('fake_tits', $data)) {
             $self->fake_tits = $data['fake_tits'];
         }
-        if (isset($data['penis_length'])) {
+        if (array_key_exists('penis_length', $data)) {
             $self->penis_length = $data['penis_length'];
         }
-        if (isset($data['circumcised'])) {
+        if (array_key_exists('circumcised', $data)) {
             $self->circumcised = \Aazsamir\Stasphp\Graphql\CircumcisedEnum::from($data['circumcised']);
         }
-        if (isset($data['career_length'])) {
+        if (array_key_exists('career_length', $data)) {
             $self->career_length = $data['career_length'];
         }
-        if (isset($data['career_start'])) {
+        if (array_key_exists('career_start', $data)) {
             $self->career_start = $data['career_start'];
         }
-        if (isset($data['career_end'])) {
+        if (array_key_exists('career_end', $data)) {
             $self->career_end = $data['career_end'];
         }
-        if (isset($data['tattoos'])) {
+        if (array_key_exists('tattoos', $data)) {
             $self->tattoos = $data['tattoos'];
         }
-        if (isset($data['piercings'])) {
+        if (array_key_exists('piercings', $data)) {
             $self->piercings = $data['piercings'];
         }
-        if (isset($data['alias_list'])) {
+        if (array_key_exists('alias_list', $data)) {
             $self->alias_list = \Aazsamir\Stasphp\Graphql\BulkUpdateStrings::fromArray($data['alias_list']);
         }
-        if (isset($data['twitter'])) {
+        if (array_key_exists('twitter', $data)) {
             $self->twitter = $data['twitter'];
         }
-        if (isset($data['instagram'])) {
+        if (array_key_exists('instagram', $data)) {
             $self->instagram = $data['instagram'];
         }
-        if (isset($data['favorite'])) {
+        if (array_key_exists('favorite', $data)) {
             $self->favorite = $data['favorite'];
         }
-        if (isset($data['tag_ids'])) {
+        if (array_key_exists('tag_ids', $data)) {
             $self->tag_ids = \Aazsamir\Stasphp\Graphql\BulkUpdateIds::fromArray($data['tag_ids']);
         }
-        if (isset($data['rating100'])) {
+        if (array_key_exists('rating100', $data)) {
             $self->rating100 = $data['rating100'];
         }
-        if (isset($data['details'])) {
+        if (array_key_exists('details', $data)) {
             $self->details = $data['details'];
         }
-        if (isset($data['death_date'])) {
+        if (array_key_exists('death_date', $data)) {
             $self->death_date = $data['death_date'];
         }
-        if (isset($data['hair_color'])) {
+        if (array_key_exists('hair_color', $data)) {
             $self->hair_color = $data['hair_color'];
         }
-        if (isset($data['weight'])) {
+        if (array_key_exists('weight', $data)) {
             $self->weight = $data['weight'];
         }
-        if (isset($data['ignore_auto_tag'])) {
+        if (array_key_exists('ignore_auto_tag', $data)) {
             $self->ignore_auto_tag = $data['ignore_auto_tag'];
         }
-        if (isset($data['custom_fields'])) {
+        if (array_key_exists('custom_fields', $data)) {
             $self->custom_fields = \Aazsamir\Stasphp\Graphql\CustomFieldsInput::fromArray($data['custom_fields']);
         }
 

@@ -49,13 +49,13 @@ class Version implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['hash'])) {
+        if (array_key_exists('hash', $data)) {
             $self->hash = $data['hash'];
         }
-        if (isset($data['build_time'])) {
+        if (array_key_exists('build_time', $data)) {
             $self->build_time = $data['build_time'];
         }
-        if (isset($data['version'])) {
+        if (array_key_exists('version', $data)) {
             $self->version = $data['version'];
         }
 

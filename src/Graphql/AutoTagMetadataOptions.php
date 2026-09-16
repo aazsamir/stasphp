@@ -59,7 +59,7 @@ class AutoTagMetadataOptions implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['performers'])) {
+        if (array_key_exists('performers', $data)) {
             $self->performers = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -68,7 +68,7 @@ class AutoTagMetadataOptions implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['performers'] ?? []);
         }
-        if (isset($data['studios'])) {
+        if (array_key_exists('studios', $data)) {
             $self->studios = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -77,7 +77,7 @@ class AutoTagMetadataOptions implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['studios'] ?? []);
         }
-        if (isset($data['tags'])) {
+        if (array_key_exists('tags', $data)) {
             $self->tags = array_map(function ($data) {
                 if ($data === []) {
                     return [];

@@ -75,16 +75,16 @@ class GalleryCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['title'])) {
+        if (array_key_exists('title', $data)) {
             $self->title = $data['title'];
         }
-        if (isset($data['code'])) {
+        if (array_key_exists('code', $data)) {
             $self->code = $data['code'];
         }
-        if (isset($data['url'])) {
+        if (array_key_exists('url', $data)) {
             $self->url = $data['url'];
         }
-        if (isset($data['urls'])) {
+        if (array_key_exists('urls', $data)) {
             $self->urls = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -93,22 +93,22 @@ class GalleryCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['urls'] ?? []);
         }
-        if (isset($data['date'])) {
+        if (array_key_exists('date', $data)) {
             $self->date = $data['date'];
         }
-        if (isset($data['details'])) {
+        if (array_key_exists('details', $data)) {
             $self->details = $data['details'];
         }
-        if (isset($data['photographer'])) {
+        if (array_key_exists('photographer', $data)) {
             $self->photographer = $data['photographer'];
         }
-        if (isset($data['rating100'])) {
+        if (array_key_exists('rating100', $data)) {
             $self->rating100 = $data['rating100'];
         }
-        if (isset($data['organized'])) {
+        if (array_key_exists('organized', $data)) {
             $self->organized = $data['organized'];
         }
-        if (isset($data['scene_ids'])) {
+        if (array_key_exists('scene_ids', $data)) {
             $self->scene_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -117,10 +117,10 @@ class GalleryCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['scene_ids'] ?? []);
         }
-        if (isset($data['studio_id'])) {
+        if (array_key_exists('studio_id', $data)) {
             $self->studio_id = $data['studio_id'];
         }
-        if (isset($data['tag_ids'])) {
+        if (array_key_exists('tag_ids', $data)) {
             $self->tag_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -129,7 +129,7 @@ class GalleryCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['tag_ids'] ?? []);
         }
-        if (isset($data['performer_ids'])) {
+        if (array_key_exists('performer_ids', $data)) {
             $self->performer_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -138,7 +138,7 @@ class GalleryCreateInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['performer_ids'] ?? []);
         }
-        if (isset($data['custom_fields'])) {
+        if (array_key_exists('custom_fields', $data)) {
             $self->custom_fields = $data['custom_fields'];
         }
 

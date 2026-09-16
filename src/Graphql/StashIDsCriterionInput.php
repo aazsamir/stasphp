@@ -30,13 +30,13 @@ class StashIDsCriterionInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['modifier'])) {
+        if (array_key_exists('modifier', $data)) {
             $self->modifier = \Aazsamir\Stasphp\Graphql\CriterionModifier::from($data['modifier']);
         }
-        if (isset($data['endpoint'])) {
+        if (array_key_exists('endpoint', $data)) {
             $self->endpoint = $data['endpoint'];
         }
-        if (isset($data['stash_ids'])) {
+        if (array_key_exists('stash_ids', $data)) {
             $self->stash_ids = array_map(function ($data) {
                 if ($data === []) {
                     return [];

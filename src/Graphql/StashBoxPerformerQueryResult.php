@@ -44,10 +44,10 @@ class StashBoxPerformerQueryResult implements \Aazsamir\Graphpql\Model\GraphObje
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['query'])) {
+        if (array_key_exists('query', $data)) {
             $self->query = $data['query'];
         }
-        if (isset($data['results'])) {
+        if (array_key_exists('results', $data)) {
             $self->results = array_map(function ($data) {
                 if ($data === []) {
                     return [];

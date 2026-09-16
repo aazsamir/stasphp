@@ -39,10 +39,10 @@ class GroupDescription implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['group'])) {
+        if (array_key_exists('group', $data)) {
             $self->group = \Aazsamir\Stasphp\Graphql\Group::fromArray($data['group']);
         }
-        if (isset($data['description'])) {
+        if (array_key_exists('description', $data)) {
             $self->description = $data['description'];
         }
 

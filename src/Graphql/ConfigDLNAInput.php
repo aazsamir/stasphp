@@ -45,16 +45,16 @@ class ConfigDLNAInput implements \Aazsamir\Graphpql\Model\GraphObject
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['serverName'])) {
+        if (array_key_exists('serverName', $data)) {
             $self->serverName = $data['serverName'];
         }
-        if (isset($data['enabled'])) {
+        if (array_key_exists('enabled', $data)) {
             $self->enabled = $data['enabled'];
         }
-        if (isset($data['port'])) {
+        if (array_key_exists('port', $data)) {
             $self->port = $data['port'];
         }
-        if (isset($data['whitelistedIPs'])) {
+        if (array_key_exists('whitelistedIPs', $data)) {
             $self->whitelistedIPs = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -63,7 +63,7 @@ class ConfigDLNAInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['whitelistedIPs'] ?? []);
         }
-        if (isset($data['interfaces'])) {
+        if (array_key_exists('interfaces', $data)) {
             $self->interfaces = array_map(function ($data) {
                 if ($data === []) {
                     return [];
@@ -72,7 +72,7 @@ class ConfigDLNAInput implements \Aazsamir\Graphpql\Model\GraphObject
                 return $data;
             }, $data['interfaces'] ?? []);
         }
-        if (isset($data['videoSortOrder'])) {
+        if (array_key_exists('videoSortOrder', $data)) {
             $self->videoSortOrder = $data['videoSortOrder'];
         }
 

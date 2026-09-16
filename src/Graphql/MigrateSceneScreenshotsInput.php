@@ -23,10 +23,10 @@ class MigrateSceneScreenshotsInput implements \Aazsamir\Graphpql\Model\GraphObje
     public static function fromArray(array $data): self
     {
         $self = new self();
-        if (isset($data['deleteFiles'])) {
+        if (array_key_exists('deleteFiles', $data)) {
             $self->deleteFiles = $data['deleteFiles'];
         }
-        if (isset($data['overwriteExisting'])) {
+        if (array_key_exists('overwriteExisting', $data)) {
             $self->overwriteExisting = $data['overwriteExisting'];
         }
 
