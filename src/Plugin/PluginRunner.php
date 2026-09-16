@@ -11,7 +11,7 @@ class PluginRunner
 {
     public function __construct(
         private Plugin $plugin,
-        private ?LoggerInterface $logger,
+        private ?LoggerInterface $logger = null,
     ) {}
 
     public function run(PluginInput $input): void
