@@ -23,6 +23,10 @@ class PluginRunner
             $output = $this->plugin->run($input);
             $this->writeOutput($output);
         } catch (\Throwable $exception) {
+            if ((int) getenv('DEBUG')) {
+                throw $exception;
+            }
+
             $this->logger?->warning('[plugin] error', [
                 'error' => $exception->getMessage(),
             ]);
