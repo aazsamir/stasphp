@@ -9,17 +9,21 @@ use Aazsamir\Stasphp\Scraper\Input\SceneByName;
 use Aazsamir\Stasphp\Scraper\Input\SceneByQueryFragment;
 use Aazsamir\Stasphp\Scraper\Output\SceneOutput;
 use Aazsamir\Stasphp\Scraper\Output\SceneOutputs;
+use Psr\Log\LoggerInterface;
 
 class ScraperRunner
 {
     public function __construct(
         private ?ScraperByFragment $scraperByFragment = null,
         private ?ScraperByName $scraperByName = null,
-        private ?ScraperByQueryFragment $scraperByQueryFragment,
+        private ?ScraperByQueryFragment $scraperByQueryFragment = null,
+        private ?LoggerInterface $logger = null,
     ) {}
 
     public function runFromJsonString(ScrapType $type, string $json): void
     {
+        $this->logger?->debug('[scrap] start', ['input' => $json]);
+
         try {
             $decoded = \json_decode($json, true, 512, \JSON_THROW_ON_ERROR);
         } catch (\JsonException) {
