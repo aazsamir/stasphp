@@ -11,13 +11,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Aazsamir\\Stasphp\\": "src/",
-            "Stasphp\\Scrapers\\": ["scrapers/src/", "scrapers/"]
+            "Aazsamir\\Stasphp\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Aazsamir\\Stasphp\\Tests\\": "tests/"
+            "Tests\\": "tests/"
         }
     },
     "authors": [
@@ -28,7 +27,7 @@
     ],
     "require": {
         "php": "^8.1",
-        "aazsamir/graphpql": "0.1",
+        "aazsamir/graphpql": "^0.2.0",
         "psr/log": "^3.0"
     },
     "require-dev": {

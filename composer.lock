@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0354cf7358449fcf0b6ba802559f1e4d",
+    "content-hash": "dc91b98fea38ec97911d69d3ec916508",
     "packages": [
         {
             "name": "aazsamir/graphpql",
-            "version": "v0.1",
+            "version": "v0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aazsamir/graphpql.git",
-                "reference": "6d6b04e27e2e860625b366b9977a920ffc15219f"
+                "reference": "a4f54714c8fcbdc67de63e018250434b579d5af9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aazsamir/graphpql/zipball/6d6b04e27e2e860625b366b9977a920ffc15219f",
-                "reference": "6d6b04e27e2e860625b366b9977a920ffc15219f",
+                "url": "https://api.github.com/repos/aazsamir/graphpql/zipball/a4f54714c8fcbdc67de63e018250434b579d5af9",
+                "reference": "a4f54714c8fcbdc67de63e018250434b579d5af9",
                 "shasum": ""
             },
             "require": {
@@ -43,11 +43,14 @@
                     "email": "sutikkukun@gmail.com"
                 }
             ],
+            "keywords": [
+                "graphql"
+            ],
             "support": {
                 "issues": "https://github.com/aazsamir/graphpql/issues",
-                "source": "https://github.com/aazsamir/graphpql/tree/v0.1"
+                "source": "https://github.com/aazsamir/graphpql/tree/v0.2"
             },
-            "time": "2026-09-11T15:23:11+00:00"
+            "time": "2026-09-16T17:47:41+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
